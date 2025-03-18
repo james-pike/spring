@@ -12,12 +12,16 @@ module.exports = {
     "./src/**/*.{html,js,jsx,ts,tsx,mdx}"
   ],  theme: {
     extend: {
+          '4.5xl': ['2.625rem', { lineHeight: '2.75rem' }],
       colors: {
         primary: colors.amber,
         secondary: colors.gray,
       },
       fontFamily: {
         sans: ["'Inter Variable'", ...defaultTheme.fontFamily.sans],
+      },
+      fontSize: {
+        '4.5xl': ['2.625rem', { lineHeight: '2.75rem' }],
       },
       animation: {
         'from-left': 'slideFromLeft 0.2s 1',
