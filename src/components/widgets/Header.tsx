@@ -16,9 +16,9 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`sticky top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out ${
+      class={`sticky top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 bg-gray-100 dark:bg-gray-800 transition-[opacity] ease-in-out ${
         store.isScrolling
-          ? " md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-white dark:bg-slate-900"
+          ? " md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-white dark:bg-gray-950"
           : ""
       }`}
       window:onScroll$={() => {
@@ -38,6 +38,8 @@ export default component$(() => {
           </a>
           <div class="flex items-center md:hidden">
             <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
+            <button class="btn w-full bg-gray-50 dark:bg-transparent">Contact Us</button>
+
             <ToggleMenu />
           </div>
         </div>

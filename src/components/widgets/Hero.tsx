@@ -1,12 +1,11 @@
 import { component$ } from "@builder.io/qwik";
-import { Image } from "@unpic/qwik";
+import HeroCarousel from "./HeroCarousel";
 
-const coverImage =
-  "https://images.unsplash.com/photo-1590767950092-42b8362368da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3087&q=80";
+
 
 export default component$(() => {
   return (
-    <section class="relative md:-mt-[76px] not-prose bg-gray-200">
+    <section class="relative md:-mt-[76px] not-prose bg-gray-100 dark:bg-gray-800">
       <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
@@ -44,7 +43,7 @@ export default component$(() => {
             </div>
           </div>
           <div class="basis-1/2">
-            <Image
+            {/* <Image
               src={coverImage}
               layout="constrained"
               width={493}
@@ -53,7 +52,8 @@ export default component$(() => {
               class="mx-auto lg:mr-0 w-full drop-shadow-2xl rounded-md"
               priority={true}
               breakpoints={[320, 480, 640, 768, 1024]}
-            />
+            /> */}
+            <HeroCarousel/>
           </div>
         </div>
       </div>
