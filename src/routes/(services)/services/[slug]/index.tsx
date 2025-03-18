@@ -7,28 +7,58 @@ interface Service {
   details: string;
   image: string;
   alt: string;
-  delay: number;
+
   slug: string;
 }
 
 const services: Service[] = [
   {
-    title: "Exhibit Photography",
-    description: "Professional photography services tailored for exhibitions and galleries.",
-    details: "Showcase your artwork or exhibits with high-quality, detailed photography.",
-    image: "/images/hero1.webp",
-    alt: "Exhibit Photography",
-    delay: 0,
-    slug: "exhibit-photography"
+    title: "Emergency Lockout Assistance",
+    description: "Fast and reliable 24/7 lockout services for homes, offices, and vehicles.",
+    details: "Regain access to your property quickly with our professional lockout solutions.",
+    image: "/images/lockout.webp",
+    alt: "Emergency Lockout Assistance",
+    slug: "emergency-lockout"
   },
   {
-    title: "Reproduction Services",
-    description: "Accurate reproductions for prints, publications, and digital archives.",
-    details: "Ensure every detail is captured for stunning, true-to-life reproductions.",
-    image: "/images/hero1.webp",
-    alt: "Reproduction Services",
-    delay: 100,
-    slug: "reproduction-services"
+    title: "Key Duplication & Replacement",
+    description: "Precision key cutting and duplication for all types of locks.",
+    details: "Get spare keys for your home, office, or vehicle with accuracy and efficiency.",
+    image: "/images/key-duplication.webp",
+    alt: "Key Duplication & Replacement",
+    slug: "key-duplication"
+  },
+  {
+    title: "Lock Installation & Repair",
+    description: "Enhance security with professional lock installation and repair services.",
+    details: "We install and fix all types of locks to keep your property secure.",
+    image: "/images/lock-installation.webp",
+    alt: "Lock Installation & Repair",
+    slug: "lock-installation"
+  },
+  {
+    title: "Smart Lock & Security System Installation",
+    description: "Upgrade your security with the latest smart locks and access control systems.",
+    details: "We install high-tech security solutions for homes and businesses.",
+    image: "/images/smart-locks.webp",
+    alt: "Smart Lock & Security System Installation",
+    slug: "smart-locks"
+  },
+  {
+    title: "Automotive Locksmith Services",
+    description: "Key programming, lock repairs, and ignition services for all vehicle models.",
+    details: "We provide expert automotive locksmith solutions, including key fob replacement.",
+    image: "/images/auto-locksmith.webp",
+    alt: "Automotive Locksmith Services",
+    slug: "automotive-locksmith"
+  },
+  {
+    title: "Safe Opening & Installation",
+    description: "Secure storage solutions and expert safe opening services.",
+    details: "We install, repair, and unlock safes while maintaining their integrity.",
+    image: "/images/safe-services.webp",
+    alt: "Safe Opening & Installation",
+    slug: "safe-services"
   },
 ];
 
