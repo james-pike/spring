@@ -38,7 +38,7 @@ export default component$(() => {
    
  
   >
-    <div class="w-full h-6 px-2 md:px-7 mx-auto bg-white flex justify-between items-center max-w-7xl relative">
+    <div class="w-full hidden sm:block h-6 px-2 md:px-7 mx-auto bg-white flex justify-between items-center max-w-7xl relative">
       <div>
         <p>Free Website Audit & SEO Report.</p>
       </div>
