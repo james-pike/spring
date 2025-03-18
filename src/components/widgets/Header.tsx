@@ -5,7 +5,6 @@ import ToggleTheme from "~/components/common/ToggleTheme";
 import IconChevronDown from "../icons/IconChevronDown";
 import { Logo2 } from "../common/Logo2";
 import MenuModal from "./MenuModal";
-import IconTwitter from "../icons/IconTwitter";
 
 export default component$(() => {
   const store = useStore({
