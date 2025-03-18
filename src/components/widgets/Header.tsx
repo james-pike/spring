@@ -5,6 +5,7 @@ import ToggleTheme from "~/components/common/ToggleTheme";
 import ToggleMenu from "~/components/common/ToggleMenu";
 import IconChevronDown from "../icons/IconChevronDown";
 import { Logo2 } from "../common/Logo2";
+import MenuModal from "./MenuModal";
 
 export default component$(() => {
   const store = useStore({
@@ -40,7 +41,7 @@ export default component$(() => {
             <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
             <button class="btn w-full bg-gray-50 dark:bg-transparent">Contact Us</button>
 
-            <ToggleMenu />
+            <MenuModal/>
           </div>
         </div>
         <nav
