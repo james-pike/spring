@@ -6,41 +6,44 @@ const sideImg =
   "https://images.unsplash.com/photo-1583195648430-18b2681307e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80";
 
 export default component$(() => {
-  const stepsData = {
-    title: "Sed ac magna sit amet risus tristique interdum. hac.",
-    items: [
-      {
-        title: "Step 1",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.",
-        icon: IconStar,
-      },
-      {
-        title: "Step 2",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.",
-        icon: IconStar,
-      },
-      {
-        title: "Step 3",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.",
-        icon: IconStar,
-      },
-      {
-        title: "Ready!",
-        icon: IconStar,
-      },
-    ],
-    image: {
-      src: sideImg,
-      alt: "Steps image",
+ const stepsData = {
+  title: "Fast, Reliable Locksmith Services in Just a Few Steps",
+  items: [
+    {
+      title: "Step 1: Contact Us",
+      description:
+        "Locked out or need a security upgrade? Call us or book an appointment online, and our expert locksmiths will be on their way.",
+      icon: IconStar, // Replace with a relevant icon
     },
-  };
+    {
+      title: "Step 2: Assessment & Quote",
+      description:
+        "Our team evaluates your situation—whether it's a lockout, key replacement, or security installation—and provides a transparent, upfront quote.",
+      icon: IconStar, // Replace with a relevant icon
+    },
+    {
+      title: "Step 3: Professional Service",
+      description:
+        "We quickly and efficiently handle your locksmith needs, ensuring top-quality security solutions for your home, business, or vehicle.",
+      icon: IconStar, // Replace with a relevant icon
+    },
+    {
+      title: "Ready! You're Secure",
+      description:
+        "With your locks fixed, keys replaced, or security upgraded, you can rest easy knowing you're in safe hands with AdeptLock.",
+      icon: IconStar, // Replace with a relevant icon
+    },
+  ],
+  image: {
+    src: sideImg,
+    alt: "Locksmith service process",
+  },
+};
+
   const { title, items, image } = stepsData;
 
   return (
-    <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+    <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20 bg-gray-100">
       <div class="row-gap-10 grid gap-6 md:grid-cols-2">
         <div class="mb-4 md:mb-0 md:py-4 md:pr-16">
           {title && <h2 class="font-heading mb-8 text-3xl font-bold lg:text-4xl">{title}</h2>}

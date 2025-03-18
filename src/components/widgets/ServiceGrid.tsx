@@ -1,0 +1,83 @@
+import { component$ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city"; // Import Link component
+
+const services = [
+    {
+      title: "Emergency Lockout Assistance",
+      description: "Fast and reliable 24/7 lockout services for homes, offices, and vehicles.",
+      details: "Regain access to your property quickly with our professional lockout solutions.",
+      image: "/images/lockout.webp",
+      alt: "Emergency Lockout Assistance",
+      slug: "emergency-lockout"
+    },
+    {
+      title: "Key Duplication & Replacement",
+      description: "Precision key cutting and duplication for all types of locks.",
+      details: "Get spare keys for your home, office, or vehicle with accuracy and efficiency.",
+      image: "/images/key-duplication.webp",
+      alt: "Key Duplication & Replacement",
+      slug: "key-duplication"
+    },
+    {
+      title: "Lock Installation & Repair",
+      description: "Enhance security with professional lock installation and repair services.",
+      details: "We install and fix all types of locks to keep your property secure.",
+      image: "/images/lock-installation.webp",
+      alt: "Lock Installation & Repair",
+      slug: "lock-installation"
+    },
+    {
+      title: "Smart Lock & Security System Installation",
+      description: "Upgrade your security with the latest smart locks and access control systems.",
+      details: "We install high-tech security solutions for homes and businesses.",
+      image: "/images/smart-locks.webp",
+      alt: "Smart Lock & Security System Installation",
+      slug: "smart-locks"
+    },
+    {
+      title: "Automotive Locksmith Services",
+      description: "Key programming, lock repairs, and ignition services for all vehicle models.",
+      details: "We provide expert automotive locksmith solutions, including key fob replacement.",
+      image: "/images/auto-locksmith.webp",
+      alt: "Automotive Locksmith Services",
+      slug: "automotive-locksmith"
+    },
+    {
+      title: "Safe Opening & Installation",
+      description: "Secure storage solutions and expert safe opening services.",
+      details: "We install, repair, and unlock safes while maintaining their integrity.",
+      image: "/images/safe-services.webp",
+      alt: "Safe Opening & Installation",
+      slug: "safe-services"
+    },
+  ];
+
+export default component$(() => {
+  return (
+    <div class="grid mx-auto max-w-screen-xl mt-2 mb-2 md:mb-16 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      {services.map(({ title, description, details, image, alt, slug }, index) => (
+        <Link
+          href={`/services/${slug}`} // Creates URL like "/services/exhibit-photography"
+          key={index}
+          class="group relative overflow-hidden rounded-lg shadow-md motion-preset-slide-up no-underline"
+        >
+          <div class="relative aspect-[2/1]">
+            <img
+              width={700}
+              src={image}
+              alt={alt}
+              class="w-full h-full object-cover transition-transform bg-primary-50 duration-300 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+              <p class="text-white text-center px-4">{details}</p>
+            </div>
+          </div>
+          <div class="px-4 py-3 bg-gray-100 dark:bg-gray-800">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
+});

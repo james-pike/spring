@@ -17,53 +17,62 @@ const IconBrandGoogle = qwikSerialized(() => import("../components/icons/IconBra
 const IconBulb = qwikSerialized(() => import("../components/icons/IconBulb"));
 
 import { SITE } from "~/config.mjs";
+import Services from "~/components/widgets/Services";
 
 export default component$(() => {
   return (
     <>
       <Hero />
+      <Services
+  highlight="Services"
+  title="Reliable Locksmith Services You Can Trust"
+  subtitle="From emergency lockouts to advanced security solutions, we provide fast, professional, and secure locksmith services tailored to your needs."
+  items={[]}/>
+
       <Features
-        highlight="Features"
-        title="What you get with Qwind"
-        subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
-        items={[
-          {
-            title: "Qwik + Tailwind CSS Integration",
-            description:
-              "A seamless integration between two great frameworks that offer high productivity, performance and versatility.",
-            icon: IconBrandTailwind,
-          },
-          {
-            title: "Ready-to-use Components",
-            description:
-              "Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...",
-            icon: IconApps,
-          },
-          {
-            title: "Best Practices",
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
-          },
-          {
-            title: "Excellent Page Speed",
-            description:
-              "Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.",
-            icon: IconRocket,
-          },
-          {
-            title: "Search Engine Optimization (SEO)",
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
-            icon: IconBrandGoogle,
-          },
-          {
-            title: "Open to new ideas and contributions",
-            description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.",
-            icon: IconBulb
-          },
-        ]}
-      />
+  highlight="Features"
+  title="Reliable Locksmith Services You Can Trust"
+  subtitle="From emergency lockouts to advanced security solutions, we provide fast, professional, and secure locksmith services tailored to your needs."
+  items={[
+    {
+      title: "24/7 Emergency Services",
+      description:
+        "Locked out of your home, office, or car? Our team is available around the clock to assist you anytime, anywhere.",
+      icon: IconRocket, // Replace with a relevant icon
+    },
+    {
+      title: "Residential & Commercial Security",
+      description:
+        "We offer expert lock installation, repair, and key duplication services to keep your home and business secure.",
+      icon: IconRocket, // Replace with a relevant icon
+    },
+    {
+      title: "Automotive Locksmithing",
+      description:
+        "Lost your car keys? Need a key fob replacement? We provide fast and reliable car key programming and lockout services.",
+      icon: IconRocket, // Replace with a relevant icon
+    },
+    {
+      title: "High-Security Locks & Safes",
+      description:
+        "Upgrade your security with high-quality locks, access control systems, and safe installations for added protection.",
+      icon: IconRocket, // Replace with a relevant icon
+    },
+    {
+      title: "Fast Response Time",
+      description:
+        "We prioritize quick service to get you back inside and secure your property with minimal wait time.",
+      icon: IconRocket, // Replace with a relevant icon
+    },
+    {
+      title: "Licensed & Trusted Professionals",
+      description:
+        "Our experienced locksmiths are fully licensed, insured, and dedicated to providing top-notch security solutions.",
+      icon: IconRocket, // Replace with a relevant icon
+    },
+  ]}
+/>
+
       <Steps />
       <FAQs
         title="Frequently Asked Questions"
