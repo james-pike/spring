@@ -45,6 +45,8 @@ module.exports = {
     },
   },
   },
-  plugins: [require("@tailwindcss/typography"), [flowbitePlugin]],
+  plugins: [require("@tailwindcss/typography"),
+    require('tailwindcss-animate'),
+     [flowbitePlugin]],
   darkMode: "class",
 };
