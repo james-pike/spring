@@ -8,16 +8,11 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
- <Services  
-      title="What We Do"
-      subtitle="Now Serving Preston, Wellington & Almonte"
-      highlight="Services"
-      items={[]}
-      classes={{
-        
-    
-      }}
-      />
+  <Services
+  highlight="Services"
+  title="Reliable Locksmith Services You Can Trust"
+  subtitle="From emergency lockouts to advanced security solutions, we provide fast, professional, and secure locksmith services tailored to your needs."
+  items={[]}/>
     </>
   );
 });

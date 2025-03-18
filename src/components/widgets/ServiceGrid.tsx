@@ -6,7 +6,7 @@ const services = [
       title: "Emergency Lockout Assistance",
       description: "Fast and reliable 24/7 lockout services for homes, offices, and vehicles.",
       details: "Regain access to your property quickly with our professional lockout solutions.",
-      image: "/images/lockout.webp",
+      image: "/images/placeholder.png",
       alt: "Emergency Lockout Assistance",
       slug: "emergency-lockout"
     },
@@ -14,7 +14,7 @@ const services = [
       title: "Key Duplication & Replacement",
       description: "Precision key cutting and duplication for all types of locks.",
       details: "Get spare keys for your home, office, or vehicle with accuracy and efficiency.",
-      image: "/images/key-duplication.webp",
+      image: "/images/placeholder.png",
       alt: "Key Duplication & Replacement",
       slug: "key-duplication"
     },
@@ -22,7 +22,7 @@ const services = [
       title: "Lock Installation & Repair",
       description: "Enhance security with professional lock installation and repair services.",
       details: "We install and fix all types of locks to keep your property secure.",
-      image: "/images/lock-installation.webp",
+      image: "/images/placeholder.png",
       alt: "Lock Installation & Repair",
       slug: "lock-installation"
     },
@@ -30,7 +30,7 @@ const services = [
       title: "Smart Lock & Security System Installation",
       description: "Upgrade your security with the latest smart locks and access control systems.",
       details: "We install high-tech security solutions for homes and businesses.",
-      image: "/images/smart-locks.webp",
+      image: "/images/placeholder.png",
       alt: "Smart Lock & Security System Installation",
       slug: "smart-locks"
     },
@@ -38,7 +38,7 @@ const services = [
       title: "Automotive Locksmith Services",
       description: "Key programming, lock repairs, and ignition services for all vehicle models.",
       details: "We provide expert automotive locksmith solutions, including key fob replacement.",
-      image: "/images/auto-locksmith.webp",
+      image: "/images/placeholder.png",
       alt: "Automotive Locksmith Services",
       slug: "automotive-locksmith"
     },
@@ -46,7 +46,7 @@ const services = [
       title: "Safe Opening & Installation",
       description: "Secure storage solutions and expert safe opening services.",
       details: "We install, repair, and unlock safes while maintaining their integrity.",
-      image: "/images/safe-services.webp",
+      image: "/images/placeholder.png",
       alt: "Safe Opening & Installation",
       slug: "safe-services"
     },

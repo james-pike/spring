@@ -16,6 +16,7 @@ const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket")
 
 import { SITE } from "~/config.mjs";
 import Services from "~/components/widgets/Services";
+import Reviews from "~/components/widgets/Reviews";
 
 export default component$(() => {
   return (
@@ -70,7 +71,11 @@ export default component$(() => {
     },
   ]}
 />
-
+<Reviews
+  highlight="Reviews"
+  title="Hear What Our Clients Say"
+  subtitle="From emergency lockouts to advanced security solutions, we provide fast, professional, and secure locksmith services tailored to your needs."
+  items={[]}/>
       <Steps />
       <FAQs
         title="Frequently Asked Questions"

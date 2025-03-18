@@ -34,36 +34,7 @@ export default component$(() => {
 
 
 
-      <div
-
-  >
-    <div class="w-full h-6 hidden sm:block px-2 md:px-7 mx-auto flex justify-between items-center max-w-7xl relative">
-      <div>
-        <p>Free Website Audit & SEO Report.</p>
-      </div>
-      <div id="test" class="flex gap-4 sm:flex hidden sm:block">
-        <a
-          class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
-          href="tel:+16132188063"
-          onClick$={(event) => event.stopPropagation()} // Prevent link from triggering modal
-        >
-          <IconTwitter />
-          <p class="pl-1">(613) 218-8063</p>
-        </a>
-        <p class="text-gray-50">|</p>
-        <a
-          class="text-gray-50 px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
-          href="mailto:info@webdev.ca"
-          onClick$={(event) => event.stopPropagation()} // Prevent link from triggering modal
-        >
-          <IconTwitter />
-          <p class="pl-1">info@webdev.ca</p>
-        </a>
-      </div>
- 
-    </div>
-  </div>
-
+   
 
 
       <div class="relative text-default py-2 px-3 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
