@@ -7,7 +7,6 @@ interface Service {
   details: string;
   image: string;
   alt: string;
-
   slug: string;
 }
 
@@ -15,7 +14,7 @@ const services: Service[] = [
   {
     title: "Emergency Lockout Assistance",
     description: "Fast and reliable 24/7 lockout services for homes, offices, and vehicles.",
-    details: "Regain access to your property quickly with our professional lockout solutions.",
+    details: "Regain access to your property quickly with our professional lockout solutions. Regain access to your property quickly with our professional lockout solutions. Regain access to your property quickly with our professional lockout solutions. Regain access to your property quickly with our professional lockout solutions.",
     image: "/images/placeholder.png",
     alt: "Emergency Lockout Assistance",
     slug: "emergency-lockout"
@@ -70,20 +69,53 @@ export const useService = routeLoader$<Service | null>(({ params }) => {
 export default component$(() => {
   const service = useService();
   if (!service.value) {
-    return <div>Service not found</div>;
+    return (
+      <div class="max-w-screen-xl mx-auto px-4 py-16 text-center">
+        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Service Not Found</h1>
+        <p class="text-gray-600 dark:text-gray-400">The requested service could not be found.</p>
+      </div>
+    );
   }
-  return (
-    <div class="max-w-screen-xl mx-auto mt-0 mb-16 px-4">
-            <img src={service.value.image} alt={service.value.alt} class="w-full max-w-md mb-4" />
 
-      <h1 class="text-3xl font-bold mb-4">{service.value.title}</h1>
-      <p class="text-lg mb-4">{service.value.description}</p>
-      <p>{service.value.details}</p>
-    </div>
+  return (
+    <section class="max-w-screen-xl mx-auto px-4 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        {/* Image Section */}
+        <div class="flex justify-center md:justify-start">
+          <img
+            src={service.value.image}
+            alt={service.value.alt}
+            width={500}
+            height={300}
+            class="w-full max-w-md rounded-lg shadow-md object-cover"
+          />
+        </div>
+
+        {/* Text Section */}
+        <div class="space-y-6">
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+            {service.value.title}
+          </h1>
+          <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">
+            {service.value.description}
+          </p>
+          <p class="text-base md:text-lg text-gray-600 dark:text-gray-400">
+            {service.value.details}
+          </p>
+          {/* Optional Call-to-Action */}
+          <a
+            href="/contact"
+            class="inline-block px-6 py-3 bg-primary-600 text-white font-semibold rounded-md hover:bg-primary-700 transition-colors"
+          >
+            Contact Us for This Service
+          </a>
+        </div>
+      </div>
+    </section>
   );
 });
 
-// Add this to pre-render all slugs
+// Pre-render all slugs
 export const onStaticGenerate: StaticGenerateHandler = async () => {
   return {
     params: services.map(service => ({ slug: service.slug })),
