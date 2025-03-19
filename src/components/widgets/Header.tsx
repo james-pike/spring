@@ -1,10 +1,11 @@
-import { component$, useStore } from "@builder.io/qwik";
+import { $, component$, useSignal, useStore } from "@builder.io/qwik";
 import { useContent } from "@builder.io/qwik-city";
 
 import ToggleTheme from "~/components/common/ToggleTheme";
 import IconChevronDown from "../icons/IconChevronDown";
 import { Logo2 } from "../common/Logo2";
 import MenuModal from "./MenuModal";
+import IconTwitter from "../icons/IconTwitter";
 
 export default component$(() => {
   const store = useStore({
@@ -12,6 +13,24 @@ export default component$(() => {
   });
 
   const { menu } = useContent();
+
+  const isBannerVisible = useSignal(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('bannerClosed') !== 'true';
+    }
+    return true;
+  });
+
+  const show = useSignal(false); // Shared state for the modal
+
+
+
+  const handleCloseBanner = $(() => {
+    isBannerVisible.value = false;
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('bannerClosed', 'true');
+    }
+  });
 
   return (
     <header
@@ -33,7 +52,46 @@ export default component$(() => {
 
 
 
-   
+      {isBannerVisible.value && (
+
+    <div class="w-full h-6 px-2 md:px-7 mx-auto bg-white  flex justify-between items-center max-w-7xl relative">
+      <div>
+        <p>Free Website Audit & SEO Report.</p>
+      </div>
+      <div id="test" class="flex gap-4 sm:flex hidden sm:block">
+        <a
+          class=" px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+          href="tel:+16132188063"
+          onClick$={(event) => event.stopPropagation()} // Prevent link from triggering modal
+        >
+          <IconTwitter />
+          <p class="pl-1">(613) 218-8063</p>
+        </a>
+        <p class="">|</p>
+        <a
+          class=" px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+          href="mailto:info@webdev.ca"
+          onClick$={(event) => event.stopPropagation()} // Prevent link from triggering modal
+        >
+          <IconTwitter />
+          <p class="pl-1">info@webdev.ca</p>
+        </a>
+      </div>
+      <button
+        class="sm:hidden absolute right-2 top-1/2 -translate-y-1/2 hover:text-gray-200 focus:outline-none"
+        onClick$={(event) => {
+          event.stopPropagation(); // Prevent modal trigger
+          handleCloseBanner(); // Close banner
+        }}
+        aria-label="Close banner"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+ 
+)}
 
 
       <div class="relative text-default py-2 px-3 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">

@@ -19,7 +19,7 @@ export default component$(() => {
             <div class="max-w-3xl mx-auto lg:max-w-none">
               <p class="text-xl text-muted mb-5 dark:text-slate-300">
             
-                AdeptLock provides expert locksmith services for homes, businesses, and vehicles. 
+                TestLock provides expert locksmith services for homes, businesses, and vehicles. 
                 From emergency lockouts to advanced security installations, we ensure your safety with precision and care.
                
            

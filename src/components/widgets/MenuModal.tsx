@@ -16,11 +16,11 @@ export default component$(() => {
   // Menu items array structure
   const menuItems = [
     { title: "Home", href: "/", badge: null },
-    { title: "About", href: "/", badge: null },
+    { title: "About", href: "/about/", badge: null },
   
     { 
       title: "Services", 
-      href: "/",
+      href: "/services/",
       hasSubmenu: true,
       subitems: [
         { title: "Web Design", href: "/services/web-design" },
@@ -29,17 +29,17 @@ export default component$(() => {
       ]
     },
     { 
-      title: "Portfolio", 
-      href: "/", 
+      title: "Gallery", 
+      href: "/gallery/", 
       badge: <Badge class="absolute -top-0.1 left-14.5 bg-primary-300 text-white text-xs px-1 py-0 rounded">New</Badge> 
     },
     { 
       title: "Reviews", 
-      href: "/", 
+      href: "/reviews/", 
     },
-    { title: "Technology", href: "/", badge: null },
-    { title: "FAQ", href: "/", badge: null },
-    { title: "Contact Us", href: "/", badge: null }
+   
+    { title: "FAQ", href: "/faq/", badge: null },
+    { title: "Contact Us", href: "/contact/", badge: null }
   ];
 
   // Get services subitems safely
