@@ -55,7 +55,7 @@ export default component$(() => {
           observer.disconnect(); // Disconnect after first intersection
         }
       },
-      { threshold: 0.4 } // Trigger when 10% of the section is visible
+      { threshold: 0.2 } // Trigger when 10% of the section is visible
     );
 
     const element = document.querySelector("#steps-section");
