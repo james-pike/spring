@@ -28,8 +28,19 @@ module.exports = {
         'from-right': 'slideFromRight 0.2s 1',
         'accordion-up': 'collapsible-up 0.2s ease-out 0s 1 normal forwards',
         'accordion-down': 'collapsible-down 0.2s ease-out 0s 1 normal forwards',
+        'fade-up': 'fadeUp 0.5s ease-in forwards',
       },
       keyframes: {
+        fadeUp: {
+          '0%': { 
+            opacity: '0',
+            transform: 'translateY(20px)' 
+          },
+          '100%': { 
+            opacity: '1',
+            transform: 'translateY(0)' 
+          },
+        },
         slideFromLeft: {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(0)' },
