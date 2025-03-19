@@ -27,7 +27,7 @@ const services = [
       slug: "lock-installation"
     },
     {
-      title: "Smart Lock & Security System Installation",
+      title: "Smart Lock & Security System",
       description: "Upgrade your security with the latest smart locks and access control systems.",
       details: "We install high-tech security solutions for homes and businesses.",
       image: "/images/placeholder.png",
