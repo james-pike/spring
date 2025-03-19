@@ -42,7 +42,7 @@ export default component$((props: Props) => {
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
         <ItemGrid
           items={items}
-          defaultIcon={IconStar}
+          
           classes={{
             container: "md:grid-cols-2",
             title: "md:text-[1.3rem]",

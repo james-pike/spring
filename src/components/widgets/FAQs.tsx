@@ -57,7 +57,7 @@ export default component$((props: Props) => {
         <div class="sm:mx-auto hidden sm:block">
           <ItemGrid
             items={items}
-            defaultIcon={IconArrowDownRight}
+            
             classes={{
               panel: "max-w-none",
               ...(classes?.items ?? {}),

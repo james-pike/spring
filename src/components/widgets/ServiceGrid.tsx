@@ -88,7 +88,7 @@ const services = [
               transition-all duration-500
               ${isVisible.value ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             style={{
-              transitionDelay: `${index * 150}ms`,
+              transitionDelay: `${index * 100}ms`,
             }}
           >
             <div class="relative aspect-[2/1]">
