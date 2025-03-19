@@ -3,7 +3,6 @@ import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
 import { ItemGrid } from "~/components/ui/ItemGrid";
 
-import IconStar from "~/components/icons/IconStar";
 
 interface Item {
   title?: string;
