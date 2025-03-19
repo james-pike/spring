@@ -21,7 +21,6 @@ export default component$(() => {
     return true;
   });
 
-  const show = useSignal(false); // Shared state for the modal
 
 
 
