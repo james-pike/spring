@@ -31,7 +31,7 @@ const services = [
       description: "Upgrade your security with the latest smart locks and access control systems.",
       details: "We install high-tech security solutions for homes and businesses.",
       image: "/images/placeholder.png",
-      alt: "Smart Lock & Security System Installation",
+      alt: "Smart Lock & Security Systems",
       slug: "smart-locks"
     },
     {
