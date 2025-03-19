@@ -53,7 +53,7 @@ export default component$((props: Props) => {
             ...(classes?.headline ?? {}),
           }}
         />
-        <div class="sm:mx-auto">
+        <div class="sm:mx-auto hidden sm:block">
           <ItemGrid
            id="faq-grid"
             items={items}
