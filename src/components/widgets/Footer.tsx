@@ -75,9 +75,23 @@ export default component$(() => {
                 TestLock - Safe & Auto Inc
               </Link>
             </div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">
+            <div class="text-sm text-gray-600 mb-4 dark:text-gray-400">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi
               risus tempus nulla
+            </div>
+            <div class="flex gap-2">
+              <a
+                href="/contact"
+                class="inline-block px-6 py-2 bg-primary-600 text-white font-semibold rounded-md hover:bg-primary-700 transition-colors"
+              >
+                Call Now
+              </a>
+              <a
+                href="/contact"
+                class="inline-block px-6 py-2 bg-primary-600 text-white font-semibold rounded-md hover:bg-primary-700 transition-colors"
+              >
+                Schedule Service
+              </a>
             </div>
           </div>
           {links.map(({ title, items }, index) => (
@@ -100,7 +114,7 @@ export default component$(() => {
             </div>
           ))}
         </div>
-        <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
+        <div class="md:flex md:items-center border-t dark:border-gray-500 md:justify-between py-6 md:py-8">
           <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
             {social.map(({ label, href, icon: Icon }, index) => (
               <li key={index}>
@@ -117,13 +131,14 @@ export default component$(() => {
           </ul>
 
           <div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
-            <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
+            {/* <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
             Made by{" "}
             <a class="text-secondary-800 underline dark:text-gray-200" href="https://onwidget.com/">
               {" "}
               onWidget
-            </a>{" "}
-            · All rights reserved.
+            </a>{" "}· All rights reserved. */}
+               © {new Date().getFullYear()} Webdev.ca · All rights reserved
+            
           </div>
         </div>
       </div>
