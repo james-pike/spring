@@ -1,4 +1,4 @@
-import { component$, useVisibleTask$, useSignal } from "@builder.io/qwik";
+import { component$, useVisibleTask$, useSignal, useId } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 
 interface Item {
@@ -11,10 +11,15 @@ interface Item {
 interface Props {
   items?: Array<Item>;
   classes?: Record<string, string>;
+  id?: string; // Optional custom ID for unique observer targeting
 }
 
 export const ItemGrid = component$((props: Props) => {
-  const { items = [], classes = {} } = props;
+  const { items = [], classes = {}, id: customId } = props;
+
+  // Generate a unique ID if none provided
+  const uniqueId = useId();
+  const gridId = customId || `item-grid-${uniqueId}`;
 
   const isVisible = useSignal(false);
 
@@ -23,16 +28,16 @@ export const ItemGrid = component$((props: Props) => {
       (entries) => {
         if (entries[0].isIntersecting) {
           isVisible.value = true;
-          observer.disconnect();
+          observer.disconnect(); // Disconnect after first intersection
         }
       },
       { threshold: 0.1 }
     );
 
-    const element = document.querySelector('#item-grid');
+    const element = document.querySelector(`#${gridId}`);
     if (element) observer.observe(element);
 
-    return () => observer.disconnect();
+    return () => observer.disconnect(); // Cleanup on unmount
   });
 
   const {
@@ -44,8 +49,8 @@ export const ItemGrid = component$((props: Props) => {
   } = classes as Record<string, string>;
 
   return (
-    items.length && (
-      <div id="item-grid" class={twMerge("grid mx-auto gap-8", containerClass)}>
+    items.length > 0 && (
+      <div id={gridId} class={twMerge("grid mx-auto gap-8", containerClass)}>
         {items.map(({ title, description, icon: Icon, classes: itemClasses = {} }, index) => (
           <div
             key={`${title}${index}`}
@@ -53,12 +58,10 @@ export const ItemGrid = component$((props: Props) => {
               "flex flex-row max-w-md",
               panelClass,
               itemClasses?.panel,
-              "transition-all duration-500",
+              "transition-all duration-500 ease-out",
               isVisible.value ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
-            style={{
-              transitionDelay: `${index * 100}ms`,
-            }}
+            style={{ transitionDelay: `${index * 100}ms` }}
           >
             {Icon && (
               <div class="flex justify-center">

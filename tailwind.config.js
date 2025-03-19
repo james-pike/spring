@@ -62,6 +62,8 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/typography"),
     require('tailwindcss-animate'),
+    require('tailwindcss-motion'),
+    require('tailwindcss-intersect'),
      [flowbitePlugin]],
   darkMode: "class",
 };

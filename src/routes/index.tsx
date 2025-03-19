@@ -12,6 +12,8 @@ import { qwikSerialized } from "~/utils/qwikSerialized";
 
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
+const IconArrowDownRight = qwikSerialized(() => import("../components/icons/IconArrowDownRight"));
+
 
 
 import { SITE } from "~/config.mjs";
@@ -88,40 +90,41 @@ export default component$(() => {
             title: "What do I need to start?",
             description:
               "Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.",
-              icon: IconRocket,
+              icon: IconArrowDownRight,
           },
           {
-            icon: IconRocket,
+            icon: IconArrowDownRight,
             title: "How to install the Qwik + Tailwind CSS template?",
             description:
               "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
           },
           {
-            icon: IconRocket,
+            icon: IconArrowDownRight,
             title: "What's something that you don't understand?",
             description:
               "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
           },
           {
-            icon: IconRocket,
+            icon: IconArrowDownRight,
             title: "What's an example of when you changed your mind?",
             description:
               "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
           },
           {
-            icon: IconRocket,
+            icon: IconArrowDownRight,
             title: "What is something that you would like to try again?",
             description:
               "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
           },
           {
-            icon: IconRocket,
+            icon: IconArrowDownRight,
             title: "If you could only ask one question to each person you meet, what would that question be?",
             description:
               "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
           },
         ]}
       />
+
       <Stats />
       <CallToAction />
     </>
