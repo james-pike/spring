@@ -34,10 +34,10 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`sticky top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 bg-gray-100 dark:bg-gray-800 transition-[opacity] ease-in-out ${
+      class={`sticky top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out ${
         store.isScrolling
           ? " md:bg-white/90 md:backdrop-blur-sm dark:md:bg-slate-900/90 bg-white dark:bg-gray-950"
-          : ""
+          : "bg-transparent"
       }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
@@ -53,7 +53,7 @@ export default component$(() => {
 
       {isBannerVisible.value && (
 
-    <div class="w-full h-6 px-2 md:px-7 mx-auto bg-white  flex justify-between items-center max-w-7xl relative">
+    <div class="w-full h-6 px-2 md:px-7 mx-auto bg-white hidden flex justify-between items-center max-w-7xl relative">
       <div>
         <p>Free Website Audit & SEO Report.</p>
       </div>
