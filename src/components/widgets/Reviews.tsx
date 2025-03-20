@@ -40,6 +40,7 @@ export default component$((props: Props) => {
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
      <ReviewGrid/>
+    
       </div>
     </section>
   );

@@ -63,7 +63,7 @@ export default component$(() => {
               </a>
             </Modal.Title>
             <Modal.Description class="text-md font-medium px-2 py-1 text-gray-700 dark:text-gray-200">
-KasLords Of The BlockDag            </Modal.Description>
+Safe & Auto Inc           </Modal.Description>
           </div>
 
           {/* Navigation Content */}

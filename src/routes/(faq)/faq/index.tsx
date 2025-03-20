@@ -45,6 +45,10 @@ export default component$(() => {
           },
         ]}
       />
+
+<div class="max-w-6xl mb-10 mx-auto bg-white h-40">
+      <p>More questions? Contact us and we'll get back to you promptly!</p>
+     </div>
     </>
   );
 });

@@ -18,6 +18,9 @@ export default component$(() => {
     
       }}
       />
+       <div class="max-w-6xl mx-auto mb-10 bg-white h-40">
+      <p>Returning customer? Write a review on Google!</p>
+     </div>
     </>
   );
 });
