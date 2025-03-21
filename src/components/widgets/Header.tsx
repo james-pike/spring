@@ -16,22 +16,11 @@ export default component$(() => {
   const { menu } = useContent();
   const location = useLocation();
 
-  const isBannerVisible = useSignal(() => {
-    if (typeof window !== 'undefined') {
-      return sessionStorage.getItem('bannerClosed') !== 'true';
-    }
-    return true;
-  });
 
 
 
 
-  const handleCloseBanner = $(() => {
-    isBannerVisible.value = false;
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('bannerClosed', 'true');
-    }
-  });
+
 
   return (
     <header
@@ -53,7 +42,7 @@ export default component$(() => {
 
 
 
-      {isBannerVisible.value && (
+    
 
     <div class="w-full h-7 px-2 md:px-7 mx-auto bg-gray-100 dark:bg-gray-800 flex justify-between items-center max-w-7xl relative">
       <div>
@@ -76,21 +65,10 @@ export default component$(() => {
           <p class="pl-1">info@webdev.ca</p>
         </a>
       </div>
-      <button
-        class="sm:hidden absolute right-2 top-1/2 -translate-y-1/2 hover:text-gray-200 focus:outline-none"
-        onClick$={(event) => {
-          event.stopPropagation(); // Prevent modal trigger
-          handleCloseBanner(); // Close banner
-        }}
-        aria-label="Close banner"
-      >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+    
     </div>
  
-)}
+
 
 
       <div class="relative text-default py-2 px-3 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
