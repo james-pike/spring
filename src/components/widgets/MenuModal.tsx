@@ -77,7 +77,7 @@ export default component$(() => {
           {/* Header */}
           <div class="border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1">
-              <a href="/">
+              <a href="/" class="focus:outline-none">
                 <Logo2 />
               </a>
             </Modal.Title>
