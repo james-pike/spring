@@ -52,11 +52,7 @@ export default component$(() => {
     
       ]
     },
-    { 
-      title: "Gallery", 
-      href: "/gallery/", 
-      badge: <Badge class="absolute -top-0.1 left-14.5 bg-primary-300 text-white text-xs px-1 py-0 rounded">New</Badge> 
-    },
+
     { 
       title: "Reviews", 
       href: "/reviews/", 
@@ -80,13 +76,13 @@ export default component$(() => {
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border-0">
           {/* Header */}
-          <div class="border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-850 p-1">
+          <div class="border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1">
               <a href="/">
                 <Logo2 />
               </a>
             </Modal.Title>
-            <Modal.Description class="text-md font-medium px-2 py-1 text-gray-700 dark:text-gray-200">
+            <Modal.Description class="text-lg font-medium px-2 py-1 text-gray-700 dark:text-gray-200">
 Safe & Auto Inc           </Modal.Description>
           </div>
 
@@ -124,7 +120,7 @@ Safe & Auto Inc           </Modal.Description>
             ) : (
               // Main Menu
               <div>
-                <ul class="flex flex-col gap-0 text-lg">
+                <ul class="flex flex-col gap-0 text-xl">
                   {menuItems.map((item) => (
                     <li key={item.title}>
                       {item.hasSubmenu ? (
