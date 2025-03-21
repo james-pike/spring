@@ -74,12 +74,12 @@ export default component$(() => {
               </Link>
             </div>
             <div class="text-sm text-gray-600 mb-4 dark:text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi
-              risus tempus nulla
+            TestLock provides expert locksmith services for homes, businesses, and vehicles.
+            From emergency lockouts to advanced security installations, we ensure your safety with precision and care.
             </div>
             <div class="flex gap-2">
               <a
-                href="/contact"
+                href="tel:+16132188063"
                 class="inline-block px-6 py-2 btn-primary text-white font-semibold rounded-md hover:bg-primary-900 transition-colors"
               >
                 Call Now
@@ -135,7 +135,7 @@ export default component$(() => {
               {" "}
               onWidget
             </a>{" "}· All rights reserved. */}
-               © {new Date().getFullYear()} Webdev.ca · All rights reserved
+               © {new Date().getFullYear()} TestLock - Safe & Auto Inc · All rights reserved
             
           </div>
         </div>

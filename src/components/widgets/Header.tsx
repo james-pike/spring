@@ -17,11 +17,6 @@ export default component$(() => {
   const location = useLocation();
 
 
-
-
-
-
-
   return (
     <header
       id="header"
@@ -52,7 +47,7 @@ export default component$(() => {
         <a
           class=" md:px-3 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
           href="tel:+16132188063"
-          onClick$={(event) => event.stopPropagation()} // Prevent link from triggering modal
+         // Prevent link from triggering modal
         >
           <p class="pl-1">(613) 218-8063</p>
         </a>
@@ -60,7 +55,7 @@ export default component$(() => {
         <a
           class=" md:px-3 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
           href="mailto:info@webdev.ca"
-          onClick$={(event) => event.stopPropagation()} // Prevent link from triggering modal
+        // Prevent link from triggering modal
         >
           <p class="pl-1">info@webdev.ca</p>
         </a>
@@ -191,13 +186,13 @@ export default component$(() => {
             </div>
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
             <a
-                href="https://github.com/onwidget/qwind"
+                href="/contact"
                 class="btn bg-gray-100 ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
                <IconBrandGoogle class="mr-1"/> Free Estimate
               </a>
               <a
-                href="https://github.com/onwidget/qwind"
+                href="tel:+16132188063"
                 class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
                <IconBrandTailwind class="mr-1"/> Call Now
