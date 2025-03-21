@@ -9,7 +9,7 @@ export default component$(() => {
   return (
     <section class="relative md:-mt-[76px] not-prose ">
       <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-      <div class="relative max-w-7xl mx-auto px-2 py-2 sm:px-6">
+      <div class="relative max-w-7xl mx-auto px-1 py-1 sm:px-6">
         <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
         <div class="py-10 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8 px-4 md:px-6 bg-gray-200 dark:bg-gray-800 rounded-lg">
           <div class="basis-1/2 text-center lg:text-left pb-8 md:pb-16 mx-auto">
