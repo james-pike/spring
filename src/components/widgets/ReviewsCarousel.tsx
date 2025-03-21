@@ -77,7 +77,7 @@ export default component$(() => {
             ))}
           </Carousel.Pagination>
           <a
-            href="/classes"
+            href="/reviews"
             class="text-sm font-medium hover:underline"
             style={{ transform: 'translateY(5px)' }} // Fine-tune downward shift
           >

@@ -58,24 +58,22 @@ export default component$(() => {
 
     <div class="w-full h-6 px-2 md:px-7 mx-auto bg-gray-100 dark:bg-gray-800 flex justify-between items-center max-w-7xl relative">
       <div>
-        <p>Free Website Audit & SEO Report.</p>
+        <p>Safe & Auto Inc.</p>
       </div>
-      <div id="test" class="flex gap-4 sm:flex hidden sm:block">
+      <div id="test" class="flex gap-4 sm:flex">
         <a
-          class=" px-3 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+          class=" md:px-3 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
           href="tel:+16132188063"
           onClick$={(event) => event.stopPropagation()} // Prevent link from triggering modal
         >
-          <IconTwitter />
           <p class="pl-1">(613) 218-8063</p>
         </a>
         <p class="">|</p>
         <a
-          class=" px-3 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+          class=" md:px-3 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
           href="mailto:info@webdev.ca"
           onClick$={(event) => event.stopPropagation()} // Prevent link from triggering modal
         >
-          <IconTwitter />
           <p class="pl-1">info@webdev.ca</p>
         </a>
       </div>

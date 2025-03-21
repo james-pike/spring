@@ -1,9 +1,10 @@
-import { component$ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";  // Add useLocation import
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
 
 import ReviewGrid from "./ReviewGrid";
 import ReviewsCarousel from "./ReviewsCarousel";
+import { useLocation } from "@builder.io/qwik-city";
 
 interface Item {
   title?: string;
@@ -24,6 +25,8 @@ interface Props {
 
 export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
+  const loc = useLocation();  // Get current location
+  const isIndexPage = loc.url.pathname === '/';  // Check if we're on root path
 
   return (
     <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
@@ -40,9 +43,7 @@ export default component$((props: Props) => {
         )}
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
-     <ReviewGrid/>
-     <ReviewsCarousel/>
-    
+        {isIndexPage ? <ReviewsCarousel/> : <ReviewGrid/>}
       </div>
     </section>
   );
