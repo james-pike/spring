@@ -1,4 +1,4 @@
-import { $, component$, useSignal, useStore } from "@builder.io/qwik";
+import {  component$, useStore } from "@builder.io/qwik";
 import { useContent, useLocation } from "@builder.io/qwik-city";
 
 import ToggleTheme from "~/components/common/ToggleTheme";
