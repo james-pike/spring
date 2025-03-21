@@ -46,7 +46,7 @@ const services: Service[] = [
   {
     title: "Automotive Locksmith Services",
     description: "Key programming, lock repairs, and ignition services for all vehicle models.",
-    details: "We provide expert automotive locksmith solutions, including key fob replacement.",
+    details: "We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement.",
     image: "/images/placeholder.png",
     alt: "Automotive Locksmith Services",
     slug: "automotive-locksmith"
@@ -78,7 +78,7 @@ export default component$(() => {
   }
 
   return (
-    <section class="max-w-screen-xl mx-auto px-4 md:py-16">
+    <section class="max-w-screen-xl mx-auto px-4 pb-8 md:py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         {/* Image Section */}
         <div class="flex justify-center md:justify-start">
