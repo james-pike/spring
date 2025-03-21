@@ -32,7 +32,7 @@ export default component$((props: Props) => {
   } = props;
 
   return (
-    <section class="relative scroll-mt-16 bg-gray-100 dark:bg-gray-900" {...(id ? { id } : {})}>
+    <section class="relative scroll-mt-16 bg-gray-100 dark:bg-gray-800" {...(id ? { id } : {})}>
     <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
       <slot name="bg">
         <div class={twMerge("absolute inset-0", isDark ? "bg-dark dark:bg-transparent" : "")}></div>
@@ -53,7 +53,7 @@ export default component$((props: Props) => {
             classes={{
               container: "md:grid-cols-2",
               title: "md:text-[1.3rem]",
-              icon: "text-white bg-primary-700 dark:bg-primary-800 rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",
+              icon: "text-white bg-primary-800 dark:bg-primary-800 rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",
               ...(classes?.items ?? {}),
             }}
           />
