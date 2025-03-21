@@ -1,10 +1,10 @@
 export const SITE = {
-  name: "Qwind",
+  name: "Webdev.ca",
 
   title:
-    "Qwind — Free template for Qwik + Tailwind CSS to build your new website.",
+    "Webdev.ca - Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites. ",
   description:
-    "Qwind is a free and ready to start template to make your website using Qwik and Tailwind CSS.",
+  "Webdev.ca - Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites. ",
 
   origin: "https://qwind.pages.dev",
   basePathname: "/",

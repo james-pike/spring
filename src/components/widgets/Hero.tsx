@@ -31,15 +31,15 @@ export default component$(() => {
                 <div class="flex w-full sm:w-auto">
                   <a
                     class="btn btn-primary sm:mb-0 w-full"
-                    href="https://github.com/onwidget/qwind"
-                    target="_blank"
-                    rel="noopener"
+               href="tel:+16132188063"
                   >
                      <IconBrandTailwind class="mr-1"/> {" "} Call - (613) 218-8063
                   </a>
                 </div>
                 <div class="flex w-full sm:w-auto">
+                  <a href="/contact">
                   <button class="btn w-full bg-gray-50 dark:bg-transparent"> <IconBrandGoogle class="mr-1"/> Get A Free Estimate</button>
+                  </a>
                 </div>
               </div>
             </div>
