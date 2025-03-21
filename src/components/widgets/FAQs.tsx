@@ -40,6 +40,8 @@ export default component$((props: Props) => {
           <div class={twMerge("absolute inset-0", isDark ? "bg-dark dark:bg-transparent" : "")}></div>
         </slot>
       </div>
+      {/* <img src="/images/placeholder.png" class="w-full h-24"></img> */}
+
       <div
         class={twMerge("relative text-default px-4 md:px-6 py-12 md:py-16 lg:py-20 mx-auto max-w-6xl", isDark ? "dark" : "")}
       >
@@ -61,7 +63,7 @@ export default component$((props: Props) => {
             classes={{
               panel: "max-w-none",
               ...(classes?.items ?? {}),
-              icon: "text-primary-400"
+              icon: "text-primary-800"
             }}
           />
         </div>

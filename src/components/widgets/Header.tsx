@@ -56,13 +56,13 @@ export default component$(() => {
 
       {isBannerVisible.value && (
 
-    <div class="w-full h-6 px-2 md:px-7 mx-auto bg-white hidden flex justify-between items-center max-w-7xl relative">
+    <div class="w-full h-6 px-2 md:px-7 mx-auto bg-gray-100 dark:bg-gray-800 flex justify-between items-center max-w-7xl relative">
       <div>
         <p>Free Website Audit & SEO Report.</p>
       </div>
       <div id="test" class="flex gap-4 sm:flex hidden sm:block">
         <a
-          class=" px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+          class=" px-3 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
           href="tel:+16132188063"
           onClick$={(event) => event.stopPropagation()} // Prevent link from triggering modal
         >
@@ -71,7 +71,7 @@ export default component$(() => {
         </a>
         <p class="">|</p>
         <a
-          class=" px-3 dark:text-gray-400 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+          class=" px-3 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
           href="mailto:info@webdev.ca"
           onClick$={(event) => event.stopPropagation()} // Prevent link from triggering modal
         >
@@ -123,10 +123,10 @@ export default component$(() => {
               <>
                 <button
                   class="
-                    hover:text-primary-500 dark:hover:text-primary-400 
+                    hover:text-primary-800
                     px-4 py-3 
                     flex items-center 
-                    text-primary-700 dark:text-primary-200 
+                     
                     transition-all duration-200
                   "
                 >
@@ -136,7 +136,7 @@ export default component$(() => {
                       w-3.5 h-3.5 
                       ml-0.5 rtl:ml-0 rtl:mr-0.5 
                       hidden md:inline 
-                      text-primary-500 dark:text-primary-300
+                     
                     "
                   />
                 </button>
@@ -160,9 +160,9 @@ export default component$(() => {
                       <a
                         class="
                           first:rounded-t last:rounded-b 
-                          hover:bg-primary-500 hover:text-white 
-                          dark:hover:bg-primary-500 dark:hover:text-white 
-                          text-primary-600 dark:text-primary-200 
+                          hover:bg-primary-800 hover:text-white 
+                          dark:hover:text-white 
+                  
                           py-2 px-5 
                           block whitespace-no-wrap 
                           transition-all duration-200
@@ -178,8 +178,8 @@ export default component$(() => {
             ) : (
               <a
                 class={`
-                  text-primary-700 dark:text-primary-200 
-                  hover:text-primary-500 dark:hover:text-primary-400 
+                 
+                  hover:text-primary-800 dark:hover:text-primary-800 
                   px-4 py-3 
                   flex items-center 
                   md:hover:bg-primary-50 
@@ -190,7 +190,7 @@ export default component$(() => {
                   after:bottom-[6px] 
                   after:left-1/2 
                   after:h-[2px] 
-                  after:bg-primary-500 
+                  after:bg-primary-800 
                   after:transition-all 
                   after:duration-200 
                   ${isActive
@@ -225,7 +225,7 @@ export default component$(() => {
                 href="https://github.com/onwidget/qwind"
                 class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
-               <IconBrandTailwind class="mr-1"/> (613) 218-8063
+               <IconBrandTailwind class="mr-1"/> Call Now
               </a>
             </span>
           </div>

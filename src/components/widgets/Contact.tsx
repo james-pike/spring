@@ -18,7 +18,7 @@ export default component$((props: Props) => {
             {/* Hero Banner Section */}
             <div
                 class="relative mx-auto max-w-7xl text-white py-16 sm:py-24"
-                style={{ backgroundImage: "url('/images/hero2.webp')" }}
+                style={{ backgroundImage: "url('/images/placeholder.png')" }}
             >
                 <div class="px-6 lg:px-8">
                     <div class="max-w-2xl mx-auto text-center">

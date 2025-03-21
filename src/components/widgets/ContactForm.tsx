@@ -199,7 +199,7 @@ export default component$(() => {
                             <div class="mt-3.5 pb-4 flex">
                                 <button
                                     type="submit"
-                                    class="py-3 w-full px-5 text-sm font-medium text-center text-white rounded-md bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                                    class="py-3 w-full px-5 text-sm font-medium text-center text-white rounded-md bg-primary-800 sm:w-fit hover:bg-primary-900 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                                 >
                                     Send message
                                 </button>

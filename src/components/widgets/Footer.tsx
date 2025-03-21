@@ -80,13 +80,13 @@ export default component$(() => {
             <div class="flex gap-2">
               <a
                 href="/contact"
-                class="inline-block px-6 py-2 bg-primary-600 text-white font-semibold rounded-md hover:bg-primary-700 transition-colors"
+                class="inline-block px-6 py-2 btn-primary text-white font-semibold rounded-md hover:bg-primary-900 transition-colors"
               >
                 Call Now
               </a>
               <a
                 href="/contact"
-                class="inline-block px-6 py-2 bg-white font-semibold rounded-md hover:bg-primary-700 transition-colors"
+                class="inline-block btn-secondary px-6 py-2 bg-white font-semibold rounded-md hover:bg-primary-700 transition-colors"
               >
                 Get A Free Estimate
               </a>
