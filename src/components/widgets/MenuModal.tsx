@@ -92,7 +92,7 @@ Safe & Auto Inc           </Modal.Description>
               <div class="flex flex-col h-full">
                 <div class="flex items-center p-2">
                   <button
-                    class="text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2"
+                    class="text-gray-700 dark:text-gray-200 hover:text-primary-800 p-2"
                     onClick$={() => (isServicesSection.value = false)}
                   >
                     <LuArrowLeft class="h-5 w-5" />
@@ -106,7 +106,7 @@ Safe & Auto Inc           </Modal.Description>
                         href={subitem.href}
                         class={cn(
                           "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
-                          location.url.pathname === subitem.href && "bg-gray-200 dark:bg-gray-700 text-primary-600"
+                          location.url.pathname === subitem.href && "bg-gray-200 dark:bg-gray-700 text-primary-800"
                         )}
                         onClick$={() => (show.value = false)}
                       >
@@ -125,20 +125,20 @@ Safe & Auto Inc           </Modal.Description>
                       {item.hasSubmenu ? (
                         <button
                           class={cn(
-                            "block w-full text-left text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200 flex items-center justify-between",
-                            location.url.pathname.startsWith("/services/") && "bg-gray-100  text-primary-600"
+                            "block w-full text-left text-gray-700 dark:text-gray-200 hover:text-primary-800 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200 flex items-center justify-between",
+                            location.url.pathname.startsWith("/services/") && "bg-gray-100  text-primary-800"
                           )}
                           onClick$={() => (isServicesSection.value = true)}
                         >
                           <span>{item.title}</span>
-                          <LuChevronRight class="h-5 w-5 text-gray-500 group-hover:text-primary-600" />
+                          <LuChevronRight class="h-5 w-5 text-gray-500 group-hover:text-primary-800" />
                         </button>
                       ) : (
                         <a
                           href={item.href}
                           class={cn(
                             "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200 relative",
-                            location.url.pathname === item.href && "bg-gray-200 dark:bg-gray-700 text-primary-600"
+                            location.url.pathname === item.href && "bg-gray-200 dark:bg-gray-700 text-primary-800 dark:text-primary-800"
                           )}
                           onClick$={() => (show.value = false)}
                         >
