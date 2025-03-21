@@ -180,7 +180,7 @@ export default component$(() => {
                   hover:text-primary-800 dark:hover:text-primary-800 
                   px-4 py-3 
                   flex items-center 
-                  md:hover:bg-primary-50 
+                  hover:bg-gray-100 dark:hover:bg-gray-800
                   relative 
                   transition-all duration-200 
                   after:content-[''] 
