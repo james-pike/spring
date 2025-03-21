@@ -86,9 +86,9 @@ export default component$(() => {
               </a>
               <a
                 href="/contact"
-                class="inline-block px-6 py-2 bg-white font-semibold rounded-md hover:bg-primary-700 transition-colors"
+                class="inline-block px-6 py-2 bg-gray-100 font-semibold rounded-md hover:bg-primary-700 transition-colors"
               >
-                Schedule Service
+                Get A Free Estimate
               </a>
             </div>
           </div>
