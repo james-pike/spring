@@ -5,7 +5,6 @@ import { Logo2 } from "../common/Logo2";
 import { useLocation } from "@builder.io/qwik-city";
 import { Modal } from "../ui/Modal";
 import IconHamburger from "../icons/IconHamburger";
-import { Badge } from "../ui/Badge";
 import { buttonVariants } from "../ui/Button";
 
 export default component$(() => {
