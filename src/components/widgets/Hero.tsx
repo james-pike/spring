@@ -35,7 +35,7 @@ export default component$(() => {
                     target="_blank"
                     rel="noopener"
                   >
-                     <IconBrandTailwind class="mr-1"/> {" "} Call (613) 218-8063
+                     <IconBrandTailwind class="mr-1"/> {" "} Call - (613) 218-8063
                   </a>
                 </div>
                 <div class="flex w-full sm:w-auto">
