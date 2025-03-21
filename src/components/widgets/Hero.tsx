@@ -1,6 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import HeroCarousel from "./HeroCarousel";
 import IconBrandTailwind from "../icons/IconBrandTailwind";
+import IconBrandGoogle from "../icons/IconBrandGoogle";
 
 
 
@@ -38,7 +39,7 @@ export default component$(() => {
                   </a>
                 </div>
                 <div class="flex w-full sm:w-auto">
-                  <button class="btn w-full bg-gray-50 dark:bg-transparent">Get An Estimate</button>
+                  <button class="btn w-full bg-gray-50 dark:bg-transparent"> <IconBrandGoogle class="mr-1"/> Get A Free Estimate</button>
                 </div>
               </div>
             </div>
