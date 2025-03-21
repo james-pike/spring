@@ -59,7 +59,7 @@ export default component$(() => {
       <div>
         <p>Safe & Auto Inc.</p>
       </div>
-      <div id="test" class="flex gap-4 sm:flex">
+      <div id="test" class="flex md:gap-4 gap-2 sm:flex">
         <a
           class=" md:px-3 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
           href="tel:+16132188063"
