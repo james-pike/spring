@@ -7,6 +7,7 @@ import { Logo2 } from "../common/Logo2";
 import MenuModal from "./MenuModal";
 import IconTwitter from "../icons/IconTwitter";
 import IconBrandTailwind from "../icons/IconBrandTailwind";
+import IconBrandGoogle from "../icons/IconBrandGoogle";
 
 export default component$(() => {
   const store = useStore({
@@ -216,15 +217,15 @@ export default component$(() => {
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
             <a
                 href="https://github.com/onwidget/qwind"
-                class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
+                class="btn bg-gray-100 ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
-               <IconBrandTailwind/> Get An Estimate
+               <IconBrandGoogle class="mr-1"/> Free Estimate
               </a>
               <a
                 href="https://github.com/onwidget/qwind"
                 class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
-               <IconBrandTailwind/> (613) 218-8063
+               <IconBrandTailwind class="mr-1"/> (613) 218-8063
               </a>
             </span>
           </div>

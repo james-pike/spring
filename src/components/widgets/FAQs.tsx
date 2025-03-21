@@ -61,6 +61,7 @@ export default component$((props: Props) => {
             classes={{
               panel: "max-w-none",
               ...(classes?.items ?? {}),
+              icon: "text-primary-400"
             }}
           />
         </div>
