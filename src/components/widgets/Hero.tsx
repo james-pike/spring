@@ -37,8 +37,11 @@ export default component$(() => {
                   </a>
                 </div>
                 <div class="flex w-full sm:w-auto">
-                  <a href="/contact">
-                  <button class="btn w-full bg-gray-50 dark:bg-transparent"> <IconBrandGoogle class="mr-1"/> Get A Free Estimate</button>
+                  <a
+                    class="btn btn-primary btn-secondary sm:mb-0 w-full"
+               href="/contact"
+                  >
+                     <IconBrandGoogle class="mr-1"/> Get A Free Estimate
                   </a>
                 </div>
               </div>

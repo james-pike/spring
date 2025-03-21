@@ -80,7 +80,7 @@ export default component$(() => {
           </div>
         </div>
         <nav
-  class="items-center w-full md:w-auto hidden md:flex text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:mx-5"
+  class="items-center w-full md:w-auto hidden md:flex text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:mx-5 group"
   aria-label="Main navigation"
 >
   {menu && menu.items ? (
@@ -92,13 +92,38 @@ export default component$(() => {
             {items?.length ? (
               <>
                 <button
-                  class="
+                  class={`
                     hover:text-primary-800
                     px-4 py-3 
                     flex items-center 
-                     
                     transition-all duration-200
-                  "
+                    relative
+                    after:content-[''] 
+                    after:absolute 
+                    after:bottom-[6px] 
+                    after:left-1/2 
+                    after:h-[2px] 
+                    after:bg-primary-800 
+                    after:transition-all 
+                    after:duration-200 
+                    ${
+                      isActive
+                        ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
+                        : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
+                    }
+                  `}
+                  onClick$={() => {
+                    if (location.url.pathname !== "/") {
+                      // Navigate to root and scroll to #services
+                      window.location.href = "/#services";
+                    } else {
+                      // Already on root, just scroll to #services
+                      const servicesSection = document.getElementById("services");
+                      if (servicesSection) {
+                        servicesSection.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }
+                  }}
                 >
                   {text}{" "}
                   <IconChevronDown
@@ -106,7 +131,6 @@ export default component$(() => {
                       w-3.5 h-3.5 
                       ml-0.5 rtl:ml-0 rtl:mr-0.5 
                       hidden md:inline 
-                     
                     "
                   />
                 </button>
@@ -125,30 +149,44 @@ export default component$(() => {
                     py-2
                   "
                 >
-                  {items.map(({ text: text2, href: href2 }, key2) => (
-                    <li key={key2}>
-                      <a
-                        class="
-                          first:rounded-t last:rounded-b 
-                          hover:bg-primary-800 hover:text-white 
-                          dark:hover:text-white 
-                  
-                          py-2 px-5 
-                          block whitespace-no-wrap 
-                          transition-all duration-200
-                        "
-                        href={href2}
-                      >
-                        {text2}
-                      </a>
-                    </li>
-                  ))}
+                  {items.map(({ text: text2, href: href2 }, key2) => {
+                    const isDropdownActive = location.url.pathname === href2;
+                    return (
+                      <li key={key2}>
+                        <a
+                          class={`
+                            first:rounded-t last:rounded-b 
+                            hover:text-primary-800 dark:hover:text-primary-800 
+                            py-2 px-5 
+                            block whitespace-no-wrap 
+                            transition-all duration-200 
+                            relative
+                            after:content-[''] 
+                            after:absolute 
+                            after:bottom-[4px] 
+                            after:left-1/2 
+                            after:h-[2px] 
+                            after:bg-primary-800 
+                            after:transition-all 
+                            after:duration-200 
+                            ${
+                              isDropdownActive
+                                ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
+                                : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
+                            }
+                          `}
+                          href={href2}
+                        >
+                          {text2}
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </>
             ) : (
               <a
                 class={`
-                 
                   hover:text-primary-800 dark:hover:text-primary-800 
                   px-4 py-3 
                   flex items-center 
@@ -163,9 +201,10 @@ export default component$(() => {
                   after:bg-primary-800 
                   after:transition-all 
                   after:duration-200 
-                  ${isActive
-                    ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0"
-                    : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
+                  ${
+                    isActive
+                      ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
+                      : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
                   }
                 `}
                 href={href}

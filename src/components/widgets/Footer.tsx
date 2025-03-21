@@ -135,7 +135,7 @@ export default component$(() => {
               {" "}
               onWidget
             </a>{" "}· All rights reserved. */}
-               © {new Date().getFullYear()} TestLock - Safe & Auto Inc · All rights reserved
+               © {new Date().getFullYear()} Webdev.ca · All rights reserved
             
           </div>
         </div>

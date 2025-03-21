@@ -30,7 +30,7 @@ export default component$(() => {
         },
         {
           title: "Emergency Lockout Assistance",
-          href:"/services/emergrency-lockout"
+          href:"/services/emergency-lockout"
         },
         {
           title: "Key Duplication & Replacement",

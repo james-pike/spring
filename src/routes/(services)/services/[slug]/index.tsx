@@ -22,7 +22,7 @@ const services: Service[] = [
   {
     title: "Key Duplication & Replacement",
     description: "Precision key cutting and duplication for all types of locks.",
-    details: "Get spare keys for your home, office, or vehicle with accuracy and efficiency.",
+    details: "Get spare keys for your home, office, or vehicle with accuracy and efficiency. Get spare keys for your home, office, or vehicle with accuracy and efficiency. Get spare keys for your home, office, or vehicle with accuracy and efficiency. Get spare keys for your home, office, or vehicle with accuracy and efficiency. Get spare keys for your home, office, or vehicle with accuracy and efficiency.",
     image: "/images/placeholder.png",
     alt: "Key Duplication & Replacement",
     slug: "key-duplication"
@@ -30,7 +30,7 @@ const services: Service[] = [
   {
     title: "Lock Installation & Repair",
     description: "Enhance security with professional lock installation and repair services.",
-    details: "We install and fix all types of locks to keep your property secure.",
+    details: "We install and fix all types of locks to keep your property secure. We install and fix all types of locks to keep your property secure. We install and fix all types of locks to keep your property secure. We install and fix all types of locks to keep your property secure.",
     image: "/images/placeholder.png",
     alt: "Lock Installation & Repair",
     slug: "lock-installation"
@@ -38,7 +38,7 @@ const services: Service[] = [
   {
     title: "Smart Lock & Security System Installation",
     description: "Upgrade your security with the latest smart locks and access control systems.",
-    details: "We install high-tech security solutions for homes and businesses.",
+    details: " We install high-tech security solutions for homes and businesses. We install high-tech security solutions for homes and businesses. We install high-tech security solutions for homes and businesses. We install high-tech security solutions for homes and businesses.",
     image: "/images/placeholder.png",
     alt: "Smart Lock & Security System Installation",
     slug: "smart-locks"
@@ -46,7 +46,7 @@ const services: Service[] = [
   {
     title: "Automotive Locksmith Services",
     description: "Key programming, lock repairs, and ignition services for all vehicle models.",
-    details: "We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement.",
+    details: "We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement. We provide expert automotive locksmith solutions, including key fob replacement.",
     image: "/images/placeholder.png",
     alt: "Automotive Locksmith Services",
     slug: "automotive-locksmith"
@@ -54,7 +54,7 @@ const services: Service[] = [
   {
     title: "Safe Opening & Installation",
     description: "Secure storage solutions and expert safe opening services.",
-    details: "We install, repair, and unlock safes while maintaining their integrity.",
+    details: "We install, repair, and unlock safes while maintaining their integrity. We install, repair, and unlock safes while maintaining their integrity. We install, repair, and unlock safes while maintaining their integrity. We install, repair, and unlock safes while maintaining their integrity.",
     image: "/images/placeholder.png",
     alt: "Safe Opening & Installation",
     slug: "safe-services"
@@ -70,7 +70,7 @@ export default component$(() => {
   const service = useService();
   if (!service.value) {
     return (
-      <div class="max-w-screen-xl mx-auto px-4 py-16 text-center">
+      <div class="max-w-screen-xl mx-auto px- py-16 text-center">
         <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Service Not Found</h1>
         <p class="text-gray-600 dark:text-gray-400">The requested service could not be found.</p>
       </div>
@@ -87,7 +87,7 @@ export default component$(() => {
             alt={service.value.alt}
             width={500}
             height={300}
-            class="w-full max-w-md rounded-lg shadow-md object-cover"
+            class="w-full max-w-md rounded-none shadow-md object-cover"
           />
         </div>
 
