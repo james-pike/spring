@@ -103,12 +103,7 @@ export default component$(() => {
             {service.value.details}
           </p>
           {/* Optional Call-to-Action */}
-          <a
-            href="/contact"
-            class="inline-block px-6 py-3 bg-primary-600 text-white font-semibold rounded-md hover:bg-primary-700 transition-colors"
-          >
-            Contact Us for This Service
-          </a>
+      
         </div>
       </div>
     </section>

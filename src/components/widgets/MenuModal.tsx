@@ -13,6 +13,8 @@ export default component$(() => {
   const isServicesSection = useSignal(false);
   const location = useLocation();
 
+ 
+
   // Menu items array structure
   const menuItems = [
     { title: "Home", href: "/", badge: null },
@@ -23,9 +25,31 @@ export default component$(() => {
       href: "/services/",
       hasSubmenu: true,
       subitems: [
-        { title: "Web Design", href: "/services/web-design" },
-        { title: "Development", href: "/services/development" },
-        { title: "SEO", href: "/services/seo" }
+        {
+          title: "Safe Opening & Installation",
+          href:"/services/safe-services"
+        },
+        {
+          title: "Emergency Lockout Assistance",
+          href:"/services/emergrency-lockout"
+        },
+        {
+          title: "Key Duplication & Replacement",
+          href:"/services/key-duplication"
+        },
+        {
+          title: "Lock Installation & Repair",
+          href:"/services/lock-installation"
+        },
+        {
+          title: "Smart Lock & Security System Installation",
+          href:"/services/smart-locks"
+        },
+        {
+          title: "Automotive Locksmith Services",
+          href:"/services/automotive-locksmith"
+        },
+    
       ]
     },
     { 

@@ -6,6 +6,7 @@ import IconChevronDown from "../icons/IconChevronDown";
 import { Logo2 } from "../common/Logo2";
 import MenuModal from "./MenuModal";
 import IconTwitter from "../icons/IconTwitter";
+import IconBrandTailwind from "../icons/IconBrandTailwind";
 
 export default component$(() => {
   const store = useStore({
@@ -112,9 +113,9 @@ export default component$(() => {
   aria-label="Main navigation"
 >
   {menu && menu.items ? (
-    <ul class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium group">
+    <ul class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium">
       {menu.items.map(({ text, href, items }, key) => {
-        const isActive = location.url.pathname === href; // Assuming `location` is available
+        const isActive = location.url.pathname === href; // Assuming `location` is available for active state
         return (
           <li key={key} class={items?.length ? "dropdown" : ""}>
             {items?.length ? (
@@ -192,7 +193,7 @@ export default component$(() => {
                   after:transition-all 
                   after:duration-200 
                   ${isActive
-                    ? "after:w-1/2 after:left-1/4 group-hover:[&:not(:hover)]:after:w-0 group-hover:[&:not(:hover)]:after:left-1/2"
+                    ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0"
                     : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
                   }
                 `}
@@ -213,11 +214,17 @@ export default component$(() => {
               <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
             </div>
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
+            <a
+                href="https://github.com/onwidget/qwind"
+                class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
+              >
+               <IconBrandTailwind/> Get An Estimate
+              </a>
               <a
                 href="https://github.com/onwidget/qwind"
                 class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
               >
-                Download
+               <IconBrandTailwind/> (613) 218-8063
               </a>
             </span>
           </div>

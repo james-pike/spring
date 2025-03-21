@@ -16,8 +16,7 @@ export default component$(() => {
         { title: "Team", href: "#" },
         { title: "Enterprise", href: "#" },
         { title: "Customer stories", href: "#" },
-        { title: "Pricing", href: "#" },
-        { title: "Resources", href: "#" },
+    
       ],
     },
     {
@@ -48,8 +47,7 @@ export default component$(() => {
         { title: "Careers", href: "#" },
         { title: "Press", href: "#" },
         { title: "Inclusion", href: "#" },
-        { title: "Social Impact", href: "#" },
-        { title: "Shop", href: "#" },
+     
       ],
     },
   ];
@@ -88,7 +86,7 @@ export default component$(() => {
               </a>
               <a
                 href="/contact"
-                class="inline-block px-6 py-2 bg-primary-600 text-white font-semibold rounded-md hover:bg-primary-700 transition-colors"
+                class="inline-block px-6 py-2 bg-white font-semibold rounded-md hover:bg-primary-700 transition-colors"
               >
                 Schedule Service
               </a>

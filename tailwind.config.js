@@ -14,7 +14,7 @@ module.exports = {
     extend: {
           '4.5xl': ['2.625rem', { lineHeight: '2.75rem' }],
       colors: {
-        primary: colors.amber,
+        primary: colors.red,
         secondary: colors.gray,
       },
       fontFamily: {

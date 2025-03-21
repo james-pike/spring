@@ -25,6 +25,7 @@ export default component$(() => {
     <>
       <Hero />
       <Services
+      id="services"
   highlight="Services"
   title="Reliable Locksmith Services You Can Trust"
   subtitle="From emergency lockouts to advanced security solutions, we provide fast, professional, and secure locksmith services tailored to your needs."
