@@ -75,7 +75,7 @@ export default component$(() => {
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border-0">
           {/* Header */}
-          <div class="border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 p-1">
+          <div class="border-2 border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1">
               <a href="/" class="focus:outline-none">
                 <Logo2 />
@@ -105,7 +105,7 @@ Safe & Auto Inc           </Modal.Description>
                       <a
                         href={subitem.href}
                         class={cn(
-                          "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
+                          "block text-gray-700 dark:text-gray-200 hover:text-primary-800 dark:hover:text-primary-500 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                           location.url.pathname === subitem.href && "bg-gray-200 dark:bg-gray-700 text-primary-800"
                         )}
                         onClick$={() => (show.value = false)}
@@ -125,7 +125,7 @@ Safe & Auto Inc           </Modal.Description>
                       {item.hasSubmenu ? (
                         <button
                           class={cn(
-                            "block w-full text-left text-gray-700 dark:text-gray-200 hover:text-primary-800 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200 flex items-center justify-between",
+                            "block w-full text-left text-gray-700 dark:text-gray-200 hover:text-primary-800 dark:hover:text-primary-600 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200 flex items-center justify-between",
                             location.url.pathname.startsWith("/services/") && "bg-gray-100  text-primary-800"
                           )}
                           onClick$={() => (isServicesSection.value = true)}
@@ -137,8 +137,8 @@ Safe & Auto Inc           </Modal.Description>
                         <a
                           href={item.href}
                           class={cn(
-                            "block text-gray-700 dark:text-gray-200 hover:text-primary-600 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200 relative",
-                            location.url.pathname === item.href && "bg-gray-200 dark:bg-gray-700 text-primary-800 dark:text-primary-800"
+                            "block text-gray-700 dark:text-gray-200 hover:text-primary-800 dark:hover:text-primary-500 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200 relative",
+                            location.url.pathname === item.href && "bg-white dark:bg-gray-700 text-primary-800 dark:text-primary-500"
                           )}
                           onClick$={() => (show.value = false)}
                         >
