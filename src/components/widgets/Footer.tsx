@@ -64,7 +64,7 @@ export default component$(() => {
   ];
 
   return (
-    <footer class="border-t border-gray-200 dark:border-slate-800">
+    <footer class="border-t border-gray-200 bg-gray-100 dark:bg-gray-800 dark:border-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
           <div class="col-span-12 lg:col-span-4 pr-8">
@@ -86,7 +86,7 @@ export default component$(() => {
               </a>
               <a
                 href="/contact"
-                class="inline-block px-6 py-2 bg-gray-100 font-semibold rounded-md hover:bg-primary-700 transition-colors"
+                class="inline-block px-6 py-2 bg-white font-semibold rounded-md hover:bg-primary-700 transition-colors"
               >
                 Get A Free Estimate
               </a>
