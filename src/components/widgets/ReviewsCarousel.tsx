@@ -82,10 +82,10 @@ export default component$(() => {
           <div class="flex justify-between items-end">
             <Carousel.Pagination class="carousel-pagination justify-start -mt-1">
               {reviews.map((review, index) => (
-                <Carousel.Bullet
-                  key={`${review.author_name}-${index}`}
-                  class="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:!bg-primary-500 data-[active]:scale-125"
-                />
+             <Carousel.Bullet
+             key={`${review.author_name}-${index}`}
+             class="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:!bg-primary-500 data-[active]:scale-125 mx-1" // Added mx-1 for horizontal margin
+           />
               ))}
             </Carousel.Pagination>
             <a
