@@ -6,57 +6,59 @@ import { useLocation } from "@builder.io/qwik-city";
 import { Modal } from "../ui/Modal";
 import IconHamburger from "../icons/IconHamburger";
 import { buttonVariants } from "../ui/Button";
+import IconBrandTailwind from "../icons/IconBrandTailwind";
+import IconBrandGoogle from "../icons/IconBrandGoogle";
 
 export default component$(() => {
   const show = useSignal(false);
   const isServicesSection = useSignal(false);
   const location = useLocation();
 
- 
+
 
   // Menu items array structure
   const menuItems = [
     { title: "Home", href: "/", badge: null },
     { title: "About", href: "/about/", badge: null },
-  
-    { 
-      title: "Services", 
+
+    {
+      title: "Services",
       href: "/services/",
       hasSubmenu: true,
       subitems: [
         {
           title: "Safe Opening & Installation",
-          href:"/services/safe-services"
+          href: "/services/safe-services"
         },
         {
           title: "Emergency Lockout Assistance",
-          href:"/services/emergency-lockout"
+          href: "/services/emergency-lockout"
         },
         {
           title: "Key Duplication & Replacement",
-          href:"/services/key-duplication"
+          href: "/services/key-duplication"
         },
         {
           title: "Lock Installation & Repair",
-          href:"/services/lock-installation"
+          href: "/services/lock-installation"
         },
         {
           title: "Smart Lock & Security System Installation",
-          href:"/services/smart-locks"
+          href: "/services/smart-locks"
         },
         {
           title: "Automotive Locksmith Services",
-          href:"/services/automotive-locksmith"
+          href: "/services/automotive-locksmith"
         },
-    
+
       ]
     },
 
-    { 
-      title: "Reviews", 
-      href: "/reviews/", 
+    {
+      title: "Reviews",
+      href: "/reviews/",
     },
-   
+
     { title: "FAQ", href: "/faq/", badge: null },
     { title: "Contact Us", href: "/contact/", badge: null }
   ];
@@ -81,9 +83,12 @@ export default component$(() => {
                 <Logo2 />
               </a>
             </Modal.Title>
+
             <Modal.Description class="text-lg font-medium px-2 py-1 text-gray-700 dark:text-gray-200">
-Safe & Auto Inc           </Modal.Description>
+              Safe & Auto Inc           </Modal.Description>
           </div>
+
+
 
           {/* Navigation Content */}
           <nav class="mt-0 space-y-4 border-2 border-t-0 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800">
@@ -148,13 +153,36 @@ Safe & Auto Inc           </Modal.Description>
                       )}
                     </li>
                   ))}
-                 
+
                 </ul>
-                
-              
+
+
               </div>
+
             )}
           </nav>
+          <div class="border-1 border-b-2 border-r-2 border-l-2 pb-2 border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900">
+          <div class=" sm:max-w-md mx-2 pt-2 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-2 lg:justify-start lg:m-0 lg:max-w-7xl">
+            <div class="flex w-full sm:w-auto">
+              <a
+                class="btn btn-primary sm:mb-0 w-full"
+                href="tel:+16132188063"
+              >
+                <IconBrandTailwind  /> {" "} Call - (613) 218-8063
+              </a>
+            </div>
+            <div class="flex w-full sm:w-auto">
+              <a
+                class="btn btn-primary btn-secondary sm:mb-0 w-full"
+                href="/contact"
+              >
+                <IconBrandGoogle  /> Get A Free Estimate
+              </a>
+            </div>
+          </div>
+          </div>
+
+      
 
           {/* Close Button */}
           <Modal.Close

@@ -75,7 +75,7 @@ export default component$(() => {
           <div class="flex items-center md:hidden">
             <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
             <a
-                href="tel:+16132188063"
+                href="/contact"
                 class="btn btn-secondary ml-2 mr-1 py-2.5 px-5.5 md:px-4 font-semibold shadow-none text-sm w-auto"
               >
                 Contact
