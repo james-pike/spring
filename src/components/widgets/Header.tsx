@@ -45,7 +45,7 @@ export default component$(() => {
       </div>
       <div id="test" class="flex md:gap-4 gap-2 sm:flex">
         <a
-          class=" md:px-3 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+          class=" md:px-3 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-none text-sm inline-flex items-center"
           href="tel:+16132188063"
          // Prevent link from triggering modal
         >
@@ -53,7 +53,7 @@ export default component$(() => {
         </a>
         <p class="">|</p>
         <a
-          class=" md:px-3 hover:bg-primary-400 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center"
+          class=" md:px-3 hover:bg-gray-100 focus:outline-none  dark:hover:bg-gray-700  focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-none text-sm inline-flex items-center"
           href="mailto:info@webdev.ca"
         // Prevent link from triggering modal
         >
@@ -225,14 +225,14 @@ export default component$(() => {
             </div>
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
             <a
-                href="/contact"
-                class="btn bg-gray-100 ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
+                href="tel:+16132188063"
+                class="btn btn-secondary ml-2 py-2.5 px-5.5 md:px-4 font-semibold shadow-none text-sm w-auto"
               >
                <IconBrandGoogle class="mr-1"/> Free Estimate
               </a>
               <a
                 href="tel:+16132188063"
-                class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto"
+                class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-4 font-semibold shadow-none text-sm w-auto"
               >
                <IconBrandTailwind class="mr-1"/> Call Now
               </a>

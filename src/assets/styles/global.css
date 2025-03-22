@@ -20,11 +20,11 @@
   }
 
   .btn-primary {
-    @apply font-semibold px-6 bg-primary-800 text-white border-primary-600 hover:bg-primary-700 hover:border-primary-800 hover:text-white dark:text-white dark:bg-primary-800 dark:border-primary-700 dark:hover:border-primary-900 dark:hover:bg-primary-900;
+    @apply font-semibold px-6 bg-primary-800 !text-white border-primary-600 hover:bg-primary-700 hover:border-primary-800 hover:text-white dark:text-white dark:bg-primary-800 dark:border-primary-700 dark:hover:border-primary-900 dark:hover:bg-primary-700;
   }
 
   .btn-secondary {
-    @apply font-semibold px-6 bg-gray-200 border-primary-600 hover:bg-primary-700 hover:border-primary-800 hover:text-white  dark:bg-white dark:border-primary-700 dark:hover:border-primary-900 dark:hover:bg-primary-900;
+    @apply font-semibold  !text-white px-6 bg-gray-100 border-gray-200 hover:bg-primary-700 hover:border-primary-800   dark:bg-gray-700 dark:border-gray-600 dark:hover:border-gray-700 dark:hover:bg-gray-600;
   }
 
   [data-aw-toggle-menu] path {
