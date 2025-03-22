@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import Reviews from "~/components/widgets/Reviews";
+import About from "~/components/widgets/About";
 
 
 import { SITE } from "~/config.mjs";
@@ -8,10 +8,10 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
- <Reviews  
-      title="What We Do"
-      subtitle="Now Serving Preston, Wellington & Almonte"
-      highlight="Services"
+ <About  
+      title="About TestLock"
+      subtitle="About page"
+      highlight="About"
       items={[]}
       classes={{
         

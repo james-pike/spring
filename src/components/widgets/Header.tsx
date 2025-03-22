@@ -1,7 +1,6 @@
 import {  component$, useStore } from "@builder.io/qwik";
 import { useContent, useLocation } from "@builder.io/qwik-city";
 
-import ToggleTheme from "~/components/common/ToggleTheme";
 import IconChevronDown from "../icons/IconChevronDown";
 import { Logo2 } from "../common/Logo2";
 import MenuModal from "./MenuModal";
@@ -73,7 +72,6 @@ export default component$(() => {
             <Logo2/>
           </a>
           <div class="flex items-center md:hidden">
-            <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
             <a
                 href="/contact"
                 class="btn btn-secondary ml-2 mr-1 py-2.5 px-5.5 md:px-4 font-semibold shadow-none text-sm w-auto"
@@ -226,7 +224,6 @@ export default component$(() => {
         <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
           <div class="items-center flex justify-between w-full md:w-auto">
             <div class="flex">
-              <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
             </div>
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
             <a

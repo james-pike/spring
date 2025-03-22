@@ -134,7 +134,7 @@ export default component$(() => {
               {" "}
               onWidget
             </a>{" "}· All rights reserved. */}
-               © {new Date().getFullYear()} Webdev.ca · All rights reserved
+               © {new Date().getFullYear()} Testlock.com · All rights reserved
             
           </div>
         </div>

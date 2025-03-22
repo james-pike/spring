@@ -26,7 +26,7 @@ export default component$(() => {
                                         </svg>
                                     </dt>
                                     <dd>
-                                        545 Mavis Island<br />Chicago, IL 99191
+                                        100 Duncan Lane<br />Hastings Highlands, ON K@G5Y5
                                     </dd>
                                 </div>
                                 <div class="flex gap-x-4">
@@ -53,7 +53,7 @@ export default component$(() => {
                                             class="hover:text-gray-900 dark:hover:text-white"
                                             href="tel:+1 (555) 234-5678"
                                         >
-                                            +1 (555) 234-5678
+                                            +1 (613) 218-8063
                                         </a>
                                     </dd>
                                 </div>
@@ -81,7 +81,7 @@ export default component$(() => {
                                             class="hover:text-gray-900 dark:hover:text-white"
                                             href="mailto:hello@example.com"
                                         >
-                                            hello@example.com
+                                            james@webdev.ca
                                         </a>
                                     </dd>
                                 </div>
@@ -105,7 +105,7 @@ export default component$(() => {
                                             type="text"
                                             id="first-name"
                                             class="block p-2.5 w-full text-md text-gray-900 bg-white rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                                            placeholder="Bonnie"
+                                            placeholder="James"
                                             required
                                         />
                                     </div>
@@ -122,7 +122,7 @@ export default component$(() => {
                                             type="text"
                                             id="last-name"
                                             class="block p-2.5 w-full text-md text-gray-900 bg-white rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                                            placeholder="Green"
+                                            placeholder="Pike"
                                             required
                                         />
                                     </div>
@@ -139,7 +139,7 @@ export default component$(() => {
                                             type="email"
                                             id="email"
                                             class="shadow-sm bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                                            placeholder="name@flowbite.com"
+                                            placeholder="james@webdev.ca"
                                             required
                                         />
                                     </div>
@@ -172,7 +172,7 @@ export default component$(() => {
                                         id="topic"
                                         class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     >
-                                        <option selected>Select a topic</option>
+                                        <option selected>Select a service</option>
                                         <option value="US">Switch plans and add-ons</option>
                                         <option value="CA">Billing & Invoice</option>
                                         <option value="DE">Parental controls</option>
@@ -189,7 +189,7 @@ export default component$(() => {
                                     <div class="mt-1.5">
                                         <textarea
                                             id="message"
-                                            rows={4}
+                                            rows={3}
                                             class="block p-2.5 w-full text-md text-gray-900 bg-white rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                             placeholder="Leave a comment..."
                                         ></textarea>
