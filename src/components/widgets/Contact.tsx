@@ -60,7 +60,7 @@ export default component$((props: Props) => {
                                         </svg>
                                     </dt>
                                     <dd>
-                                        100 Duncan Lane<br />Hastings Highlands, ON K@G5Y5
+                                        100 Duncan Lane<br />Hastings Highlands, ON K2G5Y5
                                     </dd>
                                 </div>
                                 <div class="flex gap-x-4">
