@@ -9,6 +9,7 @@ export default component$(() => {
   return (
     <>
  <Reviews  
+ isDark
       title="What We Do"
       subtitle="Now Serving Preston, Wellington & Almonte"
       highlight="Services"

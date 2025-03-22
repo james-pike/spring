@@ -9,6 +9,7 @@ export default component$(() => {
   return (
     <>
 <FAQs
+isDark
   title="Frequently Asked Questions"
   subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
   highlight="FAQs"

@@ -43,22 +43,11 @@ export default component$((props: Props) => {
         )}
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
-           <div class="sm:mx-auto hidden sm:block">
-                <ItemGrid
-                 id="faq-grid"
-                  items={items}
-                  
-                  classes={{
-                    panel: "max-w-none",
-                    ...(classes?.items ?? {}),
-                    icon: "text-primary-800"
-                  }}
-                />
+           <div class="sm:mx-auto h-80 hidden sm:block">
+            <p></p>
               </div>
       
-              <div class="block sm:hidden">
-                <FAQAccordion/>
-              </div>
+           
       </div>
     </section>
   );

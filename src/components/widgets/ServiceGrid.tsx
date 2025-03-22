@@ -104,7 +104,7 @@ const services = [
                 <p class="text-white text-center px-4">{details}</p>
               </div>
             </div>
-            <div class="px-4 py-3 bg-gray-100 dark:bg-gray-800">
+            <div class="px-4 py-3 bg-gray-100 dark:bg-gray-700">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
               <p class="text-sm text-gray-600 dark:text-gray-400">{description}</p>
             </div>

@@ -33,7 +33,7 @@ export default component$(() => {
         <DarkThemeLauncher />
         <ServiceWorkerRegister />
       </head>
-      <body class="text-gray-900 dark:text-slate-300 tracking-tight bg-white max-w-7xl mx-auto  dark:bg-gray-950 antialiased">
+      <body class="text-gray-900 dark:text-slate-300 tracking-tight border-x border-gray-700 bg-white max-w-7xl mx-auto  dark:bg-gray-950 antialiased">
       <ObserverProvider>
         <RouterOutlet />
         </ObserverProvider>

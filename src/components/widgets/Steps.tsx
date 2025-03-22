@@ -65,6 +65,7 @@ export default component$(() => {
   });
 
   return (
+    <div class="max-w-7xl bg-gray-900">
     <section
       id="steps-section"
       class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-800"
@@ -132,5 +133,6 @@ export default component$(() => {
         </div>
       </div>
     </section>
+    </div>
   );
 });
