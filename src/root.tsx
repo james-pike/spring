@@ -32,6 +32,7 @@ export default component$(() => {
         <RouterHead />
         <DarkThemeLauncher />
         <ServiceWorkerRegister />
+        <link rel="preload" href="/images/placeholder.png" as="image" />
       </head>
       <body class="text-gray-900 dark:text-slate-300 tracking-tight md:border-x border-gray-700 bg-white max-w-7xl mx-auto  dark:bg-gray-950 antialiased">
       <ObserverProvider>
