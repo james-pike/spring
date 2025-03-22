@@ -1,8 +1,7 @@
 import { component$ } from "@builder.io/qwik";  // Add useLocation import
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
-import { ItemGrid } from "../ui/ItemGrid";
-import FAQAccordion from "./FAQAccordion";
+
 
 
 
@@ -25,7 +24,7 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "",   items = [], classes = {}, isDark = false } = props;
+  const { id, title = "", subtitle = "", highlight = "",    classes = {}, isDark = false } = props;
 
 
   return (
