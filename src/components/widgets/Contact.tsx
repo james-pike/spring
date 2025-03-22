@@ -70,7 +70,7 @@ export default component$((props: Props) => {
                                         </svg>
                                     </dt>
                                     <dd>
-                                        545 Mavis Island<br />Chicago, IL 99191
+                                        100 Duncan Lane<br />Hastings Highlands, ON K@G5Y5
                                     </dd>
                                 </div>
                                 <div class="flex gap-x-4">
@@ -97,7 +97,7 @@ export default component$((props: Props) => {
                                             class="hover:text-gray-900 dark:hover:text-white"
                                             href="tel:+1 (555) 234-5678"
                                         >
-                                            +1 (555) 234-5678
+                                            +1 (613) 218-8063
                                         </a>
                                     </dd>
                                 </div>
@@ -125,7 +125,7 @@ export default component$((props: Props) => {
                                             class="hover:text-gray-900 dark:hover:text-white"
                                             href="mailto:hello@example.com"
                                         >
-                                            hello@example.com
+                                            james@webdev.ca
                                         </a>
                                     </dd>
                                 </div>
@@ -137,7 +137,7 @@ export default component$((props: Props) => {
                         method="POST"
                         class="px-7 pb-6 pt-8 sm:pb-32 lg:px-8 lg:py-24"
                     >
-                        <div class="mx-auto max-w-xl lg:max-w-lg">
+                         <div class="mx-auto max-w-xl lg:max-w-lg">
                             <div class="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
                                 <div>
                                     <label
@@ -151,7 +151,7 @@ export default component$((props: Props) => {
                                             type="text"
                                             id="first-name"
                                             class="block p-2 w-full text-md text-gray-900 bg-white rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                                            placeholder="Bonnie"
+                                            placeholder="James"
                                             required
                                         />
                                     </div>
@@ -168,7 +168,7 @@ export default component$((props: Props) => {
                                             type="text"
                                             id="last-name"
                                             class="block p-2 w-full text-md text-gray-900 bg-white rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                                            placeholder="Green"
+                                            placeholder="Pike"
                                             required
                                         />
                                     </div>
@@ -185,7 +185,7 @@ export default component$((props: Props) => {
                                             type="email"
                                             id="email"
                                             class="shadow-sm bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                                            placeholder="name@flowbite.com"
+                                            placeholder="james@webdev.ca"
                                             required
                                         />
                                     </div>
@@ -218,7 +218,7 @@ export default component$((props: Props) => {
                                         id="topic"
                                         class="bg-white border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     >
-                                        <option selected>Select a topic</option>
+                                        <option selected>Select a service</option>
                                         <option value="US">Switch plans and add-ons</option>
                                         <option value="CA">Billing & Invoice</option>
                                         <option value="DE">Parental controls</option>
@@ -245,7 +245,7 @@ export default component$((props: Props) => {
                             <div class="mt-3.5 pb-4 flex">
                                 <button
                                     type="submit"
-                                    class="py-3 w-full px-5 text-sm font-medium text-center text-white rounded-md bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                                    class="py-3 w-full px-5 text-sm font-medium text-center text-white rounded-md bg-primary-800 sm:w-fit hover:bg-primary-900 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-800 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                                 >
                                     Send message
                                 </button>
