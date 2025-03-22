@@ -84,7 +84,7 @@ export default component$(() => {
               {reviews.map((review, index) => (
                 <Carousel.Bullet
                   key={`${review.author_name}-${index}`}
-                  class="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:!bg-primary data-[active]:scale-125"
+                  class="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:!bg-primary-500 data-[active]:scale-125"
                 />
               ))}
             </Carousel.Pagination>
