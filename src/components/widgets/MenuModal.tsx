@@ -126,7 +126,7 @@ Safe & Auto Inc           </Modal.Description>
                         <button
                           class={cn(
                             "block w-full text-left text-gray-700 dark:text-gray-200 hover:text-primary-800 dark:hover:text-primary-600 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200 flex items-center justify-between",
-                            location.url.pathname.startsWith("/services/") && "bg-gray-100  text-primary-800"
+                            location.url.pathname.startsWith("/services/") && "bg-gray-100 dark:bg-gray-700  text-primary-800"
                           )}
                           onClick$={() => (isServicesSection.value = true)}
                         >
