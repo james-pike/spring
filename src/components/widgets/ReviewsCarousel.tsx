@@ -93,7 +93,7 @@ export default component$(() => {
               class="text-sm font-medium hover:underline"
               style={{ transform: 'translateY(5px)' }}
             >
-              Browse All Reviews -
+              Browse All Reviews {"\u2192"}
             </a>
           </div>
         </Carousel.Root>
