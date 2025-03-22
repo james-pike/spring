@@ -71,7 +71,7 @@ export default component$(() => {
     <>
       <Modal.Root bind:show={show}>
         <div class="flex items-center hover:bg-primary-100 dark:hover:bg-gray-700">
-          <Modal.Trigger class=" rounded-sm p-2 bg-gray-100 dark:bg-gray-800 border-1 border-gray-200 dark:border-gray-700">
+          <Modal.Trigger class=" rounded-sm p-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
           </Modal.Trigger>
         </div>
@@ -161,8 +161,8 @@ export default component$(() => {
 
             )}
           </nav>
-          <div class="border-1 border-b-2 border-r-2 border-l-2 pb-2 border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900">
-          <div class=" sm:max-w-md mx-2 pt-2 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-2 lg:justify-start lg:m-0 lg:max-w-7xl">
+          <div class="border-1 border-b-2 border-r-2 border-l-2 pb-3 border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900">
+          <div class=" sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:m-0 lg:max-w-7xl">
             <div class="flex w-full sm:w-auto">
               <a
                 class="btn btn-primary sm:mb-0 w-full"
