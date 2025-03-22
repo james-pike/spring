@@ -37,6 +37,7 @@ export default component$((props: Props) => {
                                     ></div>
                                 </div>
                             </div>
+                            <div class="pt-1"></div>
                             <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
                             <dl class="mt-8 space-y-4 text-base/7 text-gray-600 dark:text-gray-300">
                                 <div class="flex gap-x-4">
