@@ -39,7 +39,7 @@ export default component$(() => {
       )}
       onResolved={(reviews) => (
         <Carousel.Root 
-          class="carousel-root bg-gray-50 dark:bg-gray-850 border-gray-300" 
+          class="carousel-root bg-gray-50 dark:bg-gray-900 border-gray-300" 
           slidesPerView={1.2} 
           gap={25} 
           rewind 
