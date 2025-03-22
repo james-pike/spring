@@ -6,7 +6,6 @@ import Features from "~/components/widgets/Features";
 import Steps from "~/components/widgets/Steps";
 import FAQs from "~/components/widgets/FAQs";
 import Stats from "~/components/widgets/Stats";
-import CallToAction from "~/components/widgets/CallToAction";
 
 import { qwikSerialized } from "~/utils/qwikSerialized";
 
@@ -19,6 +18,7 @@ const IconArrowDownRight = qwikSerialized(() => import("../components/icons/Icon
 import { SITE } from "~/config.mjs";
 import Services from "~/components/widgets/Services";
 import Reviews from "~/components/widgets/Reviews";
+import Contact from "~/components/widgets/Contact";
 
 export default component$(() => {
   return (
@@ -127,7 +127,7 @@ export default component$(() => {
       />
 
       <Stats />
-      <CallToAction />
+      <Contact/>
     </>
   );
 });
