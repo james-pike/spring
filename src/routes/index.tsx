@@ -23,6 +23,7 @@ import Contact from "~/components/widgets/Contact";
 export default component$(() => {
   return (
     <>
+    
       <Hero />
       <Services
       id="services"
