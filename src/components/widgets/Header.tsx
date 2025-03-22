@@ -38,7 +38,7 @@ export default component$(() => {
 
     
 
-    <div class="w-full h-7 px-2 md:px-7 mx-auto bg-gray-200 dark:bg-gray-800 flex justify-between items-center max-w-7xl relative">
+    <div class="w-full h-7 px-2 md:px-7 border-b border-gray-700 mx-auto bg-gray-200 dark:bg-gray-800 flex justify-between items-center max-w-7xl relative">
       <div>
         <p>Safe & Auto Inc.</p>
       </div>
@@ -74,7 +74,7 @@ export default component$(() => {
           <div class="flex items-center md:hidden">
             <a
                 href="/contact"
-                class="btn btn-secondary rounded-sm ml-2 mr-1 h-12 py-2.5 px-4 md:px-4 font-semibold shadow-none text-md w-auto"
+                class="btn btn-secondary rounded-sm ml-2 mr-1.5 h-12 py-2.5 px-4 md:px-4 font-semibold shadow-none text-md w-auto"
               >
                 Contact Us
               </a>
