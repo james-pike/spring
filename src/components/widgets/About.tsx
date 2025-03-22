@@ -1,6 +1,8 @@
 import { component$ } from "@builder.io/qwik";  // Add useLocation import
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
+import { ItemGrid } from "../ui/ItemGrid";
+import FAQAccordion from "./FAQAccordion";
 
 
 
@@ -23,7 +25,7 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
+  const { id, title = "", subtitle = "", highlight = "",   items = [], classes = {}, isDark = false } = props;
 
 
   return (
@@ -41,7 +43,22 @@ export default component$((props: Props) => {
         )}
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+           <div class="sm:mx-auto hidden sm:block">
+                <ItemGrid
+                 id="faq-grid"
+                  items={items}
+                  
+                  classes={{
+                    panel: "max-w-none",
+                    ...(classes?.items ?? {}),
+                    icon: "text-primary-800"
+                  }}
+                />
+              </div>
       
+              <div class="block sm:hidden">
+                <FAQAccordion/>
+              </div>
       </div>
     </section>
   );
