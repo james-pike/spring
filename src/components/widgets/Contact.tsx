@@ -2,32 +2,21 @@ import { component$ } from '@builder.io/qwik';
 import { Headline } from '../ui/Headline';
 
 interface Props {
-  id?: string;
-  title?: any;
-  subtitle?: any;
-  highlight?: any;
-  isDark?: boolean;
-  classes?: any;
+    id?: string;
+    title?: any;
+    subtitle?: any;
+    highlight?: any;
+    isDark?: boolean;
+    classes?: any;
 }
 
 export default component$((props: Props) => {
-  const {  title = "", subtitle = "", highlight = "", classes = {} } = props;
+    const { title = "", subtitle = "", highlight = "", classes = {} } = props;
 
     return (
         <>
             {/* Hero Banner Section */}
-            <div
-                class="relative mx-auto max-w-7xl text-white py-16 sm:py-24"
-                style={{ backgroundImage: "url('/images/placeholder.png')" }}
-            >
-                <div class="px-6 lg:px-8">
-                    <div class="max-w-2xl mx-auto text-center">
-                        {/* Placeholder for content */}
-                    </div>
-                </div>
-                {/* Optional background overlay */}
-                <div class="absolute inset-0 bg-black opacity-20"></div>
-            </div>
+      
 
             {/* Form/Contact Section */}
             <div class="relative isolate mx-auto max-w-7xl bg-primary-25 rounded-lg bg-gray-100 dark:bg-gray-800">
@@ -137,7 +126,7 @@ export default component$((props: Props) => {
                         method="POST"
                         class="px-7 pb-6 pt-8 sm:pb-32 lg:px-8 lg:py-24"
                     >
-                         <div class="mx-auto max-w-xl lg:max-w-lg">
+                        <div class="mx-auto max-w-xl lg:max-w-lg">
                             <div class="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
                                 <div>
                                     <label

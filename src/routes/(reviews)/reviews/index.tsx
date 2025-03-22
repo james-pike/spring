@@ -10,9 +10,9 @@ export default component$(() => {
     <>
  <Reviews  
  isDark
-      title="What We Do"
-      subtitle="These reviews are pulled automatically from Google Reviews are filtered to only display 4-5 star ratings."
-      highlight="Services"
+      title="What Our Clients Say"
+      subtitle="These reviews are pulled from Google Reviews are filtered to only display 4-5 star ratings."
+      highlight="Reviews"
       items={[]}
       classes={{
         

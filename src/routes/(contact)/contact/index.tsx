@@ -9,9 +9,9 @@ export default component$(() => {
   return (
     <>
  <Contact  
-      title="Contact Us"
-      subtitle="Now Serving Preston, Wellington & Almonte"
-      highlight="Get In Touch"
+      title="Get A Free Estimate"
+      subtitle="Get in touch for a service call or free estimate."
+      highlight="Contact Us"
       classes={{
         
     
