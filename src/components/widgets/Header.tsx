@@ -76,9 +76,9 @@ export default component$(() => {
             <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
             <a
                 href="tel:+16132188063"
-                class="btn btn-secondary ml-2 py-2.5 px-5.5 md:px-4 font-semibold shadow-none text-sm w-auto"
+                class="btn btn-secondary ml-2 mr-1 py-2.5 px-5.5 md:px-4 font-semibold shadow-none text-sm w-auto"
               >
-               <IconBrandGoogle class="mr-1"/> Free Estimate
+                Contact
               </a>
 
             <MenuModal/>
