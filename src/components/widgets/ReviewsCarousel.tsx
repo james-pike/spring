@@ -49,7 +49,7 @@ export default component$(() => {
             {reviews.map((review, index) => (
               <Carousel.Slide
                 key={`${review.author_name}-${index}`}
-                class="carousel-slide min-h-72 flex flex-col bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden"
+                class="carousel-slide h-64 flex flex-col bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden"
               >
                 {/* Star Rating - Smaller section at the top */}
                 <div class="flex items-center p-2 bg-gray-100 dark:bg-gray-700">
@@ -60,12 +60,12 @@ export default component$(() => {
                   </div>
                 </div>
                 
-                {/* Review Content - Takes up most of the space */}
-                <div class="flex-1 p-4 flex flex-col">
+                {/* Review Content - Takes up most of the space, with truncation */}
+                <div class="flex-1 p-4 flex flex-col overflow-hidden">
                   <h1 class="text-lg font-bold truncate text-gray-900 dark:text-gray-100">
                     {review.author_name}
                   </h1>
-                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 flex-1">
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 line-clamp-3">
                     {review.text}
                   </p>
                   <p class="text-xs text-gray-500 dark:text-gray-600 mt-2">
