@@ -14,8 +14,8 @@ export default component$(() => {
         { title: "Features", href: "#" },
         { title: "Security", href: "#" },
         { title: "Team", href: "#" },
-        { title: "Enterprise", href: "#" },
-        { title: "Customer stories", href: "#" },
+    
+     
     
       ],
     },
@@ -25,12 +25,11 @@ export default component$(() => {
         { title: "Developer API", href: "#" },
         { title: "Partners", href: "#" },
         { title: "Atom", href: "#" },
-        { title: "Electron", href: "#" },
-        { title: "Qwind Desktop", href: "#" },
+ 
       ],
     },
     {
-      title: "Support",
+      title: "Services",
       items: [
         { title: "Docs", href: "#" },
         { title: "Community Forum", href: "#" },
@@ -46,7 +45,7 @@ export default component$(() => {
         { title: "Blog", href: "#" },
         { title: "Careers", href: "#" },
         { title: "Press", href: "#" },
-        { title: "Inclusion", href: "#" },
+   
      
       ],
     },
