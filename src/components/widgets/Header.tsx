@@ -19,10 +19,10 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`sticky top-0 z-40 flex-none mx-auto    w-full border-b border-gray-700 transition-[opacity] ease-in-out ${
+      class={`sticky top-0 z-40 flex-none mx-auto bg-gradient-to-r from-gray-950 to-gray-900    w-full border-b border-gray-700 transition-[opacity] ease-in-out ${
         store.isScrolling
-          ? " md:bg-white/90 md:backdrop-blur-sm   bg-white dark:bg-gray-950"
-          : "bg-white dark:bg-gray-950"
+          ? "    "
+          : ""
       }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
