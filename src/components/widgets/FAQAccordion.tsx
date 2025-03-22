@@ -3,7 +3,7 @@ import { Accordion } from '../ui/Accordion';
 
 export default component$(() => {
   return (
-    <Accordion.Root class="w-full -mt-2 rounded-sm">
+    <Accordion.Root class="w-full -mt-2 px-2 rounded-sm">
       <Accordion.Item>
         <Accordion.Trigger class="text-md">
           Do you offer emergency locksmith services?
