@@ -168,7 +168,7 @@ export default component$(() => {
                 class="btn btn-primary sm:mb-0 w-full"
                 href="tel:+16132188063"
               >
-                <IconBrandTailwind  /> {" "} Call - (613) 218-8063
+                <IconBrandTailwind class="mr-1" /> {" "} Call - (613) 218-8063
               </a>
             </div>
             <div class="flex w-full sm:w-auto">
@@ -176,7 +176,7 @@ export default component$(() => {
                 class="btn btn-primary btn-secondary sm:mb-0 w-full"
                 href="/contact"
               >
-                <IconBrandGoogle  /> Get A Free Estimate
+                <IconBrandGoogle  class="mr-1"/> Get A Free Estimate
               </a>
             </div>
           </div>
