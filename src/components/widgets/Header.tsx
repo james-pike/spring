@@ -74,7 +74,12 @@ export default component$(() => {
           </a>
           <div class="flex items-center md:hidden">
             <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />
-            <button class="btn w-full bg-gray-50 dark:bg-transparent">Contact Us</button>
+            <a
+                href="tel:+16132188063"
+                class="btn btn-secondary ml-2 py-2.5 px-5.5 md:px-4 font-semibold shadow-none text-sm w-auto"
+              >
+               <IconBrandGoogle class="mr-1"/> Free Estimate
+              </a>
 
             <MenuModal/>
           </div>
