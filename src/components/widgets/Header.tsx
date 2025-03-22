@@ -38,7 +38,7 @@ export default component$(() => {
 
     
 
-    <div class="w-full h-7 px-2 md:px-7 border-b border-gray-700 mx-auto bg-gray-200 dark:bg-gray-800 flex justify-between items-center max-w-7xl relative">
+    <div class="w-full h-7 px-2 md:px-7 mx-auto bg-gray-200 dark:bg-gray-800 flex justify-between items-center max-w-7xl relative">
       <div>
         <p>Safe & Auto Inc.</p>
       </div>
