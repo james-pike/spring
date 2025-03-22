@@ -43,7 +43,13 @@ export default component$((props: Props) => {
         )}
       >
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+        
+        <div class="block sm:hidden">
         {isIndexPage ? <ReviewsCarousel/> : <ReviewGrid/>}
+        </div>
+        <div class="hidden sm:block">
+        {<ReviewGrid/>}
+        </div>
       </div>
     </section>
   );

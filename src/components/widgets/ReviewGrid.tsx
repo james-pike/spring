@@ -1,4 +1,5 @@
 import { component$, useResource$, Resource } from '@builder.io/qwik';
+import { useLocation } from '@builder.io/qwik-city';
 import { twMerge } from 'tailwind-merge';
 import { getReviews } from '~/api/GoogleReviews';
 
@@ -24,6 +25,9 @@ interface Props {
 }
 
 export default component$<Props>((props) => {
+  // Get the current location
+  const loc = useLocation();
+
   // Use useResource$ to fetch reviews server-side
   const reviewsResource = useResource$<Review[]>(async ({ cleanup }) => {
     const abortController = new AbortController();
@@ -32,6 +36,10 @@ export default component$<Props>((props) => {
     const reviews = await getReviews();
     return reviews.filter(review => review.rating >= 4); // Filter only 4+ star reviews
   });
+
+  // Determine background class based on route
+  const isIndexRoute = loc.url.pathname === '/';
+  const bgClass = isIndexRoute ? 'bg-gray-800' : 'bg-gray-900';
 
   return (
     <Resource
@@ -53,7 +61,8 @@ export default component$<Props>((props) => {
               >
                 <div
                   class={twMerge(
-                    "flex flex-col p-4 bg-gray-900 shadow-md rounded-lg border border-gray-200 dark:border-gray-700 opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up",
+                    "flex flex-col p-4 shadow-md rounded-lg border border-gray-200 dark:border-gray-700 opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up",
+                    bgClass, // Apply dynamic background class
                     props.classes?.panel
                   )}
                   style={{ animationDelay: `${index * 100}ms` }}

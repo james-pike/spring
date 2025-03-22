@@ -126,7 +126,18 @@ export default component$(() => {
               width={532}
               height={704}
               alt={image.alt}
-              class="inset-0 w-full rounded-md bg-gray-500 object-cover object-top shadow-lg dark:bg-slate-700 md:absolute md:h-full"
+              class="inset-0 w-full rounded-md bg-gray-500 hidden sm:block object-cover object-top shadow-lg dark:bg-slate-700 md:absolute md:h-full"
+              breakpoints={[320, 480, 640, 1024]}
+            />
+          )}
+               {typeof image !== "undefined" && (
+            <Image
+              layout="constrained"
+              src={image.src}
+              width={400}
+              height={400}
+              alt={image.alt}
+              class="inset-0 w-full rounded-md bg-gray-500 block sm:hidden mx-auto object-cover object-top shadow-lg dark:bg-slate-700 md:absolute md:h-full"
               breakpoints={[320, 480, 640, 1024]}
             />
           )}

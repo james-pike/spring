@@ -11,7 +11,7 @@ export default component$(() => {
  <Reviews  
  isDark
       title="What We Do"
-      subtitle="Now Serving Preston, Wellington & Almonte"
+      subtitle="These reviews are pulled automatically from Google Reviews are filtered to only display 4-5 star ratings."
       highlight="Services"
       items={[]}
       classes={{

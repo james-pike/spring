@@ -79,7 +79,7 @@ export default component$(() => {
 <Reviews
   highlight="Reviews"
   title="Hear What Our Clients Say"
-  subtitle="From emergency lockouts to advanced security solutions, we provide fast, professional, and secure locksmith services tailored to your needs."
+  subtitle="These reviews are pulled automatically from Google Reviews and can be filtered to only display 4-5 star ratings."
   items={[]}/>
       <Steps />
       <FAQs
