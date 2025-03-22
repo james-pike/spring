@@ -77,7 +77,7 @@ export default component$(() => {
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border-0">
           {/* Header */}
-          <div class="border-2 border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 p-1">
+          <div class="border border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1">
               <a href="/" class="focus:outline-none">
                 <Logo2 />
@@ -91,7 +91,7 @@ export default component$(() => {
 
 
           {/* Navigation Content */}
-          <nav class="mt-0 space-y-4 border-2 border-t-0 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800">
+          <nav class="mt-0 space-y-4 border border-t-0 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800">
             {isServicesSection.value ? (
               // Services Section
               <div class="flex flex-col h-full">
@@ -161,7 +161,7 @@ export default component$(() => {
 
             )}
           </nav>
-          <div class="border-1 border-b-2 border-r-2 border-l-2 pb-3 border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900">
+          <div class="border border-t-0 pb-3 border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900">
           <div class=" sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:m-0 lg:max-w-7xl">
             <div class="flex w-full sm:w-auto">
               <a
