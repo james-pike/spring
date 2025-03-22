@@ -228,7 +228,7 @@ export default component$(() => {
             </div>
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
             <a
-                href="tel:+16132188063"
+                href="/contact"
                 class="btn btn-secondary ml-2 py-2.5 px-5.5 md:px-4 font-semibold shadow-none text-sm w-auto"
               >
                <IconBrandGoogle class="mr-1"/> Free Estimate
