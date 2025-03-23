@@ -16,7 +16,7 @@ export default component$(() => {
             <h1 class="text-4.5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
               Trusted Locksmith & Security Solutions <br class="hidden lg:block" />{" "}
               {/* <span class="hidden lg:inline">create a website using </span> <span class="text-[#039de1]">Qwik</span> +{" "}
-              <span class="sm:whitespace-nowrap text-[#039de1]">Tailwind CSS</span> */}
+              <span class="sm:whitespace-nowrap text-[#039de1]">Tailwind CfSS</span> */}
             </h1>
             <div class="max-w-3xl mx-auto lg:max-w-none">
               <p class="text-xl text-muted mb-5 dark:text-slate-300">
