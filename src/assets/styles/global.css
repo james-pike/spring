@@ -25,7 +25,7 @@
   }
 
   .btn-secondary {
-    @apply font-semibold  !text-white px-6 bg-gray-100 border-gray-200 hover:bg-primary-700 hover:border-primary-800   dark:bg-gray-700 dark:border-gray-600 dark:hover:border-gray-700 dark:hover:bg-gray-600;
+    @apply font-semibold   px-6 bg-white text-gray-900 border-gray-300 hover:bg-gray-100 hover:border-gray-400  dark:bg-gray-700 dark:border-gray-600 dark:hover:border-gray-700 dark:hover:bg-gray-600;
   }
 
   [data-aw-toggle-menu] path {

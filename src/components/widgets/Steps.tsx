@@ -65,10 +65,10 @@ export default component$(() => {
   });
 
   return (
-    <div class="max-w-7xl bg-gray-900">
+    <div class="max-w-7xl bg-gray-100 dark:bg-gray-900">
     <section
       id="steps-section"
-      class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-800"
+      class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 bg-white dark:bg-gray-800"
     >
       <div class="row-gap-10 grid gap-6 md:grid-cols-2">
         <div class="mb-4 md:mb-0 md:py-4 md:pr-16">

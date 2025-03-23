@@ -11,7 +11,7 @@ export default component$(() => {
       <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
       <div class="relative max-w-7xl mx-auto ">
         <div class="pt-0 md:pt-[40px] pointer-events-none"></div>
-        <div class="py-10 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8 px-4 md:px-8 bg-gradient-to-r from-gray-900 to-gray-800">
+        <div class="py-10 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8 px-4 md:px-8 bg-gradient-to-r from-gray-200 to-gray-100 dark:from-gray-900 dark:to-gray-800">
           <div class="basis-1/2 text-center lg:text-left pb-8 md:pb-16 mx-auto">
             <h1 class="text-4.5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
               Trusted Locksmith & Security Solutions <br class="hidden lg:block" />{" "}
@@ -38,7 +38,7 @@ export default component$(() => {
                 </div>
                 <div class="flex w-full sm:w-auto">
                   <a
-                    class="btn btn-primary btn-secondary sm:mb-0 w-full"
+                    class="btn  btn-secondary sm:mb-0 w-full"
                href="/contact"
                   >
                      <IconBrandGoogle class="mr-1"/> Get A Free Estimate

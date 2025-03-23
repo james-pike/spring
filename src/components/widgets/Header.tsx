@@ -19,7 +19,7 @@ export default component$(() => {
   return (
     <header
       id="header"
-      class={`sticky top-0 z-40 flex-none mx-auto bg-gradient-to-r from-gray-950 to-gray-900    w-full border-b border-gray-800 transition-[opacity] ease-in-out ${
+      class={`sticky top-0 z-40 flex-none mx-auto bg-gradient-to-r from-white to-gray-50 dark:from-gray-950 dark:to-gray-900    w-full border-b border-gray-300 dark:border-gray-800 transition-[opacity] ease-in-out ${
         store.isScrolling
           ? "    "
           : ""
@@ -38,7 +38,7 @@ export default component$(() => {
 
     
 
-    <div class="w-full h-7 px-2 md:px-7 border-b border-gray-800 mx-auto bg-gradient-to-r from-gray-900 to-gray-800 flex justify-between items-center max-w-7xl relative">
+    <div class="w-full h-7 px-2 md:px-7 border-b border-gray-300 dark:border-gray-800 mx-auto bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 flex justify-between items-center max-w-7xl relative">
       <div>
         <p>Safe & Auto Inc.</p>
       </div>
@@ -74,12 +74,12 @@ export default component$(() => {
           <div class="flex items-center md:hidden">
             <a
                 href="/contact"
-                class="btn btn-secondary !bg-gray-800 !border-gray-900 rounded-sm ml-2 mr-1.5 h-12 py-2.5 px-4 md:px-4 font-semibold shadow-none text-md w-auto"
+                class="btn bg-gray-200 border-gray-300 dark:bg-gray-800 dark:border-gray-900 rounded-sm ml-2 mr-1.5 h-12 py-2.5 px-4 md:px-4 font-semibold shadow-none text-md w-auto"
               >
                 Contact Us
               </a>
             
-
+         
             <MenuModal/>
           </div>
         </div>

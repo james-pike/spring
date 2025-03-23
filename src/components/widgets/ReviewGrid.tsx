@@ -39,7 +39,7 @@ export default component$<Props>((props) => {
 
   // Determine background class based on route
   const isIndexRoute = loc.url.pathname === '/';
-  const bgClass = isIndexRoute ? 'bg-gray-800' : 'bg-gray-900';
+  const bgClass = isIndexRoute ? ' bg-white dark:bg-gray-800' : 'bg-white dark:bg-gray-900';
 
   return (
     <Resource
