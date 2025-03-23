@@ -85,7 +85,7 @@ export default component$(() => {
               </a>
               <a
                 href="/contact"
-                class="inline-block btn-secondary px-6 py-2 font-semibold rounded-md transition-colors"
+                class="inline-block btn btn-secondary px-6 py-2 font-semibold rounded-md transition-colors"
               >
                 Get A Free Estimate
               </a>
