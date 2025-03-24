@@ -80,7 +80,7 @@ export default component$(() => {
             ))}
           </Carousel.Scroller>
           <div class="flex justify-between items-end">
-            <Carousel.Pagination class="carousel-pagination justify-start -mt-1">
+            <Carousel.Pagination class="carousel-pagination justify-start ">
               {reviews.map((review, index) => (
              <Carousel.Bullet
              key={`${review.author_name}-${index}`}
