@@ -8,6 +8,7 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
+    <img src="/images/contact" class="h-20"></img>
  <About  
       title="About TestLock"
       subtitle="About page"

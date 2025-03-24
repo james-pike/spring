@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import FAQs from "~/components/widgets/FAQs";
+import FAQ2 from "~/components/widgets/FAQ2";
 
 
 import { SITE } from "~/config.mjs";
@@ -11,10 +11,10 @@ const IconArrowDownRight = qwikSerialized(() => import("~/components/icons/IconA
 export default component$(() => {
   return (
     <>
-    <FAQs
+    <FAQ2
     isDark
       title="Frequently Asked Questions"
-      subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
+      subtitle="Find answers to common inquiries about our cafe."
       highlight="FAQs"
       items={[
         {

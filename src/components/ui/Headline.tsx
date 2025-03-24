@@ -5,10 +5,12 @@ interface Props {
   subtitle?: string;
   highlight?: string;
   classes?: Record<string, string>;
+  align?: "left" | "center" | "right"; // New prop for text alignment
+
 }
 
 export const Headline = (props: Props) => {
-  const { title = "", subtitle = "", highlight = "", classes = {} } = props;
+  const { title = "", subtitle = "", highlight = "", align = "center", classes = {} } = props;
 
   const {
     container: containerClass = "max-w-3xl",
@@ -16,8 +18,14 @@ export const Headline = (props: Props) => {
     subtitle: subtitleClass = "text-xl",
   } = classes;
 
+  const alignmentClass = {
+    left: "text-left",
+    center: "text-center",
+    right: "text-right",
+  }[align] || "text-center"; // Default to "center" if not specified
+
   return (title || subtitle || highlight) ? (
-      <div class={twMerge("mb-8 md:mx-auto md:mb-12 text-center", containerClass)}>
+      <div class={twMerge("mb-8 md:mx-auto md:mb-12 text-center", containerClass,  alignmentClass)}>
         {highlight && (
           <p
             class="text-base text-primary-800 font-bold tracking-wide uppercase"
@@ -35,3 +43,16 @@ export const Headline = (props: Props) => {
       </div>
     ) : null;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
