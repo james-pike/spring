@@ -79,13 +79,13 @@ export default component$(() => {
             <div class="flex gap-2">
               <a
                 href="tel:+16132188063"
-                class="inline-block px-6 py-2 btn-primary text-white font-semibold rounded-md transition-colors"
+                class=" px-4 py-2 btn-primary text-white font-semibold rounded-md transition-colors"
               >
                 Call Now
               </a>
               <a
                 href="/contact"
-                class="inline-block btn btn-secondary px-6 py-2 font-semibold rounded-md transition-colors"
+                class=" btn-secondary px-4 py-2 text-white font-semibold rounded-md transition-colors"
               >
                 Get An Estimate
               </a>
