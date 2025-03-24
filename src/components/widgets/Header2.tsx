@@ -30,6 +30,31 @@ export default component$(() => {
       }
     }}
   >
+    
+
+    <div class="w-full h-7 px-2 md:px-7 border-b border-gray-300 dark:border-gray-700 mx-auto bg-gradient-to-r from-gray-100 to-white dark:from-gray-900 dark:to-gray-700 flex justify-between items-center max-w-7xl relative">
+        <div>
+          <p>Safe & Auto Inc.</p>
+        </div>
+        <div id="test" class="flex md:gap-4 gap-2 sm:flex">
+          <a
+            class=" md:px-3 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-none text-sm inline-flex items-center"
+            href="tel:+16132188063"
+          // Prevent link from triggering modal
+          >
+            <p class="pl-1">(613) 218-8063</p>
+          </a>
+          <p class="">|</p>
+          <a
+            class=" md:px-3 hover:bg-gray-100 focus:outline-none  dark:hover:bg-gray-700  focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-none text-sm inline-flex items-center"
+            href="mailto:info@webdev.ca"
+          // Prevent link from triggering modal
+          >
+            <p class="pl-1">info@webdev.ca</p>
+          </a>
+        </div>
+
+      </div>
   
         <div class="relative text-default py-2 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
           <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
