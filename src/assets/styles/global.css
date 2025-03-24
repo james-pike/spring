@@ -54,39 +54,51 @@
     animation-play-state: paused;
   }
   
-  .animate-hero-text {
-    animation: fadeUp 0.2s ease-out forwards;
-    animation-delay: 0s; /* Slight delay for smoother entrance */
-    opacity: 0; /* Ensures it starts hidden until animation begins */
-  }
+ 
 
   .animate-1 {
     animation: fadeUp 0.2s ease-out forwards;
     animation-delay: 0.1s; /* Slight delay for smoother entrance */
     opacity: 0; /* Ensures it starts hidden until animation begins */
+    animation-iteration-count: 1; /* Runs once */
+
   }
 
   .animate-2 {
     animation: fadeUp 0.2s ease-out forwards;
     animation-delay: 0.2s; /* Slight delay for smoother entrance */
     opacity: 0; /* Ensures it starts hidden until animation begins */
+    animation-iteration-count: 1; /* Runs once */
+
   }
 
   .animate-3 {
     animation: fadeUp 0.5s ease-out forwards;
     animation-delay: 0.3s; /* Slight delay for smoother entrance */
     opacity: 0; /* Ensures it starts hidden until animation begins */
+    animation-iteration-count: 1; /* Runs once */
+
   }
 
   .animate-4 {
     animation: fadeUp 0.5s ease-out forwards;
     animation-delay: 0.4s; /* Slight delay for smoother entrance */
     opacity: 0; /* Ensures it starts hidden until animation begins */
+    animation-iteration-count: 1; /* Runs once */
+
   }
 
   .animate-5 {
     animation: fadeUp 0.5s ease-out forwards;
     animation-delay: 0.5s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+    animation-iteration-count: 1; /* Runs once */
+
+  }
+
+   .animate-hero-text {
+    animation: fadeUp 0.5s ease-out forwards;
+    animation-delay: 0s; /* Slight delay for smoother entrance */
     opacity: 0; /* Ensures it starts hidden until animation begins */
   }
 
