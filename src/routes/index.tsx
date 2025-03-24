@@ -29,13 +29,13 @@ export default component$(() => {
       id="services"
   highlight="Services"
   title="Reliable Locksmith Services You Can Trust"
-  subtitle="From emergency lockouts to advanced security solutions, we provide fast, professional, and secure locksmith services tailored to your needs."
+  subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
   items={[]}/>
 
       <Features
   highlight="Features"
   title="Reliable Locksmith Services You Can Trust"
-  subtitle="From emergency lockouts to advanced security solutions, we provide fast, professional, and secure locksmith services tailored to your needs."
+  subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
   items={[
     {
       title: "24/7 Emergency Services",
@@ -80,7 +80,7 @@ export default component$(() => {
 <Reviews
   highlight="Reviews"
   title="What Our Clients Say"
-  subtitle="These reviews are pulled from Google Reviews and can be filtered to only display 4-5 star ratings."
+  subtitle="These reviews are pulled from Google Reviews and filtered to only display 4-5 star ratings."
   items={[]}/>
       <Steps />
     <FAQs

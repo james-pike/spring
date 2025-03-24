@@ -45,8 +45,6 @@ export default component$((props: Props) => {
            <div class="sm:mx-auto h-80 hidden sm:block">
             <p></p>
               </div>
-      
-           
       </div>
     </section>
   );
