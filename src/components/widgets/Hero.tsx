@@ -23,7 +23,7 @@ export default component$(() => {
               <p class="text-xl text-muted mb-5 dark:text-slate-300">
 
                 TestLock provides expert locksmith services for homes, businesses, and vehicles.
-                From emergency lockouts to advanced security installations, we ensure your safety with precision and care.
+                From emergency lockouts to security installations, we ensure your safety with precision and care.
 
 
               </p>
