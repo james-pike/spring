@@ -1,7 +1,7 @@
 import { component$, useSignal } from "@builder.io/qwik";
 import { LuX, LuArrowLeft, LuChevronRight } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
-import { Logo2 } from "../common/Logo2";
+import { Logo2, LogoStatic } from "../common/Logo2";
 import { useLocation } from "@builder.io/qwik-city";
 import { Modal } from "../ui/Modal";
 import IconHamburger from "../icons/IconHamburger";
@@ -80,7 +80,7 @@ export default component$(() => {
           <div class="border border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1">
               <a href="/" class="focus:outline-none">
-                <Logo2 />
+                <LogoStatic />
               </a>
             </Modal.Title>
 
