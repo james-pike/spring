@@ -2,7 +2,6 @@ import { component$ } from "@builder.io/qwik";
 import HeroCarousel from "./HeroCarousel";
 import IconBrandTailwind from "../icons/IconBrandTailwind";
 import IconBrandGoogle from "../icons/IconBrandGoogle";
-import LogoClouds from "./LogoClouds";
 
 
 
@@ -62,7 +61,6 @@ export default component$(() => {
             <HeroCarousel />
           </div>
         </div>
-        <LogoClouds/>
       </div>
     </section>
   );
