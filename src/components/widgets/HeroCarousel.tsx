@@ -16,12 +16,7 @@ export default component$(() => {
     
 
     
-      {/* <Carousel.Slide>
-        <img src="/images/hero7.jpg" alt="..." />
-      </Carousel.Slide>
-      <Carousel.Slide>
-        <img src="/images/hero6.jpg" alt="..." />
-      </Carousel.Slide> */}
+ 
     </Carousel>
   )
 })

@@ -80,7 +80,7 @@ export default component$(() => {
   return (
     <div class="max-w-7xl  bg-gray-100 dark:bg-gray-800">
     <section class="max-w-6xl mx-auto px-4 pb-8 md:py-16 bg-gray-100 dark:bg-gray-800">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0 items-start">
         {/* Image Section */}
         <div class="flex justify-center md:justify-start">
           <img
