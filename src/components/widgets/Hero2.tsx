@@ -7,7 +7,7 @@ import LogoClouds from "./LogoClouds";
 export default component$(() => {
   return (
     <section>
-      <div class="grid grid-cols-2 grid-rows-[84%_16%] h-[calc(100vh-85.66667px)]">
+      <div class="grid grid-cols-2 grid-rows-[84%_16%] h-[calc(100vh-113.66667px)]">
         <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 flex items-center px-8">
           <div>
             <h1 class="text-4.5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200 animate-hero-text">
