@@ -36,7 +36,7 @@ export default component$(() => {
         <div class="bg-red-400 h-full w-full">
           <Carousel />
         </div>
-        <div class="bg-blue-500 dark:from-gray-900 dark:to-gray-700 col-span-2 flex items-center">
+        <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 col-span-2 flex items-center">
             <LogoClouds/>
         </div>
       </div>
