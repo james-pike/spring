@@ -12,6 +12,32 @@
 
 @layer components {
 
+
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-hero-text {
+    animation: fadeUp 0.5s ease-out forwards;
+    animation-delay: 0.2s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+  }
+
+  .animate-hero-subtitle {
+    animation: fadeUp 0.5s ease-out forwards;
+    animation-delay: 0.4s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+  }
+  
+
   .btn {
     @apply inline-flex items-center justify-center rounded-md shadow-md border-gray-400 border bg-transparent font-medium text-center text-lg text-gray-700 leading-snug transition py-3 px-2 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-slate-300 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800;
   }
@@ -81,6 +107,7 @@
 
 
 
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -104,4 +131,9 @@
 /* Initial state before animation */
 .invisible {
   visibility: hidden;
+}
+
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
