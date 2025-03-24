@@ -24,10 +24,69 @@
       transform: translateY(0);
     }
   }
+
+  .animate-scroll {
+    display: flex; /* Change from grid to flex for smooth scrolling */
+    animation: scroll-left 20s linear infinite; /* 20s duration, adjust as needed */
+    animation-delay: 1s; /* Slight delay for smoother entrance */
+
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  
+  /* Keyframes for the scrolling effect */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Move half the width for seamless looping */
+    }
+  }
+  
+  /* Ensure the parent container hides overflow */
+  .relative.overflow-hidden {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Optional: Pause animation on hover */
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
   
   .animate-hero-text {
-    animation: fadeUp 0.5s ease-out forwards;
+    animation: fadeUp 0.2s ease-out forwards;
     animation-delay: 0s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+  }
+
+  .animate-1 {
+    animation: fadeUp 0.2s ease-out forwards;
+    animation-delay: 0.1s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+  }
+
+  .animate-2 {
+    animation: fadeUp 0.2s ease-out forwards;
+    animation-delay: 0.2s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+  }
+
+  .animate-3 {
+    animation: fadeUp 0.5s ease-out forwards;
+    animation-delay: 0.3s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+  }
+
+  .animate-4 {
+    animation: fadeUp 0.5s ease-out forwards;
+    animation-delay: 0.4s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+  }
+
+  .animate-5 {
+    animation: fadeUp 0.5s ease-out forwards;
+    animation-delay: 0.5s; /* Slight delay for smoother entrance */
     opacity: 0; /* Ensures it starts hidden until animation begins */
   }
 
