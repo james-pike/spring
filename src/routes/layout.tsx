@@ -1,12 +1,12 @@
 import { component$, Slot } from "@builder.io/qwik";
 
 import Footer from "~/components/widgets/Footer";
-import Header from "~/components/widgets/Header";
+import Header2 from "~/components/widgets/Header2";
 
 export default component$(() => {
   return (
     <>
-      <Header />
+      <Header2 />
       <main>
         <Slot />
       </main>

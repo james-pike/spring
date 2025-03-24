@@ -19,12 +19,17 @@ import { SITE } from "~/config.mjs";
 import Services from "~/components/widgets/Services";
 import Reviews from "~/components/widgets/Reviews";
 import Contact from "~/components/widgets/Contact";
+import Hero2 from "~/components/widgets/Hero2";
 
 export default component$(() => {
   return (
     <>
-    
-      <Hero />
+    <div class="hidden md:block">
+      <Hero2/>
+      </div>
+      <div class="block md:hidden">
+      <Hero/>
+      </div>
       <Services
       id="services"
   highlight="Services"
