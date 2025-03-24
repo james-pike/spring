@@ -86,7 +86,7 @@ export default component$(() => {
     <FAQs
    
       title="Frequently Asked Questions"
-      subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
+      subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque."
       highlight="FAQs"
       items={[
         {
