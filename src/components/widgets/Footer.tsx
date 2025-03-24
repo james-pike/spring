@@ -85,7 +85,7 @@ export default component$(() => {
               </a>
               <a
                 href="/contact"
-                class=" btn-secondary px-4 py-2 text-white font-semibold rounded-md transition-colors"
+                class=" btn-secondary px-4 py-2 dark:text-white font-semibold rounded-md transition-colors"
               >
                 Get An Estimate
               </a>
