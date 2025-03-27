@@ -1,6 +1,4 @@
 import { component$ } from "@builder.io/qwik";
-import IconBrandTailwind from "../icons/IconBrandTailwind";
-import IconBrandGoogle from "../icons/IconBrandGoogle";
 import Carousel from "../ui/Carousel";
 import LogoClouds from "./LogoClouds";
 import { Button } from "../ui/Button";

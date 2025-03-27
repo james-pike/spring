@@ -1,8 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { twMerge } from "tailwind-merge";
 import { Headline } from "~/components/ui/Headline";
-import { ItemGrid } from "~/components/ui/ItemGrid";
-import FAQAccordion from "./FAQAccordion";
+
 import { useLocation } from "@builder.io/qwik-city";
 import PriceTabs from "./PriceTabs";
 
