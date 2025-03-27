@@ -19,7 +19,7 @@ export default component$(() => {
   // Menu items array structure
   const menuItems = [
     { title: "Home", href: "/", badge: null },
-    { title: "About", href: "/about/", badge: null },
+    { title: "About", href: "/pricing/", badge: null },
 
     {
       title: "Services",

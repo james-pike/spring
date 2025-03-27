@@ -1,16 +1,29 @@
 import { component$, Slot } from "@builder.io/qwik";
+import { ThemeBaseColors, ThemeBorderRadiuses, ThemeFonts, ThemeModes, ThemePrimaryColors, ThemeStyles } from "@qwik-ui/utils";
 
 import Footer from "~/components/widgets/Footer";
-import Header2 from "~/components/widgets/Header2";
+import Header from "~/components/widgets/Header";
+import { ThemeProvider } from "~/lib/provider";
 
 export default component$(() => {
   return (
     <>
-      <Header2 />
+    <ThemeProvider        attribute="class"
+              enableSystem={false}
+              themes={[
+                ...Object.values(ThemeFonts),
+                ...Object.values(ThemeModes),
+                ...Object.values(ThemeStyles),
+                ...Object.values(ThemeBaseColors),
+                ...Object.values(ThemePrimaryColors),
+                ...Object.values(ThemeBorderRadiuses),
+              ]}>
+      <Header />
       <main>
         <Slot />
       </main>
       <Footer />
+      </ThemeProvider>
     </>
   );
 });

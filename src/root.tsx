@@ -1,4 +1,4 @@
-import { component$, useStyles$ } from "@builder.io/qwik";
+import { component$, useContextProvider, useStore, useStyles$ } from "@builder.io/qwik";
 import { QwikCityProvider, RouterOutlet, ServiceWorkerRegister } from "@builder.io/qwik-city";
 
 import { RouterHead } from "~/components/common/RouterHead";
@@ -8,6 +8,10 @@ import { DarkThemeLauncher } from "~/components/common/DarkThemeLauncher";
 // import "@fontsource-variable/inter";
 import styles from  "~/assets/styles/global.css?inline";
 import { ObserverProvider } from "./components/common/ObserverProvider";
+import { APP_STATE_CONTEXT_ID } from "./components/widgets/AppStateContext";
+import { AppState } from "./components/widgets/AppStateType";
+import { ThemeProvider } from "./lib/provider";
+import { ThemeBaseColors, ThemeBorderRadiuses, ThemeFonts, ThemeModes, ThemePrimaryColors, ThemeStyles } from "@qwik-ui/utils";
 
 export default component$(() => {
   /**
@@ -18,6 +22,15 @@ export default component$(() => {
    */
 
   useStyles$(styles);
+
+  const appState = useStore<AppState>({
+    featureFlags: {
+      showStyled: true,
+      showNeumorphic: import.meta.env.DEV,
+    },
+  });
+
+  useContextProvider(APP_STATE_CONTEXT_ID, appState);
 
   return (
     <QwikCityProvider>
@@ -30,7 +43,7 @@ export default component$(() => {
           rel="stylesheet"
         /> */}
         <RouterHead />
-        <DarkThemeLauncher />
+        {/* <DarkThemeLauncher /> */}
         <ServiceWorkerRegister />
                 <script
           dangerouslySetInnerHTML={`
@@ -47,10 +60,14 @@ export default component$(() => {
         />
         <link rel="preload" href="/images/placeholder.png" as="image" />
         <link rel="preload" href="/images/contact.jpg" as="image" />
+ 
       </head>
-      <body class="text-gray-900 dark:text-slate-300 tracking-tight md:border-x  border-gray-300 dark:border-gray-700 bg-white max-w-7xl mx-auto  dark:bg-gray-950 antialiased">
+      <body class=" tracking-tight md:border-x-2 mx-auto  bg-background dark:bg-muted max-w-7xl   antialiased">
       <ObserverProvider>
-        <RouterOutlet />
+          <RouterOutlet />
+      
+   
+       
         </ObserverProvider>
       </body>
     </QwikCityProvider>

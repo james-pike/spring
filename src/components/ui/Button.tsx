@@ -1,7 +1,6 @@
 import { component$, type PropsOf, Slot } from '@builder.io/qwik';
 import { cn } from '@qwik-ui/utils';
-import { cva, VariantProps } from 'class-variance-authority';
-
+import { cva, type VariantProps } from 'class-variance-authority';
 
 export const buttonVariants = cva(
   'inline-flex items-center justify-center rounded text-sm font-medium transition-all duration-100 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',

@@ -1,7 +1,7 @@
 # Menu
 
 ## [Home](/)
-## [About](/about)
+## [About](/pricing)
 
 ## Services
 

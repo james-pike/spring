@@ -5,7 +5,7 @@ import IconBrandGoogle from "../icons/IconBrandGoogle";
 
 export default component$(() => {
   return (
-    <section class="relative md:-mt-[76px] not-prose">
+    <section class="relative md:-mt-[76px] not-prose bg-background">
       <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
       <div class="relative max-w-7xl mx-auto">
         <div class="pt-0 md:pt-[40px] pointer-events-none"></div>
