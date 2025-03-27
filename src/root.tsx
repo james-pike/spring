@@ -9,8 +9,7 @@ import styles from  "~/assets/styles/global.css?inline";
 import { ObserverProvider } from "./components/common/ObserverProvider";
 import { APP_STATE_CONTEXT_ID } from "./components/widgets/AppStateContext";
 import { AppState } from "./components/widgets/AppStateType";
-import { ThemeProvider } from "./lib/provider";
-import { ThemeBaseColors, ThemeBorderRadiuses, ThemeFonts, ThemeModes, ThemePrimaryColors, ThemeStyles } from "@qwik-ui/utils";
+
 
 export default component$(() => {
   /**
