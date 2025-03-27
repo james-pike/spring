@@ -28,7 +28,7 @@ export default component$((props: Props) => {
     title = null,
     subtitle = null,
     highlight = null,
-    items = [],
+
     isDark = false,
     classes = {},
   } = props;
