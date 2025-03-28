@@ -3,6 +3,7 @@ import { Headline } from "~/components/ui/Headline"; // Adjust the import path
 import { SectionWrapper } from "./SectionWrapper";
 import { ItemGrid } from "../ui/ItemGrid";
 import { twMerge } from "tailwind-merge";
+import { Card } from "../ui/Card";
 
 interface Item {
   title?: string;
@@ -27,12 +28,13 @@ export default component$((props: Props) => {
   return (
     <SectionWrapper id={id} isDark={isDark} classes={classes}>
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+      <Card.Root>
       <ItemGrid
         id="features-grid" // Unique ID for this instance
         items={items}
         classes={{
           container: twMerge(
-            "md:grid-cols-2 p-4 sm:p-6 md:p-8 border rounded-base",
+            "md:grid-cols-2 p-4 sm:p-6 md:p-8 ",
             isDark ? "bg-background" : "bg-muted"
           ),
           title: "md:text-[1.3rem]",
@@ -40,6 +42,7 @@ export default component$((props: Props) => {
           ...(classes?.items ?? {}),
         }}
       />
+      </Card.Root>
     </SectionWrapper>
   );
 });

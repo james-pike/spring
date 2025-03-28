@@ -1,6 +1,7 @@
 import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Accordion } from '../ui/Accordion';
 import { twMerge } from "tailwind-merge";
+import { Card } from '../ui/Card';
 
 interface Props {
   isDark?: boolean;
@@ -54,6 +55,7 @@ export default component$(({ isDark }: Props) => {
   ];
 
   return (
+    <Card.Root>
     <Accordion.Root
       id="accordion-root"
       class={twMerge(
@@ -81,5 +83,6 @@ export default component$(({ isDark }: Props) => {
         </Accordion.Item>
       ))}
     </Accordion.Root>
+    </Card.Root>
   );
 });
