@@ -3,6 +3,7 @@ import { Headline } from "~/components/ui/Headline"; // Adjust the import path
 import { SectionWrapper } from "./SectionWrapper";
 import { ItemGrid } from "../ui/ItemGrid";
 import { twMerge } from "tailwind-merge";
+import FAQAccordion from "./FAQAccordion";
 
 interface Item {
   title?: string;
@@ -27,6 +28,8 @@ export default component$((props: Props) => {
   return (
     <SectionWrapper id={id} isDark={isDark} classes={classes}>
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+      
+      <div class="hidden sm:block">
       <ItemGrid
         id="faq-grid" // Unique ID for this instance
         items={items}
@@ -40,6 +43,13 @@ export default component$((props: Props) => {
           ...(classes?.items ?? {}),
         }}
       />
+         </div>
+
+      <div class="block sm:hidden">
+      <FAQAccordion isDark={isDark} />
+
+
+      </div>
     </SectionWrapper>
   );
 });

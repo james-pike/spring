@@ -1,7 +1,12 @@
 import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Accordion } from '../ui/Accordion';
+import { twMerge } from "tailwind-merge";
 
-export default component$(() => {
+interface Props {
+  isDark?: boolean;
+}
+
+export default component$(({ isDark }: Props) => {
   const isVisible = useSignal(false);
 
   useVisibleTask$(() => {
@@ -12,7 +17,7 @@ export default component$(() => {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 } // Trigger when 10% of the accordion is visible
+      { threshold: 0 }
     );
 
     const element = document.querySelector('#accordion-root');
@@ -49,22 +54,28 @@ export default component$(() => {
   ];
 
   return (
-    <Accordion.Root id="accordion-root" class="w-full -mt-2 px-1 rounded-sm">
+    <Accordion.Root
+      id="accordion-root"
+      class={twMerge(
+        "w-full -mt-2 rounded-sm p-4 sm:p-6 md:p-8 border",
+        isDark ? "bg-background" : "bg-muted"
+      )}
+    >
       {accordionItems.map(({ trigger, content }, index) => (
         <Accordion.Item
           key={index}
-          class={`
-            transition-all duration-500
-            ${isVisible.value ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
-          `}
+          class={twMerge(
+            "transition-all duration-500 border-b last:border-none",
+            isVisible.value ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          )}
           style={{
             transitionDelay: `${index * 100}ms`, // Stagger by 100ms per item
           }}
         >
-          <Accordion.Trigger class="text-md">
+          <Accordion.Trigger class="text-md font-medium">
             {trigger}
           </Accordion.Trigger>
-          <Accordion.Content>
+          <Accordion.Content class="text-sm text-muted-foreground">
             {content}
           </Accordion.Content>
         </Accordion.Item>

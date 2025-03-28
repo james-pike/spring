@@ -87,7 +87,7 @@ export default component$(() => {
         items={[]} />
       <Steps />
       <FAQ
-
+isDark
         title="Frequently Asked Questions"
         subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque."
         highlight="FAQs"
