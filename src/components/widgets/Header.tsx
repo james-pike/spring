@@ -16,9 +16,6 @@ export default component$(() => {
   const location = useLocation();
 
 
-
-
-
   return (
     <header
     id="header"
