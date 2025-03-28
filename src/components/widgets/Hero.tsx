@@ -9,7 +9,7 @@ export default component$(() => {
     <section class="relative overflow-hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[85%_15%] min-h-[calc(100vh-89px)]">
         {/* Text Content */}
-        <div class="relative z-10 flex items-center justify-center bg-gradient-to-r from-muted to-background dark:from-background dark:to-muted px-4 py-8 md:px-8 md:py-0 order-1 md:order-1">
+        <div class="relative z-10 flex items-center justify-center bg-gradient-to-r from-muted to-background dark:from-background dark:to-muted px-4 py-8 md:px-8 md:py-0 order-2 md:order-1">
           <div class="text-center md:text-left">
             <h1 class="text-5xl font-bold tracking-tighter text-balance sm:text-6xl md:text-6xl lg:text-7xl mb-4 animate-hero-text">
               Premium <span class="text-primary">Web Design</span> Solutions
@@ -28,7 +28,7 @@ export default component$(() => {
           </div>
         </div>
         {/* Carousel */}
-        <div class="relative order-2 md:order-2 h-64 sm:h-80 md:h-full">
+        <div class="relative order-1 md:order-2 h-64 sm:h-80 md:h-full">
           <Carousel />
         </div>
         {/* LogoClouds */}
