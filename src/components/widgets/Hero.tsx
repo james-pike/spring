@@ -5,33 +5,31 @@ import { Button } from "../ui/Button";
 import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
-  const headerHeight = useSignal("66px"); // Default fallback value
-  const carouselHeight = useSignal(""); // No initial height, let CSS handle fallback
+  const carouselHeight = useSignal("192px"); // Initial h-48 equivalent
 
   useVisibleTask$(() => {
-    const header = document.querySelector("header");
     const textSection = document.querySelector(".text-section");
 
-    const updateHeights = () => {
-      if (header && textSection) {
+    const updateCarouselHeight = () => {
+      if (textSection) {
         const viewportHeight = document.documentElement.clientHeight;
-        const headerPx = header.getBoundingClientRect().height;
+        const headerHeight = 66; // Hardcoded
         const textHeight = textSection.getBoundingClientRect().height;
+        const availableHeight = viewportHeight - headerHeight - textHeight;
 
-        headerHeight.value = `${headerPx}px`;
-        const availableHeight = viewportHeight - headerPx - textHeight;
+        // Set carousel height with a minimum of 100px
         carouselHeight.value = `${Math.max(100, availableHeight)}px`;
       }
     };
 
     // Initial calculation
-    updateHeights();
+    updateCarouselHeight();
 
-    // Debounced resize handler for refresh/scroll stability
+    // Debounced resize/scroll handler
     let timeout: string | number | NodeJS.Timeout | undefined;
     const debouncedUpdate = () => {
       clearTimeout(timeout);
-      timeout = setTimeout(updateHeights, 100); // 100ms debounce
+      timeout = setTimeout(updateCarouselHeight, 100); // 100ms debounce
     };
 
     window.addEventListener("resize", debouncedUpdate);
@@ -47,16 +45,8 @@ export default component$(() => {
   return (
     <section class="relative overflow-hidden">
       <div
-        class="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[85%_15%]"
-        style={{ minHeight: `calc(100vh - ${headerHeight.value})` }}
+        class="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[85%_15%] min-h-[calc(100vh-66px)]"
       >
-        {/* Carousel */}
-        <div
-          class="relative order-1 md:order-2 min-h-[100px]"
-          style={{ height: carouselHeight.value || "auto" }}
-        >
-          <Carousel />
-        </div>
         {/* Text Content */}
         <div class="relative z-10 flex items-center justify-center bg-gradient-to-r from-muted to-background dark:from-background dark:to-muted px-4 py-8 md:px-8 md:py-0 order-2 md:order-1 text-section">
           <div class="text-center md:text-left">
@@ -75,6 +65,13 @@ export default component$(() => {
               </Link>
             </div>
           </div>
+        </div>
+        {/* Carousel */}
+        <div
+          class="relative order-1 md:order-2 min-h-[100px]"
+          style={{ height: carouselHeight.value }}
+        >
+          <Carousel />
         </div>
         {/* LogoClouds */}
         <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 col-span-1 md:col-span-2 flex items-center justify-center py-4 order-3">
