@@ -11,22 +11,17 @@ export const SectionWrapper = component$((props: SectionWrapperProps) => {
   const { id, isDark, classes = {} } = props;
 
   return (
-    <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
-      <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
-        <Slot name="bg">
-          <div
-            class={twMerge(
-              "absolute inset-0",
-              isDark ? "bg-muted" : ""
-            )}
-          ></div>
-        </Slot>
-      </div>
+    <section
+      class={twMerge(
+        "relative scroll-mt-16",
+        isDark ? "bg-muted" : "" // Apply background color directly to the section
+      )}
+      {...(id ? { id } : {})}
+    >
       <div
         class={twMerge(
           "relative mx-auto max-w-5xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default",
-          classes?.container,
-          isDark ? "dark" : ""
+          classes?.container
         )}
       >
         <Slot />
