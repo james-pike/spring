@@ -17,9 +17,10 @@ import { SITE } from "~/config.mjs";
 
 import Reviews from "~/components/widgets/Reviews";
 import Contact from "~/components/widgets/Contact";
-import Hero2 from "~/components/widgets/Hero2";
+import Hero2 from "~/components/widgets/Hero";
 import Pricing from "~/components/widgets/Pricing";
 import Services from "~/components/widgets/Services";
+import Hero from "~/components/widgets/Hero";
 
 export default component$(() => {
   return (
@@ -29,7 +30,7 @@ export default component$(() => {
     
   
        
-          <Hero2 />
+          <Hero />
       
        
     
