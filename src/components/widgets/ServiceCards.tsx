@@ -81,6 +81,7 @@ export default component$(() => {
             <Card.Root
               class={`
                 relative block h-full rounded-lg shadow-lg outline-1 duration-150 ease-step
+                 transform transition-all duration-500 ease-out
                 hover:scale-[1.025] focus:scale-[1.025]
                 ${isVisible.value ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               style={{ transitionDelay: `${index * 100}ms`}}>
