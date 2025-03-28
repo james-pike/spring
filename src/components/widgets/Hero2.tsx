@@ -11,10 +11,10 @@ export default component$(() => {
         {/* Text Content */}
         <div class="relative z-10 flex items-center justify-center bg-gradient-to-r from-muted to-background dark:from-background dark:to-muted px-4 py-8 md:px-8 md:py-0 order-2 md:order-1">
           <div class="text-center md:text-left">
-            <h1 class="text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl mb-4 animate-hero-text">
+            <h1 class="text-5xl font-bold tracking-tighter text-balance sm:text-6xl md:text-6xl lg:text-7xl mb-4 animate-hero-text">
               Premium <span class="text-primary">Web Design</span> Solutions
             </h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 animate-hero-subtitle max-w-2xl mx-auto md:mx-0">
+            <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground mb-6 animate-hero-subtitle max-w-2xl mx-auto md:mx-0">
               Transform your online presence with custom web design and development services—stunning, fast, and secure websites for your business.
             </p>
             <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start animate-hero-buttons">
