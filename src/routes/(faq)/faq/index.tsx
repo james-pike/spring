@@ -12,7 +12,7 @@ export default component$(() => {
   return (
     <>
     <FAQ
-    isDark
+    
       title="Frequently Asked Questions"
       subtitle="Find answers to common inquiries about our cafe."
       highlight="FAQs"
