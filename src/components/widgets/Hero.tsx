@@ -6,7 +6,7 @@ import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   const headerHeight = useSignal("66px"); // Default fallback value
-  const carouselHeight = useSignal("40vh"); // Default to a percentage for initial render
+  const carouselHeight = useSignal(""); // No initial height, let CSS handle fallback
 
   useVisibleTask$(() => {
     const header = document.querySelector("header");
@@ -14,17 +14,12 @@ export default component$(() => {
 
     const updateHeights = () => {
       if (header && textSection) {
-        // Use clientHeight for more consistent viewport measurement
         const viewportHeight = document.documentElement.clientHeight;
         const headerPx = header.getBoundingClientRect().height;
         const textHeight = textSection.getBoundingClientRect().height;
 
-        // Ensure header height is set first
         headerHeight.value = `${headerPx}px`;
-
-        // Calculate carousel height as remaining space
         const availableHeight = viewportHeight - headerPx - textHeight;
-        // Prevent negative or shrinking values with a minimum
         carouselHeight.value = `${Math.max(100, availableHeight)}px`;
       }
     };
@@ -40,7 +35,6 @@ export default component$(() => {
     };
 
     window.addEventListener("resize", debouncedUpdate);
-    // Listen for scroll to catch Safari's pull-to-refresh
     window.addEventListener("scroll", debouncedUpdate);
 
     return () => {
@@ -58,8 +52,8 @@ export default component$(() => {
       >
         {/* Carousel */}
         <div
-          class="relative order-1 md:order-2"
-          style={{ height: carouselHeight.value }}
+          class="relative order-1 md:order-2 min-h-[100px]"
+          style={{ height: carouselHeight.value || "auto" }}
         >
           <Carousel />
         </div>

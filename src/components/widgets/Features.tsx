@@ -53,7 +53,7 @@ export default component$((props: Props) => {
             classes={{
               container: "md:grid-cols-2",
               title: "md:text-[1.3rem]",
-              icon: "text-white bg-primary-800 dark:bg-primary-800 rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",
+              icon: "text-white bg-primary dark:bg-primary rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",
               ...(classes?.items ?? {}),
             }}
           />
