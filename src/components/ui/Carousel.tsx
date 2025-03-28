@@ -2,7 +2,7 @@ import { component$, useSignal, useStyles$, useVisibleTask$ } from '@builder.io/
 import { Carousel } from '@qwik-ui/headless';
 
 const slides = [
-  { src: '/images/wizard.jpg', alt: 'Locksmith Service 1' },
+  { src: '/images/hero1.png', alt: 'Locksmith Service 1' },
   { src: '/images/wixard.png', alt: 'Security Installation' },
   // Fallback or additional slide
 ];
