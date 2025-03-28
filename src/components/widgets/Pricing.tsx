@@ -66,8 +66,6 @@ export default component$((props: Props) => {
           }}
         />
    
-
-        
           <PriceTabs/>
      
       </div>

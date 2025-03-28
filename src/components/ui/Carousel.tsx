@@ -1,5 +1,11 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
+import { component$, useSignal, useStyles$, useVisibleTask$ } from '@builder.io/qwik';
 import { Carousel } from '@qwik-ui/headless';
+
+const slides = [
+  { src: '/images/wizard.jpg', alt: 'Locksmith Service 1' },
+  { src: '/images/wixard.png', alt: 'Security Installation' },
+  // Fallback or additional slide
+];
 
 export default component$(() => {
   useStyles$(`
@@ -22,11 +28,38 @@ export default component$(() => {
     }
     .carousel-buttons {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
       z-index: 10;
       display: flex;
-      gap: 10px;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+    .carousel-button {
+      pointer-events: auto;
+      width: 50px; /* Increased from 40px */
+      height: 50px; /* Increased from 40px */
+      background: rgba(128, 128, 128, 0.7); /* Gray with transparency */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+    }
+    .carousel-button:hover {
+      background: rgba(128, 128, 128, 1); /* Solid gray on hover */
+    }
+    .carousel-button i {
+      font-size: 24px; /* Larger arrows */
+    }
+    .carousel-prev {
+      margin-left: 10px;
+    }
+    .carousel-next {
+      margin-right: 10px;
     }
     .carousel-conditional {
       height: 100%;
@@ -34,18 +67,26 @@ export default component$(() => {
     }
   `);
 
-  const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink'];
+  const isPlaying = useSignal<boolean>(false);
+
+  useVisibleTask$(() => {
+    isPlaying.value = true;
+  });
 
   return (
-    <Carousel.Root class="carousel-root" gap={30}>
+    <Carousel.Root class="carousel-root" gap={30} autoPlayIntervalMs={3500} bind:autoplay={isPlaying}>
       <div class="carousel-buttons">
-        <Carousel.Previous>Prev</Carousel.Previous>
-        <Carousel.Next>Next</Carousel.Next>
+        <Carousel.Previous class="carousel-button carousel-prev">
+          <i class="fas fa-arrow-left" />
+        </Carousel.Previous>
+        <Carousel.Next class="carousel-button carousel-next">
+          <i class="fas fa-arrow-right" />
+        </Carousel.Next>
       </div>
       <div class="carousel-conditional">
-        {colors.map((color) => (
-          <Carousel.Slide key={color} class="carousel-slide">
-            <img src="/images/placeholder.png" alt={`Slide ${color}`} />
+        {slides.map((slide, index) => (
+          <Carousel.Slide key={index} class="carousel-slide">
+            <img src={slide.src} alt={slide.alt} />
           </Carousel.Slide>
         ))}
       </div>

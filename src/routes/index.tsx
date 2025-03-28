@@ -1,7 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-
-import Hero from "~/components/widgets/Hero";
 import Features from "~/components/widgets/Features";
 import Steps from "~/components/widgets/Steps";
 import FAQs from "~/components/widgets/FAQs";
@@ -16,11 +14,12 @@ const IconArrowDownRight = qwikSerialized(() => import("../components/icons/Icon
 
 
 import { SITE } from "~/config.mjs";
-import Services from "~/components/widgets/Services";
+
 import Reviews from "~/components/widgets/Reviews";
 import Contact from "~/components/widgets/Contact";
 import Hero2 from "~/components/widgets/Hero2";
 import Pricing from "~/components/widgets/Pricing";
+import Services from "~/components/widgets/Services";
 
 export default component$(() => {
   return (
@@ -29,23 +28,25 @@ export default component$(() => {
 
     
   
-        <div class="hidden md:block">
+       
           <Hero2 />
-        </div>
-        <div class="block md:hidden">
-          <Hero />
-        </div>
-        <Pricing  id="services"
-          highlight="Services"
-          title="Reliable Locksmith Services You Can Trust"
-          subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
-          items={[]} />
+      
+       
+    
+
         <Services
           id="services"
           highlight="Services"
           title="Reliable Locksmith Services You Can Trust"
           subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
           items={[]} />
+     
+        <Pricing  id="services"
+          highlight="Services"
+          title="Reliable Locksmith Services You Can Trust"
+          subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
+          items={[]} />
+    
 
         <Features
           highlight="Features"

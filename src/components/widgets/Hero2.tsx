@@ -6,42 +6,34 @@ import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
-    <section>
-      <div class="grid grid-cols-2 grid-rows-[84%_16%] h-[calc(100vh-90.66667px)] ">
-        <div class="bg-gradient-to-r  from-muted to-background dark:from-background dark:to-muted flex items-center px-8">
-          <div>
-            <h1 class="text-4.5xl md:text-7xl font-bold  tracking-tighter leading-tighter mb-4  animate-hero-text">
-              Premium 
-              <br class="hidden md:block" /> <span class="text-primary">Web Design</span>
-              <br class="hidden md:block" />Solutions <br class="hidden lg:block" />{" "}
+    <section class="relative overflow-hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[85%_15%] min-h-[calc(100vh-90.66667px)]">
+        {/* Text Content */}
+        <div class="relative z-10 flex items-center justify-center bg-gradient-to-r from-muted to-background dark:from-background dark:to-muted px-4 py-8 md:px-8 md:py-0 order-2 md:order-1">
+          <div class="text-center md:text-left">
+            <h1 class="text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl mb-4 animate-hero-text">
+              Premium <span class="text-primary">Web Design</span> Solutions
             </h1>
-            <div class="max-w-3xl mx-auto lg:max-w-none">
-              <p class="text-xl mb-6 animate-hero-subtitle text-muted-foreground">
-              Transform your online presence with our custom web design and development services. We help business create stunning, fast, and secure websites.
-              </p>
-              <div class="max-w-xs sm:max-w-md animate-hero-buttons m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:m-0 lg:max-w-7xl">
-                <div class="flex w-full gap-3 sm:w-auto">
-                <Link href="/quote">
-                <Button>
-                  Get A Quote
-                </Button>
-                </Link>
-                <Link href="/quote">
-                <Button look="secondary">
-                  Book A Free Consultation
-                </Button>
-                </Link>
-                </div>
-               
-              </div>
+            <p class="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 animate-hero-subtitle max-w-2xl mx-auto md:mx-0">
+              Transform your online presence with custom web design and development services—stunning, fast, and secure websites for your business.
+            </p>
+            <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start animate-hero-buttons">
+              <Link href="/quote" class="w-full sm:w-auto">
+                <Button size="lg" class="w-full">Get A Quote</Button>
+              </Link>
+              <Link href="/quote" class="w-full sm:w-auto">
+                <Button look="secondary" size="lg" class="w-full">Book A Free Consultation</Button>
+              </Link>
             </div>
           </div>
         </div>
-        <div class="bg-red-400 h-full w-full">
+        {/* Carousel */}
+        <div class="relative order-1 md:order-2 h-64 sm:h-80 md:h-full">
           <Carousel />
         </div>
-        <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 col-span-2 flex items-center">
-            <LogoClouds/>
+        {/* LogoClouds */}
+        <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 col-span-1 md:col-span-2 flex items-center justify-center py-4 order-3">
+          <LogoClouds />
         </div>
       </div>
     </section>
