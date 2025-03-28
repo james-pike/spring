@@ -1,5 +1,4 @@
 import { component$, useResource$, Resource } from '@builder.io/qwik';
-import { useLocation } from '@builder.io/qwik-city';
 import { twMerge } from 'tailwind-merge';
 import { getReviews } from '~/api/GoogleReviews';
 
@@ -27,7 +26,7 @@ interface Props {
 
 export default component$<Props>((props) => {
   // Get the current location
-  const loc = useLocation();
+
 
   // Use useResource$ to fetch reviews server-side
   const reviewsResource = useResource$<Review[]>(async ({ cleanup }) => {
@@ -39,10 +38,8 @@ export default component$<Props>((props) => {
   });
 
   // Determine background class based on route
-  const isIndexRoute = loc.url.pathname === '/';
-  const bgClass = isIndexRoute
-    ? 'bg-white dark:bg-gray-800'
-    : 'bg-white dark:bg-gray-900';
+
+
 
   return (
     <Resource
