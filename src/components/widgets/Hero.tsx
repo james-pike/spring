@@ -6,22 +6,48 @@ import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   const headerHeight = useSignal("66px"); // Default fallback value
-  const carouselHeight = useSignal("192px"); // Default carousel height (h-48 in px)
+  const carouselHeight = useSignal("40vh"); // Default to a percentage for initial render
 
   useVisibleTask$(() => {
-    const header = document.querySelector("header"); // Adjust selector to match your header
-    if (header) {
-      const headerPx = header.getBoundingClientRect().height;
-      headerHeight.value = `${headerPx}px`;
+    const header = document.querySelector("header");
+    const textSection = document.querySelector(".text-section");
 
-      // Calculate available height after header and text/buttons
-      const textSection = document.querySelector(".text-section"); // Class added below
-      if (textSection) {
+    const updateHeights = () => {
+      if (header && textSection) {
+        // Use clientHeight for more consistent viewport measurement
+        const viewportHeight = document.documentElement.clientHeight;
+        const headerPx = header.getBoundingClientRect().height;
         const textHeight = textSection.getBoundingClientRect().height;
-        const availableHeight = window.innerHeight - headerPx - textHeight;
-        carouselHeight.value = `${availableHeight}px`;
+
+        // Ensure header height is set first
+        headerHeight.value = `${headerPx}px`;
+
+        // Calculate carousel height as remaining space
+        const availableHeight = viewportHeight - headerPx - textHeight;
+        // Prevent negative or shrinking values with a minimum
+        carouselHeight.value = `${Math.max(100, availableHeight)}px`;
       }
-    }
+    };
+
+    // Initial calculation
+    updateHeights();
+
+    // Debounced resize handler for refresh/scroll stability
+    let timeout: string | number | NodeJS.Timeout | undefined;
+    const debouncedUpdate = () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(updateHeights, 100); // 100ms debounce
+    };
+
+    window.addEventListener("resize", debouncedUpdate);
+    // Listen for scroll to catch Safari's pull-to-refresh
+    window.addEventListener("scroll", debouncedUpdate);
+
+    return () => {
+      window.removeEventListener("resize", debouncedUpdate);
+      window.removeEventListener("scroll", debouncedUpdate);
+      clearTimeout(timeout);
+    };
   });
 
   return (
