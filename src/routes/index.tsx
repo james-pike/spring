@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import Steps from "~/components/widgets/Steps";
 import Stats from "~/components/widgets/Stats";
 import { qwikSerialized } from "~/utils/qwikSerialized";
 import { SITE } from "~/config.mjs";
@@ -11,6 +10,7 @@ import Services from "~/components/widgets/Services";
 import Hero from "~/components/widgets/Hero";
 import Features from "~/components/widgets/Features";
 import FAQ from "~/components/widgets/FAQ";
+import Steps from "~/components/widgets/Steps";
 
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
@@ -87,7 +87,12 @@ export default component$(() => {
         title="What Our Clients Say"
         subtitle="These reviews are pulled from Google Reviews and filtered to only display 4-5 star ratings."
         items={[]} />
-      <Steps />
+      <Steps       
+      id="steps"
+      highlight="Reviews"
+        title="What Our Clients Say"
+        subtitle="These reviews are pulled from Google Reviews and filtered to only display 4-5 star ratings."
+        items={[]} />
       <FAQ
 isDark
         title="Frequently Asked Questions"
