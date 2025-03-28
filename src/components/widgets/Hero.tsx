@@ -1,54 +1,15 @@
-import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import Carousel from "../ui/Carousel";
 import LogoClouds from "./LogoClouds";
 import { Button } from "../ui/Button";
 import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
-  const carouselHeight = useSignal("192px"); // Initial h-48 equivalent
-
-  useVisibleTask$(() => {
-    const textSection = document.querySelector(".text-section");
-
-    const updateCarouselHeight = () => {
-      if (textSection) {
-        const viewportHeight = document.documentElement.clientHeight;
-        const headerHeight = 66; // Hardcoded
-        const textHeight = textSection.getBoundingClientRect().height;
-        const availableHeight = viewportHeight - headerHeight - textHeight;
-
-        // Set carousel height with a minimum of 100px
-        carouselHeight.value = `${Math.max(100, availableHeight)}px`;
-      }
-    };
-
-    // Initial calculation
-    updateCarouselHeight();
-
-    // Debounced resize/scroll handler
-    let timeout: string | number | NodeJS.Timeout | undefined;
-    const debouncedUpdate = () => {
-      clearTimeout(timeout);
-      timeout = setTimeout(updateCarouselHeight, 100); // 100ms debounce
-    };
-
-    window.addEventListener("resize", debouncedUpdate);
-    window.addEventListener("scroll", debouncedUpdate);
-
-    return () => {
-      window.removeEventListener("resize", debouncedUpdate);
-      window.removeEventListener("scroll", debouncedUpdate);
-      clearTimeout(timeout);
-    };
-  });
-
   return (
     <section class="relative overflow-hidden">
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[85%_15%] min-h-[calc(100vh-66px)]"
-      >
+      <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[85%_15%] min-h-[calc(100vh-90.66667px)]">
         {/* Text Content */}
-        <div class="relative z-10 flex items-center justify-center bg-gradient-to-r from-muted to-background dark:from-background dark:to-muted px-4 py-8 md:px-8 md:py-0 order-2 md:order-1 text-section">
+        <div class="relative z-10 flex items-center justify-center bg-gradient-to-r from-muted to-background dark:from-background dark:to-muted px-4 py-8 md:px-8 md:py-0 order-2 md:order-1">
           <div class="text-center md:text-left">
             <h1 class="text-4.5xl font-bold tracking-tighter text-balance sm:text-6xl md:text-6xl lg:text-7xl mb-4 animate-hero-text">
               Premium <span class="text-primary">Web Design</span> Solutions
@@ -67,10 +28,7 @@ export default component$(() => {
           </div>
         </div>
         {/* Carousel */}
-        <div
-          class="relative order-1 md:order-2 min-h-[100px]"
-          style={{ height: carouselHeight.value }}
-        >
+        <div class="relative order-1 md:order-2 h-64 sm:h-80 md:h-full">
           <Carousel />
         </div>
         {/* LogoClouds */}
