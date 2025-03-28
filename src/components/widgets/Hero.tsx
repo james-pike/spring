@@ -28,7 +28,7 @@ export default component$(() => {
           </div>
         </div>
         {/* Carousel */}
-        <div class="relative order-1 md:order-2 h-64 sm:h-80 md:h-full">
+        <div class="relative order-1 md:order-2 h-48 sm:h-80 md:h-full">
           <Carousel />
         </div>
         {/* LogoClouds */}
