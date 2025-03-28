@@ -6,7 +6,7 @@ const Root = component$<PropsOf<'div'>>((props) => {
     <div
       {...props}
       class={cn(
-        'rounded-base border bg-muted text-card-foreground shadow-sm',
+        'rounded-base border bg-muted text-card-foreground shadow-md',
         props.class,
       )}
     >

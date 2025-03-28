@@ -12,6 +12,7 @@ import Hero from "~/components/widgets/Hero";
 import Features from "~/components/widgets/Features";
 import FAQ from "~/components/widgets/FAQ";
 
+
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
 const IconArrowDownRight = qwikSerialized(() => import("../components/icons/IconArrowDownRight"));
 
@@ -81,6 +82,7 @@ export default component$(() => {
 
 
       <Reviews
+      isDark
         highlight="Reviews"
         title="What Our Clients Say"
         subtitle="These reviews are pulled from Google Reviews and filtered to only display 4-5 star ratings."

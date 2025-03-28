@@ -75,14 +75,14 @@ export default component$(() => {
 
   return (
     <Carousel.Root class="carousel-root" gap={30} autoPlayIntervalMs={3500} bind:autoplay={isPlaying}>
-      <div class="carousel-buttons">
+      {/* <div class="carousel-buttons">
         <Carousel.Previous class="carousel-button carousel-prev">
           <i class="fas fa-arrow-left" />
         </Carousel.Previous>
         <Carousel.Next class="carousel-button carousel-next">
           <i class="fas fa-arrow-right" />
         </Carousel.Next>
-      </div>
+      </div> */}
       <div class="carousel-conditional">
         {slides.map((slide, index) => (
           <Carousel.Slide key={index} class="carousel-slide">

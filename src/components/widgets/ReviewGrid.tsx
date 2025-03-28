@@ -22,6 +22,7 @@ interface Props {
   items?: Array<Item>;
   defaultIcon?: any;
   classes?: Record<string, string>;
+  isDark?: boolean;
 }
 
 export default component$<Props>((props) => {
@@ -34,12 +35,14 @@ export default component$<Props>((props) => {
     cleanup(() => abortController.abort());
 
     const reviews = await getReviews();
-    return reviews.filter(review => review.rating >= 4); // Filter only 4+ star reviews
+    return reviews.filter(review => review.rating >= 4);
   });
 
   // Determine background class based on route
   const isIndexRoute = loc.url.pathname === '/';
-  const bgClass = isIndexRoute ? ' bg-white dark:bg-gray-800' : 'bg-white dark:bg-gray-900';
+  const bgClass = isIndexRoute
+    ? 'bg-white dark:bg-gray-800'
+    : 'bg-white dark:bg-gray-900';
 
   return (
     <Resource
@@ -49,7 +52,6 @@ export default component$<Props>((props) => {
         reviews.length > 0 ? (
           <div
             class={twMerge(
-              // Masonry layout with columns instead of grid
               "motion-group mx-auto max-w-5xl columns-1 md:columns-2 lg:columns-3 gap-6 sm:gap-8",
               props.classes?.container
             )}
@@ -57,12 +59,15 @@ export default component$<Props>((props) => {
             {reviews.map((review, index) => (
               <div
                 key={`${review.author_name}-${index}`}
-                class="flex flex-col w-full break-inside-avoid mb-4 sm:mb-8" // Break-inside prevents splitting across columns
+                class="flex flex-col w-full break-inside-avoid mb-4 sm:mb-8"
               >
                 <div
                   class={twMerge(
-                    "flex flex-col p-4 shadow-md rounded-lg border border-gray-200 dark:border-gray-700 opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up",
-                    bgClass, // Apply dynamic background class
+                    "flex flex-col p-4 shadow-md rounded-lg border opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up",
+                    props.isDark ? "bg-background" : "bg-muted", // Apply background conditionally
+                    props.isDark
+                      ? "border-muted/50 text-muted-foreground"
+                      : "border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400",
                     props.classes?.panel
                   )}
                   style={{ animationDelay: `${index * 100}ms` }}
@@ -86,12 +91,19 @@ export default component$<Props>((props) => {
                   </div>
 
                   {/* Review Text */}
-                  <p class={twMerge("text-gray-600 dark:text-gray-400 mt-2", props.classes?.description)}>
+                  <p class={twMerge(
+                    "mt-2",
+                    props.isDark ? "text-muted-foreground" : "text-gray-600 dark:text-gray-400",
+                    props.classes?.description
+                  )}>
                     {review.text}
                   </p>
 
-                  {/* Review Date (Optional, formatted from Unix timestamp) */}
-                  <p class={twMerge("text-sm text-gray-500 dark:text-gray-600 mt-2")}>
+                  {/* Review Date */}
+                  <p class={twMerge(
+                    "text-sm mt-2",
+                    props.isDark ? "text-muted/70" : "text-gray-500 dark:text-gray-600"
+                  )}>
                     {new Date(review.time * 1000).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'long',

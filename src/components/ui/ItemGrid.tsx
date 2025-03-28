@@ -41,7 +41,7 @@ export const ItemGrid = component$((props: Props) => {
   });
 
   const {
-    container: containerClass = "md:grid-cols-2",
+    container: containerClass = "md:grid-cols-2 ",
     panel: panelClass = "",
     title: titleClass = "",
     description: descriptionClass = "",

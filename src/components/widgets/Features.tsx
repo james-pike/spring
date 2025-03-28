@@ -34,7 +34,7 @@ export default component$((props: Props) => {
         items={items}
         classes={{
           container: twMerge(
-            "md:grid-cols-2 p-4 sm:p-6 md:p-8 ",
+            "md:grid-cols-2 p-4 sm:p-6 md:p-10  rounded-base",
             isDark ? "bg-background" : "bg-muted"
           ),
           title: "md:text-[1.3rem]",
