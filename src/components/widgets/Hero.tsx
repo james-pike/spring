@@ -22,12 +22,12 @@ export default component$(() => {
             <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground mb-6 animate-hero-subtitle max-w-2xl mx-auto md:mx-0">
               Transform your online presence with custom web design and development services—stunning, fast, and secure websites for your business.
             </p>
-            <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start animate-hero-buttons">
+            <div class="flex flex-col items-center gap-4 px-2 sm:flex-row sm:justify-center md:justify-start animate-hero-buttons">
               <Link href="/quote" class="w-full sm:w-auto">
-                <Button size="lg" class="w-full">Get A Quote</Button>
+                <Button size="md" class="w-full">Get A Quote</Button>
               </Link>
               <Link href="/quote" class="w-full sm:w-auto">
-                <Button look="secondary" size="lg" class="w-full">Book A Free Consultation</Button>
+                <Button look="secondary" size="md" class="w-full">Book A Free Consultation</Button>
               </Link>
             </div>
           </div>
