@@ -7,7 +7,7 @@ const services = [
     title: "Emergency Lockout Assistance",
     description: "Fast and reliable 24/7 lockout services for homes, offices, and vehicles.",
     details: "Regain access to your property quickly with our professional lockout solutions.",
-    image: "/images/placeholder.png",
+    image: "/images/hero1.png",
     alt: "Emergency Lockout Assistance",
     slug: "emergency-lockout"
   },
@@ -64,7 +64,7 @@ export default component$(() => {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0 }
     );
 
     const element = document.querySelector("#services-grid");

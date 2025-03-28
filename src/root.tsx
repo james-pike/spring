@@ -56,7 +56,7 @@ export default component$(() => {
             })();
           `}
         />
-        <link rel="preload" href="/images/placeholder.png" as="image" />
+        <link rel="preload" href="/images/hero1.png" as="image" />
         <link rel="preload" href="/images/contact.jpg" as="image" />
  
       </head>

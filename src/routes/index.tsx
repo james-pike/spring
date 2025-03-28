@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Steps from "~/components/widgets/Steps";
-import FAQs from "~/components/widgets/FAQs";
+import FAQs from "~/components/widgets/FAQ";
 import Stats from "~/components/widgets/Stats";
 import { qwikSerialized } from "~/utils/qwikSerialized";
 import { SITE } from "~/config.mjs";
@@ -11,6 +11,7 @@ import Pricing from "~/components/widgets/Pricing";
 import Services from "~/components/widgets/Services";
 import Hero from "~/components/widgets/Hero";
 import Features from "~/components/widgets/Features";
+import FAQ from "~/components/widgets/FAQ";
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
 const IconArrowDownRight = qwikSerialized(() => import("../components/icons/IconArrowDownRight"));
@@ -86,7 +87,7 @@ export default component$(() => {
         subtitle="These reviews are pulled from Google Reviews and filtered to only display 4-5 star ratings."
         items={[]} />
       <Steps />
-      <FAQs
+      <FAQ
 
         title="Frequently Asked Questions"
         subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque."
