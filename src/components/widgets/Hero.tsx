@@ -17,18 +17,18 @@ export default component$(() => {
 
   return (
     <section class="relative overflow-hidden">
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[85%_15%]"
-        style={{ minHeight: `calc(100vh - ${headerHeight.value})` }}
-      >
-        {/* Inner Grid for Carousel and Text */}
-        <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_1fr] contents-md md:contents col-span-1 md:col-span-2">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        {/* Inner Container for Carousel and Text */}
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] col-span-1 md:col-span-2"
+          style={{ height: `calc(100vh - ${headerHeight.value})` }}
+        >
           {/* Carousel */}
-          <div class="relative order-1 md:order-2 h-48 sm:h-80 md:h-full">
+          <div class="relative order-1 md:order-2 h-48 sm:h-80 md:h-[50%]">
             <Carousel />
           </div>
           {/* Text Content */}
-          <div class="relative z-10 flex items-center justify-center bg-gradient-to-r from-muted to-background dark:from-background dark:to-muted px-4 py-8 md:px-8 md:py-0 order-2 md:order-1">
+          <div class="relative z-10 flex items-center justify-center bg-gradient-to-r from-muted to-background dark:from-background dark:to-muted px-4 py-8 md:px-8 md:py-0 order-2 md:order-1 h-[calc(100%-12rem)] sm:h-[calc(100%-20rem)] md:h-[50%]">
             <div class="text-center md:text-left">
               <h1 class="text-4.5xl font-bold tracking-tighter text-balance sm:text-6xl md:text-6xl lg:text-7xl mb-4 animate-hero-text">
                 Premium <span class="text-primary">Web Design</span> Solutions
@@ -48,7 +48,7 @@ export default component$(() => {
           </div>
         </div>
         {/* LogoClouds */}
-        <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 col-span-1 md:col-span-2 flex items-center justify-center py-4 order-3">
+        <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 col-span-1 md:col-span-2 flex items-center justify-center py-4">
           <LogoClouds />
         </div>
       </div>
