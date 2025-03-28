@@ -5,6 +5,7 @@ import { Logo2 } from "../common/Logo2";
 import MenuModal from "./MenuModal";
 
 import Settings from "./settings";
+import ToggleTheme from "../common/ToggleTheme";
 
 export default component$(() => {
   const store = useStore({
@@ -68,7 +69,7 @@ export default component$(() => {
             </a>
             <div class="flex items-center md:hidden">
             <Settings/>
-  
+  <ToggleTheme/>
   
               <MenuModal />
             </div>

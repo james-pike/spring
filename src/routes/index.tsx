@@ -1,39 +1,28 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import Features from "~/components/widgets/Features";
+
 import Steps from "~/components/widgets/Steps";
 import FAQs from "~/components/widgets/FAQs";
 import Stats from "~/components/widgets/Stats";
-
 import { qwikSerialized } from "~/utils/qwikSerialized";
+import { SITE } from "~/config.mjs";
+import Reviews from "~/components/widgets/Reviews";
+import Contact from "~/components/widgets/Contact";
+import Pricing from "~/components/widgets/Pricing";
+import Services from "~/components/widgets/Services";
+import Hero from "~/components/widgets/Hero";
+import Features from "~/components/widgets/Features";
 
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
 const IconArrowDownRight = qwikSerialized(() => import("../components/icons/IconArrowDownRight"));
 
 
-
-import { SITE } from "~/config.mjs";
-
-import Reviews from "~/components/widgets/Reviews";
-import Contact from "~/components/widgets/Contact";
-import Pricing from "~/components/widgets/Pricing";
-import Services from "~/components/widgets/Services";
-import Hero from "~/components/widgets/Hero";
-
 export default component$(() => {
   return (
     <>
-
-
-    
-  
-       
           <Hero />
-      
-       
     
-
         <Services
           id="services"
           highlight="Services"
@@ -41,14 +30,9 @@ export default component$(() => {
           subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
           items={[]} />
      
-        <Pricing  id="services"
-          highlight="Services"
-          title="Reliable Locksmith Services You Can Trust"
-          subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
-          items={[]} />
     
-
         <Features
+ 
           highlight="Features"
           title="Reliable Locksmith Services You Can Trust"
           subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
@@ -92,6 +76,12 @@ export default component$(() => {
           ]}
         />
 
+<Pricing  id="services"
+          highlight="Services"
+          title="Reliable Locksmith Services You Can Trust"
+          subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
+          items={[]} />
+    
 
         <Reviews
           highlight="Reviews"
@@ -149,12 +139,8 @@ export default component$(() => {
           subtitle="Get in touch for a service call or free estimate."
           highlight="Contact Us"
           classes={{
-
-
           }}
         />
-
-    
     </>
   );
 });

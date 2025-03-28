@@ -8,7 +8,7 @@ interface SectionWrapperProps {
 }
 
 export const SectionWrapper = component$((props: SectionWrapperProps) => {
-  const { id, isDark = false, classes = {} } = props;
+  const { id, isDark, classes = {} } = props;
 
   return (
     <section class="relative scroll-mt-16" {...(id ? { id } : {})}>
@@ -17,7 +17,7 @@ export const SectionWrapper = component$((props: SectionWrapperProps) => {
           <div
             class={twMerge(
               "absolute inset-0",
-              isDark ? "" : ""
+              isDark ? "bg-muted" : ""
             )}
           ></div>
         </Slot>
