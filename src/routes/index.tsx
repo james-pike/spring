@@ -143,11 +143,11 @@ isDark
       />
       <Stats />
       <Contact
-      isDark
+      
       id="services"
-      highlight="Services"
-      title="Reliable Locksmith Services You Can Trust"
-      subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
+      highlight="Contact Us"
+      title="Get In Touch"
+      subtitle="Request a quote or book a free consultation today!."
       items={[]} />
     </>
   );

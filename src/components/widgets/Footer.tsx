@@ -5,6 +5,7 @@ import IconTwitter from "~/components/icons/IconTwitter"
 import IconInstagram from "~/components/icons/IconInstagram"
 import IconFacebook from "~/components/icons/IconFacebook"
 import ToggleTheme from "../common/ToggleTheme";
+import { Button } from "../ui/Button";
 
 export default component$(() => {
   const links = [
@@ -63,7 +64,7 @@ export default component$(() => {
   ];
 
   return (
-    <footer class="border-t dark:border-gray-700 border-gray-300 bg-background">
+    <footer class="border-t-2 bg-background">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
           <div class="col-span-12 lg:col-span-4 pr-8">
@@ -77,18 +78,8 @@ export default component$(() => {
             From emergency lockouts to advanced security installations, we ensure your safety with precision and care.
             </div>
             <div class="flex gap-2">
-              <a
-                href="tel:+16132188063"
-                class=" px-4 py-2 btn-primary text-white font-semibold rounded-md transition-colors"
-              >
-                Call Now
-              </a>
-              <a
-                href="/contact"
-                class=" btn-secondary px-4 py-2 dark:text-white font-semibold rounded-md transition-colors"
-              >
-                Get An Estimate
-              </a>
+              <Button>Get Started Today</Button>
+           
             </div>
           </div>
           {links.map(({ title, items }, index) => (
