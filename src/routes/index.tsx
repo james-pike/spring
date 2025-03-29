@@ -11,6 +11,7 @@ import Features from "~/components/widgets/Features";
 import FAQ from "~/components/widgets/FAQ";
 import Steps from "~/components/widgets/Steps";
 import Contact2 from "~/components/widgets/Contact2";
+import ServiceCarousel from "~/components/widgets/ServiceCarousel";
 
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
@@ -27,6 +28,8 @@ export default component$(() => {
         title="Reliable Locksmith Services You Can Trust"
         subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
         items={[]} />
+
+        <ServiceCarousel/>
 
 
       <Features

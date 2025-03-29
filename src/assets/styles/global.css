@@ -1529,3 +1529,25 @@ body {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
+.carousel-animation {
+  transition: 0.35s transform cubic-bezier(0.57, 0.16, 0.95, 0.67);
+}
+
+.carousel-pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.carousel-pagination-bullet {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.carousel-pagination-bullet[data-active] {
+  background-color: #000 !important;
+  transform: scale(1.2);
+}
