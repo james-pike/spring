@@ -19,7 +19,7 @@ export default component$(() => {
             <h1 class="text-5xl font-bold tracking-tighter text-balance sm:text-6xl md:text-6xl lg:text-7xl mb-4 animate-hero-text">
               Premium <span class="text-primary">Web Design</span> Solutions
             </h1>
-            <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground mb-6 animate-hero-subtitle max-w-2xl mx-auto md:mx-0">
+            <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground text-balance mb-6 animate-hero-subtitle max-w-2xl mx-auto md:mx-0">
               Transform your online presence with custom web design and development services—stunning, fast, and secure websites for your business.
             </p>
             <div class="flex flex-col items-center gap-4 px-2 sm:flex-row sm:justify-center md:justify-start animate-hero-buttons">
@@ -33,7 +33,7 @@ export default component$(() => {
           </div>
         </div>
         {/* Carousel */}
-        <div class="relative order-2 md:order-2 h-64 sm:h-80 md:h-full">
+        <div class="relative order-2 px-4 md:order-2 h-64 sm:h-80 md:h-full">
           <Carousel />
         </div>
         {/* LogoClouds */}

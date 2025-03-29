@@ -1,10 +1,12 @@
 import { component$ } from "@builder.io/qwik";
+import { Card } from "../ui/Card";
 
 
 
 export default component$(() => {
   return (
     <>
+    <Card.Root class="px-4">
     <dl class="mt-8 space-y-4 text-base/7 text-gray-600 dark:text-gray-300">
                                 <div class="flex gap-x-4">
                                     <dt class="flex-none">
@@ -206,6 +208,7 @@ export default component$(() => {
                             </div>
                         </div>
                     </form>
+                    </Card.Root>
                     </>
   );
 });

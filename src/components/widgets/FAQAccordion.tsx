@@ -59,7 +59,7 @@ export default component$(({ isDark }: Props) => {
     <Accordion.Root
       id="accordion-root"
       class={twMerge(
-        "w-full -mt-2 rounded-base p-4 sm:p-6 md:p-8 ",
+        "w-full  rounded-base px-5 py-2 sm:p-6 md:p-8 ",
         isDark ? "bg-background" : "bg-muted"
       )}
     >

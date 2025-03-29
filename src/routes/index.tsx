@@ -4,13 +4,13 @@ import Stats from "~/components/widgets/Stats";
 import { qwikSerialized } from "~/utils/qwikSerialized";
 import { SITE } from "~/config.mjs";
 import Reviews from "~/components/widgets/Reviews";
-import Contact from "~/components/widgets/Contact";
 import Pricing from "~/components/widgets/Pricing";
 import Services from "~/components/widgets/Services";
 import Hero from "~/components/widgets/Hero";
 import Features from "~/components/widgets/Features";
 import FAQ from "~/components/widgets/FAQ";
 import Steps from "~/components/widgets/Steps";
+import Contact2 from "~/components/widgets/Contact2";
 
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
@@ -138,13 +138,12 @@ isDark
         ]}
       />
       <Stats />
-      <Contact
-        title="Get A Free Estimate"
-        subtitle="Get in touch for a service call or free estimate."
-        highlight="Contact Us"
-        classes={{
-        }}
-      />
+      <Contact2
+      id="services"
+      highlight="Services"
+      title="Reliable Locksmith Services You Can Trust"
+      subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
+      items={[]} />
     </>
   );
 });

@@ -69,10 +69,10 @@ export const ItemGrid = component$((props: Props) => {
               </div>
             )}
             <div>
-              <h3 class={twMerge("text-xl font-bold", titleClass, itemClasses?.title)}>{title}</h3>
+              <h3 class={twMerge("text-xl font-bold text-balance", titleClass, itemClasses?.title)}>{title}</h3>
               {description && (
                 <p
-                  class={twMerge("text-gray-600 dark:text-slate-400 mt-3", descriptionClass, itemClasses?.description)}
+                  class={twMerge("text-gray-600 dark:text-slate-400 mt-3 text-balance", descriptionClass, itemClasses?.description)}
                   dangerouslySetInnerHTML={description}
                 />
               )}
