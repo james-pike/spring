@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline"; // Adjust the import path
-import ServiceCards from "./ServiceCards";
 import { SectionWrapper } from "./SectionWrapper";
 import ServiceCarousel from "./ServiceCarousel";
 
