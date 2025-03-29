@@ -1,7 +1,6 @@
 import { component$, PropsOf, useContextProvider, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Carousel, Progress } from '@qwik-ui/headless';
 import { Card } from '../ui/Card'; // Adjust the import path as needed
-import { twMerge } from 'tailwind-merge';
 import { DarkContext } from '~/DarkContext';
 
 export const CarouselProgress = component$((props: PropsOf<typeof Progress.Root>) => {
