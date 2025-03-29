@@ -1,7 +1,6 @@
-import { component$, PropsOf } from '@builder.io/qwik';
+import { component$, PropsOf, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import { Carousel, Progress } from '@qwik-ui/headless';
 import { Card } from '../ui/Card'; // Adjust the import path as needed
-import { SectionWrapper } from './SectionWrapper';
 
 export const CarouselProgress = component$((props: PropsOf<typeof Progress.Root>) => {
   return (
@@ -21,37 +20,59 @@ export default component$(() => {
     {
       title: 'Mobile Apps',
       description: 'Creating native and cross-platform mobile solutions',
-      image: '/images/hero1.webp'
+         image: '/images/hero1.png'
     },
     {
       title: 'UI/UX Design',
       description: 'Designing intuitive and beautiful user interfaces',
-      image: '/images/hero1.webp'
+        image: '/images/hero1.png'
     },
     {
       title: 'Cloud Services',
       description: 'Implementing scalable cloud infrastructure',
-      image: '/images/hero1.webp'
+         image: '/images/hero1.png'
     },
     {
       title: 'Cloud Services2',
       description: 'Implementing scalable cloud infrastructure',
-      image: '/images/hero1.webp'
+        image: '/images/hero1.png'
     },
     {
       title: 'Cloud Services3',
       description: 'Implementing scalable cloud infrastructure',
-      image: '/images/hero1.webp'
+         image: '/images/hero1.png'
     }
   ];
 
+  const isDraggable = useSignal(true); // Signal to manage draggable state
+
+  // Run this task on the client when the component becomes visible
+  useVisibleTask$(() => {
+    const updateDraggable = () => {
+      // Use Tailwind's default md breakpoint (768px) as the threshold
+      if (window.innerWidth >= 768) {
+        isDraggable.value = false; // Disable dragging on desktop
+      } else {
+        isDraggable.value = true; // Enable dragging on mobile
+      }
+    };
+
+    // Initial check
+    updateDraggable();
+
+    // Listen for window resize events
+    window.addEventListener('resize', updateDraggable);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', updateDraggable);
+  });
+
   return (
     
-    <Carousel.Root class="carousel-root" gap={30}>
-      <div class="carousel-buttons">
-        <Carousel.Previous>Prev</Carousel.Previous>
-        <Carousel.Next>Next</Carousel.Next>
-      </div>
+    <Carousel.Root class="carousel-root" gap={30}  draggable={isDraggable.value} rewind sensitivity={{
+      touch: 1.75,
+    }} >
+ 
       <Carousel.Scroller class="carousel-scroller">
         {services.map((service) => (
           <Carousel.Slide
@@ -82,13 +103,19 @@ export default component$(() => {
               />
             ))}
           </Carousel.Pagination>
-          <a
+
+
+          <div class="">
+        <Carousel.Previous>Prev</Carousel.Previous>
+        <Carousel.Next>Next</Carousel.Next>
+      </div>
+          {/* <a
             href="/services"
             class="text-sm font-medium hover:underline"
             style={{ transform: 'translateY(5px)' }} // Fine-tune downward shift
           >
             Browse Portfolio -&gt;
-          </a>
+          </a> */}
         </div>
     </Carousel.Root>
   

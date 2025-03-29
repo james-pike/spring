@@ -17,7 +17,7 @@ const Root = component$<PropsOf<'div'>>((props) => {
 
 const Header = component$<PropsOf<'div'>>((props) => {
   return (
-    <div {...props} class={cn('flex flex-col space-y-1.5 p-4 md:p-6', props.class)}>
+    <div {...props} class={cn('flex flex-col space-y-1.5 p-4 ', props.class)}>
       <Slot />
     </div>
   );
