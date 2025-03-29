@@ -83,14 +83,14 @@ export default component$((props: Props) => {
       touch: 1.75,
     }} >
  
-      <Carousel.Scroller class="carousel-scroller">
+      <Carousel.Scroller class="carousel-scroller py-4">
         {services.map((service) => (
           <Carousel.Slide
             style={{ flexBasis: '300px' }}
             key={service.title}
             class="carousel-slide"
           >
-            <Card.Root class="border shadow-xl">
+            <Card.Root>
               <Card.Image 
                 src={service.image} 
                 alt={service.title}
@@ -105,11 +105,11 @@ export default component$((props: Props) => {
         ))}
       </Carousel.Scroller>
       <div class="flex justify-between items-end">
-          <Carousel.Pagination class="carousel-pagination justify-start -mt-1">
+          <Carousel.Pagination class="carousel-pagination flex gap-1 justify-start ">
             {services.map((service) => (
               <Carousel.Bullet
                 key={service.title}
-                class="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:!bg-primary data-[active]:scale-125"
+                class="carousel-pagination-bullet w-[10px] -mt-7 h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:!bg-primary data-[active]:scale-125"
               />
             ))}
           </Carousel.Pagination>

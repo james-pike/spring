@@ -10,7 +10,6 @@ import Hero from "~/components/widgets/Hero";
 import Features from "~/components/widgets/Features";
 import FAQ from "~/components/widgets/FAQ";
 import Steps from "~/components/widgets/Steps";
-import Contact2 from "~/components/widgets/Contact2";
 import Contact from "~/components/widgets/Contact";
 
 
@@ -23,10 +22,10 @@ export default component$(() => {
       <Hero />
 
       <Services
-    isDark
+    
         id="services"
-        highlight="Services"
-        title="Reliable Locksmith Services You Can Trust"
+        highlight="Our Services"
+        title="What We Offer"
         subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
         items={[]} />
 

@@ -1534,12 +1534,7 @@ body {
   transition: 0.35s transform cubic-bezier(0.57, 0.16, 0.95, 0.67);
 }
 
-.carousel-pagination {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin-top: 1rem;
-}
+
 
 .carousel-pagination-bullet {
   cursor: pointer;
