@@ -12,10 +12,10 @@ export default component$(() => {
       title="Get A Free Estimate"
       subtitle="Get in touch for a service call or free estimate."
       highlight="Contact Us"
-      classes={{
+      items={[]
         
     
-      }}
+      }
       />
     </>
   );
