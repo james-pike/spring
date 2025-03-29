@@ -46,7 +46,7 @@ export default component$(() => {
   ];
 
   return (
-    <SectionWrapper>
+    
     <Carousel.Root class="carousel-root" gap={30}>
       <div class="carousel-buttons">
         <Carousel.Previous>Prev</Carousel.Previous>
@@ -91,6 +91,6 @@ export default component$(() => {
           </a>
         </div>
     </Carousel.Root>
-    </SectionWrapper>
+  
   );
 });

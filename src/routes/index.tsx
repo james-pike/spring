@@ -29,7 +29,7 @@ export default component$(() => {
         subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
         items={[]} />
 
-        <ServiceCarousel/>
+    
 
 
       <Features
