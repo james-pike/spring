@@ -11,6 +11,7 @@ import Features from "~/components/widgets/Features";
 import FAQ from "~/components/widgets/FAQ";
 import Steps from "~/components/widgets/Steps";
 import Contact2 from "~/components/widgets/Contact2";
+import Contact from "~/components/widgets/Contact";
 
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
@@ -142,7 +143,8 @@ isDark
         ]}
       />
       <Stats />
-      <Contact2
+      <Contact
+      isDark
       id="services"
       highlight="Services"
       title="Reliable Locksmith Services You Can Trust"
