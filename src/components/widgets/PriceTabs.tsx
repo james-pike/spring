@@ -1,13 +1,21 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useContextProvider } from '@builder.io/qwik';
 
 import { Card } from '../ui/Card';
 import { Label } from '../ui/Label';
 import { Input } from '../ui/Input';
 import { Button } from '../ui/Button';
 import { Tabs } from '../ui/Tabs';
+import { DarkContext } from '~/DarkContext';
 
+interface Props {
+  isDark?: boolean;
+}
 
-export default component$(() => {
+export default component$((props: Props) => {
+  const { isDark = false } = props;
+
+  useContextProvider(DarkContext, isDark);
+
   return (
     <Tabs.Root class="max-w-[400px]">
       <Tabs.List class="grid w-full grid-cols-2">

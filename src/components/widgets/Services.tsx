@@ -27,7 +27,9 @@ export default component$((props: Props) => {
     <SectionWrapper id={id} isDark={isDark} classes={classes}>
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       {/* <ServiceCards /> */}
-          <ServiceCarousel/>
+          <ServiceCarousel isDark={isDark}/>
     </SectionWrapper>
   );
 });
+
+// classes={{ container: "max-w-6xl" }}

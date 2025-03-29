@@ -22,6 +22,7 @@ export default component$(() => {
       <Hero />
 
       <Services
+    isDark
         id="services"
         highlight="Services"
         title="Reliable Locksmith Services You Can Trust"
@@ -77,7 +78,8 @@ export default component$(() => {
       />
 
       <Pricing id="services"
-        highlight="Services"
+      isDark
+        highlight="pricing"
         title="Reliable Locksmith Services You Can Trust"
         subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
         items={[]} />

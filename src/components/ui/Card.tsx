@@ -1,13 +1,22 @@
-import { component$, type PropsOf, Slot } from '@builder.io/qwik';
+import { component$, type PropsOf, Slot, useContext } from '@builder.io/qwik';
 import { cn } from '@qwik-ui/utils';
+import { DarkContext } from '~/DarkContext';
 
-const Root = component$<PropsOf<'div'>>((props) => {
+interface CardRootProps extends PropsOf<'div'> {
+  isDark?: boolean;
+}
+
+const Root = component$<CardRootProps>((props) => {
+  const contextIsDark = useContext(DarkContext, false);
+  const { isDark = contextIsDark, ...restProps } = props;
+
   return (
     <div
-      {...props}
+      {...restProps}
       class={cn(
-        'rounded-base border bg-muted text-card-foreground shadow-md',
-        props.class,
+        'rounded-base border text-card-foreground shadow-lg',
+        isDark ? 'bg-background' : 'bg-muted', // Conditional background
+        props.class
       )}
     >
       <Slot />
@@ -17,7 +26,7 @@ const Root = component$<PropsOf<'div'>>((props) => {
 
 const Header = component$<PropsOf<'div'>>((props) => {
   return (
-    <div {...props} class={cn('flex flex-col space-y-1.5 p-4 ', props.class)}>
+    <div {...props} class={cn('flex flex-col space-y-1.5 p-4 md:p-6 ', props.class)}>
       <Slot />
     </div>
   );
