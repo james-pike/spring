@@ -1418,7 +1418,7 @@ body {
 
   .animate-2 {
     animation: fadeUp 0.2s ease-out forwards;
-    animation-delay: 0.2s; /* Slight delay for smoother entrance */
+    animation-delay: 0.15s; /* Slight delay for smoother entrance */
     opacity: 0; /* Ensures it starts hidden until animation begins */
     animation-iteration-count: 1; /* Runs once */
 
@@ -1426,7 +1426,7 @@ body {
 
   .animate-3 {
     animation: fadeUp 0.5s ease-out forwards;
-    animation-delay: 0.3s; /* Slight delay for smoother entrance */
+    animation-delay: 0.2s; /* Slight delay for smoother entrance */
     opacity: 0; /* Ensures it starts hidden until animation begins */
     animation-iteration-count: 1; /* Runs once */
 
@@ -1434,7 +1434,7 @@ body {
 
   .animate-4 {
     animation: fadeUp 0.5s ease-out forwards;
-    animation-delay: 0.4s; /* Slight delay for smoother entrance */
+    animation-delay: 0.25s; /* Slight delay for smoother entrance */
     opacity: 0; /* Ensures it starts hidden until animation begins */
     animation-iteration-count: 1; /* Runs once */
 
@@ -1442,10 +1442,66 @@ body {
 
   .animate-5 {
     animation: fadeUp 0.5s ease-out forwards;
+    animation-delay: 0.3s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+    animation-iteration-count: 1; /* Runs once */
+
+  }
+
+  .animate-6 {
+    animation: fadeUp 0.5s ease-out forwards;
+    animation-delay: 0.35s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+    animation-iteration-count: 1; /* Runs once */
+
+  }
+
+  .animate-7 {
+    animation: fadeUp 0.5s ease-out forwards;
+    animation-delay: 0.4s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+    animation-iteration-count: 1; /* Runs once */
+
+  }
+
+  .animate-8 {
+    animation: fadeUp 0.5s ease-out forwards;
+    animation-delay: 0.45s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+    animation-iteration-count: 1; /* Runs once */
+
+  }
+
+  .animate-9 {
+    animation: fadeUp 0.5s ease-out forwards;
     animation-delay: 0.5s; /* Slight delay for smoother entrance */
     opacity: 0; /* Ensures it starts hidden until animation begins */
     animation-iteration-count: 1; /* Runs once */
 
+  }
+
+  .animate-10 {
+    animation: fadeUp 0.5s ease-out forwards;
+    animation-delay: 0.65s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+    animation-iteration-count: 1; /* Runs once */
+
+  }
+
+  .animate-11 {
+    animation: fadeUp 0.5s ease-out forwards;
+    animation-delay: 0.7s; /* Slight delay for smoother entrance */
+    opacity: 0; /* Ensures it starts hidden until animation begins */
+    animation-iteration-count: 1; /* Runs once */
+
+  }
+
+  .animate-underline {
+    animation: underlineFade 1.2s ease-in-out forwards;
+    animation-delay: 0.6s; /* Starts after animate-5 */
+    opacity: 0;
+    transform-origin: left; /* Ensures it grows from the left */
+    animation-iteration-count: 1;
   }
 
    .animate-hero-text {

@@ -7,6 +7,7 @@ import MenuModal from "./MenuModal";
 import Settings from "./settings";
 import ToggleTheme from "../common/ToggleTheme";
 import { Button } from "../ui/Button";
+import Logo3 from "../common/Logo3";
 
 export default component$(() => {
   const store = useStore({
@@ -63,7 +64,7 @@ export default component$(() => {
           <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
             <a class="flex items-center" href={"/"}>
               {/* <Logo /> */}
-              <Logo2 />
+              <Logo3 />
             </a>
             <div class="flex items-center md:hidden">
             <Settings/>
