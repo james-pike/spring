@@ -32,4 +32,4 @@ export default component$((props: Props) => {
   );
 });
 
-// classes={{ container: "max-w-6xl" }}
+// classes={{ container: "max-w-6xl" }}  /
