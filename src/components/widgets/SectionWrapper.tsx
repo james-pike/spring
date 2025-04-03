@@ -1,4 +1,5 @@
 import { component$, Slot } from "@builder.io/qwik";
+import { useLocation } from "@builder.io/qwik-city";
 import { twMerge } from "tailwind-merge";
 
 interface SectionWrapperProps {
@@ -9,6 +10,10 @@ interface SectionWrapperProps {
 
 export const SectionWrapper = component$((props: SectionWrapperProps) => {
   const { id, isDark, classes = {} } = props;
+  const location = useLocation();  // Get the current route
+
+  // Reduce padding by 25% if not on the landing page
+  const paddingY = location.url.pathname === '/' ? 'py-12 md:py-16 lg:py-20' : 'py-9 md:py-12 lg:py-15'; 
 
   return (
     <section
@@ -20,7 +25,8 @@ export const SectionWrapper = component$((props: SectionWrapperProps) => {
     >
       <div
         class={twMerge(
-          "relative mx-auto max-w-5xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default",
+          "relative mx-auto max-w-5xl px-4 md:px-6",
+          paddingY,  // Conditionally applied padding
           classes?.container
         )}
       >

@@ -78,7 +78,7 @@ export default component$(() => {
       />
 
       <Pricing id="services"
-      isDark
+      
         highlight="pricing"
         title="Reliable Locksmith Services You Can Trust"
         subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
@@ -143,7 +143,7 @@ isDark
       />
       <Stats />
       <Contact
-      
+      isDark
       id="services"
       highlight="Contact Us"
       title="Get In Touch"

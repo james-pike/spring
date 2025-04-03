@@ -1,11 +1,12 @@
 import { component$, useStore } from "@builder.io/qwik";
-import { useContent, useLocation } from "@builder.io/qwik-city";
+import { Link, useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
 import { Logo2 } from "../common/Logo2";
 import MenuModal from "./MenuModal";
 
 import Settings from "./settings";
 import ToggleTheme from "../common/ToggleTheme";
+import { Button } from "../ui/Button";
 
 export default component$(() => {
   const store = useStore({
@@ -19,7 +20,7 @@ export default component$(() => {
   return (
     <header
     id="header"
-    class={`sticky top-0 z-40 flex-none border-b-2 border-t-2 bg-primary dark:bg-black mx-auto  transition-[opacity] ease-in-out ${
+    class={`sticky top-0 z-40 flex-none border-b-2 border-t-2 bg-background mx-auto  transition-[opacity] ease-in-out ${
       store.isScrolling
         ? "    "
         : ""
@@ -209,10 +210,12 @@ export default component$(() => {
           </nav>
           <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
             <div class="items-center flex justify-between w-full md:w-auto">
-              <div class="flex">
-              </div>
-              <span class="ml-4 rtl:ml-0 rtl:mr-4">
+             
+          
                 <Settings/>
+                 <Link href="/quote" class="w-full sm:w-auto">
+                                <Button size="md" class="w-full">Get A Quote</Button>
+                              </Link>
                 {/* <a
                   href="/contact"
                   class="btn btn-secondary ml-2 py-2.5 px-5.5 md:px-4 font-semibold shadow-none text-sm w-auto"
@@ -225,7 +228,7 @@ export default component$(() => {
                 >
                   <IconBrandTailwind class="mr-1" /> Call Now
                 </a> */}
-              </span>
+              
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ export default component$(() => {
     <section class="relative overflow-hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[85%_15%] min-h-[calc(100vh-89px)]">
         {/* Text Content */}
-        <div class="relative z-10 stars order-2 md:order-1 flex items-center justify-center bg-gradient-to-r from-muted to-background dark:from-background dark:to-muted px-4 py-8 md:px-8 md:py-0">
+        <div class="relative z-10 stars order-1 md:order-1 flex items-center justify-center bg-gradient-to-r from-muted to-background dark:from-background dark:to-muted px-4 py-8 md:px-8 md:py-0">
           <div class="text-center md:text-left">
 {/* 
           <a href="#" class="inline-flex justify-between items-center py-1 -mt-1 px-1 pr-4 mb-4 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
@@ -22,7 +22,7 @@ export default component$(() => {
             <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground text-balance mb-6 animate-hero-subtitle max-w-2xl mx-auto md:mx-0">
               Transform your online presence with custom web design and development services—stunning, fast, and secure websites for your business.
             </p>
-            <div class="flex flex-col items-center gap-4 px-2 sm:flex-row sm:justify-center md:justify-start animate-hero-buttons">
+            <div class="flex flex-col items-center gap-4 px-2 md:px-0 sm:flex-row sm:justify-center md:justify-start animate-hero-buttons">
               <Link href="/quote" class="w-full sm:w-auto">
                 <Button size="md" class="w-full">Get A Quote</Button>
               </Link>
@@ -33,7 +33,7 @@ export default component$(() => {
           </div>
         </div>
         {/* Carousel */}
-        <div class="relative order-1 px-4 md:order-2 h-52 sm:h-80 md:h-full">
+        <div class="relative order-2 px-4 md:order-2 h-52 sm:h-80 md:h-full">
           <Carousel />
         </div>
         {/* LogoClouds */}
