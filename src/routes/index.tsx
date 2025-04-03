@@ -147,7 +147,7 @@ isDark
       id="services"
       highlight="Contact Us"
       title="Get In Touch"
-      subtitle="Request a quote or book a free consultation today!."
+      subtitle="Request a quote or book a free consultations today!."
       items={[]} />
     </>
   );
