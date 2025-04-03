@@ -1,7 +1,6 @@
 import { component$, useStore } from "@builder.io/qwik";
 import { Link, useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
-import { Logo2 } from "../common/Logo2";
 import MenuModal from "./MenuModal";
 
 import Settings from "./settings";
