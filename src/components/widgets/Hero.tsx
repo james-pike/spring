@@ -26,14 +26,14 @@ export default component$(() => {
               Transform your online presence with custom web design and development services—stunning, fast, and secure websites for your business.
             </p>
             <div class="flex flex-col items-center gap-4 px-2 md:px-0 sm:flex-row sm:justify-center md:justify-start animate-hero-buttons">
-              <Link href="/quote" class="w-full sm:w-auto">
+              <Link href="/contact" class="w-full sm:w-auto">
               <Button
   size="md"
   class="w-full relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] before:animate-shimmer"
 >
   Get A Quote
 </Button>              </Link>
-              <Link href="/quote" class="w-full sm:w-auto">
+              <Link href="/contact" class="w-full sm:w-auto">
                 <Button look="secondary" size="md" class="w-full">Book A Free Consultation</Button>
               </Link>
             </div>

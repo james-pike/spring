@@ -41,7 +41,9 @@
     "markdown-it": "^14.1.0",
     "node-fetch": "3.3.2",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-intersect": "^2.2.0"
+    "tailwindcss-intersect": "^2.2.0",
+    "three": "^0.175.0",
+    "vanta": "^0.5.24"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.8.0",
@@ -53,6 +55,7 @@
     "@types/eslint": "^8.56.10",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.5.0",
+    "@types/three": "^0.175.0",
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "@typescript-eslint/parser": "^7.13.0",
     "autoprefixer": "^10.4.20",

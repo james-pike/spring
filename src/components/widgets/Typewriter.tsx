@@ -50,9 +50,12 @@ export const Typewriter = component$(() => {
   const currentColor = words[loopNum.value % words.length].color;
 
   return (
-    <span class={`${currentColor}`}>
+    <span class={currentColor}>
       {text.value}
-      <span class="border-r-2 animate-pulse ml-1" />
+      <span
+        class="border-r-2 animate-pulse ml-1"
+        style={{ borderColor: 'currentColor' }}
+      />
     </span>
   );
 });

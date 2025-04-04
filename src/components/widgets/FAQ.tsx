@@ -37,9 +37,10 @@ export default component$((props: Props) => {
         items={items}
         classes={{
           container: twMerge(
-            "md:grid-cols-2 px-5 py-8 sm:px-8 sm:px-12 md:px-10 md:py-12 rounded-base",
+            "md:grid-cols-2 px-2 py-2  rounded-base",
             isDark ? "bg-background" : "bg-muted"
           ),
+          panel: "bg-primary/10",
           title: "md:text-[1.3rem]",
           icon: "text-white bg-primary dark:bg-primary rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",
           ...(classes?.items ?? {}),

@@ -55,7 +55,7 @@ export const ItemGrid = component$((props: Props) => {
           <div
             key={`${title}${index}`}
             class={twMerge(
-              "flex flex-row max-w-md",
+              "flex flex-row max-w-lg",
               panelClass,
               itemClasses?.panel,
               "transition-all duration-500 ease-out rounded-base p-4",
