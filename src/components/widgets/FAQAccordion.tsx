@@ -61,13 +61,13 @@ export default component$(({ isDark }: Props) => {
         {`
           #accordion-root {
             border: var(--border-width) solid hsl(var(--primary)); /* Static border */
-            outline: 2px solid hsl(var(--primary)); /* Base outline */
+            outline: 2px solid hsl(var(--primary) / 50%); /* Base outline */
             outline-offset: 0; /* No gap initially */
             transition: outline-width 0.3s ease, outline-offset 0.3s ease; /* Smooth transitions */
           }
 
           #accordion-root.pulse {
-            animation: pulse-outline 0.6s ease-in-out 1; /* Single smooth pulse */
+            animation: pulse-outline 1.2s cubic-bezier(0.4, 0, 0.2, 1) 1; /* Breathing effect */
           }
 
           @keyframes pulse-outline {
@@ -109,7 +109,7 @@ export default component$(({ isDark }: Props) => {
               class="text-md font-medium"
               onClick$={async () => {
                 shouldPulse.value = true; // Trigger pulse
-                await new Promise(resolve => setTimeout(resolve, 600)); // Match animation duration
+                await new Promise(resolve => setTimeout(resolve, 1200)); // Match new animation duration
                 shouldPulse.value = false; // Reset to allow retriggering
               }}
             >
