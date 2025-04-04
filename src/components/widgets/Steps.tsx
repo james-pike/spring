@@ -24,43 +24,44 @@ interface Props {
 }
 
 const sideImg =
-  "/images/placeholder.png";
+  "/images/steps.webp";
 
   const stepsData = {
-    stepsTitle: "Fast, Reliable Locksmith Services in Just a Few Steps",
+    stepsTitle: "Bringing Your Vision to Life in Just a Few Steps",
     items: [
       {
-        title: "Step 1: Contact Us",
+        title: "Step 1: Get in Touch",
         description:
-          "Locked out or need a security upgrade? Call us or book an appointment online, and our expert locksmiths will be on their way.",
+          "Reach out with your idea, whether it’s a brand refresh or a full custom website. We’ll schedule a discovery call to understand your goals and vision.",
         icon: IconStar,
       },
       {
-        title: "Step 2: Assessment & Quote",
+        title: "Step 2: Strategy & Proposal",
         description:
-          "Our team evaluates your situation—whether it's a lockout, key replacement, or security installation—and provides a transparent, upfront quote.",
+          "We dive into research, define your project scope, and craft a clear, customized proposal—no fluff, just a roadmap built around results.",
         icon: IconStar,
       },
       {
-        title: "Step 3: Professional Service",
+        title: "Step 3: Design & Development",
         description:
-          "We quickly and efficiently handle your locksmith needs, ensuring top-quality security solutions for your home, business, or vehicle.",
+          "Our team handles everything from branding and UX to responsive development—building you a modern, high-performing website tailored to your audience.",
         icon: IconStar,
       },
       {
-        title: "Ready! You're Secure",
+        title: "Step 4: Launch & Support",
         description:
-          "With your locks fixed, keys replaced, or security upgraded, you can rest easy knowing you're in safe hands with AdeptLock.",
+          "After testing and final revisions, we launch your site with confidence. Need help post-launch? We’re here for ongoing support and future updates.",
         icon: IconStar,
       },
     ],
     image: {
       src: sideImg,
-      alt: "Locksmith service process",
+      alt: "Web design and development process",
     },
   };
+  
 
-  const { stepsTitle, items, image } = stepsData;
+  const { items, image } = stepsData;
 
 export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "",  classes = {}, isDark } = props;
@@ -90,11 +91,11 @@ export default component$((props: Props) => {
     
   return (
     <SectionWrapper id={id} isDark={isDark} classes={classes}>
-      <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+      <Headline align="left" title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       <Card.Root>
     <div class="row-gap-10 grid gap-6 md:grid-cols-2">
-         <div class="mb-4 md:mb-0 md:py-4 md:pr-16">
-           {title && <h2 class="font-heading mb-8 text-3xl font-bold lg:text-4xl">{stepsTitle}</h2>}
+         <div class="mb-4 md:mb-0 px-2 py-4 md:py-4 md:pr-16">
+           {/* {title && <h2 class="font-heading mb-8 text-3xl font-bold lg:text-4xl">{stepsTitle}</h2>} */}
            {Array.isArray(items) &&
              items.length &&
              items.map(({ title, description, icon: Icon }, index) => (
@@ -110,25 +111,25 @@ export default component$((props: Props) => {
                  <div class="mr-4 flex flex-col items-center">
                    <div>
                      {index !== items.length - 1 ? (
-                       <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-900">
+                       <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary">
                          {typeof Icon !== "undefined" ? (
-                           <Icon class="h-6 w-6 text-primary-800 dark:text-slate-200" />
+                           <Icon class="h-6 w-6 text-primary dark:text-slate-200" />
                          ) : (
-                           <IconStar class="h-6 w-6 text-primary-800 dark:text-slate-200" />
+                           <IconStar class="h-6 w-6 text-primary dark:text-slate-200" />
                          )}
                        </div>
                      ) : (
-                       <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary-900 bg-primary-900">
+                       <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-primary-900">
                          {typeof Icon !== "undefined" ? (
-                           <Icon class="h-6 w-6 text-white dark:text-slate-200" />
+                           <Icon class="h-6 w-6 text-primary dark:text-slate-200" />
                          ) : (
-                           <IconStar class="h-6 w-6 text-white dark:text-slate-200" />
+                           <IconStar class="h-6 w-6 text-primary dark:text-slate-200" />
                          )}
                        </div>
                      )}
                    </div>
                    {index !== items.length - 1 && (
-                     <div class="h-full w-px bg-gray-300 dark:bg-slate-500"></div>
+                     <div class="h-full w-px bg-primary dark:bg-slate-500"></div>
                    )}
                  </div>
                  <div class={`pt-1 ${index !== items.length - 1 ? "pb-8" : ""}`}>

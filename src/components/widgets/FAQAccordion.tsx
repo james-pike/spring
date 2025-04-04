@@ -61,7 +61,7 @@ export default component$(({ isDark }: Props) => {
         {`
           #accordion-root {
             border: var(--border-width) solid hsl(var(--primary)); /* Static border */
-            outline: 2px solid hsl(var(--primary) / 50%); /* Base outline */
+            outline: 1px solid hsl(var(--primary) / 50%); /* Base outline */
             outline-offset: 0; /* No gap initially */
             transition: outline-width 0.3s ease, outline-offset 0.3s ease; /* Smooth transitions */
           }
@@ -76,7 +76,7 @@ export default component$(({ isDark }: Props) => {
               outline-offset: 0;
             }
             50% {
-              outline-width: 4px; /* Grow outward */
+              outline-width: 3px; /* Grow outward */
               outline-offset: 2px; /* Move further out */
             }
             100% {

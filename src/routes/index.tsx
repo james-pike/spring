@@ -94,9 +94,9 @@ export default component$(() => {
         items={[]} />
       <Steps       
       id="steps"
-      highlight="Reviews"
-        title="What Our Clients Say"
-        subtitle="These reviews are pulled from Google Reviews and filtered to only display 4-5 star ratings."
+      highlight="Our Process"
+  title="How We Bring Your Website to Life"
+  subtitle="From first contact to final launch, our streamlined process ensures every website is strategic, beautifully designed, and built to perform."
         items={[]} />
       <FAQ
 isDark
