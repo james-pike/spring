@@ -20,9 +20,9 @@ export default component$(() => {
   return (
     <header
     id="header"
-    class={`sticky top-0 z-40 flex-none border-b-2 border-t-2 bg-background mx-auto  transition-[opacity] ease-in-out ${
+    class={`sticky top-0 z-40 flex-none bg-gradient-to-r from-border via-background to-muted dark:from-background dark:to-muted   mx-auto  transition-[opacity] ease-in-out ${
       store.isScrolling
-        ? "    "
+        ? " border-b-2 border-t-2 bg-background/90  "
         : ""
     }`}
     window:onScroll$={() => {
