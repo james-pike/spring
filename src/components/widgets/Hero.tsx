@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import Carousel from "../ui/Carousel";
-import LogoClouds from "./LogoClouds";
 import { Button } from "../ui/Button";
 import { Link } from "@builder.io/qwik-city";
 import { Typewriter } from "./Typewriter";
