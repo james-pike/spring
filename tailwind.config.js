@@ -15,6 +15,9 @@ module.exports = {
   ],  
   theme: {
     extend: {
+      animation: {
+        'pulse-glow': 'pulseGlow 0.6s ease-out',
+      },
 
       '4.5xl': ['2.625rem', { lineHeight: '2.75rem' }],
 
@@ -109,6 +112,17 @@ module.exports = {
         'fade-up': 'fadeUp 0.5s ease-in forwards',
       },
       keyframes: {
+        pulseGlow: {
+          '0%': {
+            boxShadow: '0 0 0px hsl(var(--color-primary) / 0)',
+          },
+          '50%': {
+            boxShadow: '0 0 20px hsl(var(--color-primary) / 0.6)',
+          },
+          '100%': {
+            boxShadow: '0 0 0px hsl(var(--color-primary) / 0)',
+          },
+        },
         fadeUp: {
           '0%': { 
             opacity: '0',

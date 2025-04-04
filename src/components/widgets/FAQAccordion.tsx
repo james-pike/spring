@@ -9,6 +9,7 @@ interface Props {
 
 export default component$(({ isDark }: Props) => {
   const isVisible = useSignal(false);
+  const shouldPulse = useSignal(false); // Toggles pulse animation
 
   useVisibleTask$(() => {
     const observer = new IntersectionObserver(
@@ -56,33 +57,70 @@ export default component$(({ isDark }: Props) => {
 
   return (
     <Card.Root>
-    <Accordion.Root
-      id="accordion-root"
-      class={twMerge(
-        "w-full  rounded-base px-5 py-2 sm:p-6 md:p-8 ",
-        isDark ? "bg-background" : "bg-muted"
-      )}
-    >
-      {accordionItems.map(({ trigger, content }, index) => (
-        <Accordion.Item
-          key={index}
-          class={twMerge(
-            "transition-all duration-500 border-b last:border-none",
-            isVisible.value ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          )}
-          style={{
-            transitionDelay: `${index * 100}ms`, // Stagger by 100ms per item
-          }}
-        >
-          <Accordion.Trigger class="text-md font-medium">
-            {trigger}
-          </Accordion.Trigger>
-          <Accordion.Content class="text-sm text-muted-foreground">
-            {content}
-          </Accordion.Content>
-        </Accordion.Item>
-      ))}
-    </Accordion.Root>
+      <style>
+        {`
+          #accordion-root {
+            border: var(--border-width) solid hsl(var(--primary)); /* Static border */
+            outline: 2px solid hsl(var(--primary)); /* Base outline */
+            outline-offset: 0; /* No gap initially */
+            transition: outline-width 0.3s ease, outline-offset 0.3s ease; /* Smooth transitions */
+          }
+
+          #accordion-root.pulse {
+            animation: pulse-outline 0.6s ease-in-out 1; /* Single smooth pulse */
+          }
+
+          @keyframes pulse-outline {
+            0% {
+              outline-width: 2px;
+              outline-offset: 0;
+            }
+            50% {
+              outline-width: 4px; /* Grow outward */
+              outline-offset: 2px; /* Move further out */
+            }
+            100% {
+              outline-width: 2px;
+              outline-offset: 0;
+            }
+          }
+        `}
+      </style>
+      <Accordion.Root
+        id="accordion-root"
+        class={twMerge(
+          "w-full rounded-base px-5 py-2 sm:p-6 md:p-8",
+          isDark ? "bg-background" : "bg-muted",
+          shouldPulse.value && 'pulse' // Apply pulse class when true
+        )}
+      >
+        {accordionItems.map(({ trigger, content }, index) => (
+          <Accordion.Item
+            key={index}
+            class={twMerge(
+              "transition-all duration-500 border-b last:border-none",
+              isVisible.value ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            )}
+            style={{
+              transitionDelay: `${index * 100}ms`, // Staggered fade-in
+            }}
+          >
+            <Accordion.Trigger
+              class="text-md font-medium"
+              onClick$={async () => {
+                shouldPulse.value = true; // Trigger pulse
+                await new Promise(resolve => setTimeout(resolve, 600)); // Match animation duration
+                shouldPulse.value = false; // Reset to allow retriggering
+              }}
+            >
+              {trigger}
+            </Accordion.Trigger>
+            <Accordion.Content class="text-sm text-muted-foreground">
+              {content}
+            </Accordion.Content>
+          </Accordion.Item>
+        ))}
+      </Accordion.Root>
     </Card.Root>
   );
 });
