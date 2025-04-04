@@ -6,7 +6,6 @@ import { Input } from '../ui/Input';
 import { Button } from '../ui/Button';
 import { Tabs } from '../ui/Tabs';
 import { DarkContext } from '~/DarkContext';
-import FAQAccordion from './FAQAccordion';
 import { ItemGrid } from '../ui/ItemGrid';
 import { twMerge } from 'tailwind-merge';
 
