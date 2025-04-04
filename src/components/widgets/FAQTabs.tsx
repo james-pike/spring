@@ -1,8 +1,4 @@
 import { component$, useContextProvider } from '@builder.io/qwik';
-import { Card } from '../ui/Card';
-import { Label } from '../ui/Label';
-import { Input } from '../ui/Input';
-import { Button } from '../ui/Button';
 import { Tabs } from '../ui/Tabs';
 import { DarkContext } from '~/DarkContext';
 import FAQAccordion from './FAQAccordion';
@@ -35,7 +31,7 @@ export default component$((props: Props) => {
 
         {faqData.map((section, index) => (
           <Tabs.Panel key={index}>
-            <FAQAccordion items={section.items} />
+            <FAQAccordion items={section.items} /> {/* Passing items as a prop */}
           </Tabs.Panel>
         ))}
       </Tabs.Root>
