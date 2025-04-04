@@ -20,10 +20,10 @@ export default component$(() => {
   return (
     <header
     id="header"
-    class={`sticky top-0 z-40 flex-none bg-gradient-to-r from-border via-background to-muted dark:from-background dark:to-muted   mx-auto  transition-[opacity] ease-in-out ${
+    class={`sticky top-0 z-40 flex-none    mx-auto  transition-[opacity] ease-in-out ${
       store.isScrolling
-        ? " border-b-2 border-t-2 bg-background/90  "
-        : ""
+        ? " border-b-2 border-t-2 bg-background/95  "
+        : "bg-gradient-to-r from-border via-background to-muted dark:from-background dark:to-muted"
     }`}
     window:onScroll$={() => {
       if (!store.isScrolling && window.scrollY >= 10) {
