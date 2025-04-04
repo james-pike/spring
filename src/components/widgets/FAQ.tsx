@@ -91,7 +91,6 @@ export default component$((props: Props) => {
         <Card.Root>
           <FAQTabs2
             faqData={faqData}
-    
           />
         </Card.Root>
       </div>

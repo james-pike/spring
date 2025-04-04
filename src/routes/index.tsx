@@ -14,7 +14,6 @@ import Contact from "~/components/widgets/Contact";
 
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
-const IconArrowDownRight = qwikSerialized(() => import("../components/icons/IconArrowDownRight"));
 
 export default component$(() => {
   return (
