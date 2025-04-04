@@ -1,7 +1,13 @@
 # Menu
 
 ## [Home](/)
-## [About](/pricing)
+
+
+## About 
+
+- [About Us](/services/emergency-lockout)
+- [FAQ](/services/key-duplication)
+- [Reviews](/services/lock-installation)
 
 ## Services
 
@@ -12,8 +18,9 @@
 - [Automotive Locksmith Services](/services/automotive-locksmith)
 - [Safe Opening & Installation](/services/safe-services)
 
-## [Reviews](/reviews)
-## [FAQ](/faq)
+## [Pricing](/pricing)
+
+
 ## [Contact](/contact)
 
   
