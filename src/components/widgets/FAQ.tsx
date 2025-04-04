@@ -1,10 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline"; // Adjust the import path
 import { SectionWrapper } from "./SectionWrapper";
-import { ItemGrid } from "../ui/ItemGrid";
 import { twMerge } from "tailwind-merge";
-import FAQAccordion from "./FAQAccordion";
 import { Card } from "../ui/Card";
+import FAQTabs from "./FAQTabs";
+import FAQTabs2 from "./FAQTabs2";
 
 interface Item {
   title?: string;
@@ -32,7 +32,7 @@ export default component$((props: Props) => {
       
       <div class="hidden sm:block">
         <Card.Root>
-      <ItemGrid
+      <FAQTabs2
         id="faq-grid" // Unique ID for this instance
         items={items}
         classes={{
@@ -50,7 +50,7 @@ export default component$((props: Props) => {
          </div>
 
       <div class="block sm:hidden">
-      <FAQAccordion isDark={isDark} />
+      <FAQTabs isDark={isDark} />
 
 
       </div>
