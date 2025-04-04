@@ -50,7 +50,7 @@ export const ItemGrid = component$((props: Props) => {
 
   return (
     items.length > 0 && (
-      <div id={gridId} class={twMerge("grid mx-auto gap-8", containerClass)}>
+      <div id={gridId} class={twMerge("grid mx-auto gap-2", containerClass)}>
         {items.map(({ title, description, icon: Icon, classes: itemClasses = {} }, index) => (
           <div
             key={`${title}${index}`}
@@ -58,7 +58,7 @@ export const ItemGrid = component$((props: Props) => {
               "flex flex-row max-w-md",
               panelClass,
               itemClasses?.panel,
-              "transition-all duration-500 ease-out",
+              "transition-all duration-500 ease-out rounded-base p-4",
               isVisible.value ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             )}
             style={{ transitionDelay: `${index * 100}ms` }}

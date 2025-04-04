@@ -32,50 +32,51 @@ export default component$(() => {
     
 
 
-      <Features
-        isDark
-        highlight="Features"
-        title="Reliable Locksmith Services You Can Trust"
-        subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
-        items={[
-          {
-            title: "24/7 Emergency Services",
-            description:
-              "Locked out of your home, office, or car? Our team is available around the clock to assist you anytime, anywhere.",
-            icon: IconRocket, // Replace with a relevant icon
-          },
-          {
-            title: "Residential & Commercial Security",
-            description:
-              "We offer expert lock installation, repair, and key duplication services to keep your home and business secure.",
-            icon: IconRocket, // Replace with a relevant icon
-          },
-          {
-            title: "Automotive Locksmithing",
-            description:
-              "Lost your car keys? Need a key fob replacement? We provide fast and reliable car key programming and lockout services.",
-            icon: IconRocket, // Replace with a relevant icon
-          },
-          {
-            title: "High-Security Locks & Safes",
-            description:
-              "Upgrade your security with high-quality locks, access control systems, and safe installations for added protection.",
-            icon: IconRocket, // Replace with a relevant icon
-          },
-          {
-            title: "Fast Response Time",
-            description:
-              "We prioritize quick service to get you back inside and secure your property with minimal wait time.",
-            icon: IconRocket, // Replace with a relevant icon
-          },
-          {
-            title: "Licensed & Trusted Professionals",
-            description:
-              "Our experienced locksmiths are fully licensed, insured, and dedicated to providing top-notch security solutions.",
-            icon: IconRocket, // Replace with a relevant icon
-          },
-        ]}
-      />
+<Features
+  isDark
+  highlight="Core Competencies"
+  title="Expert Front-End Development You Can Rely On"
+  subtitle="Delivering high-performance, user-centric web applications with advanced JavaScript frameworks and modern web technologies."
+  items={[
+    {
+      title: "Advanced State Management",
+      description:
+        "Proficient in managing complex states across applications using React's Context API, Redux, and Qwik's signals, ensuring seamless, performant user interactions.",
+      icon: IconRocket, // Replace with a relevant icon
+    },
+    {
+      title: "Optimized Web Performance",
+      description:
+        "Skilled in optimizing web performance with code-splitting, lazy loading, and caching strategies, ensuring lightning-fast page loads and minimal render times.",
+      icon: IconRocket, // Replace with a relevant icon
+    },
+    {
+      title: "Responsive Design & UI/UX",
+      description:
+        "Expert in crafting responsive, mobile-first designs using CSS Grid, Flexbox, Tailwind CSS, and advanced media queries to create fluid layouts across all device sizes.",
+      icon: IconRocket, // Replace with a relevant icon
+    },
+    {
+      title: "Progressive Web Apps (PWAs)",
+      description:
+        "Experience in developing Progressive Web Apps, leveraging Service Workers and Web APIs for offline functionality and push notifications to enhance user engagement.",
+      icon: IconRocket, // Replace with a relevant icon
+    },
+    {
+      title: "JavaScript Frameworks Mastery",
+      description:
+        "Extensive expertise in ReactJS and QwikJS for building scalable, high-performance applications with optimal state management and reactivity.",
+      icon: IconRocket, // Replace with a relevant icon
+    },
+    {
+      title: "Web Browser APIs & Client-Side Integration",
+      description:
+        "In-depth understanding of web browser APIs (e.g., Geolocation, WebSockets, IndexedDB) to enable rich, interactive experiences with seamless back-end communication.",
+      icon: IconRocket, // Replace with a relevant icon
+    },
+  ]}
+/>
+
 
       <Pricing id="services"
       

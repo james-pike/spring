@@ -36,10 +36,7 @@ export default component$(() => {
         </div>
         {/* Carousel */}
         <div class="relative order-2 px-4 md:order-2 h-52 sm:h-80 md:h-full">
-          {/* <Carousel /> */}
-          <object aria-label="SVGator stroke offset animation"  class="cr_jc" type="image/svg+xml" data="https://cdn.svgator.com/assets/main-page/fold5/girl.svg">
-  <img alt="SVGator stroke offset animation" src="https://cdn.svgator.com/assets/main-page/fold5/girl.svg"/>
-</object>
+          <Carousel />
         </div>
         {/* LogoClouds */}
         <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 col-span-1 md:col-span-2 flex items-center justify-center py-4 order-3">
