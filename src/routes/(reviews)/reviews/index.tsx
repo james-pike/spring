@@ -9,7 +9,7 @@ export default component$(() => {
   return (
     <>
  <Reviews  
- 
+ isDark
       title="What Our Clients Say"
       subtitle="These reviews are pulled from Google Reviews are filtered to only display 4-5 star ratings."
       highlight="Reviews"

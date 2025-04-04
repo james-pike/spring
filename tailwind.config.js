@@ -110,8 +110,14 @@ module.exports = {
         'accordion-up': 'collapsible-up 0.2s ease-out 0s 1 normal forwards',
         'accordion-down': 'collapsible-down 0.2s ease-out 0s 1 normal forwards',
         'fade-up': 'fadeUp 0.5s ease-in forwards',
+        shimmer: 'shimmer 2.5s linear infinite',
+
       },
       keyframes: {
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
         pulseGlow: {
           '0%': {
             boxShadow: '0 0 0px hsl(var(--color-primary) / 0)',

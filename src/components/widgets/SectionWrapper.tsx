@@ -10,23 +10,25 @@ interface SectionWrapperProps {
 
 export const SectionWrapper = component$((props: SectionWrapperProps) => {
   const { id, isDark, classes = {} } = props;
-  const location = useLocation();  // Get the current route
+  const location = useLocation();
 
-  // Reduce padding by 25% if not on the landing page
-  const paddingY = location.url.pathname === '/' ? 'py-12 md:py-16 lg:py-20' : 'py-9 md:py-12 lg:py-15'; 
+  const isHomePage = location.url.pathname === "/";
+  const paddingY = isHomePage
+    ? "py-12 md:py-16 lg:py-20"
+    : "py-9 md:py-12 lg:py-15";
 
   return (
     <section
       class={twMerge(
         "relative scroll-mt-16",
-        isDark ? "bg-muted" : "" // Apply background color directly to the section
+        !isHomePage || isDark ? "bg-muted" : "", // Add bg-muted if NOT on homepage
       )}
       {...(id ? { id } : {})}
     >
       <div
         class={twMerge(
           "relative mx-auto max-w-5xl px-4 md:px-6",
-          paddingY,  // Conditionally applied padding
+          paddingY,
           classes?.container
         )}
       >

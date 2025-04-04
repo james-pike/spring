@@ -94,7 +94,7 @@ export default component$((props: Props) => {
       <Headline align="left" title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       <Card.Root>
     <div class="row-gap-10 grid gap-6 md:grid-cols-2">
-         <div class="mb-4 md:mb-0 px-2 py-4 md:py-4 md:pr-16">
+         <div class="mb-4 md:mb-0 px-2 py-4 md:py-6 md:px-4 md:pr-16">
            {/* {title && <h2 class="font-heading mb-8 text-3xl font-bold lg:text-4xl">{stepsTitle}</h2>} */}
            {Array.isArray(items) &&
              items.length &&
