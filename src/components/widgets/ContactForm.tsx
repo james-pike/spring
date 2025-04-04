@@ -16,9 +16,10 @@ interface Props {
 
   return (
     <>
-      <Card.Root>
+      <Card.Root class="border-primary border">
      
           <Card.Header>
+            <div class=" max-w-lg mx-auto">
         <dl class=" space-y-4 text-base/7 text-gray-600 dark:text-gray-300">
           <div class="flex gap-x-4">
             <dt class="flex-none">
@@ -96,10 +97,11 @@ interface Props {
             </dd>
           </div>
         </dl>
+        </div>
         </Card.Header>
         <Card.Content>
         <form action="#" method="POST" class=" ">
-          <div class="mx-auto max-w-xl lg:max-w-lg">
+          <div class="mx-auto  lg:max-w-lg">
             <div class="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
               <div>
                 <label

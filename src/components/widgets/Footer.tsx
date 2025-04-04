@@ -69,16 +69,17 @@ export default component$(() => {
         <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
           <div class="col-span-12 lg:col-span-4 pr-8">
             <div class="mb-2">
-              <Link class="inline-block font-bold text-xl" href={"/"}>
-                TestLock - Safe & Auto Inc
-              </Link>
+           
+                Webdev.ca
+             
             </div>
             <div class="text-sm text-gray-600 mb-4 dark:text-gray-400">
-            TestLock provides expert locksmith services for homes, businesses, and vehicles.
-            From emergency lockouts to advanced security installations, we ensure your safety with precision and care.
+            Transform your online presence with custom web design and development services—stunning, fast, and secure websites for your business.
             </div>
             <div class="flex gap-2">
+            <Link class="inline-block font-bold text-xl" href={"/contact"}>
               <Button>Get Started Today</Button>
+              </Link>
            
             </div>
           </div>

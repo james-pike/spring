@@ -39,7 +39,7 @@ export default component$(() => {
       )}
       onResolved={(reviews) => (
         <Carousel.Root 
-          class="carousel-root bg-gray-50 dark:bg-gray-900 border-gray-300" 
+          class="carousel-root bg-background border-gray-300" 
           slidesPerView={1.2} 
           gap={25} 
           rewind 
@@ -49,7 +49,7 @@ export default component$(() => {
             {reviews.map((review, index) => (
               <Carousel.Slide
                 key={`${review.author_name}-${index}`}
-                class="carousel-slide h-64 flex flex-col bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden"
+                class="carousel-slide h-64 flex flex-col bg-muted rounded-lg overflow-hidden"
               >
                 {/* Star Rating - Smaller section at the top */}
                 <div class="flex items-center p-2 bg-gray-100 dark:bg-gray-700">
