@@ -17,7 +17,7 @@ export default component$((props: Props) => {
   useContextProvider(DarkContext, isDark);
 
   return (
-    <div class="flex flex-col md:flex-row gap-16 mx-auto justify-center">
+    <div class="flex flex-col md:flex-row gap-12 mx-auto justify-center">
       <Tabs.Root class="max-w-[500px]">
         <Tabs.List class="grid w-full grid-cols-2">
           <Tabs.Tab>Complete Project ($3800)</Tabs.Tab>
