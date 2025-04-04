@@ -68,7 +68,7 @@ export default component$(() => {
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
           <div class="col-span-12 lg:col-span-4 pr-8">
-            <div class="mb-2">
+            <div class="mb-2 inline-block font-bold text-xl">
            
                 Webdev.ca
              
@@ -77,7 +77,7 @@ export default component$(() => {
             Transform your online presence with custom web design and development services—stunning, fast, and secure websites for your business.
             </div>
             <div class="flex gap-2">
-            <Link class="inline-block font-bold text-xl" href={"/contact"}>
+            <Link class="" href={"/contact"}>
               <Button>Get Started Today</Button>
               </Link>
            
