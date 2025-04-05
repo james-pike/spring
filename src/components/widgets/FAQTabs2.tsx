@@ -40,7 +40,7 @@ export default component$((props: Props) => {
               items={section.items}
               classes={{
                 container: twMerge(
-                  "md:grid-cols-2 px-2 py-2",
+                  "md:grid-cols-2 px-2 py-2 rounded-base",
                   isDark ? "bg-background" : "bg-muted"
                 ),
                 panel: twMerge(

@@ -10,6 +10,7 @@ import Features from "~/components/widgets/Features";
 import FAQ from "~/components/widgets/FAQ";
 import Steps from "~/components/widgets/Steps";
 import Contact from "~/components/widgets/Contact";
+import Stars from "~/components/widgets/Stars";
 
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
@@ -17,6 +18,7 @@ const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket")
 export default component$(() => {
   return (
     <>
+    
       <Hero />
 
       <Services

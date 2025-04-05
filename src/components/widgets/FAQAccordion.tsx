@@ -14,12 +14,12 @@ interface FAQAccordionProps {
 
 export default component$(({ items }: FAQAccordionProps) => {
   return (
-    <Card.Root>
+    <Card.Root class="py-1">
       <Accordion.Root>
         {items.map(({ title, description }, index) => (
           <Accordion.Item
             key={index}
-            class="transition-all px-5 py-2 duration-500 border-b last:border-none"
+            class="transition-all px-5 duration-500 border-b last:border-none"
           >
             <Accordion.Trigger class="text-md font-medium">{title}</Accordion.Trigger>
             <Accordion.Content class="text-sm text-muted-foreground">

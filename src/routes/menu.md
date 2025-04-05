@@ -5,9 +5,9 @@
 
 ## About 
 
-- [About Us](/services/emergency-lockout)
-- [FAQ](/services/key-duplication)
-- [Reviews](/services/lock-installation)
+- [About Us](/about)
+- [FAQ](/faq)
+- [Reviews](/reviews)
 
 ## Services
 

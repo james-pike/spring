@@ -22,7 +22,7 @@ export default component$(() => {
     id="header"
     class={`sticky top-0 z-40 flex-none    mx-auto  transition-[opacity] ease-in-out ${
       store.isScrolling
-        ? " border-b-2 border-t-2 bg-background  "
+        ? " border-b-2  bg-background  "
         : "bg-gradient-to-r from-border via-background to-muted dark:from-background dark:to-muted"
     }`}
     window:onScroll$={() => {
@@ -65,9 +65,12 @@ export default component$(() => {
               {/* <Logo /> */}
               <Logo3 />
             </a>
-            <div class="flex items-center md:hidden">
+            <div class="flex items-center md:hidden gap-1">
             <Settings/>
-  <ToggleTheme/>
+
+  <Link href="/quote" class="w-full sm:w-auto">
+                                <Button size="md" class="w-full px-0">Get Quote</Button>
+                              </Link>
   
               <MenuModal />
             </div>

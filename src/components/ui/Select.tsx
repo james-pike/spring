@@ -61,7 +61,7 @@ const Popover = component$<SelectPopoverProps>((props) => {
     <HeadlessSelect.Popover
       {...restProps}
       class={cn(
-        'w-full max-w-[15rem] data-[open]:animate-in data-[closing]:animate-out data-[closing]:fade-out-0 data-[open]:fade-in-0 data-[closing]:zoom-out-95 data-[open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+        'w-full max-w-[15rem] data-[open]:animate-in rounded-base data-[closing]:animate-out data-[closing]:fade-out-0 data-[open]:fade-in-0 data-[closing]:zoom-out-95 data-[open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
         isDark ? 'bg-muted' : 'bg-popover',
         'text-popover-foreground shadow-md',
         props.class
@@ -110,14 +110,14 @@ const Item = component$<SelectItemProps>((props) => {
     <HeadlessSelect.Item
       {...restProps}
       class={cn(
-        'relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-2 pr-8 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'relative flex w-full cursor-default focus:text-primary select-none items-center rounded-sm py-1.5 pl-2 pr-8 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         'data-[highlighted]:border-base',
         isDark 
           ? 'focus:bg-muted data-[highlighted]:bg-background' 
           : 'focus:bg-accent data-[highlighted]:bg-accent',
         isDark 
-          ? 'focus:text-foreground data-[highlighted]:text-foreground' 
-          : 'focus:text-accent-foreground data-[highlighted]:text-accent-foreground',
+          ? 'focus:text-foreground data-[highlighted]:text-primary' 
+          : 'focus:text-accent-foreground data-[highlighted]:text-primary',
         props.class
       )}
     >

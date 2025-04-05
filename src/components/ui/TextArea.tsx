@@ -22,7 +22,7 @@ export const Textarea = component$<TextareaProps>(
           value={valueSig ? valueSig.value : value}
           onInput$={valueSig ? $((__, el) => (valueSig.value = el.value)) : onInput$}
           class={cn(
-            'flex w-full rounded-base border border-input px-3 py-1 text-sm text-foreground shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50',
+            'flex w-full rounded-base border border-input px-3 py-1 text-sm text-foreground shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-50',
             isDark ? 'bg-muted' : 'bg-background', // Same isDark logic as Input
             props.class
           )}

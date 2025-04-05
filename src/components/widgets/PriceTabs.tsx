@@ -20,8 +20,8 @@ export default component$((props: Props) => {
     <div class="flex flex-col md:flex-row gap-12 mx-auto justify-center">
       <Tabs.Root class="max-w-[500px]">
         <Tabs.List class="grid w-full grid-cols-2">
-          <Tabs.Tab>Complete Project ($3800)</Tabs.Tab>
-          <Tabs.Tab>Monthly Cost ($200/month)</Tabs.Tab>
+          <Tabs.Tab>Complete Project </Tabs.Tab>
+          <Tabs.Tab>Monthly Cost </Tabs.Tab>
         </Tabs.List>
         <Tabs.Panel>
           <Card.Root>
