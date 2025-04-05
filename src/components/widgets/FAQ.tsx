@@ -57,7 +57,7 @@ export default component$((props: Props) => {
       ],
     },
     {
-      title: "Development",
+      title: "Develop",
       items: [
         {
           icon: IconArrowDownRight,
