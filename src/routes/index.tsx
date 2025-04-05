@@ -10,6 +10,7 @@ import FAQ from "~/components/widgets/FAQ";
 import Steps from "~/components/widgets/Steps";
 import Contact from "~/components/widgets/Contact";
 import Portfolio from "~/components/widgets/Portfolio";
+import Services from "~/components/widgets/Services";
 
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
@@ -18,6 +19,12 @@ export default component$(() => {
   return (
     <>
       <Hero />
+      <Services
+        id="services"
+        highlight="Portfolio"
+        title="Discover Past Projects We've Done"
+        subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
+        items={[]} />
 <Features
   isDark
   highlight="Core Competencies"
