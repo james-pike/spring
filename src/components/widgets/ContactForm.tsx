@@ -19,7 +19,7 @@ interface Props {
       <Card.Root class="border-primary border">
      
           <Card.Header>
-            <div class=" max-w-md ">
+            <div class=" max-w-md mx-auto ">
         <dl class=" space-y-4 text-base/7 text-gray-600 dark:text-gray-300">
           <div class="flex gap-x-4">
             <dt class="flex-none">
