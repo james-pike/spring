@@ -2,11 +2,11 @@ import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 
 export const Typewriter = component$(() => {
   const words = [
-    { word: "Web Design", color: "text-primary" },
-    { word: "Web Development", color: "text-red-500" },
-    { word: "SEO Optimization", color: "text-orange-500" },
-    { word: "Branding", color: "text-yellow-500" },
-    { word: "E-Commerce", color: "text-green-500" },
+    { word: "Web Design", gradient: "bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" },
+    { word: "Development", gradient: "bg-gradient-to-r from-green-400 via-teal-500 to-blue-600" },
+    { word: "SEO", gradient: "bg-gradient-to-r from-yellow-500 via-orange-600 to-red-700" },
+    { word: "Branding", gradient: "bg-gradient-to-r from-indigo-500 via-blue-500 to-green-500" },
+    { word: "E-Commerce", gradient: "bg-gradient-to-r from-red-500 via-yellow-500 to-green-500" },
   ];
 
   const text = useSignal('');
@@ -47,10 +47,12 @@ export const Typewriter = component$(() => {
     cleanup(() => clearTimeout(timeoutId));
   });
 
-  const currentColor = words[loopNum.value % words.length].color;
+  const currentGradient = words[loopNum.value % words.length].gradient;
 
   return (
-    <span class={currentColor}>
+    <span
+      class={`bg-clip-text text-transparent ${currentGradient}`} // Apply unique gradient for each word
+    >
       {text.value}
       <span
         class="border-r-2 animate-pulse ml-1"

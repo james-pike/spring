@@ -34,11 +34,51 @@ export default component$((props: Props) => {
           title: "Can I request revisions?",
           description: "Absolutely, we offer 2-3 rounds of revisions based on the plan you choose.",
         },
+        {
+          icon: IconArrowDownRight,
+          title: "What design tools do you use?",
+          description: "We primarily use Figma, Adobe XD, and Sketch depending on the project scope.",
+        },
+        {
+          icon: IconArrowDownRight,
+          title: "Can I request revisions?",
+          description: "Absolutely, we offer 2-3 rounds of revisions based on the plan you choose.",
+        },
+        {
+          icon: IconArrowDownRight,
+          title: "What design tools do you use?",
+          description: "We primarily use Figma, Adobe XD, and Sketch depending on the project scope.",
+        },
+        {
+          icon: IconArrowDownRight,
+          title: "Can I request revisions?",
+          description: "Absolutely, we offer 2-3 rounds of revisions based on the plan you choose.",
+        },
       ],
     },
     {
       title: "Development",
       items: [
+        {
+          icon: IconArrowDownRight,
+          title: "What tech stack do you use?",
+          description: "We work with React, Qwik, Next.js, Tailwind, Node.js, and more.",
+        },
+        {
+          icon: IconArrowDownRight,
+          title: "Do you provide API development?",
+          description: "Yes, we build scalable and secure REST and GraphQL APIs.",
+        },
+        {
+          icon: IconArrowDownRight,
+          title: "What tech stack do you use?",
+          description: "We work with React, Qwik, Next.js, Tailwind, Node.js, and more.",
+        },
+        {
+          icon: IconArrowDownRight,
+          title: "Do you provide API development?",
+          description: "Yes, we build scalable and secure REST and GraphQL APIs.",
+        },
         {
           icon: IconArrowDownRight,
           title: "What tech stack do you use?",

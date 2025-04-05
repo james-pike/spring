@@ -3,7 +3,6 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import Stats from "~/components/widgets/Stats";
 import { qwikSerialized } from "~/utils/qwikSerialized";
 import { SITE } from "~/config.mjs";
-import Reviews from "~/components/widgets/Reviews";
 import Pricing from "~/components/widgets/Pricing";
 import Services from "~/components/widgets/Services";
 import Hero from "~/components/widgets/Hero";
@@ -85,12 +84,12 @@ export default component$(() => {
         items={[]} />
 
 
-      <Reviews
+      {/* <Reviews
       
         highlight="Reviews"
         title="What Our Clients Say"
         subtitle="These reviews are pulled from Google Reviews and filtered to only display 4-5 star ratings."
-        items={[]} />
+        items={[]} /> */}
       <Steps       
       id="steps"
       highlight="Our Process"

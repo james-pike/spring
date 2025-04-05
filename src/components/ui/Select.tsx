@@ -129,7 +129,7 @@ const Item = component$<SelectItemProps>((props) => {
 const ItemIndicator = component$<PropsOf<typeof HeadlessSelect.ItemIndicator>>(
   ({ ...props }) => {
     return (
-      <span class="absolute right-2 flex h-3.5 w-3.5 items-center justify-center">
+      <span class="absolute right-2 flex h-3.5 w-3.5 items-center justify-center text-primary">
         <HeadlessSelect.ItemIndicator {...props}>
           <LuCheck class="h-4 w-4" />
         </HeadlessSelect.ItemIndicator>

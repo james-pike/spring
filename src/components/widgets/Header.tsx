@@ -22,7 +22,7 @@ export default component$(() => {
     id="header"
     class={`sticky top-0 z-40 flex-none    mx-auto  transition-[opacity] ease-in-out ${
       store.isScrolling
-        ? " border-b-2 border-t-2 bg-background/95  "
+        ? " border-b-2 border-t-2 bg-background  "
         : "bg-gradient-to-r from-border via-background to-muted dark:from-background dark:to-muted"
     }`}
     window:onScroll$={() => {
@@ -78,133 +78,132 @@ export default component$(() => {
           >
             {menu && menu.items ? (
               <ul class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium">
-                {menu.items.map(({ text, href, items }, key) => {
-                  const isActive = location.url.pathname === href; // Assuming `location` is available for active state
-                  return (
-                    <li key={key} class={items?.length ? "dropdown" : ""}>
-                      {items?.length ? (
-                        <>
-                          <button
-                            class={`
-                      hover:text-primary
-                      px-4 py-3 
-                      flex items-center 
+               {menu.items.map(({ text, href, items }, key) => {
+  const isActive = location.url.pathname === href;
+  return (
+    <li key={key} class={items?.length ? "dropdown" : ""}>
+      {items?.length ? (
+        <>
+          <button
+            class={`
+              hover:bg-muted
+              hover:text-primary
+              px-4 py-3
+              flex items-center
+              transition-all duration-200
+              relative
+              rounded-base  /* Add rounded-base for the hover effect */
+              after:content-['']
+              after:absolute
+              after:bottom-[6px]
+              after:left-1/2
+              after:h-[2px]
+              after:bg-primary
+              after:transition-all
+              after:duration-200
+              ${isActive
+                ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
+                : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
+              }
+            `}
+            onClick$={() => {
+              if (location.url.pathname !== "/") {
+                window.location.href = "/#services";
+              } else {
+                const servicesSection = document.getElementById("services");
+                if (servicesSection) {
+                  servicesSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }
+            }}
+          >
+            {text}
+            <IconChevronDown class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
+          </button>
+          <ul
+            class={`
+              dropdown-menu
+              md:backdrop-blur-md
+              dark:md:bg-muted
+              rounded
+              md:absolute
+              pl-4 md:pl-0
+              md:hidden
+              font-medium
+              md:bg-white/90
+              md:min-w-[200px]
+              drop-shadow-xl
+              py-2
+            `}
+          >
+            {items.map(({ text: text2, href: href2 }, key2) => {
+              const isDropdownActive = location.url.pathname === href2;
+              return (
+                <li key={key2}>
+                  <a
+                    class={`
+                      first:rounded-t
+                      last:rounded-b
+                      hover:bg-muted hover:text-primary
+                      py-2 px-5
+                      block whitespace-no-wrap
                       transition-all duration-200
                       relative
-                      after:content-[''] 
-                      after:absolute 
-                      after:bottom-[6px] 
-                      after:left-1/2 
-                      after:h-[2px] 
+                      after:content-['']
+                      after:absolute
+                      after:bottom-[4px]
+                      after:left-1/2
+                      after:h-[2px]
                       after:bg-primary
-                      after:transition-all 
-                      after:duration-200 
-                      ${isActive
-                                ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
-                                : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
-                              }
+                      after:transition-all
+                      after:duration-200
+                      rounded-base  /* Add rounded-base for sub-item links */
+                      ${isDropdownActive
+                        ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
+                        : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
+                      }
                     `}
-                            onClick$={() => {
-                              if (location.url.pathname !== "/") {
-                                // Navigate to root and scroll to #services
-                                window.location.href = "/#services";
-                              } else {
-                                // Already on root, just scroll to #services
-                                const servicesSection = document.getElementById("services");
-                                if (servicesSection) {
-                                  servicesSection.scrollIntoView({ behavior: "smooth" });
-                                }
-                              }
-                            }}
-                          >
-                            {text}{" "}
-                            <IconChevronDown
-                              class="
-                        w-3.5 h-3.5 
-                        ml-0.5 rtl:ml-0 rtl:mr-0.5 
-                        hidden md:inline 
-                      "
-                            />
-                          </button>
-                          <ul
-                            class="
-                      dropdown-menu 
-                      md:backdrop-blur-md 
-                      dark:md:bg-muted
-                      rounded md:absolute 
-                      pl-4 md:pl-0 
-                      md:hidden 
-                      font-medium 
-                      md:bg-white/90 
-                      md:min-w-[200px] 
-                      drop-shadow-xl
-                      py-2
-                    "
-                          >
-                            {items.map(({ text: text2, href: href2 }, key2) => {
-                              const isDropdownActive = location.url.pathname === href2;
-                              return (
-                                <li key={key2}>
-                                  <a
-                                    class={`
-                              first:rounded-t last:rounded-b 
-                              hover:text-primary 
-                              py-2 px-5 
-                              block whitespace-no-wrap 
-                              transition-all duration-200 
-                              relative
-                              after:content-[''] 
-                              after:absolute 
-                              after:bottom-[4px] 
-                              after:left-1/2 
-                              after:h-[2px] 
-                              after:bg-primary
-                              after:transition-all 
-                              after:duration-200 
-                              ${isDropdownActive
-                                        ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
-                                        : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
-                                      }
-                            `}
-                                    href={href2}
-                                  >
-                                    {text2}
-                                  </a>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        </>
-                      ) : (
-                        <a
-                          class={`
-                    hover:text-primary 
-                    px-4 py-3 
-                    flex items-center 
-                    hover:bg-muted
-                    relative 
-                    transition-all duration-200 
-                    after:content-[''] 
-                    after:absolute 
-                    after:bottom-[6px] 
-                    after:left-1/2 
-                    after:h-[2px] 
-                    after:bg-primary
-                    after:transition-all 
-                    after:duration-200 
-                    ${isActive
-                              ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
-                              : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
-                            }
-                  `}
-                          href={href}
-                        >
-                          {text}
-                        </a>
-                      )}
-                    </li>
-                  );
-                })}
+                    href={href2}
+                  >
+                    {text2}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      ) : (
+        <a
+          class={`
+            hover:bg-muted
+            hover:text-primary
+            px-4 py-3
+            flex items-center
+            relative
+            transition-all duration-200
+            after:content-['']
+            after:absolute
+            after:bottom-[6px]
+            after:left-1/2
+            after:h-[2px]
+            after:bg-primary
+            after:transition-all
+            after:duration-200
+            rounded-base  /* Add rounded-base for the hover effect */
+            ${isActive
+              ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
+              : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
+            }
+          `}
+          href={href}
+        >
+          {text}
+        </a>
+      )}
+    </li>
+  );
+})}
+
               </ul>
             ) : null}
           </nav>

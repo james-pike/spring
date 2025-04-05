@@ -141,30 +141,31 @@ export default component$((props: Props) => {
                </div>
              ))}
          </div>
-         <div class="relative">
-           {typeof image !== "undefined" && (
-             <Image
-               layout="constrained"
-               src={image.src}
-               width={532}
-               height={704}
-               alt={image.alt}
-               class="inset-0 w-full rounded-md bg-gray-500 hidden sm:block object-cover object-top shadow-lg dark:bg-slate-700 md:absolute md:h-full"
-               breakpoints={[320, 480, 640, 1024]}
-             />
-           )}
-                {typeof image !== "undefined" && (
-             <Image
-               layout="constrained"
-               src={image.src}
-               width={400}
-               height={400}
-               alt={image.alt}
-               class="inset-0 w-full rounded-md bg-gray-500 block sm:hidden mx-auto object-cover object-top shadow-lg dark:bg-slate-700 md:absolute md:h-full"
-               breakpoints={[320, 480, 640, 1024]}
-             />
-           )}
-         </div>
+         <div class="relative md:flex md:items-center md:h-full">
+  {typeof image !== "undefined" && (
+    <Image
+      layout="constrained"
+      src={image.src}
+      width={532}
+      height={704}
+      alt={image.alt}
+      class="w-full rounded-md bg-gray-500 hidden sm:block object-cover object-top shadow-lg dark:bg-slate-700 md:h-auto"
+      breakpoints={[320, 480, 640, 1024]}
+    />
+  )}
+  {typeof image !== "undefined" && (
+    <Image
+      layout="constrained"
+      src={image.src}
+      width={400}
+      height={400}
+      alt={image.alt}
+      class="w-full rounded-md bg-gray-500 block sm:hidden mx-auto object-cover object-top shadow-lg dark:bg-slate-700"
+      breakpoints={[320, 480, 640, 1024]}
+    />
+  )}
+</div>
+
        </div>
       </Card.Root>
     </SectionWrapper>

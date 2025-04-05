@@ -18,11 +18,11 @@ interface FAQSection {
 interface Props {
   isDark?: boolean;
   classes?: any;
-  faqData: FAQSection[]; // <-- declare faqData here
+  faqData: FAQSection[];
 }
 
 export default component$((props: Props) => {
-  const { isDark = false, classes, faqData } = props; // destructure faqData
+  const { isDark = false, classes, faqData } = props; // Destructure faqData
 
   return (
     <Tabs.Root class="max-w-6xl">
@@ -40,10 +40,20 @@ export default component$((props: Props) => {
               items={section.items}
               classes={{
                 container: twMerge(
-                  "md:grid-cols-2 px-2 py-2 rounded-base",
+                  "md:grid-cols-2 px-2 py-2",
                   isDark ? "bg-background" : "bg-muted"
                 ),
-                panel: "bg-primary/10",
+                panel: twMerge(
+                  "bg-primary/10 rounded-none", // Reset all corners by default
+                  // Mobile (below md): First item has rounded top, last item has rounded bottom
+                  "[&:nth-child(1)]:rounded-t-md [&:nth-child(1)]:md:rounded-tl-md [&:nth-child(1)]:md:rounded-tr-none",
+                  "[&:nth-last-child(1)]:rounded-b-md [&:nth-last-child(1)]:md:rounded-br-md [&:nth-last-child(1)]:md:rounded-bl-none",
+                  // Desktop (md and up): Specific corners for 2-column layout
+                  "[&:nth-child(2)]:md:rounded-tr-md",
+                  "[&:nth-last-child(2)]:md:rounded-bl-md",
+                  // Ensure middle items stay unrounded on desktop
+                  "[&:not(:nth-child(1)):not(:nth-child(2)):not(:nth-last-child(2)):not(:nth-last-child(1))]:md:rounded-none"
+                ),
                 title: "md:text-[1.3rem]",
                 icon:
                   "text-primary dark:bg-primary rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",
