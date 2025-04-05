@@ -130,7 +130,7 @@ export default component$((props: Props) => {
       <div class="hidden sm:block">
         <Card.Root>
           <FAQTabs2
-            faqData={faqData}
+            faqData={faqData} isDark={isDark}
           />
         </Card.Root>
       </div>

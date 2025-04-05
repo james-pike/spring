@@ -38,7 +38,7 @@ export default component$((props: Props) => {
               isDark ? "bg-background" : "bg-muted"
             ),
             panel: twMerge(
-              "bg-primary/5 rounded-none", // Reset all corners by default
+              "bg-primary/5 rounded-none group panel-hover-bg", // Apply the custom class for hover background
               // Mobile (below md): First item has rounded top, last item has rounded bottom
               "[&:nth-child(1)]:rounded-t-base [&:nth-child(1)]:md:rounded-tl-base [&:nth-child(1)]:md:rounded-tr-none",
               "[&:nth-last-child(1)]:rounded-b-base [&:nth-last-child(1)]:md:rounded-br-base [&:nth-last-child(1)]:md:rounded-bl-none",
@@ -46,7 +46,9 @@ export default component$((props: Props) => {
               "[&:nth-child(2)]:md:rounded-tr-base",
               "[&:nth-last-child(2)]:md:rounded-bl-base",
               // Ensure middle items stay unrounded on desktop
-              "[&:not(:nth-child(1)):not(:nth-child(2)):not(:nth-last-child(2)):not(:nth-last-child(1))]:md:rounded-none"
+              "[&:not(:nth-child(1)):not(:nth-child(2)):not(:nth-last-child(2)):not(:nth-last-child(1))]:md:rounded-none",
+              // Add hover effect for SVG background
+              "group-hover:bg-[url('/images/contact.jpg')] group-hover:bg-no-repeat group-hover:bg-center group-hover:bg-contain",
             ),
             title: "md:text-[1.3rem]",
             icon: "text-white bg-primary dark:bg-primary rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",

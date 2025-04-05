@@ -1,8 +1,9 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useContextProvider } from "@builder.io/qwik";
 import { Tabs } from "../ui/Tabs";
 import { Card } from "../ui/Card";
 import { ItemGrid } from "../ui/ItemGrid";
 import { twMerge } from "tailwind-merge";
+import { DarkContext } from "~/DarkContext";
 
 interface FAQItem {
   icon: any;
@@ -23,6 +24,8 @@ interface Props {
 
 export default component$((props: Props) => {
   const { isDark = false, classes, faqData } = props; // Destructure faqData
+  
+    useContextProvider(DarkContext, isDark);
 
   return (
     <Tabs.Root class="max-w-6xl">
