@@ -4,7 +4,6 @@ import IconChevronDown from "../icons/IconChevronDown";
 import MenuModal from "./MenuModal";
 
 import Settings from "./settings";
-import ToggleTheme from "../common/ToggleTheme";
 import { Button } from "../ui/Button";
 import Logo3 from "../common/Logo3";
 
