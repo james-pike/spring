@@ -206,7 +206,7 @@ export default component$(() => {
 
             <Settings />
             <Link href="/quote" class="w-full sm:w-auto">
-              <Button size="md" class="w-full">Get A Quote</Button>
+              <Button size="md" class="w-full bg-primary">Get A Quote</Button>
             </Link>
             {/* <a
                   href="/contact"

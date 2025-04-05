@@ -91,7 +91,7 @@ export default component$((props: Props) => {
     
   return (
     <SectionWrapper id={id} isDark={isDark} classes={classes}>
-      <Headline align="left" title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+      <Headline align="left" title={title} subtitle={subtitle} highlight={highlight} classes={{container: "px-4"}} />
       <Card.Root>
     <div class="row-gap-10 grid gap-6 md:grid-cols-2">
          <div class="mb-4 md:mb-0 px-3 py-5 md:py-9 md:px-6 md:pr-16">

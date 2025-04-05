@@ -1367,6 +1367,11 @@ body {
   transition: background-image 0.3s ease-in-out;
 }
 
+.panel-hover-bg:hover .icon {
+  transition: transform 0.3s ease; /* Apply a smooth transition */
+  transform: scale(1.1) rotate(10deg); /* Scale and rotate the icon on hover */
+}
+
 /* Only on hover, change the background image */
 .panel-hover-bg:hover {
   background-color: #DFDBE5;
@@ -1670,4 +1675,47 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .animate-fade-in-and-scale {
   animation: fade-in-and-scale 0.3s ease-in-out forwards;
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: translateX(0) translateY(0) scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(100px) translateY(-50px) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(200px) translateY(-100px) scale(0);
+    opacity: 0;
+  }
+}
+
+.shooting-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.shooting-stars .star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: shootingStar 1.5s linear infinite;
+}
+
+.shooting-stars .star:nth-child(odd) {
+  animation-duration: 1.2s;
+}
+
+.shooting-stars .star:nth-child(even) {
+  animation-duration: 1.5s;
 }
