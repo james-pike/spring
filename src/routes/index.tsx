@@ -17,13 +17,7 @@ const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket")
 export default component$(() => {
   return (
     <>
-    
       <Hero />
-
-
-    
-
-
 <Features
   isDark
   highlight="Core Competencies"
@@ -98,7 +92,7 @@ export default component$(() => {
   subtitle="From first contact to final launch, our streamlined process ensures every website is strategic, beautifully designed, and built to perform."
         items={[]} />
       <FAQ
-isDark
+
         title="Frequently Asked Questions"
         subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque."
         highlight="FAQs"

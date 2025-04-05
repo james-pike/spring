@@ -1,7 +1,8 @@
-import { component$, Slot, type PropsOf } from '@builder.io/qwik';
+import { component$, Slot, type PropsOf, useContext } from '@builder.io/qwik';
 import { Accordion as HeadlessAccordion } from '@qwik-ui/headless';
 import { cn } from '@qwik-ui/utils';
 import { LuChevronDown } from '@qwikest/icons/lucide';
+import { DarkContext } from '~/DarkContext'; // Adjust the import path as needed
 
 const Root = (props: PropsOf<typeof HeadlessAccordion.Root>) => (
   <HeadlessAccordion.Root {...props} accordionItemComponent={Item}>
@@ -10,8 +11,18 @@ const Root = (props: PropsOf<typeof HeadlessAccordion.Root>) => (
 );
 
 const Item = component$<PropsOf<typeof HeadlessAccordion.Item>>((props) => {
+
   return (
-    <HeadlessAccordion.Item {...props} class={cn('border-b border-gray-300 dark:border-gray-700', props.class)}>
+    <HeadlessAccordion.Item
+      {...props}
+      class={cn(
+        'border-b border-gray-300 dark:border-gray-700',
+        // Apply bg-muted when open, bg-background when isDark is true
+        'data-[open]:bg-muted',
+       
+        props.class
+      )}
+    >
       <Slot />
     </HeadlessAccordion.Item>
   );
