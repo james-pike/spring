@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline"; // Adjust the import path
 import { SectionWrapper } from "./SectionWrapper";
-import ServiceCarousel from "./ServiceCarousel";
+import ServiceTabs from "./ServiceTabs";
 
 interface Item {
   title?: string;
@@ -27,7 +27,7 @@ export default component$((props: Props) => {
     <SectionWrapper id={id} isDark={isDark} classes={{ container: "pb-4" }}>
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       {/* <ServiceCards /> */}
-          <ServiceCarousel isDark={isDark}/>
+          <ServiceTabs isDark={isDark}/>
     </SectionWrapper>
   );
 });

@@ -27,7 +27,7 @@ const Trigger = component$<
       <HeadlessAccordion.Trigger
         {...props}
         class={cn(
-          'flex flex-1 items-center py-4 text-sm font-medium transition-all hover:underline [&[data-open]>svg]:rotate-180',
+          'flex flex-1 items-center py-4 text-sm font-medium transition-all hover:underline [&[data-open]]:text-primary [&[data-open]>svg]:rotate-180',
           props.class,
         )}
       >
