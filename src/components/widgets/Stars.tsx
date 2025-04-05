@@ -30,8 +30,8 @@ export default component$(() => {
     // Animation loop
     const animate = () => {
       stars.value = stars.value.map(star => {
-        let newX = star.x + star.dx;
-        let newY = star.y + star.dy;
+        const newX = star.x + star.dx;
+        const newY = star.y + star.dy;
 
         // Get centered div bounds
         const centerX = (window.innerWidth - DIV_WIDTH) / 2;
