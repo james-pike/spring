@@ -41,10 +41,10 @@ export default component$((props: Props) => {
               classes={{
                 container: twMerge(
                   "md:grid-cols-2 px-2 py-2 rounded-base",
-                  isDark ? "bg-background" : "bg-muted"
+                  isDark ? "bg-background" : "bg-background"
                 ),
                 panel: twMerge(
-                  "bg-primary/10 rounded-none", // Reset all corners by default
+                  "bg-primary/5 rounded-none", // Reset all corners by default
                   // Mobile (below md): First item has rounded top, last item has rounded bottom
                   "[&:nth-child(1)]:rounded-t-md [&:nth-child(1)]:md:rounded-tl-md [&:nth-child(1)]:md:rounded-tr-none",
                   "[&:nth-last-child(1)]:rounded-b-md [&:nth-last-child(1)]:md:rounded-br-md [&:nth-last-child(1)]:md:rounded-bl-none",

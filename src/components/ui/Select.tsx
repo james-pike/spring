@@ -110,8 +110,10 @@ const Item = component$<SelectItemProps>((props) => {
     <HeadlessSelect.Item
       {...restProps}
       class={cn(
-        'relative flex w-full cursor-default focus:text-primary select-none items-center rounded-sm py-1.5 pl-2 pr-8 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'relative flex w-full cursor-default focus:text-primary select-none items-center py-1.5 pl-2 pr-8 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         'data-[highlighted]:border-base',
+        'first:rounded-t', // Apply rounded top to the first item
+        'last:rounded-b',  // Apply rounded bottom to the last item
         isDark 
           ? 'focus:bg-muted data-[highlighted]:bg-background' 
           : 'focus:bg-accent data-[highlighted]:bg-accent',
@@ -125,6 +127,7 @@ const Item = component$<SelectItemProps>((props) => {
     </HeadlessSelect.Item>
   );
 });
+
 
 const ItemIndicator = component$<PropsOf<typeof HeadlessSelect.ItemIndicator>>(
   ({ ...props }) => {
