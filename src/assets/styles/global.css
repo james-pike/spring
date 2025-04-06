@@ -1793,7 +1793,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
   @keyframes fadeSlideLeft {
     0% { opacity: 0; transform: translateX(-20px); }
-    80% { opacity: 1; transform: translateX(5px); }
+    
     100% { opacity: 1; transform: translateX(0); }
   }
 
