@@ -1391,22 +1391,18 @@ body {
       transform: translateY(0);
     }
   }
-
   .animate-scroll {
-    display: flex; /* Change from grid to flex for smooth scrolling */
-    animation: scroll-left 20s linear infinite; /* 20s duration, adjust as needed */
-    animation-delay: 1s; /* Slight delay for smoother entrance */
-
-    white-space: nowrap; /* Prevent wrapping */
+    display: flex;
+    animation: scroll-left 40s linear infinite;
+    white-space: nowrap;
   }
   
-  /* Keyframes for the scrolling effect */
   @keyframes scroll-left {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%); /* Move half the width for seamless looping */
+      transform: translateX(-75%);
     }
   }
   
@@ -1718,4 +1714,57 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .shooting-stars .star:nth-child(even) {
   animation-duration: 1.5s;
+}
+
+/* Fade in from top */
+.animate-fade-in-down {
+  animation: fadeInDown 0.5s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in from bottom */
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards 0.2s; /* Slight delay */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in from bottom with more delay */
+.animate-fade-in-up-delay {
+  animation: fadeInUp 0.5s ease-out forwards 0.4s; /* More delay for footer */
+}
+
+/* Slide in from left */
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out forwards 0.1s; /* Slight delay */
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

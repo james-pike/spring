@@ -38,6 +38,8 @@
     "flowbite-qwik": "^0.38.3",
     "flowbite-qwik-icons": "^0.1.8",
     "gray-matter": "^4.0.3",
+    "heroicons": "^2.2.0",
+    "heroicons-qwik": "^0.1.0",
     "markdown-it": "^14.1.0",
     "node-fetch": "3.3.2",
     "tailwind-merge": "^2.5.2",

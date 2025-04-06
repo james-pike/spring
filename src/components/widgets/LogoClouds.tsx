@@ -4,14 +4,6 @@ export default component$(() => {
   return (
 
 
-
-
-
-
-
-
-    
-
 <div class="relative overflow-hidden mx-auto">
 <div class="grid grid-cols-2 gap-8 mx-auto max-w-screen-xl text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
     <a href="#" class="flex justify-center items-center ">

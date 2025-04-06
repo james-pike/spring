@@ -26,6 +26,7 @@ export default component$(() => {
         subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
         items={[]} />
 <Features
+id="features-grid"
   isDark
   highlight="Core Competencies"
   title="Expert Front-End Development You Can Rely On"
