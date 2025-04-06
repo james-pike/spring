@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { Link, type DocumentHead } from "@builder.io/qwik-city";
+import { type DocumentHead } from "@builder.io/qwik-city";
 import Stats from "~/components/widgets/Stats";
 import { qwikSerialized } from "~/utils/qwikSerialized";
 import { SITE } from "~/config.mjs";
@@ -11,9 +11,7 @@ import Steps from "~/components/widgets/Steps";
 import Contact from "~/components/widgets/Contact";
 import Portfolio from "~/components/widgets/Portfolio";
 import Services from "~/components/widgets/Services";
-import { Card } from "~/components/ui/Card";
-import { Headline } from "~/components/ui/Headline";
-import { Button } from "~/components/ui/Button";
+
 import Reviews from "~/components/widgets/Reviews";
 
 
