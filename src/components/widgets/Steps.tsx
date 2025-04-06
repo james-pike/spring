@@ -5,6 +5,7 @@ import { Image } from "@unpic/qwik";
 import { twMerge } from "tailwind-merge";
 import { Card } from "../ui/Card";
 import IconStar from "../icons/IconStar";
+import { VisibleWrapper } from "./VisibleWrapper";
 
 interface Item {
   title?: string;
@@ -92,6 +93,7 @@ export default component$((props: Props) => {
   return (
     <SectionWrapper id={id} isDark={isDark} classes={classes}>
       <Headline align="left" title={title} subtitle={subtitle} highlight={highlight} classes={{container: "px-4"}} />
+      <VisibleWrapper id={`${id}-steps`}>
       <Card.Root>
     <div class="row-gap-10 grid gap-6 md:grid-cols-2">
          <div class="mb-4 md:mb-0 px-3 py-5 md:py-9 md:px-6 md:pr-16">
@@ -168,6 +170,7 @@ export default component$((props: Props) => {
 
        </div>
       </Card.Root>
+      </VisibleWrapper>
     </SectionWrapper>
   );
 });

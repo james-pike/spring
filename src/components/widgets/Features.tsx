@@ -4,6 +4,7 @@ import { SectionWrapper } from "./SectionWrapper";
 import { ItemGrid } from "../ui/ItemGrid";
 import { twMerge } from "tailwind-merge";
 import { Card } from "../ui/Card";
+import { VisibleWrapper } from "./VisibleWrapper";
 
 interface Item {
   title?: string;
@@ -30,6 +31,7 @@ export default component$((props: Props) => {
     <SectionWrapper id={id} isDark={isDark} classes={classes}>
       
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+        <VisibleWrapper id={`${id}-features-grid`}>
       <Card.Root>
         <ItemGrid
           id="features-grid" // Unique ID for this instance
@@ -58,6 +60,7 @@ export default component$((props: Props) => {
           }}
         />
       </Card.Root>
+      </VisibleWrapper>
     </SectionWrapper>
   );
 });

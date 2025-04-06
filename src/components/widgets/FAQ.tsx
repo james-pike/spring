@@ -5,6 +5,7 @@ import { Card } from "../ui/Card";
 import FAQTabs from "./FAQTabs";
 import FAQTabs2 from "./FAQTabs2";
 import { qwikSerialized } from "~/utils/qwikSerialized";
+import { VisibleWrapper } from "./VisibleWrapper";
 
 const IconArrowDownRight = qwikSerialized(() => import("~/components/icons/IconArrowDownRight"));
 
@@ -126,7 +127,7 @@ export default component$((props: Props) => {
   return (
     <SectionWrapper id={id} isDark={isDark} classes={classes}>
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
-
+<VisibleWrapper id={`${id}-faq`}>
       <div class="hidden sm:block">
         <Card.Root>
           <FAQTabs2
@@ -138,6 +139,7 @@ export default component$((props: Props) => {
       <div class="block sm:hidden">
         <FAQTabs faqData={faqData} isDark={isDark} />
       </div>
+      </VisibleWrapper>
     </SectionWrapper>
   );
 });

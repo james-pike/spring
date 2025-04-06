@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline"; // Adjust the import path
 import { SectionWrapper } from "./SectionWrapper";
 import PriceTabs from "./PriceTabs";
+import { VisibleWrapper } from "./VisibleWrapper";
 
 interface Item {
   title?: string;
@@ -27,7 +28,9 @@ export default component$((props: Props) => {
     <SectionWrapper id={id} isDark={isDark} classes={classes}>
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       {/* <ServiceCards /> */}
+      <VisibleWrapper id={`${id}-pricing`}>
           <PriceTabs isDark={isDark}/>
+          </VisibleWrapper>
     </SectionWrapper>
   );
 });
