@@ -1777,51 +1777,53 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 @layer utilities {
   @keyframes fadeSlideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(15px); } /* Updated to 15px */
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-\[fadeSlideUp_0\.5s_ease-out_0s_forwards\] {
+    animation: fadeSlideUp 0.5s ease-out 0s forwards;
+  }
+  .animate-\[fadeSlideUp_0\.5s_ease-out_0\.1s_forwards\] {
+    animation: fadeSlideUp 0.5s ease-out 0.1s forwards;
+  }
+  .animate-\[fadeSlideUp_0\.5s_ease-out_0\.2s_forwards\] {
+    animation: fadeSlideUp 0.5s ease-out 0.2s forwards;
   }
 
   @keyframes fadeSlideLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    0% { opacity: 0; transform: translateX(-20px); }
+    80% { opacity: 1; transform: translateX(5px); }
+    100% { opacity: 1; transform: translateX(0); }
   }
 
   @keyframes fadeSlideRight {
-    0% {
-      opacity: 0;
-      transform: translateX(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
   }
 
+  /* Existing hero animations */
   .animate-\[fadeSlideLeft_0\.8s_ease-out_0\.2s_forwards\] {
     animation: fadeSlideLeft 0.8s ease-out 0.2s forwards;
   }
-
   .animate-\[fadeSlideUp_0\.8s_ease-out_0\.4s_forwards\] {
     animation: fadeSlideUp 0.8s ease-out 0.4s forwards;
   }
-
   .animate-\[fadeSlideLeft_0\.8s_ease-out_0\.6s_forwards\] {
     animation: fadeSlideLeft 0.8s ease-out 0.6s forwards;
   }
-
   .animate-\[fadeSlideRight_1s_ease-out_0\.8s_forwards\] {
     animation: fadeSlideRight 1s ease-out 0.8s forwards;
+  }
+
+  /* New Headline animations */
+  .animate-\[fadeSlideUp_0\.5s_ease-out_0s_forwards\] {
+    animation: fadeSlideUp 0.5s ease-out 0s forwards;
+  }
+  .animate-\[fadeSlideUp_0\.5s_ease-out_0\.1s_forwards\] {
+    animation: fadeSlideUp 0.5s ease-out 0.1s forwards;
+  }
+  .animate-\[fadeSlideUp_0\.5s_ease-out_0\.2s_forwards\] {
+    animation: fadeSlideUp 0.5s ease-out 0.2s forwards;
   }
 }

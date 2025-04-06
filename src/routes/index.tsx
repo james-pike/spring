@@ -79,13 +79,13 @@ id="features-grid"
 
 
 <Portfolio
-        id="services"
+        id="portfolio"
         highlight="Portfolio"
         title="Discover Past Projects We've Done"
         subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
         items={[]} />
 
-      <Pricing id="services"
+      <Pricing id="pricing"
       isDark
         highlight="pricing"
         title="Reliable Locksmith Services You Can Trust"
