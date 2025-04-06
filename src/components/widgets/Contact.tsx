@@ -2,6 +2,9 @@ import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline"; // Adjust the import path
 import { SectionWrapper } from "./SectionWrapper";
 import ContactForm from "./ContactForm";
+import { Card } from "../ui/Card";
+import { Link } from "@builder.io/qwik-city";
+import { Button } from "../ui/Button";
 
 interface Item {
   title?: string;
@@ -28,6 +31,14 @@ export default component$((props: Props) => {
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       {/* <ServiceCards /> */}
           <ContactForm isDark={isDark}/>
+          <Card.Root class="bg-gradient-to-r from-primary to-primary/50 mt-4">
+          <Card.Content>
+          <Headline title={"Ready to transform your digital presence?"} subtitle={"Lets collaborate to create something amazing that will help your business grow and succeed in the digital landscape"} highlight={highlight} classes={classes?.headline} />
+ <Link href="/contact" class="w-full sm:w-auto">
+                <Button look="secondary" size="md" class="w-full">Get Started</Button>
+              </Link>
+          </Card.Content>
+          </Card.Root>
     </SectionWrapper>
   );
 });

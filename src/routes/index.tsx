@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { Link, type DocumentHead } from "@builder.io/qwik-city";
 import Stats from "~/components/widgets/Stats";
 import { qwikSerialized } from "~/utils/qwikSerialized";
 import { SITE } from "~/config.mjs";
@@ -11,6 +11,9 @@ import Steps from "~/components/widgets/Steps";
 import Contact from "~/components/widgets/Contact";
 import Portfolio from "~/components/widgets/Portfolio";
 import Services from "~/components/widgets/Services";
+import { Card } from "~/components/ui/Card";
+import { Headline } from "~/components/ui/Headline";
+import { Button } from "~/components/ui/Button";
 
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
@@ -114,6 +117,15 @@ id="features-grid"
       title="Get In Touch"
       subtitle="Request a quote or book a free consultations today!."
       items={[]} />
+
+             <Card.Root class="bg-gradient-to-r from-primary to-primary/50 mt-4">
+                <Card.Content>
+                <Headline title={"Ready to transform your digital presence?"} subtitle={"Lets collaborate to create something amazing that will help your business grow and succeed in the digital landscape"} />
+       <Link href="/contact" class="w-full sm:w-auto">
+                      <Button look="secondary" size="md" class="w-full">Get Started</Button>
+                    </Link>
+                </Card.Content>
+                </Card.Root>
     </>
   );
 });

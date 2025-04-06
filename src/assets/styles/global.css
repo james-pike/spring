@@ -1718,9 +1718,30 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 /* Fade in from top */
 .animate-fade-in-down {
+  opacity: 0;
+  transform: translateY(-20px);
   animation: fadeInDown 0.5s ease-out forwards;
 }
 
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-out forwards 0.2s;
+}
+
+.animate-fade-in-up-delay {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-out forwards 0.4s;
+}
+
+.animate-slide-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInLeft 0.5s ease-out forwards 0.1s;
+}
+
+/* Keyframes remain the same */
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -1732,11 +1753,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   }
 }
 
-/* Fade in from bottom */
-.animate-fade-in-up {
-  animation: fadeInUp 0.5s ease-out forwards 0.2s; /* Slight delay */
-}
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -1746,16 +1762,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Fade in from bottom with more delay */
-.animate-fade-in-up-delay {
-  animation: fadeInUp 0.5s ease-out forwards 0.4s; /* More delay for footer */
-}
-
-/* Slide in from left */
-.animate-slide-in-left {
-  animation: slideInLeft 0.5s ease-out forwards 0.1s; /* Slight delay */
 }
 
 @keyframes slideInLeft {
