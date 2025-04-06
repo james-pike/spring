@@ -26,7 +26,7 @@ export default component$((props: Props) => {
   });
 
   return (
-    <div class="w-full min-h-[600px] px-4 md:px-0">
+    <div class="w-full min-h-[600px] px-0 ">
       <Tabs.Root class="flex flex-col md:flex-row w-full max-w-6xl mx-auto">
         {/* Tabs List */}
         <Tabs.List class="grid grid-cols-2 md:flex md:flex-col w-full md:w-1/4 bg-gray-100 dark:bg-gray-800 border-b md:border-b-0 md:border-r">

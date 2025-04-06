@@ -1774,3 +1774,54 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     transform: translateX(0);
   }
 }
+
+@layer utilities {
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeSlideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeSlideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-\[fadeSlideLeft_0\.8s_ease-out_0\.2s_forwards\] {
+    animation: fadeSlideLeft 0.8s ease-out 0.2s forwards;
+  }
+
+  .animate-\[fadeSlideUp_0\.8s_ease-out_0\.4s_forwards\] {
+    animation: fadeSlideUp 0.8s ease-out 0.4s forwards;
+  }
+
+  .animate-\[fadeSlideLeft_0\.8s_ease-out_0\.6s_forwards\] {
+    animation: fadeSlideLeft 0.8s ease-out 0.6s forwards;
+  }
+
+  .animate-\[fadeSlideRight_1s_ease-out_0\.8s_forwards\] {
+    animation: fadeSlideRight 1s ease-out 0.8s forwards;
+  }
+}

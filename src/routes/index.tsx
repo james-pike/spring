@@ -14,6 +14,7 @@ import Services from "~/components/widgets/Services";
 import { Card } from "~/components/ui/Card";
 import { Headline } from "~/components/ui/Headline";
 import { Button } from "~/components/ui/Button";
+import Reviews from "~/components/widgets/Reviews";
 
 
 const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
@@ -22,12 +23,14 @@ export default component$(() => {
   return (
     <>
       <Hero />
+
       <Services
         id="services"
         highlight="Portfolio"
         title="Discover Past Projects We've Done"
         subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
         items={[]} />
+
 <Features
 id="features-grid"
   isDark
@@ -90,12 +93,12 @@ id="features-grid"
         items={[]} />
 
 
-      {/* <Reviews
+      <Reviews
       
         highlight="Reviews"
         title="What Our Clients Say"
         subtitle="These reviews are pulled from Google Reviews and filtered to only display 4-5 star ratings."
-        items={[]} /> */}
+        items={[]} />
       <Steps       
       id="steps"
       highlight="Our Process"
@@ -124,6 +127,8 @@ id="features-grid"
        <Link href="/contact" class="w-full sm:w-auto">
                       <Button look="secondary" size="md" class="w-full">Get Started</Button>
                     </Link>
+
+                    
                 </Card.Content>
                 </Card.Root>
     </>

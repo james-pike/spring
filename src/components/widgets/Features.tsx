@@ -26,7 +26,9 @@ export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "", items, classes = {}, isDark } = props;
 
   return (
+    
     <SectionWrapper id={id} isDark={isDark} classes={classes}>
+      
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       <Card.Root>
         <ItemGrid
