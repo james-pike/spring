@@ -50,7 +50,7 @@ export default component$((props: Props) => {
 
         {/* Panels - All using Design layout with animations */}
         <Tabs.Panel class="w-full md:w-3/4">
-          <div class="p-6 h-full">
+          <div class="pb-8 h-full">
             <Card.Root class="bg-white dark:bg-gray-900 shadow-lg">
               <Card.Header class="animate-fade-in-down">
                 <Card.Title class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Design Services</Card.Title>
@@ -100,7 +100,7 @@ export default component$((props: Props) => {
         </Tabs.Panel>
 
         <Tabs.Panel class="w-full md:w-3/4">
-          <div class="p-6 h-full">
+          <div class="pb-8 h-full">
             <Card.Root class="bg-white dark:bg-gray-900 shadow-lg">
               <Card.Header class="animate-fade-in-down">
                 <Card.Title class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Development Services</Card.Title>
@@ -150,7 +150,7 @@ export default component$((props: Props) => {
         </Tabs.Panel>
 
         <Tabs.Panel class="w-full md:w-3/4">
-          <div class="p-6 h-full">
+          <div class="pb-8 h-full">
             <Card.Root class="bg-white dark:bg-gray-900 shadow-lg">
               <Card.Header class="animate-fade-in-down">
                 <Card.Title class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Branding Services</Card.Title>
@@ -200,7 +200,7 @@ export default component$((props: Props) => {
         </Tabs.Panel>
 
         <Tabs.Panel class="w-full md:w-3/4">
-          <div class="p-6 h-full">
+          <div class="pb-8 h-full">
             <Card.Root class="bg-white dark:bg-gray-900 shadow-lg">
               <Card.Header class="animate-fade-in-down">
                 <Card.Title class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Marketing Services</Card.Title>
