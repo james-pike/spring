@@ -79,7 +79,7 @@ export default component$((props: Props) => {
 
   return (
     
-    <Carousel.Root class="carousel-root" gap={30}  draggable={isDraggable.value} rewind sensitivity={{
+    <Carousel.Root class="carousel-root px-2" gap={30}  draggable={isDraggable.value} rewind sensitivity={{
       touch: 1.75,
     }} >
  
