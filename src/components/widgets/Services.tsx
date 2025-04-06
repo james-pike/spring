@@ -1,4 +1,4 @@
-import { component$, useSignal, $ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline";
 import { SectionWrapper } from "./SectionWrapper";
 import ServiceTabs from "./ServiceTabs";
