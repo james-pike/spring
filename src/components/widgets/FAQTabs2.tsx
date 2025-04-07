@@ -1,9 +1,9 @@
-import { component$, useSignal } from "@builder.io/qwik";
+import { component$, useContextProvider } from "@builder.io/qwik";
 import { Tabs } from "../ui/Tabs";
 import { Card } from "../ui/Card";
 import { ItemGrid } from "../ui/ItemGrid";
 import { twMerge } from "tailwind-merge";
-
+import { DarkContext } from "~/DarkContext";
 
 interface FAQItem {
   icon: any;
@@ -23,29 +23,23 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { isDark = false, classes, faqData } = props;
-  const selectedTabIndex = useSignal(0); // 🟢 Track which tab is selected
+  const { isDark = false, classes, faqData } = props; // Destructure faqData
+  
+    useContextProvider(DarkContext, isDark);
 
   return (
     <Tabs.Root class="max-w-6xl">
       <Tabs.List class="grid w-full grid-cols-4">
-        {faqData.map((section, index) => (
-          <Tabs.Tab
-            key={section.title}
-            onClick$={() => {
-              selectedTabIndex.value = index; // 🟢 Update when tab is clicked
-            }}
-          >
-            {section.title}
-          </Tabs.Tab>
+        {faqData.map((section) => (
+          <Tabs.Tab key={section.title}>{section.title}</Tabs.Tab>
         ))}
       </Tabs.List>
 
       {faqData.map((section, index) => (
-        <Tabs.Panel key={selectedTabIndex.value === index ? `active-${index}` : `inactive-${index}`}>
+        <Tabs.Panel key={index}>
           <Card.Root>
             <ItemGrid
-              id={`faq-grid-${index}-${selectedTabIndex.value}`} // 🟢 Unique ID per render
+              id={`faq-grid-${index}`}
               items={section.items}
               classes={{
                 container: twMerge(
@@ -53,11 +47,14 @@ export default component$((props: Props) => {
                   isDark ? "bg-background" : "bg-background"
                 ),
                 panel: twMerge(
-                  "bg-primary/5 rounded-none",
+                  "bg-primary/5 rounded-none", // Reset all corners by default
+                  // Mobile (below md): First item has rounded top, last item has rounded bottom
                   "[&:nth-child(1)]:rounded-t-md [&:nth-child(1)]:md:rounded-tl-md [&:nth-child(1)]:md:rounded-tr-none",
                   "[&:nth-last-child(1)]:rounded-b-md [&:nth-last-child(1)]:md:rounded-br-md [&:nth-last-child(1)]:md:rounded-bl-none",
+                  // Desktop (md and up): Specific corners for 2-column layout
                   "[&:nth-child(2)]:md:rounded-tr-md",
                   "[&:nth-last-child(2)]:md:rounded-bl-md",
+                  // Ensure middle items stay unrounded on desktop
                   "[&:not(:nth-child(1)):not(:nth-child(2)):not(:nth-last-child(2)):not(:nth-last-child(1))]:md:rounded-none"
                 ),
                 title: "md:text-[1.3rem]",

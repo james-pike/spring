@@ -42,7 +42,7 @@ export default component$((props: Props) => {
               isDark ? "bg-background" : "bg-muted"
             ),
             panel: twMerge(
-              "bg-primary/5 rounded-none group panel-hover-bg", // Apply the custom class for hover background
+              "texture rounded-none group panel-hover-bg", // Apply the custom class for hover background
               // Mobile (below md): First item has rounded top, last item has rounded bottom
               "[&:nth-child(1)]:rounded-t-base [&:nth-child(1)]:md:rounded-tl-base [&:nth-child(1)]:md:rounded-tr-none",
               "[&:nth-last-child(1)]:rounded-b-base [&:nth-last-child(1)]:md:rounded-br-base [&:nth-last-child(1)]:md:rounded-bl-none",
