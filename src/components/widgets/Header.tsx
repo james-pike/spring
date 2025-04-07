@@ -21,8 +21,8 @@ export default component$(() => {
     <header
       id="header"
       class={`sticky top-0 z-40 flex-none mx-auto transition-[opacity] ease-in-out ${store.isScrolling
-          ? " border-b-2  bg-background  "
-          : "texture "
+        ? "   bg-background  "
+        : "texture "
         }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
@@ -32,6 +32,8 @@ export default component$(() => {
         }
       }}
     >
+  <div class="absolute bottom-[2px] left-0 w-full h-px border-b-2 border-border"></div>
+
 
 
       {/* <div class="w-full h-7 hidden px-2 md:px-7 bg-muted border-b-2 mx-auto  flex justify-between items-center max-w-7xl relative">
@@ -138,33 +140,33 @@ export default component$(() => {
     py-2
   `}
                         >
-                         {items.map(({ text: text2, href: href2 }, key2) => {
-    const isDropdownActive = location.url.pathname === href2;
-    const isFirst = key2 === 0;
-    const isLast = key2 === items.length - 1;
+                          {items.map(({ text: text2, href: href2 }, key2) => {
+                            const isDropdownActive = location.url.pathname === href2;
+                            const isFirst = key2 === 0;
+                            const isLast = key2 === items.length - 1;
 
-    return (
-      <li key={key2}>
-        <a
-          class={`hover:bg-muted hover:text-primary
+                            return (
+                              <li key={key2}>
+                                <a
+                                  class={`hover:bg-muted hover:text-primary
             py-2 px-5 block whitespace-no-wrap transition-all duration-200 relative
             after:content-[''] after:absolute after:bottom-[4px] after:left-1/2 after:h-[2px] after:bg-primary after:transition-all after:duration-200
             ${isDropdownActive
-              ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
-              : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
-            }
+                                      ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
+                                      : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
+                                    }
             ${isFirst ? "hover:rounded-t-base" : ""}
             ${isLast ? "hover:rounded-b-base" : ""}
             ${!isFirst && !isLast ? "hover:rounded-none" : ""}
           `}
-          href={href2}
-        >
-          {text2}
-        </a>
-      </li>
-    );
-  })}
-</ul>
+                                  href={href2}
+                                >
+                                  {text2}
+                                </a>
+                              </li>
+                            );
+                          })}
+                        </ul>
                       </>
                     ) : (
                       <a
