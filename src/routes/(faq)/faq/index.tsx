@@ -1,5 +1,8 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { Link, type DocumentHead } from "@builder.io/qwik-city";
+import { Button } from "~/components/ui/Button";
+import { Card } from "~/components/ui/Card";
+import { Headline } from "~/components/ui/Headline";
 import FAQ from "~/components/widgets/FAQ";
 import { SITE } from "~/config.mjs";
 
@@ -15,6 +18,7 @@ export default component$(() => {
      
     />
 
+     
 
     </>
   );
