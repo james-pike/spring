@@ -21,8 +21,8 @@ export default component$(() => {
     <header
       id="header"
       class={`sticky top-0 z-40 flex-none mx-auto transition-[opacity] ease-in-out ${store.isScrolling
-          ? " border-b-2  bg-background  "
-          : "texture-fixed border-b-2 border-transparent"
+          ? "   bg-background  "
+          : "texture-fixed "
         }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
