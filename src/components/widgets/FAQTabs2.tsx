@@ -3,7 +3,7 @@ import { Tabs } from "../ui/Tabs";
 import { Card } from "../ui/Card";
 import { ItemGrid } from "../ui/ItemGrid";
 import { twMerge } from "tailwind-merge";
-import { DarkContext } from "~/DarkContext";
+
 
 interface FAQItem {
   icon: any;

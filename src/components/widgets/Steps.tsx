@@ -65,7 +65,7 @@ const sideImg =
   const { items, image } = stepsData;
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "",  classes = {}, isDark } = props;
+  const { id, title = "", subtitle = "", highlight = "",  isDark } = props;
 
 
   
