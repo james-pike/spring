@@ -15,15 +15,19 @@ export default component$(() => {
   const { menu } = useContent();
   const location = useLocation();
 
+  // Determine if we're on the landing page
+  const isLandingPage = location.url.pathname === "/";
 
-  //bg-gradient-to-r from-border via-background to-muted dark:from-background dark:to-muted
   return (
     <header
       id="header"
-      class={`sticky top-0 z-40 flex-none mx-auto transition-[opacity] ease-in-out ${store.isScrolling
-        ? " border-b-2  bg-background  "
-        : "texture "
-        }`}
+      class={`sticky top-0 z-40 flex-none mx-auto transition-[opacity] ease-in-out ${
+        isLandingPage
+          ? store.isScrolling
+            ? "border-b-2 bg-background"
+            : "texture"
+          : "bg-background border-b-2" // Always bg-background when not on landing page
+      }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
           store.isScrolling = true;
@@ -32,46 +36,16 @@ export default component$(() => {
         }
       }}
     >
-
-
-
-      {/* <div class="w-full h-7 hidden px-2 md:px-7 bg-muted border-b-2 mx-auto  flex justify-between items-center max-w-7xl relative">
-        <div>
-          <p>Free Website Audit & SEO Report</p>
-        </div>
-        <div id="test" class="flex md:gap-4 gap-2 sm:flex">
-          <a
-            class=" md:px-3 hover:bg-gray-100 dark:hover:bg-muted focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-none text-sm inline-flex items-center"
-            href="tel:+16132188063"
-          // Prevent link from triggering modal
-          >
-            <p class="pl-1">(613) 218-8063</p>
-          </a>
-          <p class="">|</p>
-          <a
-            class=" md:px-3 hover:bg-gray-100 focus:outline-none  dark:hover:bg-gray-700  focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-none text-sm inline-flex items-center"
-            href="mailto:info@webdev.ca"
-          // Prevent link from triggering modal
-          >
-            <p class="pl-1">info@webdev.ca</p>
-          </a>
-        </div>
-
-      </div> */}
-
       <div class="relative text-default py-3 md:p-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center" href={"/"}>
-            {/* <Logo /> */}
             <Logo3 />
           </a>
           <div class="flex items-center md:hidden gap-1">
             <Settings />
-
             <Link href="/quote" class="w-full sm:w-auto">
               <Button size="md" class="w-full px-0">Get Quote</Button>
             </Link>
-
             <MenuModal />
           </div>
         </div>
@@ -95,7 +69,7 @@ export default component$(() => {
               flex items-center
               transition-all duration-200
               relative
-              rounded-base  /* Add rounded-base for the hover effect */
+              rounded-base
               after:content-['']
               after:absolute
               after:bottom-[6px]
@@ -184,7 +158,7 @@ export default component$(() => {
             after:bg-primary
             after:transition-all
             after:duration-200
-            rounded-base  /* Add rounded-base for the hover effect */
+            rounded-base
             ${isActive
                             ? "after:w-1/2 after:left-1/4 md:group-hover:[&:not(:hover)]:after:w-0 md:group-hover:[&:not(:hover)]:after:left-1/2"
                             : "after:w-0 md:hover:after:w-1/2 md:hover:after:left-1/4"
@@ -198,31 +172,15 @@ export default component$(() => {
                   </li>
                 );
               })}
-
             </ul>
           ) : null}
         </nav>
         <div class="hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0">
           <div class="items-center flex justify-between w-full md:w-auto">
-
-
             <Settings />
             <Link href="/quote" class="w-full sm:w-auto">
               <Button size="md" class="w-full bg-primary">Get A Quote</Button>
             </Link>
-            {/* <a
-                  href="/contact"
-                  class="btn btn-secondary ml-2 py-2.5 px-5.5 md:px-4 font-semibold shadow-none text-sm w-auto"
-                >
-                  <IconBrandGoogle class="mr-1" /> Free Estimate
-                </a>
-                <a
-                  href="tel:+16132188063"
-                  class="btn btn-primary ml-2 py-2.5 px-5.5 md:px-4 font-semibold shadow-none text-sm w-auto"
-                >
-                  <IconBrandTailwind class="mr-1" /> Call Now
-                </a> */}
-
           </div>
         </div>
       </div>
