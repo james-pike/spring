@@ -57,14 +57,14 @@ export default component$(() => {
 
       </div> */}
 
-      <div class="relative text-default py-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
+      <div class="relative text-default py-3 md:p-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center" href={"/"}>
             {/* <Logo /> */}
             <Logo3 />
           </a>
           <div class="flex items-center md:hidden gap-1">
-            <Settings />
+         
 
             <Link href="/quote" class="w-full sm:w-auto">
               <Button size="md" class="w-full px-0">Get Quote</Button>
