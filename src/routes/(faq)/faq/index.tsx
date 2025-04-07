@@ -1,8 +1,6 @@
 import { component$ } from "@builder.io/qwik";
-import { Link, type DocumentHead } from "@builder.io/qwik-city";
-import { Button } from "~/components/ui/Button";
-import { Card } from "~/components/ui/Card";
-import { Headline } from "~/components/ui/Headline";
+import {  type DocumentHead } from "@builder.io/qwik-city";
+
 import FAQ from "~/components/widgets/FAQ";
 import { SITE } from "~/config.mjs";
 
