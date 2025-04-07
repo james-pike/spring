@@ -3,14 +3,13 @@ import Carousel from "../ui/Carousel";
 import { Button } from "../ui/Button";
 import { Link } from "@builder.io/qwik-city";
 import { Typewriter } from "./Typewriter";
-import LogoClouds from "./LogoClouds";
 
 // bg-gradient-to-r from-border via-background to-muted dark:from-background dark:to-muted
 
 export default component$(() => {
   return (
     <section class="relative overflow-hidden">
-      <div class="grid texture-fixed grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[85%_15%] min-h-[calc(100vh-89px)]">
+      <div class="grid texture-fixed grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[99%_1%] min-h-[calc(100vh-89px)]">
         {/* Text Content */}
         <div class="relative z-10 order-1 md:order-1 flex items-center justify-center px-4 py-8 md:px-8 md:py-0">
           <div class=" md:text-left">
@@ -40,7 +39,7 @@ export default component$(() => {
           <Carousel />
         </div>
         {/* LogoClouds */}
-        <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 col-span-1 md:col-span-2 flex items-center justify-center py-4 order-3 overflow-hidden">
+        {/* <div class="bg-gradient-to-r from-gray-200 to-gray-50 dark:from-gray-900 dark:to-gray-700 col-span-1 md:col-span-2 flex items-center justify-center py-4 order-3 overflow-hidden">
           <div class="animate-scroll flex">
             <div class="flex shrink-0 px-4">
               <LogoClouds />
@@ -51,11 +50,8 @@ export default component$(() => {
             <div class="flex shrink-0 px-4">
               <LogoClouds />
             </div>
-ទ
-
-         
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
