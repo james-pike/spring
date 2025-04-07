@@ -9,11 +9,11 @@ export const Typewriter = component$(() => {
     { word: "E-Commerce", gradient: "bg-gradient-to-r from-red-500 via-yellow-500 to-green-500" },
   ];
 
-  const text = useSignal('');
-  const isDeleting = useSignal(false);
+  const text = useSignal(words[0].word); // Start fully typed
+  const isDeleting = useSignal(true); // Start by deleting after initial pause
   const loopNum = useSignal(0);
-  const typingSpeed = useSignal(60);  // Adjusted typing speed to make it smoother
-  const deleteSpeed = useSignal(50); // Set different speed for deleting characters
+  const typingSpeed = useSignal(60);
+  const deleteSpeed = useSignal(50);
 
   useVisibleTask$(({ cleanup }) => {
     let timeoutId: ReturnType<typeof setTimeout>;
@@ -30,7 +30,7 @@ export const Typewriter = component$(() => {
         timeoutId = setTimeout(() => {
           isDeleting.value = true;
           type();
-        }, 2000); // Pause before deleting
+        }, 2500);
         return;
       }
 
@@ -42,7 +42,8 @@ export const Typewriter = component$(() => {
       timeoutId = setTimeout(type, currentSpeed);
     };
 
-    type();
+    // Wait before starting the delete phase
+    timeoutId = setTimeout(() => type(), 2500);
 
     cleanup(() => clearTimeout(timeoutId));
   });
@@ -51,7 +52,7 @@ export const Typewriter = component$(() => {
 
   return (
     <span
-      class={`bg-clip-text text-transparent ${currentGradient}`} // Apply unique gradient for each word
+      class={`bg-clip-text text-transparent ${currentGradient}`}
     >
       {text.value}
       <span

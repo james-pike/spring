@@ -49,22 +49,22 @@ export default component$((props: Props) => {
         </Tabs.List>
 
         {/* Panels - All using Design layout with animations */}
-        <Tabs.Panel class="w-full md:w-3/4">
+        <Tabs.Panel class="w-full md:w-3/4 mt-0">
           <div class="pb-8 h-full">
-            <Card.Root class="bg-white dark:bg-gray-900 shadow-lg">
-              <Card.Header class="animate-fade-in-down">
+            <Card.Root class="bg-white dark:bg-gray-900 shadow-lg ">
+              <Card.Header class="">
                 <Card.Title class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Design Services</Card.Title>
                 <Card.Description class="text-gray-600 dark:text-gray-300">
                   Professional design solutions to make your brand stand out visually.
                 </Card.Description>
               </Card.Header>
-              <Card.Content class="space-y-6 animate-fade-in-up">
+              <Card.Content class="space-y-6 ">
                 <div class="flex flex-col md:flex-row gap-6">
                   <div class="md:w-1/2">
                     <img
                       src="https://placehold.co/400x250"
                       alt="Design mockup"
-                      class="w-full rounded-lg shadow-md object-cover animate-slide-in-left"
+                      class="w-full rounded-lg shadow-md object-cover "
                     />
                   </div>
                   <div class="md:w-1/2 space-y-4">
@@ -92,29 +92,29 @@ export default component$((props: Props) => {
                   </div>
                 </div>
               </Card.Content>
-              <Card.Footer class="animate-fade-in-up-delay">
+              <Card.Footer class="">
                 <Button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg">Start Designing</Button>
               </Card.Footer>
             </Card.Root>
           </div>
         </Tabs.Panel>
 
-        <Tabs.Panel class="w-full md:w-3/4">
+        <Tabs.Panel class="w-full md:w-3/4 mt-0">
           <div class="pb-8 h-full">
             <Card.Root class="bg-white dark:bg-gray-900 shadow-lg">
-              <Card.Header class="animate-fade-in-down">
+              <Card.Header class="">
                 <Card.Title class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Development Services</Card.Title>
                 <Card.Description class="text-gray-600 dark:text-gray-300">
                   Robust and scalable web development solutions.
                 </Card.Description>
               </Card.Header>
-              <Card.Content class="space-y-6 animate-fade-in-up">
+              <Card.Content class="space-y-6 ">
                 <div class="flex flex-col md:flex-row gap-6">
                   <div class="md:w-1/2">
                     <img
                       src="https://placehold.co/400x250"
                       alt="Code screenshot"
-                      class="w-full rounded-lg shadow-md object-cover animate-slide-in-left"
+                      class="w-full rounded-lg shadow-md object-cover"
                     />
                   </div>
                   <div class="md:w-1/2 space-y-4">
@@ -142,29 +142,29 @@ export default component$((props: Props) => {
                   </div>
                 </div>
               </Card.Content>
-              <Card.Footer class="animate-fade-in-up-delay">
+              <Card.Footer class="">
                 <Button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg">Begin Development</Button>
               </Card.Footer>
             </Card.Root>
           </div>
         </Tabs.Panel>
 
-        <Tabs.Panel class="w-full md:w-3/4">
+        <Tabs.Panel class="w-full md:w-3/4 mt-0">
           <div class="pb-8 h-full">
             <Card.Root class="bg-white dark:bg-gray-900 shadow-lg">
-              <Card.Header class="animate-fade-in-down">
+              <Card.Header class="">
                 <Card.Title class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Branding Services</Card.Title>
                 <Card.Description class="text-gray-600 dark:text-gray-300">
                   Create a memorable brand identity that resonates with your audience.
                 </Card.Description>
               </Card.Header>
-              <Card.Content class="space-y-6 animate-fade-in-up">
+              <Card.Content class="space-y-6 ">
                 <div class="flex flex-col md:flex-row gap-6">
                   <div class="md:w-1/2">
                     <img
                       src="https://placehold.co/400x250"
                       alt="Branding examples"
-                      class="w-full rounded-lg shadow-md object-cover animate-slide-in-left"
+                      class="w-full rounded-lg shadow-md object-cover "
                     />
                   </div>
                   <div class="md:w-1/2 space-y-4">
@@ -192,14 +192,67 @@ export default component$((props: Props) => {
                   </div>
                 </div>
               </Card.Content>
-              <Card.Footer class="animate-fade-in-up-delay">
+              <Card.Footer class="">
                 <Button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg">Build Your Brand</Button>
               </Card.Footer>
             </Card.Root>
           </div>
         </Tabs.Panel>
 
-        <Tabs.Panel class="w-full md:w-3/4">
+        <Tabs.Panel class="w-full md:w-3/4 mt-0">
+          <div class="pb-8 h-full">
+            <Card.Root class="bg-white dark:bg-gray-900 shadow-lg">
+              <Card.Header class="">
+                <Card.Title class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Marketing Services</Card.Title>
+                <Card.Description class="text-gray-600 dark:text-gray-300">
+                  Drive growth with strategic digital marketing solutions.
+                </Card.Description>
+              </Card.Header>
+              <Card.Content class="space-y-6 ">
+                <div class="flex flex-col md:flex-row gap-6">
+                  <div class="md:w-1/2">
+                    <img
+                      src="https://placehold.co/400x250"
+                      alt="Marketing campaign"
+                      class="w-full rounded-lg shadow-md object-cover "
+                    />
+                  </div>
+                  <div class="md:w-1/2 space-y-4">
+                    <div class="space-y-2">
+                      <Label class="text-lg font-semibold text-gray-800 dark:text-gray-200">Key Features</Label>
+                      <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                        <li class="flex items-center gap-2">
+                          <span class="text-green-500">✓</span> SEO & content strategy
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <span class="text-green-500">✓</span> Social media management
+                        </li>
+                        <li class="flex items-center gap-2">
+                          <span class="text-green-500">✓</span> PPC advertising
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="space-y-2">
+                      <Label class="text-lg font-semibold text-gray-800 dark:text-gray-200">Project Details</Label>
+                      <div class="grid grid-cols-2 gap-2">
+                        <Input value="$1,200/mo" readOnly class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200" placeholder="Starting Price" />
+                        <Input value="Ongoing" readOnly class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200" placeholder="Timeline" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card.Content>
+              <Card.Footer class="">
+                <Button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg">Launch Campaign</Button>
+              </Card.Footer>
+            </Card.Root>
+          </div>
+        </Tabs.Panel>
+
+
+
+        
+        {/* <Tabs.Panel class="w-full md:w-3/4 mt-0">
           <div class="pb-8 h-full">
             <Card.Root class="bg-white dark:bg-gray-900 shadow-lg">
               <Card.Header class="animate-fade-in-down">
@@ -247,7 +300,7 @@ export default component$((props: Props) => {
               </Card.Footer>
             </Card.Root>
           </div>
-        </Tabs.Panel>
+        </Tabs.Panel> */}
       </Tabs.Root>
     </div>
   );

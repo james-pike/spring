@@ -5,11 +5,12 @@ import { twMerge } from "tailwind-merge";
 interface SectionWrapperProps {
   id?: string;
   isDark?: boolean;
+  bgClass?: string; // Add this line
   classes?: Record<string, string>;
 }
 
 export const SectionWrapper = component$((props: SectionWrapperProps) => {
-  const { id, isDark, classes = {} } = props;
+  const { id, isDark, bgClass, classes = {} } = props;
   const location = useLocation();
 
   const isHomePage = location.url.pathname === "/";
@@ -21,7 +22,8 @@ export const SectionWrapper = component$((props: SectionWrapperProps) => {
     <section
       class={twMerge(
         "relative scroll-mt-16",
-        !isHomePage || isDark ? "bg-muted" : "", // Add bg-muted if NOT on homepage
+        (!isHomePage || isDark) ? "bg-muted" : "",
+        bgClass // Apply custom background class if passed
       )}
       {...(id ? { id } : {})}
     >

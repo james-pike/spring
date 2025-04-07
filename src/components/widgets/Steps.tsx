@@ -91,7 +91,7 @@ export default component$((props: Props) => {
     });
     
   return (
-    <SectionWrapper id={id} isDark={isDark} classes={classes}>
+    <SectionWrapper id={id} isDark={isDark} bgClass="texture ">
       <Headline align="left" title={title} subtitle={subtitle} highlight={highlight} classes={{container: "px-4"}} />
       <VisibleWrapper id={`${id}-steps`}>
       <Card.Root>

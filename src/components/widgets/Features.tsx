@@ -52,7 +52,6 @@ export default component$((props: Props) => {
               // Ensure middle items stay unrounded on desktop
               "[&:not(:nth-child(1)):not(:nth-child(2)):not(:nth-last-child(2)):not(:nth-last-child(1))]:md:rounded-none",
               // Add hover effect for SVG background
-              "group-hover:bg-[url('/images/contact.jpg')] group-hover:bg-no-repeat group-hover:bg-center group-hover:bg-contain",
             ),
             title: "md:text-[1.3rem]",
             icon: "text-white bg-primary dark:bg-primary rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4",

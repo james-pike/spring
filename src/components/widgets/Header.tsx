@@ -16,12 +16,13 @@ export default component$(() => {
   const location = useLocation();
 
 
+  //bg-gradient-to-r from-border via-background to-muted dark:from-background dark:to-muted
   return (
     <header
       id="header"
       class={`sticky top-0 z-40 flex-none    mx-auto  transition-[opacity] ease-in-out ${store.isScrolling
           ? " border-b-2  bg-background  "
-          : "bg-gradient-to-r from-border via-background to-muted dark:from-background dark:to-muted"
+          : "texture "
         }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
