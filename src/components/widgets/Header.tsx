@@ -34,7 +34,7 @@ export default component$(() => {
     >
 
 
-      <div class="w-full h-7 hidden px-2 md:px-7 bg-muted border-b-2 mx-auto  flex justify-between items-center max-w-7xl relative">
+      {/* <div class="w-full h-7 hidden px-2 md:px-7 bg-muted border-b-2 mx-auto  flex justify-between items-center max-w-7xl relative">
         <div>
           <p>Free Website Audit & SEO Report</p>
         </div>
@@ -56,9 +56,9 @@ export default component$(() => {
           </a>
         </div>
 
-      </div>
+      </div> */}
 
-      <div class="relative text-default py-2 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
+      <div class="relative text-default py-1 px-2 md:px-6 mx-auto w-full md:flex md:justify-between max-w-7xl">
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center" href={"/"}>
             {/* <Logo /> */}
@@ -67,9 +67,9 @@ export default component$(() => {
           <div class="flex items-center md:hidden gap-1">
             <Settings />
 
-            <Link href="/quote" class="w-full sm:w-auto">
+            {/* <Link href="/quote" class="w-full sm:w-auto">
               <Button size="md" class="w-full px-0">Get Quote</Button>
-            </Link>
+            </Link> */}
 
             <MenuModal />
           </div>

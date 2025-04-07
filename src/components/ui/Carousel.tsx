@@ -2,8 +2,8 @@ import { component$, useSignal, useStyles$, useVisibleTask$ } from '@builder.io/
 import { Carousel } from '@qwik-ui/headless';
 
 const slides = [
-  { src: '/images/hero1.png', alt: 'Locksmith Service 1' },
-  { src: '/images/wixard.png', alt: 'Security Installation' },
+  { src: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-content-3.png', alt: 'Locksmith Service 1' },
+  { src: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-content-2.png', alt: 'Security Installation' },
   // Fallback or additional slide
 ];
 
@@ -74,7 +74,7 @@ export default component$(() => {
   });
 
   return (
-    <Carousel.Root class="carousel-root" gap={30} autoPlayIntervalMs={3500} bind:autoplay={isPlaying}>
+    <Carousel.Root class="carousel-root" gap={30} autoPlayIntervalMs={4500} bind:autoplay={isPlaying}>
       {/* <div class="carousel-buttons">
         <Carousel.Previous class="carousel-button carousel-prev">
           <i class="fas fa-arrow-left" />

@@ -20,7 +20,7 @@ const services = [
   {
     title: 'Mobile Apps',
     description: 'Creating native and cross-platform mobile solutions',
-       image: '/images/hero1.png'
+       image: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png'
   },
   {
     title: 'UI/UX Design',

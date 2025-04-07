@@ -62,9 +62,12 @@ export default component$((props: Props) => {
                 <div class="flex flex-col md:flex-row gap-6">
                   <div class="md:w-1/2">
                     <img
-                      src="https://placehold.co/400x250"
+                    width={400}
+                    height={250}
+                      src=" https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-content-3.png"
+                     
                       alt="Design mockup"
-                      class="w-full rounded-lg shadow-md object-cover "
+                      class="w-full rounded-lg shadow-md object-cover h-[250px]"
                     />
                   </div>
                   <div class="md:w-1/2 space-y-4">
@@ -112,7 +115,7 @@ export default component$((props: Props) => {
                 <div class="flex flex-col md:flex-row gap-6">
                   <div class="md:w-1/2">
                     <img
-                      src="https://placehold.co/400x250"
+                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-content-2.png"
                       alt="Code screenshot"
                       class="w-full rounded-lg shadow-md object-cover"
                     />
