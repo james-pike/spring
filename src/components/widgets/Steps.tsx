@@ -95,7 +95,7 @@ export default component$((props: Props) => {
       <Headline align="left" title={title} subtitle={subtitle} highlight={highlight} classes={{container: "px-4"}} />
       <VisibleWrapper id={`${id}-steps`}>
       <Card.Root>
-    <div class="row-gap-10 grid gap-6 md:grid-cols-2">
+    <div class="row-gap-10 grid gap-6 md:grid-cols-2 bg-background rounded-base">
          <div class="mb-4 md:mb-0 px-3 py-5 md:py-9 md:px-6 md:pr-16">
            {/* {title && <h2 class="font-heading mb-8 text-3xl font-bold lg:text-4xl">{stepsTitle}</h2>} */}
            {Array.isArray(items) &&

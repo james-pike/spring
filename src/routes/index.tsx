@@ -97,7 +97,8 @@ id="features-grid"
         title="What Our Clients Say"
         subtitle="These reviews are pulled from Google Reviews and filtered to only display 4-5 star ratings."
         items={[]} />
-      <Steps       
+      <Steps      
+      isDark 
       id="steps"
       highlight="Our Process"
   title="How We Bring Your Website to Life"
