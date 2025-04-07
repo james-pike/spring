@@ -47,7 +47,7 @@ export default component$((props: Props) => {
                   isDark ? "bg-background" : "bg-background"
                 ),
                 panel: twMerge(
-                  "bg-primary/5 rounded-none", // Reset all corners by default
+                  "texture rounded-none", // Reset all corners by default
                   // Mobile (below md): First item has rounded top, last item has rounded bottom
                   "[&:nth-child(1)]:rounded-t-md [&:nth-child(1)]:md:rounded-tl-md [&:nth-child(1)]:md:rounded-tr-none",
                   "[&:nth-last-child(1)]:rounded-b-md [&:nth-last-child(1)]:md:rounded-br-md [&:nth-last-child(1)]:md:rounded-bl-none",
