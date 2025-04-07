@@ -13,14 +13,14 @@ export default component$(() => {
       <div class="grid texture-fixed grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[85%_15%] min-h-[calc(100vh-89px)]">
         {/* Text Content */}
         <div class="relative z-10 order-1 md:order-1 flex items-center justify-center px-4 py-8 md:px-8 md:py-0">
-          <div class="text-center md:text-left">
+          <div class=" md:text-left">
             <h1 class="text-5xl font-bold tracking-tighter text-balance sm:text-6xl md:text-6xl lg:text-7xl mb-4 opacity-0 animate-[fadeSlideLeft_0.8s_ease-out_0.2s_forwards]">
               Custom <br /> <Typewriter /> <br /> Solutions
             </h1>
             <p class="text-xl sm:text-xl md:text-2xl text-muted-foreground text-balance mb-6 max-w-2xl mx-auto md:mx-0 opacity-0 animate-[fadeSlideUp_0.8s_ease-out_0.4s_forwards]">
               Transform your online presence with custom web design and development services—stunning, fast, and secure websites for your business.
             </p>
-            <div class="flex flex-col items-center gap-4 px-2 md:px-0 sm:flex-row sm:justify-center md:justify-start opacity-0 animate-[fadeSlideLeft_0.8s_ease-out_0.6s_forwards]">
+            <div class="grid grid-cols-2 items-center gap-4 px-2 md:px-0 sm:flex-row sm:justify-center md:justify-start opacity-0 animate-[fadeSlideLeft_0.8s_ease-out_0.6s_forwards]">
               <Link href="/contact" class="w-full sm:w-auto">
                 <Button
                   size="md"

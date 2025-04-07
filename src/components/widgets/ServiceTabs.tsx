@@ -29,7 +29,7 @@ export default component$((props: Props) => {
     <div class="w-full min-h-[600px] px-0 ">
       <Tabs.Root class="flex flex-col md:flex-row w-full max-w-6xl mx-auto">
         {/* Tabs List */}
-        <Tabs.List class="grid grid-cols-2 md:flex md:flex-col w-full md:w-1/4 bg-gray-100 dark:bg-gray-800 border-b md:border-b-0 md:border-r">
+        <Tabs.List class="grid grid-cols-3 md:flex md:flex-col w-full md:w-1/4 bg-gray-100 dark:bg-gray-800 border-b md:border-b-0 md:border-r">
           <Tabs.Tab class="flex items-center gap-3 py-4 px-6 md:py-6 md:px-8 text-base md:text-lg font-medium text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer border-b md:border-b-0">
             <IconBrandTailwind class="w-6 h-6 text-gray-600 dark:text-gray-300" />
             Design
@@ -42,10 +42,10 @@ export default component$((props: Props) => {
             <IconBrandTailwind class="w-6 h-6 text-gray-600 dark:text-gray-300" />
             Branding
           </Tabs.Tab>
-          <Tabs.Tab class="flex items-center gap-3 py-4 px-6 md:py-6 md:px-8 text-base md:text-lg font-medium text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer border-b md:border-b-0">
+          {/* <Tabs.Tab class="flex items-center gap-3 py-4 px-6 md:py-6 md:px-8 text-base md:text-lg font-medium text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer border-b md:border-b-0">
             <IconBrandTailwind class="w-6 h-6 text-gray-600 dark:text-gray-300" />
             Marketing
-          </Tabs.Tab>
+          </Tabs.Tab> */}
         </Tabs.List>
 
         {/* Panels - All using Design layout with animations */}
@@ -202,7 +202,7 @@ export default component$((props: Props) => {
           </div>
         </Tabs.Panel>
 
-        <Tabs.Panel class="w-full md:w-3/4 mt-0">
+        {/* <Tabs.Panel class="w-full md:w-3/4 mt-0">
           <div class="pb-8 h-full">
             <Card.Root class="bg-white dark:bg-gray-900 shadow-lg">
               <Card.Header class="">
@@ -215,7 +215,7 @@ export default component$((props: Props) => {
                 <div class="flex flex-col md:flex-row gap-6">
                   <div class="md:w-1/2">
                     <img
-                      src="https://placehold.co/400x250"
+                      src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png"
                       alt="Marketing campaign"
                       class="w-full rounded-lg shadow-md object-cover "
                     />
@@ -250,7 +250,7 @@ export default component$((props: Props) => {
               </Card.Footer>
             </Card.Root>
           </div>
-        </Tabs.Panel>
+        </Tabs.Panel> */}
 
 
 

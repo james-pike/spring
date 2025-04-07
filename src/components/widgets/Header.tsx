@@ -5,6 +5,7 @@ import IconChevronDown from "../icons/IconChevronDown";
 import Settings from "./settings";
 import { Button } from "../ui/Button";
 import MenuModal from "./MenuModal";
+import Logo3 from "../common/Logo3";
 
 export default component$(() => {
   const store = useStore({
@@ -61,7 +62,7 @@ export default component$(() => {
         <div class="mr-auto rtl:mr-0 rtl:ml-auto flex justify-between">
           <a class="flex items-center" href={"/"}>
             {/* <Logo /> */}
-            {/* <Logo3 /> */}
+            <Logo3 />
           </a>
           <div class="flex items-center md:hidden gap-1">
             <Settings />
