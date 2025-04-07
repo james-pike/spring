@@ -21,7 +21,7 @@ export default component$(() => {
     <header
       id="header"
       class={`sticky top-0 z-40 flex-none mx-auto transition-[opacity] ease-in-out ${store.isScrolling
-        ? "   bg-background  "
+        ? " border-b-2  bg-background  "
         : "texture "
         }`}
       window:onScroll$={() => {
@@ -32,7 +32,6 @@ export default component$(() => {
         }
       }}
     >
-  <div class="absolute bottom-[2px] left-0 w-full h-px border-b-2 border-border"></div>
 
 
 
