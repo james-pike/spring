@@ -14,7 +14,7 @@ interface FAQAccordionProps {
 
 export default component$(({ items }: FAQAccordionProps) => {
   return (
-    <Card.Root class="py-1">
+    <Card.Root class="py-1 rounded-t-none">
       <Accordion.Root>
         {items.map(({ title, description }, index) => (
           <Accordion.Item

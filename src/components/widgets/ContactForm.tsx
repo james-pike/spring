@@ -18,10 +18,7 @@ interface Props {
     <>
       <Card.Root class="border-primary border">
      
-          <Card.Header>
-           
-        </Card.Header>
-        <Card.Content class="bg-indigo-800">
+        <Card.Content class="bg-indigo-800 pt-6">
         <form action="#" method="POST" class=" ">
           <div class="mx-auto  lg:max-w-lg">
             <div class="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">

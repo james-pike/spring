@@ -49,9 +49,9 @@ export default component$((props: Props) => {
         </Tabs.List>
 
         {/* Panels - All using Design layout with animations */}
-        <Tabs.Panel class="w-full md:w-3/4 mt-0">
+        <Tabs.Panel class="w-full md:w-3/4 md:mt-0 rounded-t-none">
           <div class="pb-8 h-full">
-            <Card.Root class="bg-white dark:bg-gray-900 shadow-lg ">
+            <Card.Root class="bg-white dark:bg-gray-900 shadow-lg rounded-t-none ">
               <Card.Header class="">
                 <Card.Title class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Design Services</Card.Title>
                 <Card.Description class="text-gray-600 dark:text-gray-300">
@@ -102,9 +102,9 @@ export default component$((props: Props) => {
           </div>
         </Tabs.Panel>
 
-        <Tabs.Panel class="w-full md:w-3/4 mt-0">
+        <Tabs.Panel class="w-full md:w-3/4 md:mt-0">
           <div class="pb-8 h-full">
-            <Card.Root class="bg-white dark:bg-gray-900 shadow-lg">
+            <Card.Root class="bg-white dark:bg-gray-900 shadow-lg rounded-t-none">
               <Card.Header class="">
                 <Card.Title class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">Development Services</Card.Title>
                 <Card.Description class="text-gray-600 dark:text-gray-300">
@@ -152,7 +152,7 @@ export default component$((props: Props) => {
           </div>
         </Tabs.Panel>
 
-        <Tabs.Panel class="w-full md:w-3/4 mt-0">
+        <Tabs.Panel class="w-full md:w-3/4 md:mt-0 rounded-t-none">
           <div class="pb-8 h-full">
             <Card.Root class="bg-white dark:bg-gray-900 shadow-lg">
               <Card.Header class="">

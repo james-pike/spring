@@ -10,11 +10,11 @@ import { Button } from "../ui/Button";
 export default component$(() => {
   const links = [
     {
-      title: "Product",
+      title: "About",
       items: [
-        { title: "Features", href: "#" },
-        { title: "Security", href: "#" },
-        { title: "Team", href: "#" },
+        { title: "About Us", href: "#" },
+        { title: "Reviews", href: "#" },
+        { title: "FAQ", href: "#" },
     
      
     

@@ -24,7 +24,7 @@ export default component$((props: Props) => {
           <Tabs.Tab>Monthly Cost </Tabs.Tab>
         </Tabs.List>
         <Tabs.Panel>
-          <Card.Root>
+          <Card.Root class="rounded-t-none ">
             <Card.Header>
               <Card.Title>Complete Project</Card.Title>
               <Card.Description>
@@ -76,7 +76,7 @@ export default component$((props: Props) => {
           </Card.Root>
         </Tabs.Panel>
         <Tabs.Panel>
-          <Card.Root>
+          <Card.Root class="rounded-t-none ">
             <Card.Header>
               <Card.Title>Monthly Cost</Card.Title>
               <Card.Description>

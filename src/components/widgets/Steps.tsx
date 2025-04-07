@@ -96,7 +96,7 @@ export default component$((props: Props) => {
       <VisibleWrapper id={`${id}-steps`}>
       <Card.Root>
     <div class="row-gap-10 grid gap-6 md:grid-cols-2 bg-background rounded-base">
-         <div class="mb-4 md:mb-0 px-3 py-5 md:py-9 md:px-6 md:pr-16">
+         <div class="mb-4 md:mb-0 px-4 pt-8 md:py-9 md:px-6 md:pr-16">
            {/* {title && <h2 class="font-heading mb-8 text-3xl font-bold lg:text-4xl">{stepsTitle}</h2>} */}
            {Array.isArray(items) &&
              items.length &&
@@ -162,7 +162,7 @@ export default component$((props: Props) => {
       width={400}
       height={400}
       alt={image.alt}
-      class="w-full rounded-md bg-gray-500 block sm:hidden mx-auto object-cover object-top shadow-lg dark:bg-slate-700"
+      class="w-full rounded-b-base bg-gray-500 block sm:hidden mx-auto object-cover object-top shadow-lg dark:bg-slate-700"
       breakpoints={[320, 480, 640, 1024]}
     />
   )}

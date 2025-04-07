@@ -37,7 +37,7 @@ export default component$((props: Props) => {
 
       {faqData.map((section, index) => (
         <Tabs.Panel key={index}>
-          <Card.Root>
+          <Card.Root class="rounded-t-none">
             <ItemGrid
               id={`faq-grid-${index}`}
               items={section.items}
