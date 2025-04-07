@@ -1,7 +1,6 @@
 import { component$, useStore } from "@builder.io/qwik";
 import { Link, useContent, useLocation } from "@builder.io/qwik-city";
 import IconChevronDown from "../icons/IconChevronDown";
-import MenuModal from "./MenuModal";
 
 import Settings from "./settings";
 import { Button } from "../ui/Button";
@@ -21,8 +20,8 @@ export default component$(() => {
     <header
       id="header"
       class={`sticky top-0 z-40 flex-none mx-auto transition-[opacity] ease-in-out ${store.isScrolling
-          ? "   bg-background  "
-          : "texture-fixed "
+          ? " border-b-2  bg-background  "
+          : "texture "
         }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
@@ -67,11 +66,11 @@ export default component$(() => {
           <div class="flex items-center md:hidden gap-1">
             <Settings />
 
-            {/* <Link href="/quote" class="w-full sm:w-auto">
+            <Link href="/quote" class="w-full sm:w-auto">
               <Button size="md" class="w-full px-0">Get Quote</Button>
-            </Link> */}
+            </Link>
 
-            <MenuModal />
+            {/* <MenuModal /> */}
           </div>
         </div>
         <nav
