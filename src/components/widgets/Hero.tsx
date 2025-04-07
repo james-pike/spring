@@ -10,7 +10,7 @@ import LogoClouds from "./LogoClouds";
 export default component$(() => {
   return (
     <section class="relative overflow-hidden">
-      <div class="grid  grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[85%_15%] min-h-[calc(100vh-89px)]">
+      <div class="grid texture-fixed grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[85%_15%] min-h-[calc(100vh-89px)]">
         {/* Text Content */}
         <div class="relative z-10 order-1 md:order-1 flex items-center justify-center px-4 py-8 md:px-8 md:py-0">
           <div class="text-center md:text-left">
