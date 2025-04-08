@@ -25,7 +25,7 @@ const List = component$<TabsListProps>((props) => {
     <HeadlessTabs.List
       {...restProps}
       class={cn(
-        'inline-flex items-center justify-center rounded-t-base border-slate-800 border p-1 text-muted-foreground shadow-sm',
+        'inline-flex items-center justify-center rounded-t-base border-slate-800 border-2 p-1 text-muted-foreground shadow-sm',
         isDark ? 'bg-background' : 'bg-muted',
         props.class
       )}
