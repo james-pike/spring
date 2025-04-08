@@ -51,7 +51,7 @@ const Tab = component$<TabsTabProps>((props) => {
         'inline-flex items-center justify-center whitespace-nowrap px-3 py-3 font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=selected]:border-base',
         isDark ? 'data-[state=selected]:bg-gray-800' : 'data-[state=selected]:bg-background',
         'data-[state=selected]:text-primary data-[state=selected]:shadow-inner',
-        isDark ? 'bg-background' : 'bg-gray-800',
+        isDark ? 'bg-background' : 'bg-gray-850',
         // Apply rounded-base to left side of first tab and right side of last tab
         'first:rounded-tl-base last:rounded-tr-base',
         // Ensure middle tabs have no rounding
