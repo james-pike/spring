@@ -24,7 +24,7 @@ export default component$((props: Props) => {
   return (
     <div class="flex flex-col md:flex-row gap-12 mx-auto justify-center">
       <Tabs.Root class="max-w-[500px]">
-        <Tabs.List class="grid w-full grid-cols-4">
+        <Tabs.List class="grid w-full text-lg grid-cols-4">
           {faqData.map((section, index) => (
             <Tabs.Tab
               key={section.title}
