@@ -132,7 +132,7 @@ export default component$((props: Props) => {
   return (
     <>
     <SectionWrapper id={id} isDark={isDark} classes={classes} bgClass="bg-gray-900">
-      <Headline align="left" title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+      <Headline  title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       <VisibleWrapper id={`${id}-faq`}>
         <div class="hidden sm:block">
           <Card.Root>

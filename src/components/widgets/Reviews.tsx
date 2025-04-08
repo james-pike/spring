@@ -33,13 +33,13 @@ export default component$((props: Props) => {
   // Conditional padding classes
 
   return (
- <SectionWrapper id={id} isDark={isDark} classes={classes}>
+ <SectionWrapper id={id} isDark={isDark} classes={classes} bgClass="bg-gray-900">
      
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
-        <Card.Root class="bg-muted">
+        <Card.Root class="bg-background">
           <Card.Header class="p-4">
         <div class="block sm:hidden">
-          {isIndexPage ? <ReviewsCarousel/> : <ReviewGrid/>}
+          {isIndexPage ? <ReviewsCarousel/> : <ReviewGrid isDark={isDark}/>}
         </div>
         <div class="hidden sm:block">
           {<ReviewGrid isDark={isDark}/>}
