@@ -56,6 +56,7 @@ const Tab = component$<TabsTabProps>((props) => {
         'first:rounded-tl-base last:rounded-tr-base',
         // Ensure middle tabs have no rounding
         'not:first:not:last:rounded-none',
+        'border-r border-gray-800 last:border-r-0',
         props.class
       )}
     >
@@ -69,7 +70,7 @@ const Panel = component$<PropsOf<typeof HeadlessTabs.Panel>>((props) => {
     <HeadlessTabs.Panel
       {...props}
       class={cn(
-        'mt-1 ring-offset-background rounded-b-base border border-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+        'mt-2 ring-offset-background rounded-b-base border border-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         props.class
       )}
     >

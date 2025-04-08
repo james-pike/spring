@@ -19,6 +19,11 @@ module.exports = {
         'pulse-glow': 'pulseGlow 0.6s ease-out',
       },
 
+      
+        borderWidth: {
+          '1.5': '1.5px',
+        },
+
       '4.5xl': ['2.625rem', { lineHeight: '2.75rem' }],
 
       screens: {
