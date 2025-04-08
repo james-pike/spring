@@ -67,7 +67,7 @@ const Panel = component$<PropsOf<typeof HeadlessTabs.Panel>>((props) => {
     <HeadlessTabs.Panel
       {...props}
       class={cn(
-        'mt-1.5 ring-offset-background rounded-b-base border border-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+        'mt-1.5 ring-offset-background bg-gray-850 rounded-b-base border border-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         props.class
       )}
     >
