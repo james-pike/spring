@@ -1,6 +1,5 @@
 import { component$ } from '@builder.io/qwik';
 import { Accordion } from '../ui/Accordion';
-import { Card } from '../ui/Card';
 
 interface AccordionItem {
   icon: any;
