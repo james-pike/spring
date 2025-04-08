@@ -4,6 +4,7 @@ import ReviewGrid from "./ReviewGrid";
 import ReviewsCarousel from "./ReviewsCarousel";
 import { useLocation } from "@builder.io/qwik-city";
 import { SectionWrapper } from "./SectionWrapper";
+import { Card } from "../ui/Card";
 
 interface Item {
   title?: string;
@@ -35,13 +36,16 @@ export default component$((props: Props) => {
  <SectionWrapper id={id} isDark={isDark} classes={classes}>
      
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
-        
+        <Card.Root class="bg-muted">
+          <Card.Header class="p-4">
         <div class="block sm:hidden">
           {isIndexPage ? <ReviewsCarousel/> : <ReviewGrid/>}
         </div>
         <div class="hidden sm:block">
           {<ReviewGrid isDark={isDark}/>}
         </div>
+        </Card.Header>
+        </Card.Root>
      
       </SectionWrapper>
   );

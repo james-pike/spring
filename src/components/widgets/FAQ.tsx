@@ -150,7 +150,7 @@ export default component$((props: Props) => {
     </SectionWrapper>
 
     {!isLandingPage && (
-        <Card.Root class="bg-gradient-to-r from-primary to-primary/50 mx-auto mt-0 pt-8 max-w-5xl">
+        <Card.Root class="bg-gradient-to-r from-primary to-primary/50 mx-auto mt-0 pt-8 max-w-5xl rounded-none">
           <Card.Content>
             <Headline title={"Any other questions about our services?"} subtitle={"Get in touch and we'll gladly answer them"} />
             <Link href="/contact" class="w-full sm:w-auto">

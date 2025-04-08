@@ -30,15 +30,15 @@ export default component$((props: Props) => {
       <Tabs.Root class="flex flex-col md:flex-row w-full max-w-6xl mx-auto">
         {/* Tabs List */}
         <Tabs.List class="grid grid-cols-3 md:flex md:flex-col w-full md:w-1/4 bg-gray-100 dark:bg-gray-800 border-b md:border-b-0 md:border-r">
-          <Tabs.Tab class="flex items-center gap-3 py-4 px-6 md:py-6 md:px-8 text-base md:text-lg font-medium text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer border-b md:border-b-0">
+          <Tabs.Tab class="flex flex-col items-center gap-3 py-4 px-6 md:py-6 md:px-8 text-base md:text-lg font-medium text-left  transition-colors cursor-pointer border-b md:border-b-0">
             <IconBrandTailwind class="w-6 h-6 text-gray-600 dark:text-gray-300" />
             Design
           </Tabs.Tab>
-          <Tabs.Tab class="flex items-center gap-3 py-4 px-6 md:py-6 md:px-8 text-base md:text-lg font-medium text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer border-b md:border-b-0">
+          <Tabs.Tab class="flex flex-col items-center gap-3 py-4 px-6 md:py-6 md:px-8 text-base md:text-lg font-medium text-left  transition-colors cursor-pointer border-b md:border-b-0">
             <IconBrandTailwind class="w-6 h-6 text-gray-600 dark:text-gray-300" />
             Development
           </Tabs.Tab>
-          <Tabs.Tab class="flex items-center gap-3 py-4 px-6 md:py-6 md:px-8 text-base md:text-lg font-medium text-left hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer border-b md:border-b-0">
+          <Tabs.Tab class="flex items-center flex-col gap-3 py-4 px-6 md:py-6 md:px-8 text-base md:text-lg font-medium text-left 700 transition-colors cursor-pointer border-b md:border-b-0">
             <IconBrandTailwind class="w-6 h-6 text-gray-600 dark:text-gray-300" />
             Branding
           </Tabs.Tab>
@@ -102,7 +102,7 @@ export default component$((props: Props) => {
           </div>
         </Tabs.Panel>
 
-        <Tabs.Panel class="w-full md:w-3/4 md:mt-0">
+        <Tabs.Panel class="w-full md:w-3/4 md:mt-0 rounded-t-none">
           <div class="pb-8 h-full">
             <Card.Root class="bg-white dark:bg-gray-900 shadow-lg rounded-t-none">
               <Card.Header class="">

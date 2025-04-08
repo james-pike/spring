@@ -33,7 +33,7 @@ export default component$((props: Props) => {
             </Card.Header>
             <Card.Content class="space-y-4">
               <div class="space-y-2">
-                <Label for="features1" class="text-lg font-semibold">Features</Label>
+                <Label for="features1" class="text-md font-semibold">Features</Label>
                 <ul class="space-y-2">
                   <li class="flex items-center gap-2">
                     <span class="text-green-500">✓</span>

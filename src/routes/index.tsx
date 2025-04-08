@@ -86,13 +86,13 @@ id="features-grid"
       <Pricing id="pricing"
       isDark
         highlight="pricing"
-        title="Reliable Locksmith Services You Can Trust"
-        subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
+        title="Flexible Pricing Options"
+        subtitle="Choose a one time payment or monthly plan."
         items={[]} />
 
 
       <Reviews
-      
+    
         highlight="Reviews"
         title="What Our Clients Say"
         subtitle="These reviews are pulled from Google Reviews and filtered to only display 4-5 star ratings."
@@ -107,7 +107,7 @@ id="features-grid"
       <FAQ
 
         title="Frequently Asked Questions"
-        subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque."
+        subtitle="Find common inquiries about our services."
         highlight="FAQs"
   
       />
