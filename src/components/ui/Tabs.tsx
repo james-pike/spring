@@ -51,7 +51,7 @@ const Tab = component$<TabsTabProps>((props) => {
       'bg-gray-900',
         // Apply rounded-base to left side of first tab and right side of last tab
         'first:rounded-tl-base last:rounded-tr-base',
-        // Ensure middle tabs have no rounding
+        // Ensure middle tabs have no roundieng
         'not:first:not:last:rounded-none',
         'border-r border-gray-750 last:border-r-0',
         props.class
