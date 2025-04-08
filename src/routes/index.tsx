@@ -105,7 +105,7 @@ id="features-grid"
   subtitle="From first contact to final launch, our streamlined process ensures every website is strategic, beautifully designed, and built to perform."
         items={[]} />
       <FAQ
-
+isDark
         title="Frequently Asked Questions"
         subtitle="Find common inquiries about our services."
         highlight="FAQs"
