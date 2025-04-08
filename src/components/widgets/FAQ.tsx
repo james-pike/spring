@@ -63,7 +63,7 @@ export default component$((props: Props) => {
       ],
     },
     {
-      title: "Develop",
+      title: "Development",
       items: [
         {
           icon: IconArrowDownRight,
@@ -98,7 +98,7 @@ export default component$((props: Props) => {
       ],
     },
     {
-      title: "SEO",
+      title: "Branding",
       items: [
         {
           icon: IconArrowDownRight,
@@ -112,21 +112,21 @@ export default component$((props: Props) => {
         },
       ],
     },
-    {
-      title: "Pricing",
-      items: [
-        {
-          icon: IconArrowDownRight,
-          title: "How do you price your services?",
-          description: "We offer tiered pricing depending on the complexity and timeline of your project.",
-        },
-        {
-          icon: IconArrowDownRight,
-          title: "Do you offer ongoing support?",
-          description: "Yes, we have monthly support packages available.",
-        },
-      ],
-    },
+    // {
+    //   title: "Pricing",
+    //   items: [
+    //     {
+    //       icon: IconArrowDownRight,
+    //       title: "How do you price your services?",
+    //       description: "We offer tiered pricing depending on the complexity and timeline of your project.",
+    //     },
+    //     {
+    //       icon: IconArrowDownRight,
+    //       title: "Do you offer ongoing support?",
+    //       description: "Yes, we have monthly support packages available.",
+    //     },
+    //   ],
+    // },
   ];
 
   return (
