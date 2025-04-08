@@ -16,7 +16,7 @@ export const SectionWrapper = component$((props: SectionWrapperProps) => {
   const isHomePage = location.url.pathname === "/";
   const paddingY = isHomePage
     ? "py-12 md:py-16 lg:py-20"
-    : "py-9 md:py-12 lg:py-15";
+    : "py-8 md:py-12 lg:py-14";
 
   return (
     <section
