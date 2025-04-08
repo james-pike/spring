@@ -15,7 +15,7 @@ const Root = component$<CardRootProps>((props) => {
       {...restProps}
       class={cn(
         'rounded-base border text-card-foreground shadow-lg',
-        isDark ? 'bg-background' : 'bg-muted', // Conditional background
+        isDark ? 'bg-gray-800' : 'bg-muted', // Conditional background
         props.class
       )}
     >

@@ -49,14 +49,14 @@ const Tab = component$<TabsTabProps>((props) => {
       {...restProps}
       class={cn(
         'inline-flex items-center justify-center whitespace-nowrap px-3 py-3 font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=selected]:border-base',
-        isDark ? 'data-[state=selected]:bg-gray-900' : 'data-[state=selected]:bg-background',
+        isDark ? 'data-[state=selected]:bg-gray-800' : 'data-[state=selected]:bg-background',
         'data-[state=selected]:text-primary data-[state=selected]:shadow-inner',
-        isDark ? 'bg-background' : 'bg-gray-900',
+        isDark ? 'bg-background' : 'bg-gray-800',
         // Apply rounded-base to left side of first tab and right side of last tab
         'first:rounded-tl-base last:rounded-tr-base',
         // Ensure middle tabs have no rounding
         'not:first:not:last:rounded-none',
-        'border-r border-gray-800 last:border-r-0',
+        'border-r border-gray-700 last:border-r-0',
         props.class
       )}
     >
@@ -70,7 +70,7 @@ const Panel = component$<PropsOf<typeof HeadlessTabs.Panel>>((props) => {
     <HeadlessTabs.Panel
       {...props}
       class={cn(
-        'mt-1.5 ring-offset-background rounded-b-base border border-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+        'mt-1.5 ring-offset-background rounded-b-base border border-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         props.class
       )}
     >
