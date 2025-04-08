@@ -146,11 +146,8 @@ export default component$((props: Props) => {
       </VisibleWrapper>
 
       {/* Conditionally render the card only if not on the landing page */}
-  
-    </SectionWrapper>
-
-    {!isLandingPage && (
-        <Card.Root class="bg-gradient-to-r from-primary to-primary/50 mx-auto mt-0 pt-8 max-w-5xl rounded-none">
+      {!isLandingPage && (
+        <Card.Root class="bg-gradient-to-r from-primary to-primary/50 mx-auto mt-4 pt-8 max-w-5xl ">
           <Card.Content>
             <Headline title={"Any other questions about our services?"} subtitle={"Get in touch and we'll gladly answer them"} />
             <Link href="/contact" class="w-full sm:w-auto">
@@ -159,6 +156,9 @@ export default component$((props: Props) => {
           </Card.Content>
         </Card.Root>
       )}
+    </SectionWrapper>
+
+  
     </>
   );
 });
