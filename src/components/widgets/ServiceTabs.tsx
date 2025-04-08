@@ -29,7 +29,7 @@ export default component$((props: Props) => {
     <div class="w-full min-h-[600px] px-0 ">
       <Tabs.Root class="flex flex-col md:flex-row w-full max-w-6xl mx-auto">
         {/* Tabs List */}
-        <Tabs.List class="grid grid-cols-3 md:flex md:flex-col w-full md:w-1/4 bg-gray-100 dark:bg-gray-800 border-b md:border-b-0 md:border-r">
+        <Tabs.List class="grid grid-cols-3 md:flex md:flex-col w-full md:w-1/4 bg-gray-100 dark:bg-gray-900 border-b md:border-b-0 md:border-r">
           <Tabs.Tab class="flex flex-col items-center gap-3 py-4 px-6 md:py-6 md:px-8 text-base md:text-lg font-medium text-left  transition-colors cursor-pointer border-b md:border-b-0">
             <IconBrandTailwind class="w-6 h-6 text-gray-600 dark:text-gray-300" />
             Design
