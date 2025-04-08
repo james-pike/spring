@@ -34,7 +34,8 @@ module.exports = {
             gray: {
               850: '#18202f', 
               750: '#2b3544',
-              950: '#030712', // A shade between gray-800 (#1e293b) and gray-900 (#0f172a)
+              950: '#030712',
+              925: "#0c111d", // A shade between gray-800 (#1e293b) and gray-900 (#0f172a)
             },
             border: 'hsl(var(--border))',
             input: 'hsl(var(--input))',
