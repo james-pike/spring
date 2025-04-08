@@ -131,7 +131,7 @@ export default component$((props: Props) => {
 
   return (
     <>
-    <SectionWrapper id={id} isDark={isDark} classes={classes} bgClass="bg-gray-900">
+    <SectionWrapper id={id} isDark={isDark} classes={classes} bgClass="bg-gray-950">
       <Headline  title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       <VisibleWrapper id={`${id}-faq`}>
         <div class="hidden sm:block">
