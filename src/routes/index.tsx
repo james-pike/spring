@@ -111,6 +111,13 @@ isDark
         highlight="FAQs"
   
       />
+           <FAQ
+
+        title="Frequently Asked Questions"
+        subtitle="Find common inquiries about our services."
+        highlight="FAQs"
+  
+      />
       <Stats />
       <Contact
       isDark

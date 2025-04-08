@@ -22,7 +22,7 @@ export const SectionWrapper = component$((props: SectionWrapperProps) => {
     <section
       class={twMerge(
         "relative scroll-mt-16",
-        (!isHomePage || isDark) ? "bg-muted" : "",
+        (!isHomePage || isDark) ? "bg-muted" : "bg-gray-900",
         bgClass // Apply custom background class if passed
       )}
       {...(id ? { id } : {})}
