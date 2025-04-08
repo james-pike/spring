@@ -46,7 +46,7 @@ const Tab = component$<TabsTabProps>((props) => {
       {...restProps}
       class={cn(
         'inline-flex items-center justify-center whitespace-nowrap px-3 py-3 font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=selected]:border-base',
-       'data-[state=selected]:bg-gray-900 border-b-primary',
+       'data-[state=selected]:bg-gray-900 data-[state=selected]:border-b-primary',
         'data-[state=selected]:text-primary data-[state=selected]:shadow-inner',
       'bg-gray-850',
         // Apply rounded-base to left side of first tab and right side of last tab
