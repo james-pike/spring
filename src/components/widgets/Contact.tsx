@@ -2,9 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline"; // Adjust the import path
 import { SectionWrapper } from "./SectionWrapper";
 import ContactForm from "./ContactForm";
-import { Card } from "../ui/Card";
-import { Link } from "@builder.io/qwik-city";
-import { Button } from "../ui/Button";
+
 
 interface Item {
   title?: string;
