@@ -1,7 +1,6 @@
 import { Slot, component$, type PropsOf } from '@builder.io/qwik';
 import { Tabs as HeadlessTabs } from '@qwik-ui/headless';
 import { cn } from '@qwik-ui/utils';
-import { useIsDark } from '~/utils/darkUtils'; // Adjust path
 
 const Root = (props: PropsOf<typeof HeadlessTabs.Root>) => (
   <HeadlessTabs.Root
