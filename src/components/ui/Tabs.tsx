@@ -26,7 +26,7 @@ const List = component$<TabsListProps>((props) => {
       {...restProps}
       class={cn(
         'inline-flex items-center justify-center rounded-t-base border-gray-700 border text-muted-foreground shadow-sm',
-        isDark ? 'bg-muted' : 'bg-muted',
+        isDark ? 'bg-gray-850' : 'bg-gray-850',
         props.class
       )}
     >
