@@ -23,7 +23,7 @@ const List = component$<TabsListProps>((props) => {
     <HeadlessTabs.List
       {...restProps}
       class={cn(
-        'inline-flex items-center justify-center rounded-t-base border text-muted-foreground shadow-sm',
+        'inline-flex items-center justify-center rounded-t-base border-gray-750 border text-muted-foreground shadow-sm',
      'bg-gray-850',
         props.class
       )}
@@ -53,7 +53,7 @@ const Tab = component$<TabsTabProps>((props) => {
         'first:rounded-tl-base last:rounded-tr-base',
         // Ensure middle tabs have no rounding
         'not:first:not:last:rounded-none',
-        'border-r last:border-r-0',
+        'border-r border-gray-750 last:border-r-0',
         props.class
       )}
     >
@@ -67,7 +67,7 @@ const Panel = component$<PropsOf<typeof HeadlessTabs.Panel>>((props) => {
     <HeadlessTabs.Panel
       {...props}
       class={cn(
-        'mt-1.5 ring-offset-background bg-gray-850 rounded-b-base border  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+        'mt-1.5 ring-offset-background bg-gray-850 rounded-b-base border border-gray-750 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         props.class
       )}
     >
