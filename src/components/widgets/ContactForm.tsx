@@ -7,33 +7,36 @@ import { Button } from '../ui/Button';
 import ContactSelect from './ContactSelect';
 
 interface Props {
-    isDark?: boolean;
-  }
-  
-  export default component$((props: Props) => {
- const { isDark = false } = props;
+  isDark?: boolean;
+}
+
+export default component$((props: Props) => {
+  const { isDark = false } = props;
   useContextProvider(DarkContext, isDark);
 
   return (
     <>
       <Card.Root class=" ">
 
-      <Card.Root>
-        <Card.Content>
-          <h1>Contact Details</h1>
-        <div class=" max-w-md mx-auto ">
-        <dl class=" space-y-4 text-base/7 text-gray-600 dark:text-gray-300">
+      <Card.Root class="w-full max-w-4xl mx-auto">
+  <Card.Content class="p-0">
+    <div class="flex gap-6">
+      {/* Contact Details - Left Side */}
+      <div class="flex-1 p-6 pt-0">
+        <h1 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+          Contact Details
+        </h1>
+        <dl class="space-y-4 text-base text-gray-600 dark:text-gray-300">
           <div class="flex gap-x-4">
             <dt class="flex-none">
               <span class="sr-only">Address</span>
               <svg
-                class="h-7 w-6 text-gray-400 dark:text-gray-500"
+                class="h-6 w-6 text-gray-400 dark:text-gray-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
                 aria-hidden="true"
-                data-slot="icon"
               >
                 <path
                   stroke-linecap="round"
@@ -45,20 +48,21 @@ interface Props {
             <dd>
               100 Duncan Lane
               <br />
-              Hastings Highlands, ON K@G5Y5
+              Hastings Highlands 
+              <br />
+              ON K0G 5Y5
             </dd>
           </div>
           <div class="flex gap-x-4">
             <dt class="flex-none">
               <span class="sr-only">Telephone</span>
               <svg
-                class="h-7 w-6 text-gray-400 dark:text-gray-500"
+                class="h-6 w-6 text-gray-400 dark:text-gray-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
                 aria-hidden="true"
-                data-slot="icon"
               >
                 <path
                   stroke-linecap="round"
@@ -68,7 +72,10 @@ interface Props {
               </svg>
             </dt>
             <dd>
-              <a class="hover:text-gray-900 dark:hover:text-white" href="tel:+1 (613) 218-8063">
+              <a
+                class="hover:text-gray-900 dark:hover:text-white transition-colors"
+                href="tel:+16132188063"
+              >
                 +1 (613) 218-8063
               </a>
             </dd>
@@ -77,13 +84,12 @@ interface Props {
             <dt class="flex-none">
               <span class="sr-only">Email</span>
               <svg
-                class="h-7 w-6 text-gray-400 dark:text-gray-500"
+                class="h-6 w-6 text-gray-400 dark:text-gray-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
                 aria-hidden="true"
-                data-slot="icon"
               >
                 <path
                   stroke-linecap="round"
@@ -93,123 +99,136 @@ interface Props {
               </svg>
             </dt>
             <dd>
-              <a class="hover:text-gray-900 dark:hover:text-white" href="mailto:james@webdev.ca">
+              <a
+                class="hover:text-gray-900 dark:hover:text-white transition-colors"
+                href="mailto:james@webdev.ca"
+              >
                 james@webdev.ca
               </a>
             </dd>
           </div>
         </dl>
-        </div>
-        </Card.Content>
-      </Card.Root>
-     
+      </div>
+
+      {/* Image - Right Side */}
+      <div class="flex-1 flex items-stretch">
+        <img
+          src="/images/contact.jpg"
+          alt="Contact Image"
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+    </div>
+  </Card.Content>
+</Card.Root>
+
         <Card.Content class="bg-indigo-800 pt-6">
-        <form action="#" method="POST" class=" ">
-          <div class="mx-auto  lg:max-w-lg">
-            <div class="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
-              <div>
-                <label
-                  for="first-name"
-                  class="block text-sm/6 font-semibold text-gray-900 dark:text-white"
-                >
-                  Name
-                </label>
-                <div class="mt-1.5">
-                  <Input
-                    type="text"
-                    id="first-name"
-                    name="first-name"
-                    placeholder="James"
-                    required
-                
-                  />
+          <form action="#" method="POST" class=" ">
+            <div class="mx-auto  lg:max-w-lg">
+              <div class="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
+                <div>
+                  <label
+                    for="first-name"
+                    class="block text-sm/6 font-semibold text-gray-900 dark:text-white"
+                  >
+                    Name
+                  </label>
+                  <div class="mt-1.5">
+                    <Input
+                      type="text"
+                      id="first-name"
+                      name="first-name"
+                      placeholder="James"
+                      required
+
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="last-name"
+                    class="block text-sm/6 font-semibold text-gray-900 dark:text-white"
+                  >
+                    Company
+                  </label>
+                  <div class="mt-1.5">
+                    <Input
+                      type="text"
+                      id="last-name"
+                      name="last-name"
+                      placeholder="Pike"
+                      required
+
+                    />
+                  </div>
+                </div>
+                <div class="sm:col-span-2">
+                  <label
+                    for="email"
+                    class="block text-sm/6 font-semibold text-gray-900 dark:text-white"
+                  >
+                    Email
+                  </label>
+                  <div class="mt-1.5">
+                    <Input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="james@webdev.ca"
+                      required
+
+                    />
+                  </div>
+                </div>
+                <div class="sm:col-span-1">
+                  <label
+                    for="phone-number"
+                    class="block text-sm/6 font-semibold text-gray-900 dark:text-white"
+                  >
+                    Phone number
+                  </label>
+                  <div class="mt-1.5">
+                    <Input
+                      type="tel" // Changed to tel for phone numbers
+                      id="phone-number"
+                      name="phone-number"
+                      placeholder="+12 345 6789"
+                      required
+
+                    />
+                  </div>
+                </div>
+                <div>
+
+                  <ContactSelect isDark={isDark} />
+                </div>
+                <div class="sm:col-span-2">
+                  <label
+                    for="message"
+                    class="block text-sm/6 font-semibold text-gray-900 dark:text-white"
+                  >
+                    Message
+                  </label>
+                  <div class="mt-1.5">
+                    <Textarea
+                      id="message"
+                      name="message"
+                      rows={3}
+                      placeholder="Leave a comment..."
+                    // Use Textarea with isDark
+                    />
+                  </div>
                 </div>
               </div>
-              <div>
-                <label
-                  for="last-name"
-                  class="block text-sm/6 font-semibold text-gray-900 dark:text-white"
-                >
-                  Company
-                </label>
-                <div class="mt-1.5">
-                  <Input
-                    type="text"
-                    id="last-name"
-                    name="last-name"
-                    placeholder="Pike"
-                    required
-                  
-                  />
-                </div>
-              </div>
-              <div class="sm:col-span-2">
-                <label
-                  for="email"
-                  class="block text-sm/6 font-semibold text-gray-900 dark:text-white"
-                >
-                  Email
-                </label>
-                <div class="mt-1.5">
-                  <Input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="james@webdev.ca"
-                    required
-                  
-                  />
-                </div>
-              </div>
-              <div class="sm:col-span-1">
-                <label
-                  for="phone-number"
-                  class="block text-sm/6 font-semibold text-gray-900 dark:text-white"
-                >
-                  Phone number
-                </label>
-                <div class="mt-1.5">
-                  <Input
-                    type="tel" // Changed to tel for phone numbers
-                    id="phone-number"
-                    name="phone-number"
-                    placeholder="+12 345 6789"
-                    required
-                  
-                  />
-                </div>
-              </div>
-              <div>
-             
-              <ContactSelect isDark={isDark}/>
-              </div>
-              <div class="sm:col-span-2">
-                <label
-                  for="message"
-                  class="block text-sm/6 font-semibold text-gray-900 dark:text-white"
-                >
-                  Message
-                </label>
-                <div class="mt-1.5">
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={3}
-                    placeholder="Leave a comment..."
-                   // Use Textarea with isDark
-                  />
-                </div>
+              <div class="mt-3.5 flex">
+                <Button>Send Message</Button>
               </div>
             </div>
-            <div class="mt-3.5 flex">
-             <Button>Send Message</Button>
-            </div>
-          </div>
-        </form>
+          </form>
         </Card.Content>
       </Card.Root>
 
-    
+
     </>
   );
 });

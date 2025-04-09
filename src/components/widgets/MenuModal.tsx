@@ -1,7 +1,7 @@
 import { component$, useSignal } from "@builder.io/qwik";
 import { LuX, LuArrowLeft, LuChevronRight } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
-import {  LogoStatic } from "../common/Logo2";
+import {  LogoStatic } from "../common/Logo3";
 import { useLocation } from "@builder.io/qwik-city";
 import { Modal } from "../ui/Modal";
 import IconHamburger from "../icons/IconHamburger";
@@ -80,7 +80,7 @@ export default component$(() => {
             </Modal.Title>
 
             <Modal.Description class="text-lg font-medium px-2 py-1 text-gray-700 dark:text-gray-200">
-              Safe & Auto Inc           </Modal.Description>
+              Transform your online presence         </Modal.Description>
           </div>
 
 
