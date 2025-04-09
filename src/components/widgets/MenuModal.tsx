@@ -8,7 +8,6 @@ import IconHamburger from "../icons/IconHamburger";
 import { buttonVariants } from "../ui/Button";
 import IconBrandTailwind from "../icons/IconBrandTailwind";
 import IconBrandGoogle from "../icons/IconBrandGoogle";
-import FAQAccordion from "./FAQAccordion";
 import { Accordion } from "../ui/Accordion";
 
 export default component$(() => {
