@@ -8,6 +8,8 @@ import IconHamburger from "../icons/IconHamburger";
 import { buttonVariants } from "../ui/Button";
 import IconBrandTailwind from "../icons/IconBrandTailwind";
 import IconBrandGoogle from "../icons/IconBrandGoogle";
+import FAQAccordion from "./FAQAccordion";
+import { Accordion } from "../ui/Accordion";
 
 export default component$(() => {
   const show = useSignal(false);
@@ -18,8 +20,7 @@ export default component$(() => {
 
   // Menu items array structure
   const menuItems = [
-    { title: "Home", href: "/", badge: null },
-    { title: "About", href: "/pricing/", badge: null },
+  
 
     {
       title: "Services",
@@ -54,12 +55,7 @@ export default component$(() => {
       ]
     },
 
-    {
-      title: "Reviews",
-      href: "/reviews/",
-    },
 
-    { title: "FAQ", href: "/faq/", badge: null },
     { title: "Contact Us", href: "/contact/", badge: null }
   ];
 
@@ -161,6 +157,27 @@ export default component$(() => {
 
             )}
           </nav>
+          <Accordion.Root class="w-full">
+      <Accordion.Item>
+        <Accordion.Trigger header="h2">Is it accessible?</Accordion.Trigger>
+        <Accordion.Content>
+          Yes. It adheres to the WAI-ARIA design pattern.
+        </Accordion.Content>
+      </Accordion.Item>
+      <Accordion.Item>
+        <Accordion.Trigger>Is it styled?</Accordion.Trigger>
+        <Accordion.Content>
+          Yes. It comes with default styles that matches the other components&apos;
+          aesthetic.
+        </Accordion.Content>
+      </Accordion.Item>
+      <Accordion.Item>
+        <Accordion.Trigger>Is it animated?</Accordion.Trigger>
+        <Accordion.Content>
+          Yes. It's animated by default, but you can disable it if you prefer.
+        </Accordion.Content>
+      </Accordion.Item>
+    </Accordion.Root>
           <div class="border border-t-0 pb-3 border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900">
           <div class=" sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:m-0 lg:max-w-7xl">
             <div class="flex w-full sm:w-auto">
