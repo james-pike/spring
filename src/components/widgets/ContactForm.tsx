@@ -20,7 +20,7 @@ export default component$((props: Props) => {
 
       <Card.Root class="w-full max-w-4xl mx-auto">
       <Card.Content class="p-0">
-  <div class="flex gap-6">
+  <div class="flex gap-0">
     {/* Contact Details - Left Side */}
     <div class="p-6 pt-0">
       <h1 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
@@ -115,7 +115,7 @@ export default component$((props: Props) => {
       <img
         src="/images/contact.jpg"
         alt="Contact Image"
-        class="w-full h-full object-cover rounded-lg"
+        class="w-full h-full object-cover rounded-tr-base"
       />
     </div>
   </div>
