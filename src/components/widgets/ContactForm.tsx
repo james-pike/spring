@@ -22,12 +22,12 @@ export default component$((props: Props) => {
       <Card.Content class="p-0">
   <div class="flex gap-0">
     {/* Contact Details - Left Side */}
-    <div class="p-6 pt-0">
+    <div class="p-4">
       <h1 class="text-2xl hidden sm:block font-semibold text-gray-900 dark:text-gray-100 mb-4">
         Contact Details
       </h1>
       <dl class="space-y-4 text-base text-gray-600 dark:text-gray-300">
-        <div class="flex gap-x-4">
+        <div class="flex gap-x-2">
           <dt class="flex-none">
             <span class="sr-only">Address</span>
             <svg
@@ -53,7 +53,7 @@ export default component$((props: Props) => {
             ON K0G 5Y5
           </dd>
         </div>
-        <div class="flex gap-x-4">
+        <div class="flex gap-x-2">
           <dt class="flex-none">
             <span class="sr-only">Telephone</span>
             <svg
@@ -80,7 +80,7 @@ export default component$((props: Props) => {
             </a>
           </dd>
         </div>
-        <div class="flex gap-x-4">
+        <div class="flex gap-x-2">
           <dt class="flex-none">
             <span class="sr-only">Email</span>
             <svg
