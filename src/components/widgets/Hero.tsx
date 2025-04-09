@@ -11,7 +11,7 @@ export default component$(() => {
     <section class="relative overflow-hidden">
       <div class="grid texture-fixed grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] md:grid-rows-[99%_1%] min-h-[calc(100vh-89px)]">
         {/* Text Content */}
-        <div class="relative z-10 order-1 md:order-1 flex items-center justify-center px-6 py-8 md:px-8 md:py-0">
+        <div class="relative z-10 order-1 md:order-1 flex items-center justify-center px-5 py-8 md:px-8 md:py-0">
           <div class=" md:text-left px-2">
             <h1 class="text-5xl font-bold tracking-tighter text-balance sm:text-6xl md:text-6xl lg:text-7xl mb-4 opacity-0 animate-[fadeSlideLeft_0.8s_ease-out_0.2s_forwards]">
               Custom <br /> <Typewriter /> <br /> Solutions
@@ -29,7 +29,7 @@ export default component$(() => {
                 </Button>
               </Link>
               <Link href="/contact" class="w-full sm:w-auto">
-                <Button look="secondary" size="md" class="w-full">Book A Free Consultation</Button>
+                <Button look="secondary" size="md" class="w-full bg-secondary">Book A Free Consultation</Button>
               </Link>
             </div>
           </div>

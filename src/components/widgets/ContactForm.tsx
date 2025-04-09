@@ -27,7 +27,7 @@ export default component$((props: Props) => {
         Contact Details
       </h1>
       <dl class="space-y-4 text-base text-gray-600 dark:text-gray-300">
-        <div class="flex gap-x-2">
+        <div class="flex gap-x-2 md:gap-x-4">
           <dt class="flex-none">
             <span class="sr-only">Address</span>
             <svg
@@ -53,7 +53,7 @@ export default component$((props: Props) => {
             ON K0G 5Y5
           </dd>
         </div>
-        <div class="flex gap-x-2">
+        <div class="flex gap-x-2 md:gap-x-4">
           <dt class="flex-none">
             <span class="sr-only">Telephone</span>
             <svg
@@ -80,7 +80,7 @@ export default component$((props: Props) => {
             </a>
           </dd>
         </div>
-        <div class="flex gap-x-2">
+        <div class="flex gap-x-2 md:gap-x-4">
           <dt class="flex-none">
             <span class="sr-only">Email</span>
             <svg

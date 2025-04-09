@@ -36,7 +36,11 @@ module.exports = {
               750: '#2b3544',
               950: '#030712',
               920: "#0e131f",
-              840: "#192231", // A shade between gray-800 (#1e293b) and gray-900 (#0f172a)
+              840: "#192231",
+              80: "#f4f7fa",
+              160: "#e8edf4",
+              250: "#d6dee8",
+               // A shade between gray-800 (#1e293b) and gray-900 (#0f172a)
             },
             border: 'hsl(var(--border))',
             input: 'hsl(var(--input))',
@@ -46,6 +50,14 @@ module.exports = {
             primary: {
               DEFAULT: 'hsl(var(--primary))',
               foreground: 'hsl(var(--primary-foreground))',
+            },
+            secondary: {
+              DEFAULT: 'hsl(var(--secondary))',
+              foreground: 'hsl(var(--secondary-foreground))',
+            },
+            tertiary: {
+              DEFAULT: 'hsl(var(--tertiary))',
+              foreground: 'hsl(var(--secondary-foreground))',
             },
             secondary: {
               DEFAULT: 'hsl(var(--secondary))',
