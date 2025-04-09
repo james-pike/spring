@@ -23,7 +23,7 @@ export default component$((props: Props) => {
   <div class="flex gap-0">
     {/* Contact Details - Left Side */}
     <div class="p-6 pt-0">
-      <h1 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+      <h1 class="text-2xl hidden sm:block font-semibold text-gray-900 dark:text-gray-100 mb-4">
         Contact Details
       </h1>
       <dl class="space-y-4 text-base text-gray-600 dark:text-gray-300">
