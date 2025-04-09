@@ -86,7 +86,7 @@ export default component$((props: Props) => {
       <Carousel.Scroller class="carousel-scroller py-4">
         {services.map((service) => (
           <Carousel.Slide
-            style={{ flexBasis: '300px' }}
+            style={{ flexBasis: '400px' }}
             key={service.title}
             class="carousel-slide"
           >
@@ -94,7 +94,7 @@ export default component$((props: Props) => {
               <Card.Image 
                 src={service.image} 
                 alt={service.title}
-                style={{ height: '200px' }} // Optional: adjust height as needed
+                style={{ height: '280px' }} // Optional: adjust height as needed
               />
               <Card.Header>
                 <Card.Title>{service.title}</Card.Title>

@@ -49,7 +49,7 @@ export default component$(() => {
             {reviews.map((review, index) => (
               <Carousel.Slide
                 key={`${review.author_name}-${index}`}
-                class="carousel-slide h-64 flex flex-col bg-background rounded-lg overflow-hidden"
+                class="carousel-slide h-96 flex flex-col bg-background rounded-lg overflow-hidden"
               >
                 {/* Star Rating - Smaller section at the top */}
                 <div class="flex items-center p-2 bg-gray-100 dark:bg-gray-700">
