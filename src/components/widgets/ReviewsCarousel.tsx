@@ -49,7 +49,7 @@ export default component$(() => {
             {reviews.map((review, index) => (
               <Carousel.Slide
                 key={`${review.author_name}-${index}`}
-                class="carousel-slide h-96 flex flex-col bg-background rounded-lg overflow-hidden"
+                class="carousel-slide h-80 flex flex-col bg-background rounded-lg overflow-hidden" // Changed h-64 to h-80
               >
                 {/* Star Rating - Smaller section at the top */}
                 <div class="flex items-center p-2 bg-gray-100 dark:bg-gray-700">
@@ -65,7 +65,7 @@ export default component$(() => {
                   <h1 class="text-lg font-bold truncate text-gray-900 dark:text-gray-100">
                     {review.author_name}
                   </h1>
-                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 line-clamp-3">
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 line-clamp-6"> {/* Changed line-clamp-3 to line-clamp-6 */}
                     {review.text}
                   </p>
                   <p class="text-xs text-gray-500 dark:text-gray-600 mt-2">
@@ -82,10 +82,10 @@ export default component$(() => {
           <div class="flex justify-between items-end">
             <Carousel.Pagination class="carousel-pagination justify-start ">
               {reviews.map((review, index) => (
-             <Carousel.Bullet
-             key={`${review.author_name}-${index}`}
-             class="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:!bg-primary data-[active]:scale-125 mx-0.5" // Added mx-1 for horizontal margin
-           />
+                <Carousel.Bullet
+                  key={`${review.author_name}-${index}`}
+                  class="carousel-pagination-bullet w-[10px] h-[10px] bg-[#ccc] rounded-sm transition-all duration-300 data-[active]:!bg-primary data-[active]:scale-125 mx-0.5"
+                />
               ))}
             </Carousel.Pagination>
             <a
