@@ -72,8 +72,7 @@ export default component$(() => {
         {serviceData.map((service) => (
           <Tabs.Tab
             key={service.title}
-            class="flex md:flex-row flex-col items-center gap-2 py-2 md:whitespace-normal"
-          >
+            class="flex md:flex-row flex-col items-center md:whitespace-normal">
             {service.icon && (
               <span class="inline-block md:w-1/4 w-8 h-8 flex-shrink-0">
                 <service.icon />
@@ -100,7 +99,7 @@ export default component$(() => {
                 {service.description}
               </Card.Description>
             </Card.Header>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-0">
               {/* Left Column: Image */}
               <div class="w-full h-24 md:h-64">
                 <img
