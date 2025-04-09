@@ -104,13 +104,7 @@ id="features-grid"
   title="How We Bring Your Website to Life"
   subtitle="From first contact to final launch, our streamlined process ensures every website is strategic, beautifully designed, and built to perform."
         items={[]} />
-      <FAQ
-isDark
-        title="Frequently Asked Questions"
-        subtitle="Find common inquiries about our services."
-        highlight="FAQs"
   
-      />
            <FAQ
 
         title="Frequently Asked Questions"

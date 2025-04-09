@@ -16,7 +16,8 @@ const serviceData = [
     subtitle: "Creative Solutions Creative Solution Creative Solutions",
     icon: IconRocket,
     description: "Innovative design services to bring your vision to life with creativity and precision.",
-    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png",
+    
+    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-content-3.png",
     features: [
       "Custom UI/UX Design",
       "Brand Identity Creation",
@@ -33,7 +34,7 @@ const serviceData = [
     subtitle: "Custom Software Custom Custom Software tom Software",
     icon: IconRocket,
     description: "Robust and scalable web development solutions.",
-    image: "https://via.placeholder.com/400x200?text=Development",
+    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png",
     features: [
       "Full-stack Development",
       "API Integrations",
@@ -50,7 +51,7 @@ const serviceData = [
     subtitle: "Strategic Advice Strategic Strategic Advice Strategic",
     icon: IconRocket,
     description: "Expert consulting to optimize your processes and achieve your strategic goals.",
-    image: "https://via.placeholder.com/400x200?text=Consulting",
+    image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png",
     features: [
       "Business Strategy",
       "Process Optimization",
@@ -105,7 +106,7 @@ export default component$(() => {
                 <img
                   src={service.image}
                   alt={`${service.title} illustration`}
-                  class="w-full h-full rounded-lg shadow-md object-cover"
+                  class="w-full h-full rounded-none shadow-md object-cover"
                 />
               </div>
               {/* Right Column: Features, Project Details, CTA */}
