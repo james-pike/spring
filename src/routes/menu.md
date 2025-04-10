@@ -11,15 +11,13 @@
 
 ## Services
 
-- [Emergency Lockout Assistance](/services/emergency-lockout)
-- [Key Duplication & Replacement](/services/key-duplication)
-- [Lock Installation & Repair](/services/lock-installation)
-- [Smart Lock & Security System](/services/smart-locks)
-- [Automotive Locksmith Services](/services/automotive-locksmith)
-- [Safe Opening & Installation](/services/safe-services)
+- [Web Design](/services/web-design)
+- [Web Development](/services/web-development)
+- [Branding](/services/branding)
+- [Marketing](/services/marketing)
 
 ## [Pricing](/pricing)
-
+## [Blog](/blog)
 
 ## [Contact](/contact)
 

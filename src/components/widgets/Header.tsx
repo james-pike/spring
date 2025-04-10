@@ -26,7 +26,7 @@ export default component$(() => {
           ? store.isScrolling
             ? "border-b bg-background"
             : "texture"
-          : "bg-black border-b" // Always bg-background when not on landing page
+          : "bg-background border-b" // Always bg-background when not on landing page
       }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {

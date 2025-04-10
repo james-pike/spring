@@ -3,6 +3,9 @@ import { Headline } from "~/components/ui/Headline"; // Adjust the import path
 import { SectionWrapper } from "./SectionWrapper";
 import PriceTabs from "./PriceTabs";
 import { VisibleWrapper } from "./VisibleWrapper";
+import { Link, useLocation } from "@builder.io/qwik-city";
+import { Card } from "../ui/Card";
+import { Button } from "../ui/Button";
 
 interface Item {
   title?: string;
@@ -23,6 +26,8 @@ interface Props {
 
 export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
+    const location = useLocation(); // Get the current location
+    const isLandingPage = location.url.pathname === "/"; // Check if on landing page
 
   return (
     <SectionWrapper id={id} isDark={isDark} classes={classes}>
@@ -31,6 +36,17 @@ export default component$((props: Props) => {
       <VisibleWrapper id={`${id}-pricing`}>
           <PriceTabs isDark={isDark}/>
           </VisibleWrapper>
+             {/* Conditionally render the card only if not on the landing page */}
+                {!isLandingPage && (
+                  <Card.Root class="bg-gradient-to-r from-primary to-primary/50 mx-auto mt-4 pt-8 max-w-5xl ">
+                    <Card.Content>
+                      <Headline title={"Any other questions about our services?"} subtitle={"Get in touch and we'll gladly answer them"} />
+                      <Link href="/contact" class="w-full sm:w-auto">
+                        <Button look="secondary" size="md" class="w-full">Get Started</Button>
+                      </Link>
+                    </Card.Content>
+                  </Card.Root>
+                )}
     </SectionWrapper>
   );
 });
