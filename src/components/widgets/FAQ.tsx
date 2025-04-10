@@ -131,7 +131,9 @@ export default component$((props: Props) => {
 
   return (
     <>
-    <SectionWrapper id={id} isDark={isDark} classes={classes} bgClass="dark:bg-gray-920 bg-gray-80">
+    <SectionWrapper id={id} isDark={isDark} classes={{classes}} bgClass="inset-0 max-w-7xl h-full  bg-gray-80 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+  
+
       <Headline  title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       <VisibleWrapper id={`${id}-faq`}>
         <div class="hidden sm:block">
@@ -147,7 +149,7 @@ export default component$((props: Props) => {
 
       {/* Conditionally render the card only if not on the landing page */}
       {!isLandingPage && (
-        <Card.Root class="bg-gradient-to-r from-primary to-primary/50 mx-auto mt-4 pt-8 max-w-5xl ">
+        <Card.Root class="bg-gradient-to-r z-10 from-primary to-primary/50 mx-auto mt-4 pt-8 max-w-5xl ">
           <Card.Content>
             <Headline title={"Any other questions about our services?"} subtitle={"Get in touch and we'll gladly answer them"} />
             <Link href="/contact" class="w-full sm:w-auto">
