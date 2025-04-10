@@ -72,7 +72,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
             <a
               href={item.href}
               class={cn(
-                "block text-xl text-gray-700 dark:text-gray-200 p-2 px-8 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
+                "block text-xl text-gray-700 dark:text-gray-200 p-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                 location.url.pathname === item.href && "bg-white dark:bg-gray-700"
               )}
               onClick$={closeModal}
