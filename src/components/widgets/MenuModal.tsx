@@ -3,10 +3,10 @@ import { component$, useSignal, $, Signal } from "@builder.io/qwik";
 import { LuX, LuChevronDown } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
 import { LogoStatic } from "../common/Logo3";
-import { useLocation } from "@builder.io/qwik-city";
+import { Link, useLocation } from "@builder.io/qwik-city";
 import { Modal } from "../ui/Modal";
 import IconHamburger from "../icons/IconHamburger";
-import { buttonVariants } from "../ui/Button";
+import { Button, buttonVariants } from "../ui/Button";
 import IconBrandTailwind from "../icons/IconBrandTailwind";
 import IconBrandGoogle from "../icons/IconBrandGoogle";
 
@@ -150,14 +150,14 @@ export default component$(() => {
           <div class="border border-t-0 pb-3 border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900">
             <div class="sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
               <div class="flex w-full sm:w-auto">
-                <a class="btn btn-primary sm:mb-0 w-full" href="tel:+16132188063">
-                  <IconBrandTailwind class="mr-1" /> Call - (613) 218-8063
-                </a>
+              <Link href="/quote" class="w-full sm:w-auto">
+              <Button size="md" class="w-full px-0">Get Quote</Button>
+            </Link> 
               </div>
               <div class="flex w-full sm:w-auto">
-                <a class="btn btn-primary btn-secondary sm:mb-0 w-full" href="/contact">
-                  <IconBrandGoogle class="mr-1" /> Get A Free Estimate
-                </a>
+              <Link href="/quote" class="w-full sm:w-auto">
+              <Button look={"secondary"} size="md" class="w-full px-0">Book A Consultation</Button>
+            </Link> 
               </div>
             </div>
           </div>
