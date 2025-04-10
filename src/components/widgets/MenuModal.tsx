@@ -8,7 +8,6 @@ import { Modal } from "../ui/Modal";
 import IconHamburger from "../icons/IconHamburger";
 import { Button, buttonVariants } from "../ui/Button";
 import IconBrandTailwind from "../icons/IconBrandTailwind";
-import IconBrandGoogle from "../icons/IconBrandGoogle";
 
 // Custom Accordion Component
 const CustomAccordion = component$(({ items, show }: { items: any[], show: Signal<boolean> }) => {
@@ -128,7 +127,9 @@ export default component$(() => {
       <Modal.Root bind:show={show}>
         <div class="flex items-center hover:bg-primary-100 dark:hover:bg-gray-700">
           <Modal.Trigger class="rounded-sm p-2 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-900">
+       
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
+          
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border-0">
@@ -151,12 +152,12 @@ export default component$(() => {
             <div class="sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
               <div class="flex w-full sm:w-auto">
               <Link href="/quote" class="w-full sm:w-auto">
-              <Button size="md" class="w-full px-0">Get Quote</Button>
+              <Button size="md" class="w-full px-0"> <IconBrandTailwind/> Get Quote -{'>'} </Button>
             </Link> 
               </div>
               <div class="flex w-full sm:w-auto">
               <Link href="/quote" class="w-full sm:w-auto">
-              <Button look={"secondary"} size="md" class="w-full px-0">Book A Consultation</Button>
+               <Button look={"secondary"}  size="md" class="w-full px-0"><IconBrandTailwind/> Book A Consultation -{'>'}</Button>
             </Link> 
               </div>
             </div>
