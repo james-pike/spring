@@ -1,5 +1,4 @@
-// src/components/widgets/MenuModal.tsx
-import { component$, useSignal, $, Signal } from "@builder.io/qwik";
+import { component$, useSignal, $, Signal, useVisibleTask$ } from "@builder.io/qwik";
 import { LuX, LuChevronDown } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
 import { LogoStatic } from "../common/Logo3";
@@ -14,7 +13,14 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   const openIndex = useSignal<number | null>(null);
   const location = useLocation();
 
-  // Define closeModal within CustomAccordion as a QRL
+  // Reset openIndex when modal closes
+  useVisibleTask$(({ track }) => {
+    track(() => show.value);
+    if (!show.value) {
+      openIndex.value = null;
+    }
+  });
+
   const closeModal = $(() => (show.value = false));
 
   return (
@@ -25,7 +31,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
             <>
               <button
                 class={cn(
-                  "text-xl font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between w-full p-2 px-8 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200",
+                  "text-xl font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between w-full p-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200",
                   location.url.pathname.startsWith(item.href) && "bg-white dark:bg-gray-700"
                 )}
                 onClick$={() => (openIndex.value = openIndex.value === index ? null : index)}
@@ -53,7 +59,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
                           "block text-gray-700 dark:text-gray-200 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                           location.url.pathname === subitem.href && "bg-gray-200 dark:bg-gray-700"
                         )}
-                        onClick$={closeModal} // Use locally defined QRL
+                        onClick$={closeModal}
                       >
                         {subitem.title}
                       </a>
@@ -69,7 +75,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
                 "block text-xl text-gray-700 dark:text-gray-200 p-2 px-8 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                 location.url.pathname === item.href && "bg-white dark:bg-gray-700"
               )}
-              onClick$={closeModal} // Use locally defined QRL
+              onClick$={closeModal}
             >
               {item.title}
               {item.badge}
@@ -81,6 +87,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   );
 });
 
+// Rest of the code remains unchanged
 export default component$(() => {
   const show = useSignal(false);
 
@@ -107,10 +114,8 @@ export default component$(() => {
         { title: "Marketing", href: "/services/marketing" },
       ],
     },
- 
     { title: "Pricing", href: "/pricing/", badge: null },
     { title: "Blog", href: "/blog/", badge: null },
-   
     { title: "Contact Us", href: "/contact/", badge: null },
   ];
 
@@ -119,9 +124,7 @@ export default component$(() => {
       <Modal.Root bind:show={show}>
         <div class="flex items-center hover:bg-primary-100 dark:hover:bg-gray-700">
           <Modal.Trigger class="rounded-sm p-2 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-900">
-       
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
-          
           </Modal.Trigger>
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border-0">
@@ -143,14 +146,14 @@ export default component$(() => {
           <div class="border border-t-0 pb-3 border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900">
             <div class="sm:max-w-md mx-3 pt-3 flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-3 lg:justify-start lg:max-w-7xl">
               <div class="flex w-full sm:w-auto">
-              <Link href="/quote" class="w-full sm:w-auto">
-              <Button size="md" class="w-full px-0"> <IconBrandTailwind/> Get Quote -{'>'} </Button>
-            </Link> 
+                <Link href="/quote" class="w-full sm:w-auto">
+                  <Button size="md" class="w-full px-0"> <IconBrandTailwind/> Get Quote -{'>'} </Button>
+                </Link>
               </div>
               <div class="flex w-full sm:w-auto">
-              <Link href="/quote" class="w-full sm:w-auto">
-               <Button look={"secondary"}  size="md" class="w-full px-0"><IconBrandTailwind/> Book A Consultation -{'>'}</Button>
-            </Link> 
+                <Link href="/quote" class="w-full sm:w-auto">
+                  <Button look={"secondary"} size="md" class="w-full px-0"><IconBrandTailwind/> Book A Consultation -{'>'}</Button>
+                </Link>
               </div>
             </div>
           </div>
