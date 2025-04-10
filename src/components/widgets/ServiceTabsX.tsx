@@ -68,14 +68,14 @@ const serviceData = [
 export default component$(() => {
   return (
     <Tabs.Root class={{ container: "max-w-6xl" }}>
-      <Tabs.List class="grid w-full text-lg grid-cols-3">
+       <Tabs.List class="grid w-full text-md grid-cols-3">
         {serviceData.map((service) => (
           <Tabs.Tab
             key={service.title}
             class="flex md:flex-row flex-col items-center md:whitespace-normal">
             {service.icon && (
               <span class="inline-block md:w-1/4 w-8 h-8 flex-shrink-0">
-                <service.icon />
+                <service.icon class="w-full h-full" />
               </span>
             )}
             <div class="flex flex-col md:w-3/4 w-full text-center md:text-left overflow-hidden">
@@ -89,7 +89,7 @@ export default component$(() => {
       </Tabs.List>
 
       {serviceData.map((service, index) => (
-        <Tabs.Panel key={index} class="w-full md:mt-0 rounded-t-none">
+        <Tabs.Panel key={index} class="w-full md:mt-5 rounded-t-none">
           <div class="pb-8 h-full">
             <Card.Header>
               <Card.Title class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
