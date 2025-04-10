@@ -8,7 +8,7 @@ type TextareaProps = PropsOf<'textarea'> & {
 };
 
 export const Textarea = component$<TextareaProps>(
-  ({ name, error, id, ['bind:value']: valueSig, value, onInput$, isDark: propsIsDark, ...props }) => {
+  ({ name, error, id, ['bind:value']: valueSig, value, onInput$, ...props }) => {
     const textareaId = id || name;
 
     return (
