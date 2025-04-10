@@ -48,9 +48,9 @@ export default component$(() => {
        
           <div class="flex items-center md:hidden gap-1">
             <Settings />
-            <Link href="/quote" class="w-full sm:w-auto">
+            {/* <Link href="/quote" class="w-full sm:w-auto">
               <Button size="md" class="w-full px-0">Get Quote</Button>
-            </Link>
+            </Link> */}
             <MenuModal />
           </div>
         </div>
