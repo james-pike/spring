@@ -24,13 +24,14 @@ interface Props {
   classes?: any;
 }
 
+
 export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
     const location = useLocation(); // Get the current location
     const isLandingPage = location.url.pathname === "/"; // Check if on landing page
 
   return (
-    <SectionWrapper id={id} isDark={isDark} classes={classes}>
+    <SectionWrapper id={id} isDark={isDark} classes={classes} bgClass=" inset-0  h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       {/* <ServiceCards /> */}
       <VisibleWrapper id={`${id}-pricing`}>
