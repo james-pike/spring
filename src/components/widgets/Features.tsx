@@ -3,7 +3,6 @@ import { Headline } from "~/components/ui/Headline"; // Adjust the import path
 import { SectionWrapper } from "./SectionWrapper";
 import { ItemGrid } from "../ui/ItemGrid";
 import { twMerge } from "tailwind-merge";
-import { Card } from "../ui/Card";
 import { VisibleWrapper } from "./VisibleWrapper";
 
 interface Item {
