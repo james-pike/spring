@@ -9,7 +9,6 @@ import Features from "~/components/widgets/Features";
 import FAQ from "~/components/widgets/FAQ";
 import Steps from "~/components/widgets/Steps";
 import Contact from "~/components/widgets/Contact";
-import Portfolio from "~/components/widgets/Portfolio";
 
 import Reviews from "~/components/widgets/Reviews";
 import ServicesX from "~/components/widgets/ServicesX";
@@ -76,12 +75,7 @@ id="features-grid"
 />
 
 
-<Portfolio
-        id="portfolio"
-        highlight="Portfolio"
-        title="Discover Past Projects We've Done"
-        subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
-        items={[]} />
+
 
       <Pricing id="pricing"
       isDark

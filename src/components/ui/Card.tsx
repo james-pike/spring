@@ -1,21 +1,17 @@
 import { component$, type PropsOf, Slot, useContext } from '@builder.io/qwik';
 import { cn } from '@qwik-ui/utils';
-import { DarkContext } from '~/DarkContext';
 
-interface CardRootProps extends PropsOf<'div'> {
-  isDark?: boolean;
-}
 
-const Root = component$<CardRootProps>((props) => {
-  const contextIsDark = useContext(DarkContext, false);
-  const { isDark = contextIsDark, ...restProps } = props;
+
+const Root = component$<PropsOf<'div'>>((props) => {
+  const {...restProps } = props;
 
   return (
     <div
       {...restProps}
       class={cn(
         'rounded-base border text-card-foreground shadow-lg',
-        isDark ? 'bg-gray-800' : 'bg-muted', // Conditional background
+        'bg-background', // Conditional background
         props.class
       )}
     >

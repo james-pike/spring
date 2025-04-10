@@ -56,10 +56,8 @@ const Tab = component$<TabsTabProps>((props) => {
         'not:first:not:last:rounded-none',
         'border-r dark:border-gray-750 border-gray-250 last:border-r-0',
         // Per-tab styles for selected state
-        '[&:nth-child(1)]:data-[state=selected]:border-b-primary [&:nth-child(1)]:data-[state=selected]:text-primary', // 1st tab
-        '[&:nth-child(2)]:data-[state=selected]:border-b-secondary [&:nth-child(2)]:data-[state=selected]:text-secondary', // 2nd tab
-        '[&:nth-child(3)]:data-[state=selected]:border-b-tertiary [&:nth-child(3)]:data-[state=selected]:text-tertiary', // 3rd tab
-        '[&:nth-child(4)]:data-[state=selected]:border-b-quaternary [&:nth-child(4)]:data-[state=selected]:text-quaternary', // 4th tab
+        'data-[state=selected]:border-b-primary data-[state=selected]:text-primary', // 1st tab
+     
         'data-[state=selected]:shadow-inner',
         props.class
       )}
@@ -69,12 +67,18 @@ const Tab = component$<TabsTabProps>((props) => {
   );
 });
 
+
+// '[&:nth-child(1)]:data-[state=selected]:border-b-primary [&:nth-child(1)]:data-[state=selected]:text-primary', // 1st tab
+// '[&:nth-child(2)]:data-[state=selected]:border-b-secondary [&:nth-child(2)]:data-[state=selected]:text-secondary', // 2nd tab
+// '[&:nth-child(3)]:data-[state=selected]:border-b-tertiary [&:nth-child(3)]:data-[state=selected]:text-tertiary', // 3rd tab
+// '[&:nth-child(4)]:data-[state=selected]:border-b-quaternary [&:nth-child(4)]:data-[state=selected]:text-quaternary', // 4th tab
+
 const Panel = component$<PropsOf<typeof HeadlessTabs.Panel>>((props) => {
   return (
     <HeadlessTabs.Panel
       {...props}
       class={cn(
-        'mt-1.5 ring-offset-background bg-primary/5 rounded-b-base border dark:border-gray-750 border-gray-250 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+        'mt-1.5 ring-offset-background bg-gray-160 dark:bg-gray-840 rounded-b-base border dark:border-gray-750 border-gray-250 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         props.class
       )}
     >

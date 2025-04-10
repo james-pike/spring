@@ -33,7 +33,7 @@ export default component$((props: Props) => {
   // Conditional padding classes
 
   return (
- <SectionWrapper id={id} isDark={isDark} classes={classes} bgClass="bg-gray-900">
+ <SectionWrapper id={id} isDark={isDark} classes={classes} >
      
         <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
         <Card.Root class="bg-background">

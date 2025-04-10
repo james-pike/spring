@@ -1,7 +1,6 @@
 // ui/Textarea.tsx
 import { $, component$, type PropsOf } from '@builder.io/qwik';
 import { cn } from '@qwik-ui/utils';
-import { useIsDark } from '~/utils/darkUtils'; // Adjust path
 
 type TextareaProps = PropsOf<'textarea'> & {
   error?: string;
@@ -11,7 +10,6 @@ type TextareaProps = PropsOf<'textarea'> & {
 export const Textarea = component$<TextareaProps>(
   ({ name, error, id, ['bind:value']: valueSig, value, onInput$, isDark: propsIsDark, ...props }) => {
     const textareaId = id || name;
-    const isDark = useIsDark(propsIsDark);
 
     return (
       <>
@@ -23,7 +21,7 @@ export const Textarea = component$<TextareaProps>(
           onInput$={valueSig ? $((__, el) => (valueSig.value = el.value)) : onInput$}
           class={cn(
             'flex w-full rounded-base border border-input px-3 py-1 text-md md:text-sm text-foreground shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-50',
-            isDark ? 'bg-muted' : 'bg-background', // Same isDark logic as Input
+            'bg-background', // Same isDark logic as Input
             props.class
           )}
           id={textareaId}

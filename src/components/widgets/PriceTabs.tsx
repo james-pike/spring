@@ -24,7 +24,7 @@ export default component$((props: Props) => {
           <Tabs.Tab>Monthly Cost </Tabs.Tab>
         </Tabs.List>
         <Tabs.Panel>
-          <Card.Root class="rounded-t-none ">
+          
             <Card.Header>
               <Card.Title>Complete Project</Card.Title>
               <Card.Description>
@@ -73,10 +73,10 @@ export default component$((props: Props) => {
             <Card.Footer>
               <Button class="w-full">Get Started</Button>
             </Card.Footer>
-          </Card.Root>
+        
         </Tabs.Panel>
         <Tabs.Panel>
-          <Card.Root class="rounded-t-none ">
+        
             <Card.Header>
               <Card.Title>Monthly Cost</Card.Title>
               <Card.Description>
@@ -121,7 +121,7 @@ export default component$((props: Props) => {
             <Card.Footer>
               <Button class="w-full">Subscribe</Button>
             </Card.Footer>
-          </Card.Root>
+    
         </Tabs.Panel>
       </Tabs.Root>
 
@@ -131,7 +131,7 @@ export default component$((props: Props) => {
           <Tabs.Tab>Monthly Cost ($200/month)</Tabs.Tab>
         </Tabs.List>
         <Tabs.Panel>
-          <Card.Root>
+          
             <Card.Header>
               <Card.Title>Complete Project</Card.Title>
               <Card.Description>
@@ -180,10 +180,10 @@ export default component$((props: Props) => {
             <Card.Footer>
               <Button class="w-full">Get Started</Button>
             </Card.Footer>
-          </Card.Root>
+      
         </Tabs.Panel>
         <Tabs.Panel>
-          <Card.Root>
+         
             <Card.Header>
               <Card.Title>Monthly Cost</Card.Title>
               <Card.Description>
@@ -228,7 +228,7 @@ export default component$((props: Props) => {
             <Card.Footer>
               <Button class="w-full">Subscribe</Button>
             </Card.Footer>
-          </Card.Root>
+       
         </Tabs.Panel>
       </Tabs.Root>
 
