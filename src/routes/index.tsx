@@ -23,56 +23,55 @@ export default component$(() => {
 
       <ServicesX
         id="services"
-        highlight="Portfolio"
-        title="Discover Past Projects We've Done"
-        subtitle="We provide fast, professional, and secure locksmith services tailored to your needs."
+        highlight="Services"
+        title="What We Offer"
+        subtitle="From stunning design to seamless development and strategic branding — we build digital solutions that make an impact."
         items={[]} />
 
 <Features
 id="features-grid"
-  isDark
-  highlight="Core Competencies"
-  title="Expert Front-End Development You Can Rely On"
-  subtitle="Delivering high-performance, user-centric web applications with advanced JavaScript frameworks and modern web technologies."
-  items={[
-    {
-      title: "Advanced State Management",
-      description:
-        "Proficient in managing complex states across applications using React's Context API, Redux, and Qwik's signals, ensuring seamless, performant user interactions.",
-      icon: IconRocket, // Replace with a relevant icon
-    },
-    {
-      title: "Optimized Web Performance",
-      description:
-        "Skilled in optimizing web performance with code-splitting, lazy loading, and caching strategies, ensuring lightning-fast page loads and minimal render times.",
-      icon: IconRocket, // Replace with a relevant icon
-    },
-    {
-      title: "Responsive Design & UI/UX",
-      description:
-        "Expert in crafting responsive, mobile-first designs using CSS Grid, Flexbox, Tailwind CSS, and advanced media queries to create fluid layouts across all device sizes.",
-      icon: IconRocket, // Replace with a relevant icon
-    },
-    {
-      title: "Progressive Web Apps (PWAs)",
-      description:
-        "Experience in developing Progressive Web Apps, leveraging Service Workers and Web APIs for offline functionality and push notifications to enhance user engagement.",
-      icon: IconRocket, // Replace with a relevant icon
-    },
-    {
-      title: "JavaScript Frameworks Mastery",
-      description:
-        "Extensive expertise in ReactJS and QwikJS for building scalable, high-performance applications with optimal state management and reactivity.",
-      icon: IconRocket, // Replace with a relevant icon
-    },
-    {
-      title: "Web Browser APIs & Client-Side Integration",
-      description:
-        "In-depth understanding of web browser APIs (e.g., Geolocation, WebSockets, IndexedDB) to enable rich, interactive experiences with seamless back-end communication.",
-      icon: IconRocket, // Replace with a relevant icon
-    },
-  ]}
-/>
+highlight="Core Services"
+title="Creative, Code, and Strategy—All in One Studio"
+subtitle="We bring brands to life through custom design, seamless development, and strategic positioning—built to engage and convert."
+
+items={[
+  {
+    title: "Custom Web Design",
+    description:
+      "Tailored, on-brand design systems that balance aesthetics with usability—built to communicate clearly and convert consistently.",
+    icon: IconRocket, // Swap with a design-related icon
+  },
+  {
+    title: "High-Performance Development",
+    description:
+      "Fast, scalable, and future-proof websites built with modern frameworks like Qwik, React, and Next.js. Built to grow as you do.",
+    icon: IconRocket, // Swap with a dev-related icon
+  },
+  {
+    title: "Brand Strategy & Identity",
+    description:
+      "We help you define your brand’s voice, visuals, and vibe—from logos and style guides to full positioning strategies.",
+    icon: IconRocket, // Swap with a branding-related icon
+  },
+  {
+    title: "Responsive & Accessible Design",
+    description:
+      "Fluid layouts and inclusive UX tailored for every screen size and every user—because good design works for everyone.",
+    icon:IconRocket, // Responsive-friendly icon
+  },
+  {
+    title: "Conversion-Focused UX",
+    description:
+      "Every interaction is intentional. We design user journeys that drive action—whether it’s clicks, signups, or sales.",
+    icon: IconRocket, // Conversion-focused icon
+  },
+  {
+    title: "SEO & Performance Optimization",
+    description:
+      "From metadata to Core Web Vitals, we make sure your site loads fast, ranks well, and reaches the right people.",
+    icon: IconRocket, // Performance-related icon
+  },
+]}/>
 
 
 

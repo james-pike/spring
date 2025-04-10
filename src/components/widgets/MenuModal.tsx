@@ -107,18 +107,10 @@ export default component$(() => {
         { title: "Marketing", href: "/services/marketing" },
       ],
     },
-    {
-      title: "Components",
-      href: "/components/",
-      hasSubmenu: true,
-      subitems: [
-        { title: "UI Elements", href: "/components/ui-elements" },
-        { title: "Widgets", href: "/components/widgets" },
-        { title: "Templates", href: "/components/templates" },
-      ],
-    },
-    { title: "Blog", href: "/blog/", badge: null },
+ 
     { title: "Pricing", href: "/pricing/", badge: null },
+    { title: "Blog", href: "/blog/", badge: null },
+   
     { title: "Contact Us", href: "/contact/", badge: null },
   ];
 

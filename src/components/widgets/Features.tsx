@@ -28,11 +28,11 @@ export default component$((props: Props) => {
 
   return (
     
-    <SectionWrapper id={id} isDark={isDark} classes={classes}>
+    <SectionWrapper id={id}  classes={classes}>
       
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
         <VisibleWrapper id={`${id}-features-grid`}>
-      <Card.Root>
+     
         <ItemGrid
           id="features-grid" // Unique ID for this instance
           items={items}
@@ -58,7 +58,7 @@ export default component$((props: Props) => {
             ...(classes?.items ?? {}),
           }}
         />
-      </Card.Root>
+     
       </VisibleWrapper>
     </SectionWrapper>
   );
