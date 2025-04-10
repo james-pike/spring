@@ -1,5 +1,5 @@
 import { component$, useSignal, $, Signal, useVisibleTask$ } from "@builder.io/qwik";
-import { LuX, LuChevronDown } from "@qwikest/icons/lucide";
+import { LuX, LuChevronDown, LuHome, LuInfo, LuBriefcase, LuDollarSign, LuPenSquare, LuPhone } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
 import { LogoStatic } from "../common/Logo3";
 import { Link, useLocation } from "@builder.io/qwik-city";
@@ -13,7 +13,6 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   const openIndex = useSignal<number | null>(null);
   const location = useLocation();
 
-  // Reset openIndex when modal closes
   useVisibleTask$(({ track }) => {
     track(() => show.value);
     if (!show.value) {
@@ -36,7 +35,10 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
                 )}
                 onClick$={() => (openIndex.value = openIndex.value === index ? null : index)}
               >
-                <span>{item.title}</span>
+                <span class="flex items-center gap-2">
+                  {item.icon}
+                  {item.title}
+                </span>
                 <LuChevronDown
                   class={cn(
                     "h-5 w-5 text-gray-500 transition-transform duration-200",
@@ -56,7 +58,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
                       <a
                         href={subitem.href}
                         class={cn(
-                          "block text-gray-700 dark:text-gray-200 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
+                          "block text-gray-700 dark:text-gray-200 p-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                           location.url.pathname === subitem.href && "bg-gray-200 dark:bg-gray-700"
                         )}
                         onClick$={closeModal}
@@ -77,7 +79,10 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
               )}
               onClick$={closeModal}
             >
-              {item.title}
+              <span class="flex items-center gap-2">
+                {item.icon}
+                {item.title}
+              </span>
               {item.badge}
             </a>
           )}
@@ -87,16 +92,16 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
   );
 });
 
-// Rest of the code remains unchanged
 export default component$(() => {
   const show = useSignal(false);
 
   const menuItems = [
-    { title: "Home", href: "/", badge: null },
+    { title: "Home", href: "/", badge: null, icon: <LuHome class="h-5 w-5" /> },
     {
       title: "About",
       href: "/about/",
       hasSubmenu: true,
+      icon: <LuInfo class="h-5 w-5" />,
       subitems: [
         { title: "About Us", href: "/about" },
         { title: "Reviews", href: "/reviews" },
@@ -107,6 +112,7 @@ export default component$(() => {
       title: "Services",
       href: "/services/",
       hasSubmenu: true,
+      icon: <LuBriefcase class="h-5 w-5" />,
       subitems: [
         { title: "Web Design", href: "/services/web-design" },
         { title: "Web Development", href: "/services/web-development" },
@@ -114,9 +120,9 @@ export default component$(() => {
         { title: "Marketing", href: "/services/marketing" },
       ],
     },
-    { title: "Pricing", href: "/pricing/", badge: null },
-    { title: "Blog", href: "/blog/", badge: null },
-    { title: "Contact Us", href: "/contact/", badge: null },
+    { title: "Pricing", href: "/pricing/", badge: null, icon: <LuDollarSign class="h-5 w-5" /> },
+    { title: "Blog", href: "/blog/", badge: null, icon: <LuPenSquare class="h-5 w-5" /> },
+    { title: "Contact Us", href: "/contact/", badge: null, icon: <LuPhone class="h-5 w-5" /> },
   ];
 
   return (
