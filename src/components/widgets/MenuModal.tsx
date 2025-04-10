@@ -1,4 +1,5 @@
-import { component$, useSignal, $ } from "@builder.io/qwik";
+// src/components/widgets/MenuModal.tsx
+import { component$, useSignal, $ } from "@builder.io/qwik"; // Ensure $ is imported
 import { LuX, LuChevronDown } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
 import { LogoStatic } from "../common/Logo3";
@@ -50,7 +51,7 @@ const CustomAccordion = component$(({ items, closeModal }: { items: any[], close
                           "block text-gray-700 dark:text-gray-200 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                           location.url.pathname === subitem.href && "bg-gray-200 dark:bg-gray-700"
                         )}
-                        onClick$={closeModal}
+                        onClick$={closeModal} // Line ~53: closeModal is a QRL
                       >
                         {subitem.title}
                       </a>
@@ -66,7 +67,7 @@ const CustomAccordion = component$(({ items, closeModal }: { items: any[], close
                 "block text-xl text-gray-700 dark:text-gray-200 p-2 px-8 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                 location.url.pathname === item.href && "bg-white dark:bg-gray-700"
               )}
-              onClick$={closeModal}
+              onClick$={closeModal} // Line ~69: closeModal is a QRL
             >
               {item.title}
               {item.badge}
@@ -80,7 +81,6 @@ const CustomAccordion = component$(({ items, closeModal }: { items: any[], close
 
 export default component$(() => {
   const show = useSignal(false);
-  const location = useLocation();
 
   const menuItems = [
     { title: "Home", href: "/", badge: null },
@@ -120,6 +120,7 @@ export default component$(() => {
     { title: "Contact Us", href: "/contact/", badge: null },
   ];
 
+  // Define closeModal as a QRL
   const closeModal = $(() => (show.value = false));
 
   return (
