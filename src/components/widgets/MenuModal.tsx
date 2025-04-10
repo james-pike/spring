@@ -51,7 +51,7 @@ const CustomAccordion = component$(({ items, closeModal }: { items: any[], close
                           "block text-gray-700 dark:text-gray-200 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                           location.url.pathname === subitem.href && "bg-gray-200 dark:bg-gray-700"
                         )}
-                        onClick$={$(closeModal)} // Line 54: Wrap closeModal in $()
+                        onClick$={closeModal} // Use closeModal directly (already a QRL)
                       >
                         {subitem.title}
                       </a>
@@ -67,7 +67,7 @@ const CustomAccordion = component$(({ items, closeModal }: { items: any[], close
                 "block text-xl text-gray-700 dark:text-gray-200 p-2 px-8 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                 location.url.pathname === item.href && "bg-white dark:bg-gray-700"
               )}
-              onClick$={$(closeModal)} // Line 70: Wrap closeModal in $()
+              onClick$={closeModal} // Use closeModal directly (already a QRL)
             >
               {item.title}
               {item.badge}
