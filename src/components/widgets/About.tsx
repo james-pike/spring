@@ -12,18 +12,10 @@ interface Item {
   classes?: Record<string, string>;
 }
 
-interface Props {
-  id?: string;
-  title?: any;
-  subtitle?: any;
-  highlight?: any;
-  items: Array<Item>;
-  isDark?: boolean;
-  classes?: any;
-}
 
-export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "",    classes = {}, isDark = false } = props;
+
+export default component$(() => {
+
 
 
   return (
