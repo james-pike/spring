@@ -91,9 +91,9 @@ export default component$(() => {
       href: "/about/",
       hasSubmenu: true,
       subitems: [
-        { title: "About Us", href: "/about/us" },
-        { title: "Reviews", href: "/about/reviews" },
-        { title: "FAQ", href: "/about/faq" },
+        { title: "About Us", href: "/about" },
+        { title: "Reviews", href: "/reviews" },
+        { title: "FAQ", href: "/faq" },
       ],
     },
     {
