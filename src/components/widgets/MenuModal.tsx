@@ -1,5 +1,5 @@
 import { component$, useSignal, $, Signal, useVisibleTask$ } from "@builder.io/qwik";
-import { LuX, LuChevronDown, LuHome, LuInfo, LuBriefcase, LuDollarSign, LuPenSquare, LuPhone } from "@qwikest/icons/lucide";
+import { LuX, LuChevronDown,  } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
 import { LogoStatic } from "../common/Logo3";
 import { Link, useLocation } from "@builder.io/qwik-city";
@@ -98,12 +98,12 @@ export default component$(() => {
   const show = useSignal(false);
 
   const menuItems = [
-    { title: "Home", href: "/", badge: null, icon: <LuHome class="h-5 w-5" /> },
+    { title: "Home", href: "/", badge: null, icon: <IconBrandTailwind class="h-5 w-5" /> },
     {
       title: "About",
       href: "/about/",
       hasSubmenu: true,
-      icon: <LuInfo class="h-5 w-5" />,
+      icon: <IconBrandTailwind class="h-5 w-5" />,
       subitems: [
         { title: "About Us", href: "/about" },
         { title: "Reviews", href: "/reviews" },
@@ -114,7 +114,7 @@ export default component$(() => {
       title: "Services",
       href: "/services/",
       hasSubmenu: true,
-      icon: <LuBriefcase class="h-5 w-5" />,
+      icon: <IconBrandTailwind class="h-5 w-5" />,
       subitems: [
         { title: "Web Design", href: "/services/web-design" },
         { title: "Web Development", href: "/services/web-development" },
@@ -122,9 +122,9 @@ export default component$(() => {
         { title: "Marketing", href: "/services/marketing" },
       ],
     },
-    { title: "Pricing", href: "/pricing/", badge: null, icon: <LuDollarSign class="h-5 w-5" /> },
-    { title: "Blog", href: "/blog/", badge: null, icon: <LuPenSquare class="h-5 w-5" /> },
-    { title: "Contact Us", href: "/contact/", badge: null, icon: <LuPhone class="h-5 w-5" /> },
+    { title: "Pricing", href: "/pricing/", badge: null, icon: <IconBrandTailwind class="h-5 w-5" /> },
+    { title: "Blog", href: "/blog/", badge: null, icon: <IconBrandTailwind class="h-5 w-5" /> },
+    { title: "Contact Us", href: "/contact/", badge: null, icon: <IconBrandTailwind class="h-5 w-5" /> },
   ];
 
   return (
@@ -137,7 +137,7 @@ export default component$(() => {
         </div>
         <Modal.Panel position={"left"} class="dark:bg-gray-950 border-0">
           <div class="border border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900 p-1">
-            <Modal.Title class="pt-1">
+            <Modal.Title class="pt-1 pl-2">
               <a href="/" class="focus:outline-none">
                 <LogoStatic />
               </a>
