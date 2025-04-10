@@ -45,8 +45,11 @@ const Tab = component$<TabsTabProps>((props) => {
     <HeadlessTabs.Tab
       {...restProps}
       class={cn(
-        'inline-flex items-center justify-center whitespace-nowrap px-3 py-3 font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=selected]:border-base',
-        'dark:data-[state=selected]:bg-gray-840 data-[state=selected]:bg-gray-160 data-[state=selected]:border-b-2',
+        'inline-flex items-center justify-center whitespace-nowrap px-3 py-3 font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+        // Add a default transparent border to reserve space
+        'border-b-2 border-transparent',
+        // Styles for selected state
+        'dark:data-[state=selected]:bg-gray-840 data-[state=selected]:bg-gray-160',
         // Base styles for all tabs
         'dark:bg-gray-900 bg-gray-100',
         'first:rounded-tl-base last:rounded-tr-base',
