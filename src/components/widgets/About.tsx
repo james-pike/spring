@@ -5,13 +5,6 @@ import { component$ } from "@builder.io/qwik";  // Add useLocation import
 
 
 
-interface Item {
-  title?: string;
-  description?: string;
-  icon?: any;
-  classes?: Record<string, string>;
-}
-
 
 
 export default component$(() => {
