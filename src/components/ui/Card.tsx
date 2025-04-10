@@ -11,7 +11,7 @@ const Root = component$<PropsOf<'div'>>((props) => {
       {...restProps}
       class={cn(
         'rounded-base border text-card-foreground shadow-lg',
-        'bg-background', // Conditional background
+     // Conditional background
         props.class
       )}
     >
