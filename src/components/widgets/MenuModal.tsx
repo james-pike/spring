@@ -1,5 +1,5 @@
 // src/components/widgets/MenuModal.tsx
-import { component$, useSignal, $ } from "@builder.io/qwik";
+import { component$, useSignal, $, Signal } from "@builder.io/qwik";
 import { LuX, LuChevronDown } from "@qwikest/icons/lucide";
 import { cn } from "@qwik-ui/utils";
 import { LogoStatic } from "../common/Logo3";
@@ -11,9 +11,12 @@ import IconBrandTailwind from "../icons/IconBrandTailwind";
 import IconBrandGoogle from "../icons/IconBrandGoogle";
 
 // Custom Accordion Component
-const CustomAccordion = component$(({ items, closeModal }: { items: any[], closeModal: () => void }) => {
+const CustomAccordion = component$(({ items, show }: { items: any[], show: Signal<boolean> }) => {
   const openIndex = useSignal<number | null>(null);
   const location = useLocation();
+
+  // Define closeModal within CustomAccordion as a QRL
+  const closeModal = $(() => (show.value = false));
 
   return (
     <div>
@@ -51,7 +54,7 @@ const CustomAccordion = component$(({ items, closeModal }: { items: any[], close
                           "block text-gray-700 dark:text-gray-200 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                           location.url.pathname === subitem.href && "bg-gray-200 dark:bg-gray-700"
                         )}
-                        onClick$={$(() => closeModal())} // Explicitly wrap closeModal call in $()
+                        onClick$={closeModal} // Use locally defined QRL
                       >
                         {subitem.title}
                       </a>
@@ -67,7 +70,7 @@ const CustomAccordion = component$(({ items, closeModal }: { items: any[], close
                 "block text-xl text-gray-700 dark:text-gray-200 p-2 px-8 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                 location.url.pathname === item.href && "bg-white dark:bg-gray-700"
               )}
-              onClick$={$(() => closeModal())} // Explicitly wrap closeModal call in $()
+              onClick$={closeModal} // Use locally defined QRL
             >
               {item.title}
               {item.badge}
@@ -86,7 +89,7 @@ export default component$(() => {
     { title: "Home", href: "/", badge: null },
     {
       title: "About",
-      hrefZA: "/about/",
+      href: "/about/",
       hasSubmenu: true,
       subitems: [
         { title: "About Us", href: "/about/us" },
@@ -120,9 +123,6 @@ export default component$(() => {
     { title: "Contact Us", href: "/contact/", badge: null },
   ];
 
-  // Define closeModal as a QRL
-  const closeModal = $(() => (show.value = false));
-
   return (
     <>
       <Modal.Root bind:show={show}>
@@ -144,7 +144,7 @@ export default component$(() => {
           </div>
 
           <nav class="mt-0 space-y-4 border border-t-0 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800">
-            <CustomAccordion items={menuItems} closeModal={closeModal} />
+            <CustomAccordion items={menuItems} show={show} />
           </nav>
 
           <div class="border border-t-0 pb-3 border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-900">
