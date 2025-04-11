@@ -2,9 +2,10 @@ import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline";
 import ReviewGrid from "./ReviewGrid";
 import ReviewsCarousel from "./ReviewsCarousel";
-import { useLocation } from "@builder.io/qwik-city";
+import { Link, useLocation } from "@builder.io/qwik-city";
 import { SectionWrapper } from "./SectionWrapper";
 import { Card } from "../ui/Card";
+import { Button } from "../ui/Button";
 
 interface Item {
   title?: string;
@@ -29,6 +30,10 @@ export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark } = props;
   const loc = useLocation();  // Get current location
   const isIndexPage = loc.url.pathname === '/';  // Check if we're on root path
+
+
+    const location = useLocation(); // Get the current location
+    const isLandingPage = location.url.pathname === "/"; // Check if on landing page
   
   // Conditional padding classes
 
@@ -47,6 +52,17 @@ export default component$((props: Props) => {
         </div>
         </Card.Header>
         </Card.Root>
+
+             {!isLandingPage && (
+                <Card.Root class="bg-gradient-to-r z-10 from-primary to-primary/50 mx-auto mt-4 pt-8 max-w-5xl ">
+                  <Card.Content>
+                    <Headline title={"Any other questions about our services?"} subtitle={"Get in touch and we'll gladly answer them"} />
+                    <Link href="/contact" class="w-full sm:w-auto">
+                      <Button look="secondary" size="md" class="w-full">Get Started</Button>
+                    </Link>
+                  </Card.Content>
+                </Card.Root>
+              )}
      
       </SectionWrapper>
   );

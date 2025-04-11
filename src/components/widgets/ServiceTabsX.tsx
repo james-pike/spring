@@ -89,7 +89,7 @@ export default component$(() => {
       </Tabs.List>
 
       {serviceData.map((service, index) => (
-        <Tabs.Panel key={index} class="w-full md:mt-1 rounded-t-none">
+        <Tabs.Panel key={index} class="w-full md:mt-1">
           <div class="pb-8 h-full">
             <Card.Header>
               <Card.Title class="text-2xl md:text-3xl md:pt-6 font-bold text-gray-900 dark:text-white">
