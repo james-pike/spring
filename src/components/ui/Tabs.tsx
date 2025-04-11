@@ -23,7 +23,7 @@ const List = component$<TabsListProps>((props) => {
     <HeadlessTabs.List
       {...restProps}
       class={cn(
-        'inline-flex items-center bg-card justify-center rounded-t-base border-border border text-muted-foreground shadow-sm',
+        'inline-flex items-center bg-card justify-center rounded-base border-border border text-muted-foreground shadow-sm',
         '',
         props.class
       )}
@@ -45,16 +45,16 @@ const Tab = component$<TabsTabProps>((props) => {
     <HeadlessTabs.Tab
       {...restProps}
       class={cn(
-        'inline-flex items-center justify-center whitespace-nowrap px-3 py-2 font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+        'inline-flex items-center  rounded-base justify-center whitespace-nowrap px-3 py-2 font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
         // Add a default transparent border to reserve space
         'border-b-2 border-transparent',
         // Styles for selected state
         ' data-[state=selected]:bg-background',
         // Base styles for all tabs
         'bg-card',
-        'first:rounded-tl-base last:rounded-tr-base',
+        'first:rounded-r-none last:rounded-l-none',
         'not:first:not:last:rounded-none',
-        'border-r border-border last:border-r-0',
+        // 'border-r border-border last:border-r-0',
         // Per-tab styles for selected state
         'data-[state=selected]:border-b-primary data-[state=selected]:text-primary', // 1st tab
      
@@ -78,7 +78,7 @@ const Panel = component$<PropsOf<typeof HeadlessTabs.Panel>>((props) => {
     <HeadlessTabs.Panel
       {...props}
       class={cn(
-        'mt-1 ring-offset-background bg-card rounded-b-base border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+        'mt-2 ring-offset-background bg-card rounded-base border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
         props.class
       )}
     >

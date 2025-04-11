@@ -25,7 +25,7 @@ export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
 
   return (
-    <SectionWrapper id={id} isDark={isDark} classes={{ container: "max-w-3xl" }}>
+    <SectionWrapper id={id} isDark={isDark} classes={{ container: "max-w-3xl" }} bgClass="">
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       {/* <ServiceCards /> */}
           <ContactForm isDark={isDark}/>
