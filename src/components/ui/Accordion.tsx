@@ -15,9 +15,9 @@ const Item = component$<PropsOf<typeof HeadlessAccordion.Item>>((props) => {
     <HeadlessAccordion.Item
       {...props}
       class={cn(
-        'border-b border-gray-300 dark:border-gray-750',
+        'border-b border-border',
         // Apply bg-muted when open, bg-background when isDark is true
-        'dark:data-[open]:bg-gray-900 data-[open]:bg-gray-100',
+        'data-[open]:bg-background',
        
         props.class
       )}

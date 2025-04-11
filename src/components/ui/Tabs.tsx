@@ -49,7 +49,7 @@ const Tab = component$<TabsTabProps>((props) => {
         // Add a default transparent border to reserve space
         'border-b-2 border-transparent',
         // Styles for selected state
-        ' data-[state=selected]:bg-background',
+        ' data-[state=selected]:bg-muted',
         // Base styles for all tabs
         'bg-card',
         'first:rounded-tl-base last:rounded-tr-base',
