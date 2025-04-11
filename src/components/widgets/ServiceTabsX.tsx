@@ -13,15 +13,15 @@ const IconRocket = qwikSerialized(() => import("~/components/icons/IconRocket"))
 const serviceData = [
   {
     title: "Design",
-    subtitle: "Creative Solutions Creative Solution Creative Solutions",
+    subtitle: "Creative and Functional Design",
     icon: IconRocket,
-    description: "Innovative design services to bring your vision to life with creativity and precision.",
-    
+
+    description: "Our innovative design services use Figma, Adobe XD, and Sketch to craft custom UI/UX, interactive prototypes, and branding assets tailored to your vision.",
     image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-content-3.png",
     features: [
       "Custom UI/UX Design",
-      "Brand Identity Creation",
-      "Prototyping & Wireframing"
+      "Interactive Prototyping",
+      "Branding Asset Creation"
     ],
     projectDetails: {
       startingPrice: "$3,500",
@@ -31,14 +31,15 @@ const serviceData = [
   },
   {
     title: "Development",
-    subtitle: "Custom Software Custom Custom Software tom Software",
+    subtitle: "Robust Web and Software Solutions",
     icon: IconRocket,
-    description: "Robust and scalable web development solutions.",
+
+    description: "We provide scalable development with React, Qwik, and Next.js, building secure APIs, integrating cloud solutions, and delivering custom software.",
     image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png",
     features: [
-      "Full-stack Development",
-      "API Integrations",
-      "Performance Optimization"
+      "Full-Stack Development",
+      "Secure API Integration",
+      "Cloud-Based Solutions"
     ],
     projectDetails: {
       startingPrice: "$4,000",
@@ -48,20 +49,21 @@ const serviceData = [
   },
   {
     title: "Branding",
-    subtitle: " ",
+    subtitle: "Memorable Brand Identities",
     icon: IconRocket,
-    description: " ",
+
+    description: "We create cohesive branding with logos, color palettes, and style guides, ensuring consistency across platforms and a strong audience connection.",
     image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png",
     features: [
-      "Business Strategy",
-      "Process Optimization",
-      "Tech Advisory"
+      "Logo and Identity Design",
+      "Brand Style Guides",
+      "Platform Consistency"
     ],
     projectDetails: {
       startingPrice: "$2,500",
       timeline: "3-5 weeks"
     },
-    ctaText: "Begin Consulting"
+    ctaText: "Begin Branding"
   }
 ];
 
