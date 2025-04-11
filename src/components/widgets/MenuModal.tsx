@@ -31,12 +31,12 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
             <>
               <button
                 class={cn(
-                  "text-xl font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between w-full p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200",
+                  "text-xl font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between w-full p-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200",
                   location.url.pathname.startsWith(item.href) && "bg-white dark:bg-gray-700"
                 )}
                 onClick$={() => (openIndex.value = openIndex.value === index ? null : index)}
               >
-                <span class="flex items-center gap-1.5"><IconBrandTailwind/> {item.title}</span>
+                <span > {item.title}</span>
                 <LuChevronDown
                   class={cn(
                     "h-5 w-5 text-gray-500 transition-transform duration-200",
@@ -56,7 +56,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
                       <a
                         href={subitem.href}
                         class={cn(
-                          "block text-gray-700 dark:text-gray-200 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
+                          "block text-gray-700 dark:text-gray-200 p-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                           location.url.pathname === subitem.href && "bg-gray-200 dark:bg-gray-700"
                         )}
                         onClick$={closeModal}
@@ -72,12 +72,12 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
             <a
               href={item.href}
               class={cn(
-                "block text-xl text-gray-700 dark:text-gray-200 p-2 px-3 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
+                "block text-xl text-gray-700 dark:text-gray-200 p-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
                 location.url.pathname === item.href && "bg-white dark:bg-gray-700"
               )}
               onClick$={closeModal}
             >
-              <span class="flex items-center gap-1.5"><IconBrandTailwind/> {item.title}</span>
+              <span > {item.title}</span>
               {item.badge}
             </a>
           )}
