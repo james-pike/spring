@@ -107,7 +107,7 @@ items={[
       />
       <Stats />
       <Contact
-      isDark
+    
       id="services"
       highlight="Contact Us"
       title="Get In Touch"

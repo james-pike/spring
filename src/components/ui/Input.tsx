@@ -22,7 +22,7 @@ export const Input = component$<InputProps>(
           onInput$={valueSig ? $((__, el) => (valueSig.value = el.value)) : onInput$}
           class={cn(
             'flex h-12 md:h-10 w-full rounded-base border border-input px-3 py-1 text-base sm:text-sm text-foreground shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-50',
-            isDark ? 'bg-muted' : 'bg-background', // Swap bg-background to bg-muted when isDark is true
+            isDark ? 'bg-background' : 'bg-background', // Swap bg-background to bg-muted when isDark is true
             props.class
           )}
           id={inputId}

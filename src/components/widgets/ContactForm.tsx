@@ -106,7 +106,7 @@ export default component$((props: Props) => {
       </Card.Content>
 
       {/* Form Section */}
-      <Card.Content class="bg-primary/20 pt-6">
+      <Card.Content class=" pt-6">
         <form action="#" method="POST" class="">
           <div class="mx-auto lg:max-w-lg">
             <div class="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
