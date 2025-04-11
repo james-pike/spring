@@ -23,7 +23,7 @@ const List = component$<TabsListProps>((props) => {
     <HeadlessTabs.List
       {...restProps}
       class={cn(
-        'inline-flex items-center justify-center rounded-t-base dark:border-gray-750 border-gray-250 border text-muted-foreground shadow-sm',
+        'inline-flex items-center bg-card justify-center rounded-t-base border-border border text-muted-foreground shadow-sm',
         '',
         props.class
       )}
@@ -49,12 +49,12 @@ const Tab = component$<TabsTabProps>((props) => {
         // Add a default transparent border to reserve space
         'border-b-2 border-transparent',
         // Styles for selected state
-        'dark:data-[state=selected]:bg-gray-840 data-[state=selected]:bg-gray-160',
+        ' data-[state=selected]:bg-background',
         // Base styles for all tabs
-        'dark:bg-gray-900 bg-gray-100',
+        'bg-card',
         'first:rounded-tl-base last:rounded-tr-base',
         'not:first:not:last:rounded-none',
-        'border-r dark:border-gray-750 border-gray-250 last:border-r-0',
+        'border-r border-border last:border-r-0',
         // Per-tab styles for selected state
         'data-[state=selected]:border-b-primary data-[state=selected]:text-primary', // 1st tab
      
