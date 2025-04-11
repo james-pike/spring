@@ -31,7 +31,7 @@ export default component$((props: Props) => {
     const isLandingPage = location.url.pathname === "/"; // Check if on landing page
 
   return (
-    <SectionWrapper id={id} isDark={isDark} classes={classes} bgClass=" inset-0  h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
+    <SectionWrapper id={id} isDark={isDark} classes={classes} bgClass=" inset-0  h-full w-full bg-background bg-[radial-gradient(hsl(var(--border))_1px,transparent_1px)] [background-size:16px_16px]">
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       {/* <ServiceCards /> */}
       <VisibleWrapper id={`${id}-pricing`}>
