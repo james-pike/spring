@@ -18,15 +18,15 @@
   }
 
   .light {
-    --background: 210.05deg 40% 99.02%;
+    --background: 210deg 40% 98.04%;
     --foreground: 222.2 47.4% 11.2%;
     --muted: 210deg 40% 98.04%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 47.4% 11.2%;
-    --card: 210deg 40% 96.08%;
+    --card: 212.77deg 34.38% 93.72%;
     --card-foreground: 222.2 47.4% 11.2%;
-    --border: 214.29 31.82% 91.37%;
+    --border: 213.37deg 28.57% 87.64%;
     --input: 214.3 31.8% 91.4%;
     --primary: 232 96% 60%;
     --primary-foreground: 187 0% 0%;
@@ -40,15 +40,15 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 228.57deg 84% 4.9%;
     --foreground: 210 40% 98%;
     --muted: 228.57deg 84% 4.9%;
     --muted-foreground: 215 20.2% 65.1%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --card: #0f172a;
+    --card: 219.91deg 38.32% 14.29%;
     --card-foreground: 210 40% 98%;
-    --border: #1e293b;
+    --border: 216.28deg 28.06% 21.99%;
     --input: 217.2 32.6% 17.5%;
     --primary: 232 96% 60%;
     --primary-foreground: 196 0% 0%;
@@ -197,15 +197,15 @@
   /* use colors from colors.ts */
 
   .base-slate {
-    --background: 210.05deg 40% 99.02%;
+    --background: 210deg 40% 98.04%;
     --foreground: 222.2 47.4% 11.2%;
     --muted: 210deg 40% 98.04%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 47.4% 11.2%;
-    --card: 210deg 40% 96.08%;
+    --card: 212.77deg 34.38% 93.72%;
     --card-foreground: 222.2 47.4% 11.2%;
-    --border: 214.29 31.82% 91.37%;
+    --border: 213.37deg 28.57% 87.64%;
     --input: 214.3 31.8% 91.4%;
     --primary: 232 96% 60%;
     --secondary:  52 97% 60%;
@@ -219,15 +219,15 @@
     --ring: 222.2 47.4% 11.2%;
   }
   .dark.base-slate {
-    --background: 222.2 84% 4.9%;
+    --background: 228.57deg 84% 4.9%;
     --foreground: 210 40% 98%;
     --muted: 228.57deg 84% 4.9%;
     --muted-foreground: 215 20.2% 65.1%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --card: #0f172a;
+    --card: 219.91deg 38.32% 14.29%;
     --card-foreground: 210 40% 98%;
-    --border: #1e293b;
+    --border: 216.28deg 28.06% 21.99%;
     --input: 217.2 32.6% 17.5%;
     --primary: 232 96% 60%;
     --secondary:  52 97% 60%;
@@ -377,15 +377,15 @@
   }
 
   .base-stone {
-    --background: 0 0% 100%;
+    --background: 60deg 9.09% 97.84%;
     --foreground: 24 9.8% 10%;
     --muted: 60deg 9.09% 97.84%;
     --muted-foreground: 25 5.3% 44.7%;
     --popover: 0 0% 100%;
     --popover-foreground: 24 9.8% 10%;
-    --card: 60deg 4.76% 95.88%;
+    --card: 29.89deg 5.57% 92.93%;
     --card-foreground: 24 9.8% 10%;
-    --border: 20deg 5.88% 90%;
+    --border: 22.51deg 5.81% 86.46%;
     --input: 20 5.9% 90%;
     --primary: 232 96% 60%;
     --secondary:  52 97% 60%;
@@ -399,15 +399,15 @@
     --ring: 24 9.8% 10%;
   }
   .dark.base-stone {
-    --background: 20 14.3% 4.1%;
+    --background: 20deg 14.29% 4.12%;
     --foreground: 60 9.1% 97.8%;
     --muted: 20deg 14.29% 4.12%;
     --muted-foreground: 24 5.4% 63.9%;
     --popover: 20 14.3% 4.1%;
     --popover-foreground: 60 9.1% 97.8%;
-    --card: 24deg 9.8% 10%;
+    --card: 18.15deg 7.85% 12.51%;
     --card-foreground: 60 9.1% 97.8%;
-    --border: 12deg 6.49% 15.1%;
+    --border: 22.72deg 6.34% 20%;
     --input: 12 6.5% 15.1%;
     --primary: 232 96% 60%;
     --secondary:  52 97% 60%;
