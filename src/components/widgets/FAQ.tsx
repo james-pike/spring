@@ -131,7 +131,7 @@ export default component$((props: Props) => {
 
   return (
     <>
-    <SectionWrapper id={id} isDark={isDark} classes={{classes}} bgClass="inset-0 max-w-7xl h-full  bg-background dark:bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+    <SectionWrapper id={id} isDark={isDark} classes={{classes}} bgClass="inset-0 max-w-7xl h-full  bg-background bg-[linear-gradient(to_right,hsl(var(--card))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--card)),transparent_1px)] bg-[size:14px_24px]">
   
 
       <Headline  title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />

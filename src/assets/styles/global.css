@@ -18,7 +18,7 @@
   }
 
   .light {
-    --background: 0 0% 100%;
+    --background: 210.05deg 40% 99.02%;
     --foreground: 222.2 47.4% 11.2%;
     --muted: 210deg 40% 98.04%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -197,7 +197,7 @@
   /* use colors from colors.ts */
 
   .base-slate {
-    --background: 0 0% 100%;
+    --background: 210.05deg 40% 99.02%;
     --foreground: 222.2 47.4% 11.2%;
     --muted: 210deg 40% 98.04%;
     --muted-foreground: 215.4 16.3% 46.9%;

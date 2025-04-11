@@ -24,9 +24,9 @@ export default component$(() => {
       class={`sticky top-0 z-40 flex-none mx-auto transition-[opacity] ease-in-out ${
         isLandingPage
           ? store.isScrolling
-            ? "border-b bg-muted border-border"
+            ? "border-b bg-card border-border"
             : "texture"
-          : "bg-muted border-b" // Always bg-background when not on landing page
+          : "bg-card border-b" // Always bg-background when not on landing page
       }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
