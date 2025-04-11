@@ -37,8 +37,8 @@ export default component$((props: Props) => {
           items={items}
           classes={{
             container: twMerge(
-              "md:grid-cols-2 px-2 py-2 rounded-base",
-              isDark ? "bg-background" : "bg-muted"
+              "md:grid-cols-2 px-2 py-2 rounded-base  border",
+             "bg-card",
             ),
             panel: twMerge(
               "texture rounded-none group panel-hover-bg", // Apply the custom class for hover background

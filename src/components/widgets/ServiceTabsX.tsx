@@ -92,7 +92,7 @@ export default component$(() => {
         <Tabs.Panel key={index} class="w-full md:mt-1">
           <div class="pb-8 h-full">
             <Card.Header>
-              <Card.Title class="text-2xl md:text-3xl md:pt-6 font-bold text-gray-900 dark:text-white">
+              <Card.Title class="text-2xl md:text-3xl md:pt-4 font-bold text-gray-900 dark:text-white">
                 {service.title} Services
               </Card.Title>
               <Card.Description class="text-gray-600 dark:text-gray-300">

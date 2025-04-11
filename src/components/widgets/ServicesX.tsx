@@ -26,7 +26,7 @@ export default component$((props: Props) => {
   const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
 
   return (
-    <SectionWrapper id={id} isDark={isDark} bgClass="bg-background" classes={{ container: "pb-4 max-w-5xl" }}>
+    <SectionWrapper id={id} isDark={isDark} bgClass="bg-background" classes={{ container: "pb-4 max-w-6xl" }}>
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       <VisibleWrapper id={`${id}-service-tabs`}>
         <ServiceTabsX  />

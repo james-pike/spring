@@ -1,6 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Services from "~/components/widgets/Services";
+import ServicesX from "~/components/widgets/ServicesX";
 
 
 import { SITE } from "~/config.mjs";
@@ -8,7 +9,7 @@ import { SITE } from "~/config.mjs";
 export default component$(() => {
   return (
     <>
-  <Services
+  <ServicesX
   highlight="Services"
   title="Reliable Locksmith Services You Can Trust"
   subtitle="From emergency lockouts to advanced security solutions, we provide fast, professional, and secure locksmith services tailored to your needs."

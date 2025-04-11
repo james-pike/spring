@@ -29,7 +29,7 @@ export const SectionWrapper = component$((props: SectionWrapperProps) => {
     >
       <div
         class={twMerge(
-          "relative mx-auto max-w-5xl px-3 md:px-6",
+          "relative mx-auto max-w-5xl px-3.5 md:px-6",
           paddingY,
           classes?.container
         )}
