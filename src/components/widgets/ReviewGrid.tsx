@@ -60,11 +60,9 @@ export default component$<Props>((props) => {
               >
                 <div
                   class={twMerge(
-                    "flex flex-col p-4 shadow-md rounded-lg border opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up",
-                    props.isDark ? "bg-muted"  : "bg-background", // Apply background conditionally
-                    props.isDark
-                      ? "border-muted/50 text-muted-foreground"
-                      : "border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400",
+                    "flex flex-col p-4 shadow-md rounded-lg bg-card border-border border opacity-0 intersect-once intersect:opacity-100 intersect:motion-preset-slide-up",
+                    // Apply background conditionally
+                 
                     props.classes?.panel
                   )}
                   style={{ animationDelay: `${index * 100}ms` }}

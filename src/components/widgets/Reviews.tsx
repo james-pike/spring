@@ -40,10 +40,10 @@ export default component$((props: Props) => {
         <Card.Root class="bg-background">
           <Card.Header class="p-4">
         <div class="block sm:hidden">
-          {isIndexPage ? <ReviewsCarousel/> : <ReviewGrid isDark={isDark}/>}
+          {isIndexPage ? <ReviewsCarousel/> : <ReviewGrid/>}
         </div>
         <div class="hidden sm:block">
-          {<ReviewGrid isDark={isDark}/>}
+          {<ReviewGrid/>}
         </div>
         </Card.Header>
         </Card.Root>

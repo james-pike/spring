@@ -47,10 +47,10 @@ const serviceData = [
     ctaText: "Begin Development"
   },
   {
-    title: "Consulting",
-    subtitle: "Strategic Advice Strategic Strategic Advice Strategic",
+    title: "Branding",
+    subtitle: " ",
     icon: IconRocket,
-    description: "Expert consulting to optimize your processes and achieve your strategic goals.",
+    description: " ",
     image: "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png",
     features: [
       "Business Strategy",
@@ -92,7 +92,7 @@ export default component$(() => {
         <Tabs.Panel key={index} class="w-full md:mt-1 rounded-t-none">
           <div class="pb-8 h-full">
             <Card.Header>
-              <Card.Title class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+              <Card.Title class="text-2xl md:text-3xl md:pt-6 font-bold text-gray-900 dark:text-white">
                 {service.title} Services
               </Card.Title>
               <Card.Description class="text-gray-600 dark:text-gray-300">

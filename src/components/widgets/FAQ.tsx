@@ -32,6 +32,22 @@ export default component$((props: Props) => {
       items: [
         {
           icon: IconArrowDownRight,
+          "title": "Do you offer UI/UX design services?",
+          "description": "Yes, we provide end-to-end UI/UX design, from wireframes to polished interfaces."
+        },
+    
+        {
+          icon: IconArrowDownRight,
+          "title": "Are your designs responsive?",
+          "description": "All our designs are fully responsive, optimized for desktop, tablet, and mobile."
+        },
+        {
+          icon: IconArrowDownRight,
+          "title": "Can you design branding assets?",
+          "description": "Yes, we craft logos, color schemes, and typography to elevate your brand identity."
+        },
+        {
+          icon: IconArrowDownRight,
           title: "What design tools do you use?",
           description: "We primarily use Figma, Adobe XD, and Sketch depending on the project scope.",
         },
@@ -40,20 +56,16 @@ export default component$((props: Props) => {
           title: "Can I request revisions?",
           description: "Absolutely, we offer 2-3 rounds of revisions based on the plan you choose.",
         },
+     
         {
           icon: IconArrowDownRight,
-          title: "What design tools do you use?",
-          description: "We primarily use Figma, Adobe XD, and Sketch depending on the project scope.",
+          "title": "Can you conduct usability testing?",
+          "description": "We offer usability testing to ensure your design is intuitive and user-friendly."
         },
         {
           icon: IconArrowDownRight,
-          title: "Can I request revisions?",
-          description: "Absolutely, we offer 2-3 rounds of revisions based on the plan you choose.",
-        },
-        {
-          icon: IconArrowDownRight,
-          title: "What design tools do you use?",
-          description: "We primarily use Figma, Adobe XD, and Sketch depending on the project scope.",
+          "title": "Do you provide design documentation?",
+          "description": "Yes, we deliver detailed specs and style guides with every project."
         },
         {
           icon: IconArrowDownRight,
@@ -77,23 +89,28 @@ export default component$((props: Props) => {
         },
         {
           icon: IconArrowDownRight,
-          title: "What tech stack do you use?",
-          description: "We work with React, Qwik, Next.js, Tailwind, Node.js, and more.",
+          "title": "Can you optimize app performance?",
+          "description": "We specialize in boosting load times and efficiency for top-notch user experiences."
         },
         {
           icon: IconArrowDownRight,
-          title: "Do you provide API development?",
-          description: "Yes, we build scalable and secure REST and GraphQL APIs.",
+          "title": "Can you integrate databases?",
+          "description": "Absolutely, we connect apps to databases like PostgreSQL, MongoDB, and Firebase."
         },
         {
           icon: IconArrowDownRight,
-          title: "What tech stack do you use?",
-          description: "We work with React, Qwik, Next.js, Tailwind, Node.js, and more.",
+          "title": "Do you offer version control?",
+          "description": "Yes, we use Git and platforms like GitHub for seamless code management."
         },
         {
           icon: IconArrowDownRight,
-          title: "Do you provide API development?",
-          description: "Yes, we build scalable and secure REST and GraphQL APIs.",
+          "title": "Do you perform testing?",
+          "description": "Definitely, we conduct unit, integration, and end-to-end tests for quality assurance."
+        },
+        {
+          icon: IconArrowDownRight,
+          "title": "Do you provide maintenance support?",
+          "description": "We offer ongoing support to keep your app updated and running smoothly."
         },
       ],
     },
@@ -102,8 +119,8 @@ export default component$((props: Props) => {
       items: [
         {
           icon: IconArrowDownRight,
-          title: "Do you optimize for search engines?",
-          description: "Yes, all websites come with basic on-page SEO included.",
+          "title": "What does your branding service include?",
+          "description": "We offer logo design, color palettes, typography, and brand guidelines."
         },
         {
           icon: IconArrowDownRight,
