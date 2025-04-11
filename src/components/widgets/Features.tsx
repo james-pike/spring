@@ -23,7 +23,7 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "", items, classes = {}, isDark } = props;
+  const { id, title = "", subtitle = "", highlight = "", items, classes = {} } = props;
 
   return (
     

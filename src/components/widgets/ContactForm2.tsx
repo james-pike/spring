@@ -1,10 +1,7 @@
 import { component$, useContextProvider } from '@builder.io/qwik';
-import { Card } from '../ui/Card';
-import { Input } from '../ui/Input';
-import { Textarea } from '../ui/TextArea';
+
 import { DarkContext } from '~/DarkContext';
-import { Button } from '../ui/Button';
-import ContactSelect from './ContactSelect';
+
 
 interface Props {
   isDark?: boolean;

@@ -1,7 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { Headline } from "~/components/ui/Headline"; // Adjust the import path
-import { SectionWrapper } from "./SectionWrapper";
-import ContactForm from "./ContactForm";
+
 import ContactForm2 from "./ContactForm2";
 import { SectionWrapper2 } from "./SectionWrapper2";
 
@@ -24,10 +22,10 @@ interface Props {
 }
 
 export default component$((props: Props) => {
-  const { id, title = "", subtitle = "", highlight = "", classes = {}, isDark = false } = props;
+  const { id,  } = props;
 
   return (
-    <SectionWrapper2 id={id} isDark={isDark} classes={{ container: "max-w-7xl" }} bgClass="inset-0 max-w-7xl h-full  bg-background bg-[linear-gradient(to_right,hsl(var(--card))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--card)),transparent_1px)] bg-[size:14px_24px]">
+    <SectionWrapper2 id={id} classes={{ container: "max-w-7xl" }} bgClass="inset-0 max-w-7xl h-full  bg-background bg-[linear-gradient(to_right,hsl(var(--card))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--card)),transparent_1px)] bg-[size:14px_24px]">
       {/* <div class="flex w-full">
         <div class="w-2/3 bg-border pl-6 pt-6">
           <Headline
