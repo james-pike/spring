@@ -64,8 +64,8 @@ export default component$(() => {
   }
 
   return (
-    <div class="max-w-7xl bg-gray-100 dark:bg-gray-800">
-      <section class="max-w-6xl mx-auto px-4 pb-8 md:py-16 bg-gray-100 dark:bg-gray-800">
+    <div class="max-w-7xl ">
+      <section class="max-w-6xl mx-auto px-4 pb-8 md:py-16 bg-background">
         {/* Breadcrumb Navigation */}
     
 
