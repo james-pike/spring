@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline";
-import { SectionWrapper } from "./SectionWrapper";
 import { Card } from "../ui/Card";
 import FAQTabs from "./FAQTabs";
 import FAQTabs2 from "./FAQTabs2";
