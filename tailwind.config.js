@@ -15,6 +15,9 @@ module.exports = {
   ],  
   theme: {
     extend: {
+      spacing: {
+        '0.75': '0.1875rem', // 3px (since 1rem = 16px, 3/16 = 0.1875rem)
+      },
       animation: {
         'pulse-glow': 'pulseGlow 0.6s ease-out',
       },
