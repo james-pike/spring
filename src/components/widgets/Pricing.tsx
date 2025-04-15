@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline"; // Adjust the import path
-import { Wrapper } from "./SectionWrapper";
+import { Wrapper } from "./Wrapper";
 import PriceTabs from "./PriceTabs";
 import { VisibleWrapper } from "./VisibleWrapper";
 import { Link, useLocation } from "@builder.io/qwik-city";
@@ -32,7 +32,7 @@ export default component$((props: Props) => {
 
   return (
     <Wrapper id={id} isDark={isDark} classes={classes} bgClass="inset-0  h-full w-full bg-background bg-[radial-gradient(hsl(var(--border))_1px,transparent_1px)] [background-size:16px_16px]">
-      <Card.Root class="pt-6">
+      <Card.Root class="pt-6 mb-0.5">
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       </Card.Root>
       {/* <ServiceCards /> */}

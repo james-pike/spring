@@ -60,7 +60,7 @@ export default component$(() => {
         <link rel="preload" href="/images/contact.jpg" as="image" />
  
       </head>
-      <body class=" tracking-tight md:border-x-2 mx-auto  bg-background dark:bg-muted max-w-7xl   antialiased">
+      <body class=" tracking-tight border-x-2 mx-auto  bg-background dark:bg-muted max-w-7xl   antialiased">
       <ObserverProvider>
           <RouterOutlet />
       

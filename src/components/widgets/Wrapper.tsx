@@ -9,14 +9,14 @@ interface SectionWrapperProps {
   classes?: Record<string, string>;
 }
 
-export const SectionWrapper = component$((props: SectionWrapperProps) => {
+export const Wrapper = component$((props: SectionWrapperProps) => {
   const { id, isDark, bgClass, classes = {} } = props;
   const location = useLocation();
 
   const isHomePage = location.url.pathname === "/";
   const paddingY = isHomePage
-    ? "py-1 "
-    : "py-1 ";
+    ? "py-0.5 "
+    : "py-0.5 ";
 
   return (
     <section
@@ -29,7 +29,7 @@ export const SectionWrapper = component$((props: SectionWrapperProps) => {
     >
       <div
         class={twMerge(
-          "relative mx-auto max-w-5xl px-1 md:px-6",
+          "relative mx-auto max-w-5xl px-0.5 md:px-6",
           paddingY,
           classes?.container
         )}

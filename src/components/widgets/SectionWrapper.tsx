@@ -9,7 +9,7 @@ interface SectionWrapperProps {
   classes?: Record<string, string>;
 }
 
-export const Wrapper = component$((props: SectionWrapperProps) => {
+export const SectionWrapper = component$((props: SectionWrapperProps) => {
   const { id, isDark, bgClass, classes = {} } = props;
   const location = useLocation();
 
