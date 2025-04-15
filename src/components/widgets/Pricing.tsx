@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { Headline } from "~/components/ui/Headline"; // Adjust the import path
-import { SectionWrapper } from "./SectionWrapper";
+import { Wrapper } from "./SectionWrapper";
 import PriceTabs from "./PriceTabs";
 import { VisibleWrapper } from "./VisibleWrapper";
 import { Link, useLocation } from "@builder.io/qwik-city";
@@ -31,8 +31,10 @@ export default component$((props: Props) => {
     const isLandingPage = location.url.pathname === "/"; // Check if on landing page
 
   return (
-    <SectionWrapper id={id} isDark={isDark} classes={classes} bgClass=" inset-0  h-full w-full bg-background bg-[radial-gradient(hsl(var(--border))_1px,transparent_1px)] [background-size:16px_16px]">
+    <Wrapper id={id} isDark={isDark} classes={classes} bgClass="inset-0  h-full w-full bg-background bg-[radial-gradient(hsl(var(--border))_1px,transparent_1px)] [background-size:16px_16px]">
+      <Card.Root class="pt-6">
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+      </Card.Root>
       {/* <ServiceCards /> */}
       <VisibleWrapper id={`${id}-pricing`}>
           <PriceTabs isDark={isDark}/>
@@ -48,7 +50,7 @@ export default component$((props: Props) => {
                     </Card.Content>
                   </Card.Root>
                 )}
-    </SectionWrapper>
+    </Wrapper>
   );
 });
 

@@ -12,7 +12,7 @@ export default component$(() => {
   return (
     <>
     <Pricing
-    isDark
+    
       title="Flexible Pricing Options"
       subtitle="Choose an initial upfront project cost or a monthly plan."
       highlight="Pricing"
