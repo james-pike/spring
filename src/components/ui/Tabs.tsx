@@ -43,35 +43,34 @@ const Tab = component$<TabsTabProps>((props) => {
 
   return (
     <HeadlessTabs.Tab
-      {...restProps}
-      class={cn(
-        'inline-flex items-center  rounded-base justify-center whitespace-nowrap px-1 py-2 font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
-        // Add a default transparent border to reserve space
-        'border-b-2 border-transparent',
-        // Styles for selected state
-        ' data-[state=selected]:bg-background',
-        // Base styles for all tabs
-        'bg-card',
-        'first:rounded-r-none last:rounded-l-none',
-        'not:first:not:last:rounded-none',
-        // 'border-r border-border last:border-r-0',
-        // Per-tab styles for selected state
-        'data-[state=selected]:border-b-primary data-[state=selected]:text-primary', // 1st tab
-     
-        'data-[state=selected]:shadow-inner',
-        props.class
-      )}
-    >
-      <Slot />
-    </HeadlessTabs.Tab>
+    {...restProps}
+    class={cn(
+      'inline-flex items-center justify-center whitespace-nowrap px-1 py-2 font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+      // Add a default transparent border to reserve space
+      'border-b border-transparent',
+      // Styles for selected state
+      'data-[state=selected]:bg-background',
+      // Base styles for all tabs
+      'bg-card',
+      // Rounding: only first and last tabs get rounded corners
+      '[&:first-child]:rounded-l-base [&:last-child]:rounded-r-base',
+      // Ensure middle tabs have no rounding
+      'not:first-child:not:last-child:rounded-none',
+      // Vertical borders: right border for all tabs except the last
+      'border-r border-border [&:last-child]:border-r-0',
+      // Per-tab styles for selected state
+      'data-[state=selected]:border-b-primary data-[state=selected]:text-primary',
+      'data-[state=selected]:shadow-inner',
+      props.class
+    )}
+  >
+    <Slot />
+  </HeadlessTabs.Tab>
   );
 });
 
 
-// '[&:nth-child(1)]:data-[state=selected]:border-b-primary [&:nth-child(1)]:data-[state=selected]:text-primary', // 1st tab
-// '[&:nth-child(2)]:data-[state=selected]:border-b-secondary [&:nth-child(2)]:data-[state=selected]:text-secondary', // 2nd tab
-// '[&:nth-child(3)]:data-[state=selected]:border-b-tertiary [&:nth-child(3)]:data-[state=selected]:text-tertiary', // 3rd tab
-// '[&:nth-child(4)]:data-[state=selected]:border-b-quaternary [&:nth-child(4)]:data-[state=selected]:text-quaternary', // 4th tab
+
 
 const Panel = component$<PropsOf<typeof HeadlessTabs.Panel>>((props) => {
   return (
