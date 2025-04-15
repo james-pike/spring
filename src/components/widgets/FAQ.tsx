@@ -8,6 +8,7 @@ import { qwikSerialized } from "~/utils/qwikSerialized";
 import { VisibleWrapper } from "./VisibleWrapper";
 import { Link, useLocation } from "@builder.io/qwik-city"; // Add useLocation import
 import { Button } from "../ui/Button";
+import { Wrapper } from "./Wrapper";
 
 const IconArrowDownRight = qwikSerialized(() => import("~/components/icons/IconArrowDownRight"));
 
@@ -148,10 +149,11 @@ export default component$((props: Props) => {
 
   return (
     <>
-    <SectionWrapper id={id} isDark={isDark} classes={{classes}} bgClass="inset-0 max-w-7xl h-full  bg-background bg-[linear-gradient(to_right,hsl(var(--card))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--card)),transparent_1px)] bg-[size:14px_24px]">
+    <Wrapper id={id} isDark={isDark} classes={{classes}} bgClass="inset-0 max-w-7xl h-full  bg-background bg-[linear-gradient(to_right,hsl(var(--card))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--card)),transparent_1px)] bg-[size:14px_24px]">
   
-
+    <Card.Root class="pt-6 mb-1">
       <Headline  title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+    </Card.Root>
       <VisibleWrapper id={`${id}-faq`}>
         <div class="hidden sm:block">
           <Card.Root>
@@ -175,7 +177,7 @@ export default component$((props: Props) => {
           </Card.Content>
         </Card.Root>
       )}
-    </SectionWrapper>
+    </Wrapper>
 
   
     </>
