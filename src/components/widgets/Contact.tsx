@@ -27,7 +27,7 @@ export default component$((props: Props) => {
   return (
     <Wrapper id={id} isDark={isDark} classes={{ container: "max-w-4xl" }} bgClass="inset-0 max-w-7xl h-full  bg-background bg-[linear-gradient(to_right,hsl(var(--card))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--card)),transparent_1px)] bg-[size:14px_24px]">
       <div class="flex w-full">
-        <div class="w-2/3 bg-border pl-4 pt-6">
+        <div class="w-2/3 bg-card pl-4 pt-6">
           <div class="hidden sm:block">
             <Headline
               align="left"
