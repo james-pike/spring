@@ -32,7 +32,7 @@ export default component$((props: Props) => {
 
   return (
     <Wrapper id={id} isDark={isDark} classes={classes} bgClass="inset-0 max-w-7xl h-full  bg-background bg-[linear-gradient(to_right,hsl(var(--card))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--card)),transparent_1px)] bg-[size:14px_24px]">
-      <Card.Root class="pt-6 mb-0.75">
+      <Card.Root class="pt-6 mb-1 bg-border">
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
       </Card.Root>
       {/* <ServiceCards /> */}
@@ -41,7 +41,7 @@ export default component$((props: Props) => {
           </VisibleWrapper>
              {/* Conditionally render the card only if not on the landing page */}
                 {!isLandingPage && (
-                  <Card.Root class="bg-gradient-to-r from-primary to-primary/50 mx-auto mt-0.75 pt-8 max-w-5xl ">
+                  <Card.Root class="bg-gradient-to-r from-card via-primary to-card mx-auto mt-0.75 pt-8 max-w-5xl ">
                     <Card.Content>
                       <Headline title={"Any other questions about our services?"} subtitle={"Get in touch and we'll gladly answer them"} />
                       <Link href="/contact" class="w-full sm:w-auto">

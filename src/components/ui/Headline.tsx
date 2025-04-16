@@ -66,7 +66,7 @@ export const Headline = component$((props: Props) => {
       {title && (
         <h2
           class={twMerge(
-            "font-bold leading-tighter tracking-tighter text-balance font-heading text-heading opacity-0", // Always start hidden
+            "font-bold leading-tighter tracking-tighter  font-heading text-heading opacity-0", // Always start hidden
             titleClass,
             isVisible.value && "animate-[fadeSlideUp_0.5s_ease-out_0.1s_forwards]"
           )}
