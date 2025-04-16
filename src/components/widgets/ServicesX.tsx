@@ -3,6 +3,7 @@ import { Headline } from "~/components/ui/Headline";
 import { VisibleWrapper } from "./VisibleWrapper";
 import ServiceTabsX from "./ServiceTabsX";
 import { Wrapper } from "./Wrapper";
+import { Card } from "../ui/Card";
  // Adjust the import path
 
 interface Item {
@@ -27,7 +28,9 @@ export default component$((props: Props) => {
 
   return (
     <Wrapper id={id} isDark={isDark} bgClass="bg-background" classes={{ container: "pb-4 max-w-6xl" }}>
+       <Card.Root class="pt-6 mb-0.5">
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
+      </Card.Root>
       <VisibleWrapper id={`${id}-service-tabs`}>
         <ServiceTabsX  />
       </VisibleWrapper>
