@@ -27,7 +27,7 @@ export default component$((props: Props) => {
 
   return (
     
-    <SectionWrapper id={id}  classes={classes}>
+    <SectionWrapper id={id}  classes={classes} bgClass="inset-0 z-10 h-full w-full bg-background bg-[linear-gradient(to_right,hsl(var(--card))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--card))_1px,transparent_1px)] bg-[size:6rem_4rem]">
       
       <Headline title={title} subtitle={subtitle} highlight={highlight} classes={classes?.headline} />
         <VisibleWrapper id={`${id}-features-grid`}>
