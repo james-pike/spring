@@ -23,7 +23,7 @@ export const panelVariants = cva(
         top: 'inset-x-0 top-0 mt-0 rounded-b-base border-b data-[closing]:slide-out-to-top data-[open]:slide-in-from-top',
         bottom:
           'inset-x-0 bottom-0 mb-0 rounded-t-base border-t data-[closing]:slide-out-to-bottom data-[open]:slide-in-from-bottom',
-        left: 'inset-y-0 left-0 ml-0 h-full max-w-sm rounded-r-base border-r border-gray-200 dark:border-gray-700 data-[closing]:slide-out-to-left data-[open]:slide-in-from-left',
+        left: 'inset-y-0 left-0 ml-0 h-full max-w-sm rounded-r-base border-r  data-[closing]:slide-out-to-left data-[open]:slide-in-from-left',
         right:
           'inset-y-0 right-0 mr-0 h-full max-w-sm rounded-l-base border-l data-[closing]:slide-out-to-right data-[open]:slide-in-from-right',
       },
