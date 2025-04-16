@@ -31,8 +31,8 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
             <>
               <button
                 class={cn(
-                  "text-xl font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between w-full p-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200",
-                  location.url.pathname.startsWith(item.href) && "bg-white dark:bg-gray-700"
+                  "text-xl font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between w-full p-2 px-4 hover:bg-background transition-all duration-200",
+                  location.url.pathname.startsWith(item.href) && "bg-background"
                 )}
                 onClick$={() => (openIndex.value = openIndex.value === index ? null : index)}
               >
@@ -57,7 +57,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
                         href={subitem.href}
                         class={cn(
                           "block text-gray-700 dark:text-gray-200 p-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
-                          location.url.pathname === subitem.href && "bg-gray-200 dark:bg-gray-700"
+                          location.url.pathname === subitem.href && "bg-background"
                         )}
                         onClick$={closeModal}
                       >
@@ -73,7 +73,7 @@ const CustomAccordion = component$(({ items, show }: { items: any[], show: Signa
               href={item.href}
               class={cn(
                 "block text-xl text-gray-700 dark:text-gray-200 p-2 px-4 hover:bg-gray-200 dark:hover:bg-gray-700 font-medium transition-all duration-200",
-                location.url.pathname === item.href && "bg-white dark:bg-gray-700"
+                location.url.pathname === item.href && "bg-background"
               )}
               onClick$={closeModal}
             >
@@ -127,7 +127,7 @@ export default component$(() => {
             <IconHamburger class="w-8 h-8 md:w-5 md:h-5 md:inline-block" />
           </Modal.Trigger>
         </div>
-        <Modal.Panel position={"left"} class="dark:bg-gray-950 border-0">
+        <Modal.Panel position={"left"} class="dark:bg-gray-950 border">
           <div class="border  bg-gray-200 dark:bg-gray-900 p-1">
             <Modal.Title class="pt-1 pl-2">
               <a href="/" class="focus:outline-none">
@@ -139,7 +139,7 @@ export default component$(() => {
             </Modal.Description>
           </div>
 
-          <nav class="mt-0 space-y-4 border border-t-0 border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800">
+          <nav class="mt-0 space-y-4 border border-t-0 bg-gray-100 dark:bg-gray-800">
             <CustomAccordion items={menuItems} show={show} />
           </nav>
 
