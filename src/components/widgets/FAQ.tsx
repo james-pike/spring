@@ -167,7 +167,7 @@ export default component$((props: Props) => {
 
       {/* Conditionally render the card only if not on the landing page */}
       {!isLandingPage && (
-        <Card.Root class="bg-gradient-to-r z-10 from-primary to-primary/50 mx-auto mt-4 pt-8 max-w-5xl ">
+        <Card.Root class="bg-gradient-to-r z-10 from-border via-primary to-border mx-auto mt-0.5 pt-8 max-w-5xl ">
           <Card.Content>
             <Headline title={"Any other questions about our services?"} subtitle={"Get in touch and we'll gladly answer them"} />
             <Link href="/contact" class="w-full sm:w-auto">
