@@ -24,9 +24,9 @@ export default component$(() => {
       class={`sticky top-0 z-40 flex-none mx-auto transition-[opacity] ease-in-out ${
         isLandingPage
           ? store.isScrolling
-            ? " border-y md:border-y-2 bg-card border-border"
-            : "texture"
-          : "bg-card border-y md:border-b-2" // Always bg-background when not on landing page
+            ? "   bg-white/95 border-border"
+            : ""
+          : "bg-white/95  " // Always bg-background when not on landing page
       }`}
       window:onScroll$={() => {
         if (!store.isScrolling && window.scrollY >= 10) {
@@ -44,13 +44,14 @@ export default component$(() => {
             <span class="text-xs bg-primary rounded-full text-white px-4 py-1.5 mr-3">New</span> <span class="text-sm font-medium">Free Website Audit</span> 
             <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
         </div> */}
+        {/* <img src="/images/logo.png" class="h-20"/> */}
           </a>
        
           <div class="flex items-center md:hidden gap-1">
-            <Settings />
-            {/* <Link href="/quote" class="w-full sm:w-auto">
-              <Button size="md" class="w-full px-0">Get Quote</Button>
-            </Link> */}
+            {/* <Settings /> */}
+            <Link href="/quote" class="w-full sm:w-auto">
+              <Button size="md" class="w-full px-2 mr-1">What's New</Button>
+            </Link>
             <MenuModal />
           </div>
         </div>

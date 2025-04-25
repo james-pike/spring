@@ -13,7 +13,7 @@ const IconRocket = qwikSerialized(() => import("~/components/icons/IconRocket"))
 const serviceData = [
   {
     title: "Design",
-    subtitle: "Creative and Functional Design",
+    subtitle: "Creative and Functional Design, Creative and Functional Design.",
     icon: IconRocket,
 
     description: "Our innovative design services use Figma, Adobe XD, and Sketch to craft custom UI/UX, interactive prototypes, and branding assets tailored to your vision.",
@@ -31,7 +31,7 @@ const serviceData = [
   },
   {
     title: "Development",
-    subtitle: "Robust Web and Software Solutions",
+    subtitle: "Robust Web and Software Solutions, Robust Web and Software Solutions. ",
     icon: IconRocket,
 
     description: "We provide scalable development with React, Qwik, and Next.js, building secure APIs, integrating cloud solutions, and delivering custom software.",
@@ -49,7 +49,7 @@ const serviceData = [
   },
   {
     title: "Branding",
-    subtitle: "Memorable Brand Identities",
+    subtitle: "Memorable Brand Identities, Memorable Brand Identities.",
     icon: IconRocket,
 
     description: "We create cohesive branding with logos, color palettes, and style guides, ensuring consistency across platforms and a strong audience connection.",
@@ -91,7 +91,7 @@ export default component$(() => {
       </Tabs.List>
 
       {serviceData.map((service, index) => (
-        <Tabs.Panel key={index} class="w-full md:mt-1">
+        <Tabs.Panel key={index} class="w-full md:mt-2">
           <div class="pb-8 h-full">
             <Card.Header>
               <Card.Title class="text-2xl md:text-3xl md:pt-4 font-bold text-gray-900 dark:text-white">
