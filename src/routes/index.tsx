@@ -1,21 +1,14 @@
 import { component$ } from "@builder.io/qwik";
 import { type DocumentHead } from "@builder.io/qwik-city";
-import Stats from "~/components/widgets/Stats";
 import { qwikSerialized } from "~/utils/qwikSerialized";
 import { SITE } from "~/config.mjs";
-import Pricing from "~/components/widgets/Pricing";
-import Hero from "~/components/widgets/Hero";
-import Features from "~/components/widgets/Features";
-import FAQ from "~/components/widgets/FAQ";
-import Steps from "~/components/widgets/Steps";
-import Contact from "~/components/widgets/Contact";
 
-import Reviews from "~/components/widgets/Reviews";
+import Hero from "~/components/widgets/Hero";
+
 import ServicesX from "~/components/widgets/ServicesX";
 
 
 
-const IconRocket = qwikSerialized(() => import("../components/icons/IconRocket"));
 
 export default component$(() => {
   return (
@@ -25,11 +18,11 @@ export default component$(() => {
 
       <ServicesX
         id="services"
-        highlight="Services"
-        title="What We Offer"
-        subtitle="From stunning design to seamless development and strategic branding — we build digital solutions that make an impact."
+        highlight="My Services"
+        title="Creative Work"
+        subtitle=" I work within three main modalities : labyrinth/walking meditation, expressive arts & play, and writing."
         items={[]} />
-
+{/* 
 <Features
 id="features-grid"
 highlight="Core Services"
@@ -116,7 +109,7 @@ items={[
       subtitle="Request a quote or book a free consultations today!."
       items={[]} />
 
-      
+       */}
     </>
   );
 });

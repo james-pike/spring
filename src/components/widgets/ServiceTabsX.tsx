@@ -12,7 +12,7 @@ const IconRocket = qwikSerialized(() => import("~/components/icons/IconRocket"))
 // Updated service data with additional fields
 const serviceData = [
   {
-    title: "Design",
+    title: "Play",
     subtitle: "Creative and Functional Design, Creative and Functional Design.",
     icon: IconRocket,
 
@@ -30,7 +30,7 @@ const serviceData = [
     ctaText: "Begin Design"
   },
   {
-    title: "Development",
+    title: "Walk",
     subtitle: "Robust Web and Software Solutions, Robust Web and Software Solutions. ",
     icon: IconRocket,
 
@@ -48,7 +48,7 @@ const serviceData = [
     ctaText: "Begin Development"
   },
   {
-    title: "Branding",
+    title: "Write",
     subtitle: "Memorable Brand Identities, Memorable Brand Identities.",
     icon: IconRocket,
 
@@ -95,7 +95,7 @@ export default component$(() => {
           <div class="pb-8 h-full">
             <Card.Header>
               <Card.Title class="text-2xl md:text-3xl md:pt-4 font-bold text-gray-900 dark:text-white">
-                {service.title} Services
+                {service.title} 
               </Card.Title>
               <Card.Description class="text-gray-600 dark:text-gray-300">
                 {service.description}
